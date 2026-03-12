@@ -34,23 +34,23 @@
   height: auto;
 }
 
-/* Measurements rich text content */
-.size-guide-modal__measurements h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+/* Measurements table */
+.size-guide-modal__measurements table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.size-guide-modal__measurements ul,
-.size-guide-modal__measurements ol {
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.size-guide-modal__measurements li {
-  padding: 0.3rem 0;
+.size-guide-modal__measurements th,
+.size-guide-modal__measurements td {
+  padding: 0.8rem 1rem;
+  text-align: left;
   border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
 }
 
-.size-guide-modal__measurements p {
-  margin-bottom: 0.8rem;
+.size-guide-modal__measurements th {
+  font-weight: 600;
+}
+
+.size-guide-modal__measurements tbody tr:last-child td {
+  border-bottom: none;
 }

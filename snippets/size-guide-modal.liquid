@@ -26,9 +26,29 @@
           {{ size_guide.silhouette_image.value | image_url: width: 800 | image_tag: loading: 'lazy', alt: sg_alt }}
         </div>
       {% endif %}
-      <div class="size-guide-modal__measurements">
-        {{ size_guide.measurements.value }}
-      </div>
+      {% assign measurements = size_guide.measurements.value %}
+      {% if measurements.headers and measurements.rows %}
+        <div class="size-guide-modal__measurements">
+          <table>
+            <thead>
+              <tr>
+                {% for header in measurements.headers %}
+                  <th>{{ header }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in measurements.rows %}
+                <tr>
+                  {% for cell in row %}
+                    <td>{{ cell }}</td>
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
     </div>
   </div>
 </modal-dialog>
