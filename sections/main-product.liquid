@@ -915,24 +915,53 @@
             -%}
             {%- if valid_swatches >= 2 -%}
               {{ 'colorway-swatches.css' | asset_url | stylesheet_tag }}
+              {%- liquid
+                assign colorway_types = ''
+                for cw_product in colorway_products
+                  assign cw_type = cw_product.metafields.custom.colorway_type | default: 'Color'
+                  unless colorway_types contains cw_type
+                    if colorway_types != ''
+                      assign colorway_types = colorway_types | append: '||'
+                    endif
+                    assign colorway_types = colorway_types | append: cw_type
+                  endunless
+                endfor
+                assign colorway_types_arr = colorway_types | split: '||'
+              -%}
               <fieldset class="colorway-swatches-block-wrapper product-form__input" {{ block.shopify_attributes }}>
                 <legend class="form__label">Color</legend>
-                <div class="colorway-swatches-block">
+                {%- for cw_type in colorway_types_arr -%}
+                  {%- assign type_has_valid = false -%}
                   {%- for cw_product in colorway_products -%}
-                    {%- assign swatch_image = cw_product.metafields.custom.colorway_swatch.value -%}
-                    {%- if swatch_image != blank -%}
-                      {%- if cw_product.id == product.id -%}
-                        <span class="colorway-swatches-block__swatch colorway-swatches-block__swatch--active" aria-label="{{ cw_product.title }} (current)" aria-current="true">
-                          <img src="{{ swatch_image | image_url: width: 96 }}" alt="{{ cw_product.title }}" width="44" height="44" loading="lazy">
-                        </span>
-                      {%- else -%}
-                        <a href="{{ cw_product.url }}" class="colorway-swatches-block__swatch" data-product-url="{{ cw_product.url }}" aria-label="{{ cw_product.title }}">
-                          <img src="{{ swatch_image | image_url: width: 96 }}" alt="{{ cw_product.title }}" width="44" height="44" loading="lazy">
-                        </a>
-                      {%- endif -%}
+                    {%- assign product_type = cw_product.metafields.custom.colorway_type | default: 'Color' -%}
+                    {%- if product_type == cw_type and cw_product.metafields.custom.colorway_swatch.value != blank -%}
+                      {%- assign type_has_valid = true -%}
+                      {%- break -%}
                     {%- endif -%}
                   {%- endfor -%}
-                </div>
+                  {%- if type_has_valid -%}
+                    {%- if colorway_types_arr.size > 1 -%}
+                      <span class="colorway-swatches-block__type-label">{{ cw_type }}</span>
+                    {%- endif -%}
+                    <div class="colorway-swatches-block">
+                      {%- for cw_product in colorway_products -%}
+                        {%- assign product_type = cw_product.metafields.custom.colorway_type | default: 'Color' -%}
+                        {%- assign swatch_image = cw_product.metafields.custom.colorway_swatch.value -%}
+                        {%- if product_type == cw_type and swatch_image != blank -%}
+                          {%- if cw_product.id == product.id -%}
+                            <span class="colorway-swatches-block__swatch colorway-swatches-block__swatch--active" aria-label="{{ cw_product.title }} (current)" aria-current="true">
+                              <img src="{{ swatch_image | image_url: width: 96 }}" alt="{{ cw_product.title }}" width="44" height="44" loading="lazy">
+                            </span>
+                          {%- else -%}
+                            <a href="{{ cw_product.url }}" class="colorway-swatches-block__swatch" data-product-url="{{ cw_product.url }}" aria-label="{{ cw_product.title }}">
+                              <img src="{{ swatch_image | image_url: width: 96 }}" alt="{{ cw_product.title }}" width="44" height="44" loading="lazy">
+                            </a>
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
               </fieldset>
               <script src="{{ 'colorway-swatches.js' | asset_url }}" defer="defer"></script>
             {%- endif -%}
