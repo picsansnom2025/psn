@@ -1,0 +1,56 @@
+/* Size Guide Modal — size-guide-modal.css
+   Only styles specific to size guide content.
+   Modal shell uses existing product-popup-modal CSS from section-main-product.css. */
+
+/* Trigger: button styled as text link */
+.size-guide-trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: rgba(var(--color-link), var(--alpha-link));
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Label/legend flex layout — only when trigger present */
+.product-form__input legend.form__label:has(.size-guide-trigger),
+.product-form__input label.form__label:has(.size-guide-trigger) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Silhouette image */
+.size-guide-modal__image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.size-guide-modal__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Measurements rich text content */
+.size-guide-modal__measurements h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.size-guide-modal__measurements ul,
+.size-guide-modal__measurements ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.size-guide-modal__measurements li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+}
+
+.size-guide-modal__measurements p {
+  margin-bottom: 0.8rem;
+}
