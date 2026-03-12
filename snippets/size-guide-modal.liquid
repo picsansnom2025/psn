@@ -1,0 +1,35 @@
+{% comment %}
+  Renders the size guide modal for the current product.
+
+  Accepts:
+  - product: {Object} product object with custom.size_guide metafield
+
+  Usage:
+  {% render 'size-guide-modal', product: product %}
+{% endcomment %}
+
+{% assign size_guide = product.metafields.custom.size_guide.value %}
+{% if size_guide %}
+{{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
+<modal-dialog id="SizeGuideModal" class="product-popup-modal">
+  <div role="dialog" aria-label="{{ size_guide.product_type.value }} Size Guide" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
+    <div class="modal-header">
+      <button id="ModalClose-SizeGuide" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
+        {% render 'icon-close' %}
+      </button>
+      <span class="dialog-title">{{ size_guide.product_type.value }} Size Guide</span>
+    </div>
+    <div class="product-popup-modal__content-info size-guide-modal__body">
+      {% if size_guide.silhouette_image.value %}
+        <div class="size-guide-modal__image">
+          {% assign sg_alt = size_guide.product_type.value | append: ' size guide diagram' %}
+          {{ size_guide.silhouette_image.value | image_url: width: 800 | image_tag: loading: 'lazy', alt: sg_alt }}
+        </div>
+      {% endif %}
+      <div class="size-guide-modal__measurements">
+        {{ size_guide.measurements.value }}
+      </div>
+    </div>
+  </div>
+</modal-dialog>
+{% endif %}
