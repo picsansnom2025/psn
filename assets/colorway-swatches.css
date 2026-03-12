@@ -1,3 +1,7 @@
+.colorway-swatches-block-wrapper {
+  margin-bottom: 1.6rem;
+}
+
 .colorway-swatches-block {
   display: flex;
   flex-wrap: wrap;
@@ -8,8 +12,8 @@
 .colorway-swatches-block__swatch {
   position: relative;
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
