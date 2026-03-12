@@ -18,6 +18,9 @@
         {% render 'icon-close' %}
       </button>
       <span class="dialog-title">{{ size_guide.product_type.value }} Size Guide</span>
+      {% if size_guide.fit_description.value %}
+        <p class="size-guide-modal__fit-description">{{ size_guide.fit_description.value }}</p>
+      {% endif %}
     </div>
     <div class="product-popup-modal__content-info size-guide-modal__body">
       {% if size_guide.silhouette_image.value %}

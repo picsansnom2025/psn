@@ -30,8 +30,15 @@
 }
 
 .size-guide-modal__image img {
-  max-width: 100%;
+  max-width: min(100%, 400px);
   height: auto;
+}
+
+/* Fit description subheading */
+.size-guide-modal__fit-description {
+  margin: 0.25rem 0 0;
+  font-size: 0.875em;
+  color: rgba(var(--color-foreground), 0.7);
 }
 
 /* Measurements table */
