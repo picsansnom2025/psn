@@ -1,0 +1,47 @@
+.colorway-swatches-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.colorway-swatches-block__swatch {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  padding: 0;
+  background: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.colorway-swatches-block__swatch:hover {
+  border-color: rgba(var(--color-foreground-rgb), 0.4);
+}
+
+.colorway-swatches-block__swatch--active {
+  border-color: rgba(var(--color-foreground-rgb), 1);
+  cursor: default;
+}
+
+.colorway-swatches-block__swatch--active:hover {
+  border-color: rgba(var(--color-foreground-rgb), 1);
+}
+
+.colorway-swatches-block__swatch img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.colorway-swatches-block__swatch:focus-visible {
+  outline: 2px solid rgba(var(--color-foreground-rgb), 1);
+  outline-offset: 2px;
+}

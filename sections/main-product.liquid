@@ -901,6 +901,39 @@
               </p>
               {% endif %}
             
+            {%- when 'colorway_swatches' -%}
+            {%- liquid
+              assign colorway_products = product.metafields.custom.colorway_group.value
+              assign valid_swatches = 0
+              if colorway_products != blank
+                for cw_product in colorway_products
+                  if cw_product.metafields.custom.colorway_swatch.value != blank
+                    assign valid_swatches = valid_swatches | plus: 1
+                  endif
+                endfor
+              endif
+            -%}
+            {%- if valid_swatches >= 2 -%}
+              {{ 'colorway-swatches.css' | asset_url | stylesheet_tag }}
+              <div class="colorway-swatches-block" {{ block.shopify_attributes }}>
+                {%- for cw_product in colorway_products -%}
+                  {%- assign swatch_image = cw_product.metafields.custom.colorway_swatch.value -%}
+                  {%- if swatch_image != blank -%}
+                    {%- if cw_product.id == product.id -%}
+                      <span class="colorway-swatches-block__swatch colorway-swatches-block__swatch--active" aria-label="{{ cw_product.title }} (current)" aria-current="true">
+                        <img src="{{ swatch_image | image_url: width: 80 }}" alt="{{ cw_product.title }}" width="36" height="36" loading="lazy">
+                      </span>
+                    {%- else -%}
+                      <a href="{{ cw_product.url }}" class="colorway-swatches-block__swatch" data-product-url="{{ cw_product.url }}" aria-label="{{ cw_product.title }}">
+                        <img src="{{ swatch_image | image_url: width: 80 }}" alt="{{ cw_product.title }}" width="36" height="36" loading="lazy">
+                      </a>
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+              <script src="{{ 'colorway-swatches.js' | asset_url }}" defer="defer"></script>
+            {%- endif -%}
+
             {%- when 'custom_liquid' -%}
             <div class="product-custom-liquid-block" {{ block.shopify_attributes }}>
               {{ block.settings.custom_liquid }}
@@ -3028,6 +3061,12 @@
           "default": "center"
         }
       ]
+    },
+    {
+      "type": "colorway_swatches",
+      "limit": 1,
+      "name": "Colorway swatches",
+      "settings": []
     },
     {
       "type": "custom_liquid",
