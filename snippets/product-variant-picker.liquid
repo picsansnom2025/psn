@@ -19,6 +19,8 @@
   {% assign swatch_state = false %}
 {% endif %}
 
+{% assign size_guide_metaobject = product.metafields.custom.size_guide.value %}
+
 {%- unless product.has_only_default_variant -%}
 
 {% assign optionscount = 0 %}
@@ -47,6 +49,11 @@
         {% endif %}
         {% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}
           <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
+        {% endif %}
+        {% if option.name == 'Size' and size_guide_metaobject %}
+          <modal-opener data-modal="#SizeGuideModal">
+            <button type="button" class="size-guide-trigger" aria-haspopup="dialog">Size Guide</button>
+          </modal-opener>
         {% endif %}
       </legend>
       {% assign isopener = false %}
@@ -115,6 +122,11 @@
     <div class="product-form__input product-form__input--dropdown">
       <label class="form__label{% if labels == false %} visually-hidden{% endif %}" for="Option-{{ section.id }}-{{ forloop.index0 }}">
         {{ option.name }}{% if block.settings.show_puncuation %}:{% endif %}
+        {% if option.name == 'Size' and size_guide_metaobject %}
+          <modal-opener data-modal="#SizeGuideModal">
+            <button type="button" class="size-guide-trigger" aria-haspopup="dialog">Size Guide</button>
+          </modal-opener>
+        {% endif %}
       </label>
       <div class="select">
         {% if visual_variants contains option.name and swatch_state == true and show_variant_images == false %}
@@ -141,6 +153,8 @@
   
 {%- endif -%}
 {%- endfor -%}
+
+  {% render 'size-guide-modal', product: product %}
 
 <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}
