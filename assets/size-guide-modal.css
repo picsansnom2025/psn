@@ -40,10 +40,15 @@
   box-shadow: none;
 }
 
+/* Reduce content top padding so description sits closer to title */
+#SizeGuideModal .product-popup-modal__content-info {
+  padding-top: 0.5rem;
+}
+
 /* Fit description subheading */
 .size-guide-modal__fit-description {
   margin: 0;
-  padding: 0.5rem 20px 1rem;
+  padding: 0 0 1rem;
   font-size: 0.875em;
   color: rgba(var(--color-foreground), 0.7);
 }
