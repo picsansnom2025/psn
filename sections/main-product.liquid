@@ -287,6 +287,7 @@
     <div class="product product-main-info-section align-{{ section.settings.info_txt_alignment }} vertical-align-{{ section.settings.text_section_vertical_position }}">
       <div class="product__info-container product-info-justify-{{ section.settings.text_section_position }}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if section.settings.enable_sticky_buttons %} sticky-buy-buttons sticky-buy-buttons--border-{{ section.settings.sticky_buttons_border }}{% endif %}">
                 
+        <script src="{{ 'product-page-swap.js' | asset_url }}"></script>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -964,6 +965,31 @@
                 {%- endfor -%}
               </fieldset>
               <script src="{{ 'colorway-swatches.js' | asset_url }}" defer="defer"></script>
+            {%- endif -%}
+
+            {%- when 'gender_toggle' -%}
+            {%- liquid
+              assign product_gender = product.metafields.custom.product_gender.value
+              assign counterpart = product.metafields.custom.gender_counterpart.value
+            -%}
+            {%- if product_gender != blank and counterpart != blank -%}
+              {{ 'gender-toggle.css' | asset_url | stylesheet_tag }}
+              {%- if product_gender == "Women's" -%}
+                {%- assign active_label = "Women's" -%}
+                {%- assign inactive_label = "Men's" -%}
+              {%- else -%}
+                {%- assign active_label = "Men's" -%}
+                {%- assign inactive_label = "Women's" -%}
+              {%- endif -%}
+              <fieldset class="gender-toggle product-form__input" {{ block.shopify_attributes }}>
+                <legend class="form__label">Gender</legend>
+                <div class="gender-toggle__pills">
+                  <span class="gender-toggle__pill gender-toggle__pill--active" aria-current="true">{{ active_label }}</span>
+                  <span class="gender-toggle__divider" aria-hidden="true"></span>
+                  <a href="{{ counterpart.url }}" class="gender-toggle__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
+                </div>
+              </fieldset>
+              <script src="{{ 'gender-toggle.js' | asset_url }}" defer="defer"></script>
             {%- endif -%}
 
             {%- when 'custom_liquid' -%}
@@ -2135,7 +2161,7 @@
             {
               "value": "center",
               "label": "t:sections.all.alignment.center"
-            },
+            }
           ],
           "default": "left",
           "label": "t:sections.main-product.blocks.icon_grid.settings.icon_alignment.label"
@@ -2151,7 +2177,7 @@
             {
               "value": "horizontal",
               "label": "t:sections.all.layouts.horizontal"
-            },
+            }
           ],
           "default": "stacked",
           "label": "t:sections.main-product.blocks.icon_grid.settings.icon_layout.label"
@@ -2215,7 +2241,7 @@
             {
               "value": "4",
               "label": "4"
-            },
+            }
           ],
           "default": "auto",
           "label": "t:sections.main-product.blocks.icon_grid.settings.grid_columns_desktop.label"
@@ -3098,6 +3124,12 @@
       "type": "colorway_swatches",
       "limit": 1,
       "name": "Colorway swatches",
+      "settings": []
+    },
+    {
+      "type": "gender_toggle",
+      "limit": 1,
+      "name": "Gender toggle",
       "settings": []
     },
     {
