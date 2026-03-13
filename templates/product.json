@@ -50,6 +50,10 @@
             "show_shoppay_banner": false
           }
         },
+        "gender_toggle_qfHfxC": {
+          "type": "gender_toggle",
+          "settings": {}
+        },
         "d397b53e-d0be-4717-805f-6ee8a8d247bf": {
           "type": "variant_picker",
           "settings": {
@@ -173,6 +177,7 @@
         "title",
         "description",
         "price",
+        "gender_toggle_qfHfxC",
         "d397b53e-d0be-4717-805f-6ee8a8d247bf",
         "colorway_swatches_iLdUWU",
         "099f936f-1f52-44f2-8d7b-0188fbd363d5",
