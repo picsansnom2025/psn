@@ -967,6 +967,30 @@
               <script src="{{ 'colorway-swatches.js' | asset_url }}" defer="defer"></script>
             {%- endif -%}
 
+            {%- when 'gender_toggle' -%}
+            {%- liquid
+              assign product_gender = product.metafields.custom.product_gender.value
+              assign counterpart = product.metafields.custom.gender_counterpart.value
+            -%}
+            {%- if product_gender != blank and counterpart != blank -%}
+              {{ 'gender-toggle.css' | asset_url | stylesheet_tag }}
+              {%- if product_gender == "Women's" -%}
+                {%- assign active_label = "Women's" -%}
+                {%- assign inactive_label = "Men's" -%}
+              {%- else -%}
+                {%- assign active_label = "Men's" -%}
+                {%- assign inactive_label = "Women's" -%}
+              {%- endif -%}
+              <fieldset class="gender-toggle product-form__input" {{ block.shopify_attributes }}>
+                <legend class="form__label">Gender</legend>
+                <div class="gender-toggle__pills">
+                  <span class="gender-toggle__pill gender-toggle__pill--active" aria-current="true">{{ active_label }}</span>
+                  <a href="{{ counterpart.url }}" class="gender-toggle__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
+                </div>
+              </fieldset>
+              <script src="{{ 'gender-toggle.js' | asset_url }}" defer="defer"></script>
+            {%- endif -%}
+
             {%- when 'custom_liquid' -%}
             <div class="product-custom-liquid-block" {{ block.shopify_attributes }}>
               {{ block.settings.custom_liquid }}
@@ -3099,6 +3123,12 @@
       "type": "colorway_swatches",
       "limit": 1,
       "name": "Colorway swatches",
+      "settings": []
+    },
+    {
+      "type": "gender_toggle",
+      "limit": 1,
+      "name": "Gender toggle",
       "settings": []
     },
     {
