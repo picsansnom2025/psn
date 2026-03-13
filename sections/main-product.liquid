@@ -971,8 +971,12 @@
             {%- liquid
               assign product_gender = product.metafields.custom.product_gender.value
               assign counterpart = product.metafields.custom.gender_counterpart.value
+              assign counterpart_url = counterpart.url | default: ''
+              if counterpart_url == blank and counterpart.handle != blank
+                assign counterpart_url = '/products/' | append: counterpart.handle
+              endif
             -%}
-            {%- if product_gender != blank and counterpart != blank -%}
+            {%- if product_gender != blank and counterpart_url != blank -%}
               {{ 'gender-toggle.css' | asset_url | stylesheet_tag }}
               {%- if product_gender == "Women's" -%}
                 {%- assign active_label = "Women's" -%}
@@ -985,7 +989,7 @@
                 <legend class="form__label">Gender</legend>
                 <div class="gender-toggle__pills">
                   <span class="gender-toggle__pill gender-toggle__pill--active" aria-current="true">{{ active_label }}</span>
-                  <a href="{{ counterpart.url }}" class="gender-toggle__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
+                  <a href="{{ counterpart_url }}" class="gender-toggle__pill" data-gender-swap-url="{{ counterpart_url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
                 </div>
               </fieldset>
               <script src="{{ 'gender-toggle.js' | asset_url }}" defer="defer"></script>
