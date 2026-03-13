@@ -147,8 +147,9 @@
     "gift_card_logo_width": 90,
     "cart_type": "drawer",
     "cart_show_quantity": true,
-    "show_vendor": true,
+    "show_vendor": false,
     "show_cart_note": false,
+    "cart_show_review_button": false,
     "content_for_index": []
   },
   "installed_preset_name": "Luxe",
