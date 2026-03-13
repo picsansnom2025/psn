@@ -34,11 +34,15 @@ window.ProductPageSwap = {
 - `onAfterSwap(url)` — optional callback for cleanup
 - `stateKey` — string for pushState state object (default: `'productSwap'`)
 
+### Script Loading
+
+`product-page-swap.js` must be loaded **before** both consumer scripts. Load it unconditionally near the top of `main-product.liquid`'s block render output (outside any `when` case), since its popstate listener should be present on every PDP. Both `colorway-swatches.js` and `gender-toggle.js` continue to load with `defer` inside their respective block `when` cases, after the utility.
+
 ### Responsibilities
 
-1. Fetch target URL, parse with `DOMParser`
-2. Swap `<main>` via `HTMLUpdateUtility.viewTransition()` with standard callbacks:
-   - **Pre:** cancel `.scroll-trigger` animations
+1. Fetch target URL, parse with `DOMParser` (produces a DOM node, not an HTML string)
+2. Swap `<main>` via `HTMLUpdateUtility.viewTransition(oldNode, newContent, preCallbacks, postCallbacks)` with standard callbacks:
+   - **Pre:** cancel `.scroll-trigger` animations on `newContent`
    - **Post:** reinit `Shopify.PaymentButton`, `ProductModel.loadShopifyXR()`
 3. Update `<title>` from parsed document
 4. `history.pushState()` with `{ [stateKey]: true, url }` state
@@ -47,11 +51,11 @@ window.ProductPageSwap = {
 
 ### Popstate
 
-Single `popstate` listener: reloads page if `e.state` contains any swap key (`productSwap`, `colorwaySwap`, `genderSwap`). Replaces the current listener in `colorway-swatches.js`.
+Single `popstate` listener registered by the utility: reloads page if `e.state` contains any swap key (`productSwap`, `colorwaySwap`, `genderSwap`). The existing popstate listener in `colorway-swatches.js` must be **removed** (not just supplemented) as part of the refactor to avoid duplicate listeners.
 
 ### Refactor of colorway-swatches.js
 
-Replace the inline fetch/parse/swap block (~40 lines) with:
+Remove the inline fetch/parse/swap block (~40 lines) **and** the popstate listener. Replace the swap block with:
 
 ```js
 ProductPageSwap.navigate(productUrl, {
@@ -75,6 +79,13 @@ New `{%- when 'gender_toggle' -%}` case in the block render loop.
 2. Guard: if either is blank, or counterpart product doesn't exist → render nothing
 3. Render segmented pill toggle
 
+**Asset loading:** Inside the `when 'gender_toggle'` case, load CSS and JS following the same pattern as colorway swatches:
+```liquid
+{{ 'gender-toggle.css' | asset_url | stylesheet_tag }}
+{%- comment -%} ... toggle markup ... {%- endcomment -%}
+<script src="{{ 'gender-toggle.js' | asset_url }}" defer="defer"></script>
+```
+
 **Markup:**
 ```html
 <fieldset class="gender-toggle product-form__input" {{ block.shopify_attributes }}>
@@ -82,7 +93,7 @@ New `{%- when 'gender_toggle' -%}` case in the block render loop.
   <div class="gender-toggle__pills">
     <!-- Active gender -->
     <span class="gender-toggle__pill gender-toggle__pill--active" aria-current="true">Men's</span>
-    <!-- Inactive gender — links to counterpart -->
+    <!-- Inactive gender — links to counterpart (progressive enhancement: works as plain link without JS) -->
     <a href="{{ counterpart_url }}"
        class="gender-toggle__pill"
        data-gender-swap-url="{{ counterpart_url }}"
@@ -129,22 +140,30 @@ Add `womens_measurements` JSON field to existing `size_guide` metaobject definit
 
 ### Liquid — `snippets/size-guide-modal.liquid` (modified)
 
+**Render chain:** The modal is rendered via `{% render 'size-guide-modal', product: product %}` from `snippets/product-variant-picker.liquid` (line 157), not directly from `main-product.liquid`. The `product` object passed to the snippet includes `product.metafields.custom.product_gender`, so no additional variables need to be passed.
+
 - Read `product.metafields.custom.product_gender` to determine active tab
 - If both `measurements` and `womens_measurements` exist → render tabbed interface
 - If only one exists → render single table, no tabs (backwards compatible)
 
 **Tab markup:**
 ```html
-<div class="size-guide-modal__tabs">
+<div class="size-guide-modal__tabs" role="tablist">
   <button class="size-guide-modal__tab size-guide-modal__tab--active"
-          data-tab="mens" type="button">Men's</button>
+          data-tab="mens" type="button" role="tab"
+          aria-selected="true" aria-controls="sg-panel-mens"
+          id="sg-tab-mens">Men's</button>
   <button class="size-guide-modal__tab"
-          data-tab="womens" type="button">Women's</button>
+          data-tab="womens" type="button" role="tab"
+          aria-selected="false" aria-controls="sg-panel-womens"
+          id="sg-tab-womens">Women's</button>
 </div>
-<div class="size-guide-modal__tab-panel" data-panel="mens">
+<div class="size-guide-modal__tab-panel" data-panel="mens"
+     role="tabpanel" id="sg-panel-mens" aria-labelledby="sg-tab-mens">
   <!-- men's measurement table -->
 </div>
-<div class="size-guide-modal__tab-panel" data-panel="womens" hidden>
+<div class="size-guide-modal__tab-panel" data-panel="womens" hidden
+     role="tabpanel" id="sg-panel-womens" aria-labelledby="sg-tab-womens">
   <!-- women's measurement table -->
 </div>
 ```
@@ -165,7 +184,7 @@ Active tab defaults to current product's `product_gender`. After AJAX swap, the 
 
 ### Colorway swatch interaction
 
-No changes needed. Colorway groups are gender-specific — men's products link to other men's colorways. After colorway AJAX swap, the new product's `product_gender` and `gender_counterpart` metafields render the correct toggle state.
+No code changes needed. The gender toggle renders correctly after any AJAX swap because the entire `<main>` is replaced with fresh HTML from the new product's page — the new product's `product_gender` and `gender_counterpart` metafields determine the toggle's rendered state. This works regardless of how colorway groups are organized. **Data setup assumption:** colorway groups should contain same-gender products only (men's colorways link to other men's products). If a merchant accidentally cross-links genders in a colorway group, the toggle will still render correctly (it reads the current product's metafields), but the user experience would be confusing.
 
 ### Graceful degradation
 
@@ -175,6 +194,7 @@ No changes needed. Colorway groups are gender-specific — men's products link t
 | `product_gender` set, no counterpart | Block renders nothing |
 | Counterpart deleted/unpublished | Liquid `.value` returns nil → nothing rendered |
 | AJAX fetch fails | Promise rejects → fallback to `window.location.href` |
+| JavaScript disabled | Inactive pill is a plain `<a href>` → standard navigation (progressive enhancement) |
 
 ### Reinit after swap
 
