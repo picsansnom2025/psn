@@ -131,8 +131,8 @@
         "5c65d55b-9f21-4d69-b50a-6219b616bb68": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Features & Benefits",
-            "content": "<p>Add product specifications here or connect this area to dynamic content such as product meta fields.</p>",
+            "heading": "Product Details",
+            "content": "{{ product.description }}",
             "page": ""
           }
         },
