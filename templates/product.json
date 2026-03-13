@@ -198,7 +198,7 @@
         "gallery_height_limit_desktop": true,
         "media_section_width": "wide",
         "mobile_media_nav": "track",
-        "mobile_media_nav_position": "below-media",
+        "mobile_media_nav_position": "within-media",
         "gallery_layout": "stack",
         "desktop_media_nav": "thumbnails",
         "desktop_media_thumbnail_size": "normal",
