@@ -1,10 +1,8 @@
 /**
- * Colorway Swatches — AJAX product swap for pseudo-variant color navigation.
+ * Colorway Swatches — click handler for pseudo-variant color navigation.
  *
- * When a swatch is clicked, fetches the sibling product's full page HTML
- * via Shopify's Section Rendering API and swaps <main> using the theme's
- * HTMLUpdateUtility.viewTransition(). Falls back to standard navigation
- * if the fetch or swap fails.
+ * Delegates AJAX product swap to ProductPageSwap utility.
+ * Falls back to standard navigation if the swap fails.
  */
 (function () {
   document.addEventListener('click', function (e) {
@@ -16,62 +14,21 @@
     const productUrl = swatch.dataset.productUrl;
     if (!productUrl) return;
 
-    // Show loading state
-    const swatchBlock = swatch.closest('.colorway-swatches-block');
-    if (swatchBlock) swatchBlock.style.opacity = '0.5';
-
-    fetch(productUrl)
-      .then(function (response) {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.text();
-      })
-      .then(function (html) {
-        const parsed = new DOMParser().parseFromString(html, 'text/html');
-        const newMain = parsed.querySelector('main');
-        const oldMain = document.querySelector('main');
-
-        if (!newMain || !oldMain) throw new Error('Could not find main element');
-
-        // Update page title
-        const newTitle = parsed.querySelector('head title');
-        if (newTitle) document.querySelector('head title').innerHTML = newTitle.innerHTML;
-
-        // Swap main content using theme utility
-        var preCallbacks = [
-          function (content) {
-            content.querySelectorAll('.scroll-trigger').forEach(function (el) {
-              el.classList.add('scroll-trigger--cancel');
-            });
-          }
-        ];
-        var postCallbacks = [
-          function () {
-            if (window.Shopify && window.Shopify.PaymentButton) window.Shopify.PaymentButton.init();
-            if (window.ProductModel) window.ProductModel.loadShopifyXR();
-          }
-        ];
-
-        HTMLUpdateUtility.viewTransition(oldMain, newMain, preCallbacks, postCallbacks);
-
-        // Update URL via History API
-        window.history.pushState({ colorwaySwap: true, url: productUrl }, '', productUrl);
-
-        // Scroll to top of product section
-        var productSection = document.querySelector('main .section-main-product, main product-info');
-        if (productSection) {
-          productSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      })
-      .catch(function () {
-        // Fallback: standard navigation
-        window.location.href = productUrl;
-      });
-  });
-
-  // Handle browser back/forward after AJAX swap
-  window.addEventListener('popstate', function (e) {
-    if (e.state && e.state.colorwaySwap) {
-      window.location.reload();
+    // Guard: fall back to standard navigation if utility not loaded
+    if (!window.ProductPageSwap) {
+      window.location.href = productUrl;
+      return;
     }
+
+    const swatchBlock = swatch.closest('.colorway-swatches-block');
+
+    ProductPageSwap.navigate(productUrl, {
+      stateKey: 'colorwaySwap',
+      onBeforeSwap: function () {
+        if (swatchBlock) swatchBlock.style.opacity = '0.5';
+      }
+    }).catch(function () {
+      window.location.href = productUrl;
+    });
   });
 })();
