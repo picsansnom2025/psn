@@ -970,9 +970,9 @@
             {%- when 'gender_toggle' -%}
             {%- liquid
               assign product_gender = product.metafields.custom.product_gender.value
-              assign counterpart = product.metafields.custom.gender_counterpart.value
+              assign counterpart_ref = product.metafields.custom.gender_counterpart.value
+              assign counterpart = counterpart_ref.first
             -%}
-            <!-- DEBUG gender_toggle: gender="{{ product_gender }}" counterpart="{{ counterpart }}" url="{{ counterpart.url }}" handle="{{ counterpart.handle }}" title="{{ counterpart.title }}" -->
             {%- if product_gender != blank and counterpart != blank -%}
               {{ 'gender-toggle.css' | asset_url | stylesheet_tag }}
               {%- if product_gender == "Women's" -%}
