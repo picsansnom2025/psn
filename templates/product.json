@@ -231,7 +231,7 @@
         "text_section_padding": 60,
         "blocks_vertical_spacing": 20,
         "description_split_keyword": "INFOBREAK",
-        "padding_top_mobile": 0,
+        "padding_top_mobile": 30,
         "padding_bottom_mobile": 0,
         "padding_top": 0,
         "padding_bottom": 40,
