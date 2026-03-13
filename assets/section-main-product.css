@@ -1056,7 +1056,7 @@ fieldset.product-form__input .form__label {
   font-size: var(--font-ui-size-mobile);
   line-height: 1;
   text-align: center;
-  transition: border var(--duration-short) ease;
+  transition: border 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -1221,6 +1221,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio']:not(.disabled) + label:hover {
   border: var(--variant-pills-border-width) solid rgba(var(--color-foreground-rgb),1);
+  background-color: rgba(var(--color-foreground-rgb), 0.06);
 }
 
 .product-form__input input[type='radio']:checked + label {
