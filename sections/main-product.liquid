@@ -287,7 +287,7 @@
     <div class="product product-main-info-section align-{{ section.settings.info_txt_alignment }} vertical-align-{{ section.settings.text_section_vertical_position }}">
       <div class="product__info-container product-info-justify-{{ section.settings.text_section_position }}{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}{% if section.settings.enable_sticky_buttons %} sticky-buy-buttons sticky-buy-buttons--border-{{ section.settings.sticky_buttons_border }}{% endif %}">
                 
-        <script src="{{ 'product-page-swap.js' | asset_url }}" defer="defer"></script>
+        <script src="{{ 'product-page-swap.js' | asset_url }}"></script>
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -985,6 +985,7 @@
                 <legend class="form__label">Gender</legend>
                 <div class="gender-toggle__pills">
                   <span class="gender-toggle__pill gender-toggle__pill--active" aria-current="true">{{ active_label }}</span>
+                  <span class="gender-toggle__divider" aria-hidden="true"></span>
                   <a href="{{ counterpart.url }}" class="gender-toggle__pill" data-gender-swap-url="{{ counterpart.url }}" aria-label="Switch to {{ inactive_label }}">{{ inactive_label }}</a>
                 </div>
               </fieldset>

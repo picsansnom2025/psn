@@ -12,7 +12,12 @@
     e.preventDefault();
 
     const url = pill.dataset.genderSwapUrl;
-    if (!url) return;
+    if (!url) {
+      // If data attribute is empty, try the href
+      const href = pill.getAttribute('href');
+      if (href) window.location.href = href;
+      return;
+    }
 
     // Guard: fall back to standard navigation if utility not loaded
     if (!window.ProductPageSwap) {

@@ -1,4 +1,4 @@
-/* Gender Toggle — segmented pill for men's/women's product navigation */
+/* Gender Toggle — text-link style for men's/women's product navigation */
 
 .gender-toggle {
   border: none;
@@ -8,45 +8,51 @@
 
 .gender-toggle__pills {
   display: inline-flex;
-  border: 1px solid rgba(var(--color-foreground), 0.15);
-  border-radius: 4px;
-  overflow: hidden;
+  align-items: center;
+  gap: 0;
 }
 
 .gender-toggle__pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1.25rem;
-  font-size: 0.8125rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
   font-family: inherit;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease;
   border: none;
   background: transparent;
   color: rgba(var(--color-foreground), 0.55);
+  position: relative;
 }
 
 .gender-toggle__pill--active {
-  background: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
   cursor: default;
 }
 
+/* Underline on active pill */
+.gender-toggle__pill--active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 1.5px;
+  background: rgb(var(--color-foreground));
+}
+
 .gender-toggle__pill:not(.gender-toggle__pill--active):hover {
-  background: rgba(var(--color-foreground), 0.06);
   color: rgba(var(--color-foreground), 0.8);
 }
 
-/* Divider between pills */
-.gender-toggle__pill + .gender-toggle__pill {
-  border-left: 1px solid rgba(var(--color-foreground), 0.15);
-}
-
-.gender-toggle__pill--active + .gender-toggle__pill,
-.gender-toggle__pill + .gender-toggle__pill--active {
-  border-left-color: transparent;
+/* Vertical divider between pills */
+.gender-toggle__divider {
+  width: 1.5px;
+  height: 1em;
+  background: rgba(var(--color-foreground), 0.25);
+  flex-shrink: 0;
 }
