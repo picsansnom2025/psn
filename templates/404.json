@@ -1,1 +1,376 @@
-{"sections":{"main":{"type":"main-404","settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_banner_EPXhix": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_empxfc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heading",
+            "heading_size": "h1",
+            "txt_alignment": "inherit"
+          }
+        },
+        "text_rxVkUq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Talk about your brand, product or content</p>",
+            "text_size": "text-std"
+          }
+        },
+        "buttons_XQqYNC": {
+          "type": "buttons",
+          "settings": {
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_color_scheme": "white",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "btn_one_show": true,
+            "btn_one_txt": "Button text",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_empxfc",
+        "text_rxVkUq",
+        "buttons_XQqYNC"
+      ],
+      "name": "t:sections.video-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-fullscreen",
+        "video_url": "shopify://files/videos/1bbe15acb2114a93bf721ac8dcda9bf1_raw.mp4",
+        "overlay_level": 0,
+        "video_size": "100",
+        "video_position": "center",
+        "video_margin_mobile": 0,
+        "video_margin_desktop": 0,
+        "enable_playback_pause": false,
+        "enable_audio": false,
+        "txt_position": "middle",
+        "txt_alignment": "center",
+        "content_width": 100,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": false,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "#000000"
+      }
+    },
+    "rich_text_k7aWX4": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_mt4qFH": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "alignment": "left",
+            "opacity": 100
+          }
+        },
+        "heading_EjcWEM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        },
+        "text_RypBaC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_size": "text-std",
+            "alignment": "left",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "caption_mt4qFH",
+        "heading_EjcWEM",
+        "text_RypBaC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "logo_wall_MdMe8J": {
+      "type": "logo-wall",
+      "blocks": {
+        "image_cRQihG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/VOGUE_LOGO.svg",
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_hrBbhc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Harper_s_Bazaar_Logo_svg.webp",
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_VQ8Y4Y": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_jxPfam": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_eYChgW": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_cRQihG",
+        "image_hrBbhc",
+        "image_VQ8Y4Y",
+        "image_jxPfam",
+        "image_eYChgW"
+      ],
+      "name": "t:sections.logo_wall.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "grid_style": "grid",
+        "grid_columns_mobile": "auto",
+        "grid_columns_tablet": "auto",
+        "grid_columns_desktop": "auto",
+        "animation_speed": 24,
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "logo_size_mobile": 80,
+        "logo_size_tablet": 80,
+        "logo_size": 80,
+        "logo_spacing_mobile": 40,
+        "logo_spacing_tablet": 60,
+        "logo_spacing": 60,
+        "logo_colour": "colour",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "featured_collection_WpfzBX": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "most-popular",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "Featured collection",
+        "heading_size": "h2",
+        "description": "",
+        "btn_enable": false,
+        "btn_label": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "products_layout": "carousel",
+        "arrow_style": "solid",
+        "content_width": "page-width",
+        "no_items": 8,
+        "mobile_grid": "1",
+        "tablet_grid": "3",
+        "dt_grid": "4",
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_prices": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "rollover_titles": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collection_lookbook_eN9mmM": {
+      "type": "collection-lookbook",
+      "name": "t:sections.collection-lookbook.presets.name",
+      "settings": {
+        "collection": "accessories",
+        "image": "shopify://shop_images/0329_2591e6e1-d479-4e6a-9d58-08834074590c.jpg",
+        "image_ratio": "adapt",
+        "image_alignment": "left",
+        "products_layout": "slider",
+        "arrow_style": "solid",
+        "grid_columns": "single",
+        "grid_horizontal_position": "center",
+        "product_card_size": "normal",
+        "products_alignment": "center",
+        "no_items": 4,
+        "show_secondary_image": false,
+        "show_prices": true,
+        "card_price_position": "auto",
+        "show_vendor": false,
+        "section_label": "",
+        "heading": "",
+        "sub_heading": "",
+        "heading_size": "h2",
+        "section_heading_position": "normal",
+        "txt_alignment": "left",
+        "btn_txt": "",
+        "btn_link": "",
+        "button_color_scheme": "default",
+        "btn_position": "middle",
+        "btn_style": "solid",
+        "content_width": "page-width-full-grid",
+        "card_spacing": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {
+        "txt_alignment": "center"
+      }
+    },
+    "section_testimonials_ycnGEF": {
+      "type": "section-testimonials",
+      "blocks": {
+        "testimonial_fzQYtf": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "A customer review or quote from the press.",
+            "caption": "",
+            "star_rating": 5
+          }
+        },
+        "testimonial_wBWN6A": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "A customer review or quote from the press.",
+            "caption": "",
+            "star_rating": 5
+          }
+        },
+        "testimonial_LPqhj3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "A customer review or quote from the press.",
+            "caption": "",
+            "star_rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_fzQYtf",
+        "testimonial_wBWN6A",
+        "testimonial_LPqhj3"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "section_layout": "grid",
+        "section_label": "",
+        "heading": "",
+        "subheading": "",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "show_ratings": true,
+        "show_captions": true,
+        "show_logos": false,
+        "image_size": 80,
+        "quote_font_size": "normal",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "video_banner_EPXhix",
+    "rich_text_k7aWX4",
+    "logo_wall_MdMe8J",
+    "featured_collection_WpfzBX",
+    "collection_lookbook_eN9mmM",
+    "main",
+    "section_testimonials_ycnGEF"
+  ]
+}
