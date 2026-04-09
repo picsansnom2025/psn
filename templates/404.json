@@ -15,7 +15,7 @@
         "heading_empxfc": {
           "type": "heading",
           "settings": {
-            "heading": "Heading",
+            "heading": "ARCTIC COLLECTION",
             "heading_size": "h1",
             "txt_alignment": "inherit"
           }
@@ -23,7 +23,7 @@
         "text_rxVkUq": {
           "type": "text",
           "settings": {
-            "text": "<p>Talk about your brand, product or content</p>",
+            "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
             "text_size": "text-std"
           }
         },
@@ -90,7 +90,7 @@
         "heading_EjcWEM": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "ALPINE ESCAPE",
             "heading_size": "h2",
             "alignment": "left"
           }
@@ -98,7 +98,7 @@
         "text_RypBaC": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text": "<p>Combining sophistication and technical materials, the CHANEL COCO NEIGE 2025/26 collection offers an elegant wardrobe.<br/>Starring actress and House ambassador Nana Komatsu, the campaign is inspired by Gabrielle Chanel's love of the mountains.</p>",
             "text_size": "text-std",
             "alignment": "left",
             "text_indent": "noindent"
@@ -124,6 +124,57 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
+      }
+    },
+    "section_media_collage_b7VPDg": {
+      "type": "section-media-collage",
+      "blocks": {
+        "image_BjGxfw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/99f1115759330c4931bc7c6de113632a.png",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_fcjFnH": {
+          "type": "image",
+          "settings": {
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_BjGxfw",
+        "image_fcjFnH"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h0",
+        "description": "",
+        "hdr_alignment": "right",
+        "header_style": "overlay",
+        "content_layout": "grid",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width",
+        "grid_spacing": "default-grid",
+        "grid_columns_tablet": 2,
+        "grid_columns_desktop": 2,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "logo_wall_MdMe8J": {
@@ -367,6 +418,7 @@
   "order": [
     "video_banner_EPXhix",
     "rich_text_k7aWX4",
+    "section_media_collage_b7VPDg",
     "logo_wall_MdMe8J",
     "featured_collection_WpfzBX",
     "collection_lookbook_eN9mmM",
