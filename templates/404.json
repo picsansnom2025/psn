@@ -79,20 +79,12 @@
     "rich_text_k7aWX4": {
       "type": "rich-text",
       "blocks": {
-        "caption_mt4qFH": {
-          "type": "caption",
-          "settings": {
-            "caption": "Add a tagline",
-            "alignment": "left",
-            "opacity": 100
-          }
-        },
         "heading_EjcWEM": {
           "type": "heading",
           "settings": {
             "heading": "ALPINE ESCAPE",
             "heading_size": "h2",
-            "alignment": "left"
+            "alignment": "center"
           }
         },
         "text_RypBaC": {
@@ -100,13 +92,12 @@
           "settings": {
             "text": "<p>Combining sophistication and technical materials, the CHANEL COCO NEIGE 2025/26 collection offers an elegant wardrobe.<br/>Starring actress and House ambassador Nana Komatsu, the campaign is inspired by Gabrielle Chanel's love of the mountains.</p>",
             "text_size": "text-std",
-            "alignment": "left",
+            "alignment": "center",
             "text_indent": "noindent"
           }
         }
       },
       "block_order": [
-        "caption_mt4qFH",
         "heading_EjcWEM",
         "text_RypBaC"
       ],
