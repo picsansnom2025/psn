@@ -44,11 +44,13 @@
       "blocks": {
         "image_qUqpAm": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "dd_name": "",
             "show_in_dropdown": true,
             "show_in_drawer": false,
             "show_in_drawer_primary": false,
+            "image": "shopify://shop_images/1111.png",
             "image_link": "",
             "text_position": "below-image",
             "text_color": "normal",

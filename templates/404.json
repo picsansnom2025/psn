@@ -144,6 +144,7 @@
         "image_fcjFnH": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/c9fd5896d18688383489ed888cd8dee6.jpg",
             "image_size": "half_width",
             "image_ratio": "square",
             "image_padding_mobile": 0,
@@ -175,6 +176,97 @@
         "bg_color": "bg-body",
         "padding_top": 80,
         "padding_bottom": 80
+      }
+    },
+    "image_with_hotspots_L9JULR": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "hotspot_LCiWjg": {
+          "type": "hotspot",
+          "settings": {
+            "product": "lecorset-tank-bodysuit-1",
+            "pos_x": 60,
+            "pos_y": 40
+          }
+        },
+        "hotspot_PJmaQD": {
+          "type": "hotspot",
+          "settings": {
+            "product": "eco-faux-fur-ski-jacket",
+            "pos_x": 45,
+            "pos_y": 35
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_LCiWjg",
+        "hotspot_PJmaQD"
+      ],
+      "name": "t:sections.image_with_hotspots.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "Shop the look",
+        "subheading": "",
+        "content_alignment": "left",
+        "image": "shopify://shop_images/1_3.png",
+        "image_ratio": "landscape-16x9",
+        "content_width": "page-width-full",
+        "hotspot_style": "minimal",
+        "hotspot_color": "light",
+        "hotspot_desktop_interaction": "hover",
+        "hotspot_animate": true,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 160,
+        "bottom_padding": 140,
+        "top_border": true,
+        "bottom_border": true,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collection_lookbook_EK9rmP": {
+      "type": "collection-lookbook",
+      "name": "t:sections.collection-lookbook.presets.name",
+      "settings": {
+        "collection": "arctic-collection",
+        "image": "shopify://shop_images/Generated_Image_October_28_2025_-_10_23PM.png",
+        "image_ratio": "square",
+        "image_alignment": "left",
+        "products_layout": "slider",
+        "arrow_style": "solid",
+        "grid_columns": "single",
+        "grid_horizontal_position": "center",
+        "product_card_size": "normal",
+        "products_alignment": "center",
+        "no_items": 4,
+        "show_secondary_image": false,
+        "show_prices": true,
+        "card_price_position": "auto",
+        "show_vendor": false,
+        "section_label": "",
+        "heading": "",
+        "sub_heading": "",
+        "heading_size": "h2",
+        "section_heading_position": "normal",
+        "txt_alignment": "left",
+        "btn_txt": "",
+        "btn_link": "",
+        "button_color_scheme": "default",
+        "btn_position": "middle",
+        "btn_style": "solid",
+        "content_width": "page-width-full-grid",
+        "card_spacing": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
       }
     },
     "logo_wall_MdMe8J": {
@@ -267,7 +359,7 @@
         "collection": "most-popular",
         "content_alignment": "center",
         "section_label": "",
-        "heading": "Featured collection",
+        "heading": "Most Popular",
         "heading_size": "h2",
         "description": "",
         "btn_enable": false,
@@ -275,10 +367,10 @@
         "btn_style": "solid",
         "btn_position_mobile": "bottom",
         "btn_position_desktop": "bottom",
-        "products_layout": "carousel",
+        "products_layout": "grid",
         "arrow_style": "solid",
-        "content_width": "page-width",
-        "no_items": 8,
+        "content_width": "full-width-collection",
+        "no_items": 11,
         "mobile_grid": "1",
         "tablet_grid": "3",
         "dt_grid": "4",
@@ -319,7 +411,7 @@
         "no_items": 4,
         "show_secondary_image": false,
         "show_prices": true,
-        "card_price_position": "auto",
+        "card_price_position": "bottom",
         "show_vendor": false,
         "section_label": "",
         "heading": "",
@@ -359,7 +451,7 @@
         "testimonial_fzQYtf": {
           "type": "testimonial",
           "settings": {
-            "quote": "A customer review or quote from the press.",
+            "quote": "PERFECT SKI PANTS!",
             "caption": "",
             "star_rating": 5
           }
@@ -367,7 +459,7 @@
         "testimonial_wBWN6A": {
           "type": "testimonial",
           "settings": {
-            "quote": "A customer review or quote from the press.",
+            "quote": "Ski Goggles",
             "caption": "",
             "star_rating": 5
           }
@@ -375,7 +467,7 @@
         "testimonial_LPqhj3": {
           "type": "testimonial",
           "settings": {
-            "quote": "A customer review or quote from the press.",
+            "quote": "Ski Wear",
             "caption": "",
             "star_rating": 5
           }
@@ -419,6 +511,8 @@
     "video_banner_EPXhix",
     "rich_text_k7aWX4",
     "section_media_collage_b7VPDg",
+    "image_with_hotspots_L9JULR",
+    "collection_lookbook_EK9rmP",
     "logo_wall_MdMe8J",
     "featured_collection_WpfzBX",
     "collection_lookbook_eN9mmM",

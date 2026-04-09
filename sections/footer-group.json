@@ -1,1 +1,200 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer_shopping_info_PrGcJA":{"type":"footer-shopping-info","blocks":{"column_f8PDBL":{"type":"column","settings":{"icon":"location","title":"Our Stores","text":"<p>London, Paris, Tokyo</p>"}},"column_9nVpjd":{"type":"column","settings":{"icon":"gift","title":"Gift Wrapping","text":"<p>Available on all orders</p>"}},"column_VMH6pt":{"type":"column","settings":{"icon":"return","title":"Free Returns","text":"<p>Easy global returns</p>"}},"column_73RftU":{"type":"column","settings":{"icon":"payment","title":"Secure Payment","text":"<p>Flexible and simple</p>"}}},"block_order":["column_f8PDBL","column_9nVpjd","column_VMH6pt","column_73RftU"],"settings":{"text_alignment":"center","content_width":"page-width","icon_size":"normal","block_heading_size":"h5","top_border":true,"bottom_border":false,"grid_column_gap":20,"keylines_show_mobile":false,"keylines_show":true,"keylines_to_edge":false,"keyline_colour":"0","text_color":"fg-body","bg_color":"bg-body","top_padding":40,"bottom_padding":40}},"footer":{"type":"footer","blocks":{"logo_B6PCPJ":{"type":"logo","disabled":true,"settings":{"logo_size":150,"logo_full_width":true,"logo_opacity":100,"alignment":"left","logo_padding_top":20,"logo_padding_bottom":20,"block_width":"full_width"}},"newsletter_footer_block":{"type":"newsletter_signup","settings":{"heading":"Subscribe","heading_size":"fbh-large","heading_style":"normal","subheading":"<p>Be the first to know about our new products</p>","disclaimer_show":false,"disclaimer":"","newsletter_form_width":"normal","newsletter_style":"minimal","border_opacity":60,"newsletter_submit_style":"icon","padding_top":20,"padding_bottom":30,"alignment":"center","block_width":"full_width"}},"link_list_YbfEkc":{"type":"link_list","settings":{"heading":"Discover","list_type_mobile":"accordion","block_width":"column_width","alignment":"left","list_layout":"vertical","list_layout_mobile":"vertical","menu":"footer"}},"link_list_t4mNyf":{"type":"link_list","settings":{"heading":"Explore","list_type_mobile":"accordion","block_width":"column_width","alignment":"left","list_layout":"vertical","list_layout_mobile":"vertical","menu":"footer"}},"link_list_B6bDcU":{"type":"link_list","settings":{"heading":"Help","list_type_mobile":"accordion","block_width":"column_width","alignment":"left","list_layout":"vertical","list_layout_mobile":"vertical","menu":"footer"}},"text_gyqwQi":{"type":"text","settings":{"heading":"Visit","subtext":"<p>Discover a shopping experience like no other in one our of unique stores.</p>","text_size":"text-normal","alignment_mobile":"left","alignment":"left","block_width":"column_width"}},"footer_social_media_block":{"type":"social_media","disabled":true,"settings":{"heading":"Channels","alignment":"left","block_width":"column_width","link_style":"icons"}}},"block_order":["logo_B6PCPJ","newsletter_footer_block","link_list_YbfEkc","link_list_t4mNyf","link_list_B6bDcU","text_gyqwQi","footer_social_media_block"],"settings":{"footer_font_family":"body","footer_font_size":"body","footer_heading_size":"normal","footer_heading_style":"normal","footer_heading_opacity":60,"footer_horizontal_spacing_desktop":20,"footer_padding_vertical":40,"footer_padding_bottom":20,"text_color":"fg-body","bg_color":"bg-01","main_footer_border":0,"main_footer_border_color":"dark","sub_footer_border":true,"sub_footer_border_color":"dark","sub_footer_border_width":"full","sub_footer_layout":"two-column","sub_footer_alignment":"align-center","sub_footer_linklist":"","sub_footer_single_link":"","sub_footer_single_link_label":"","show_policies":true,"show_powered_by":true,"payment_enable":false,"location_enable":true,"location_format":"code","show_currency_symbol":true,"language_enable":true,"show_location_labels":false,"follow_shop_enable":true}}},"order":["footer_shopping_info_PrGcJA","footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer_shopping_info_PrGcJA": {
+      "type": "footer-shopping-info",
+      "blocks": {
+        "column_f8PDBL": {
+          "type": "column",
+          "settings": {
+            "icon": "location",
+            "title": "Our Stores",
+            "text": "<p>London, Paris, Tokyo</p>"
+          }
+        },
+        "column_9nVpjd": {
+          "type": "column",
+          "settings": {
+            "icon": "gift",
+            "title": "Gift Wrapping",
+            "text": "<p>Available on all orders</p>"
+          }
+        },
+        "column_VMH6pt": {
+          "type": "column",
+          "settings": {
+            "icon": "return",
+            "title": "Free Returns",
+            "text": "<p>Easy global returns</p>"
+          }
+        },
+        "column_73RftU": {
+          "type": "column",
+          "settings": {
+            "icon": "payment",
+            "title": "Secure Payment",
+            "text": "<p>Flexible and simple</p>"
+          }
+        }
+      },
+      "block_order": [
+        "column_f8PDBL",
+        "column_9nVpjd",
+        "column_VMH6pt",
+        "column_73RftU"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "content_width": "page-width",
+        "icon_size": "normal",
+        "block_heading_size": "h5",
+        "top_border": true,
+        "bottom_border": false,
+        "grid_column_gap": 20,
+        "keylines_show_mobile": false,
+        "keylines_show": true,
+        "keylines_to_edge": false,
+        "keyline_colour": "0",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 40,
+        "bottom_padding": 40
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "logo_B6PCPJ": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "logo_size": 150,
+            "logo_full_width": true,
+            "logo_opacity": 100,
+            "alignment": "left",
+            "logo_padding_top": 20,
+            "logo_padding_bottom": 20,
+            "block_width": "full_width"
+          }
+        },
+        "newsletter_footer_block": {
+          "type": "newsletter_signup",
+          "settings": {
+            "heading": "Subscribe",
+            "heading_size": "fbh-large",
+            "heading_style": "normal",
+            "subheading": "<p>Be the first to know about our new products</p>",
+            "disclaimer_show": false,
+            "disclaimer": "",
+            "newsletter_form_width": "normal",
+            "newsletter_style": "minimal",
+            "border_opacity": 60,
+            "newsletter_submit_style": "icon",
+            "padding_top": 20,
+            "padding_bottom": 30,
+            "alignment": "center",
+            "block_width": "full_width"
+          }
+        },
+        "link_list_YbfEkc": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Discover",
+            "list_type_mobile": "accordion",
+            "block_width": "column_width",
+            "alignment": "left",
+            "list_layout": "vertical",
+            "list_layout_mobile": "vertical",
+            "menu": "footer"
+          }
+        },
+        "link_list_B6bDcU": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Help",
+            "list_type_mobile": "accordion",
+            "block_width": "column_width",
+            "alignment": "left",
+            "list_layout": "vertical",
+            "list_layout_mobile": "vertical",
+            "menu": "footer"
+          }
+        },
+        "text_gyqwQi": {
+          "type": "text",
+          "settings": {
+            "heading": "Visit",
+            "subtext": "<p>Discover a shopping experience like no other in one our of unique stores.</p>",
+            "text_size": "text-normal",
+            "alignment_mobile": "left",
+            "alignment": "left",
+            "block_width": "column_width"
+          }
+        },
+        "footer_social_media_block": {
+          "type": "social_media",
+          "disabled": true,
+          "settings": {
+            "heading": "Channels",
+            "alignment": "left",
+            "block_width": "column_width",
+            "link_style": "icons"
+          }
+        }
+      },
+      "block_order": [
+        "logo_B6PCPJ",
+        "newsletter_footer_block",
+        "link_list_YbfEkc",
+        "link_list_B6bDcU",
+        "text_gyqwQi",
+        "footer_social_media_block"
+      ],
+      "settings": {
+        "footer_font_family": "body",
+        "footer_font_size": "body",
+        "footer_heading_size": "normal",
+        "footer_heading_style": "normal",
+        "footer_heading_opacity": 60,
+        "footer_horizontal_spacing_desktop": 20,
+        "footer_padding_vertical": 40,
+        "footer_padding_bottom": 20,
+        "text_color": "fg-body",
+        "bg_color": "bg-01",
+        "main_footer_border": 0,
+        "main_footer_border_color": "dark",
+        "sub_footer_border": true,
+        "sub_footer_border_color": "dark",
+        "sub_footer_border_width": "full",
+        "sub_footer_layout": "two-column",
+        "sub_footer_alignment": "align-center",
+        "sub_footer_linklist": "",
+        "sub_footer_single_link": "",
+        "sub_footer_single_link_label": "",
+        "show_policies": true,
+        "show_powered_by": true,
+        "payment_enable": false,
+        "location_enable": true,
+        "location_format": "code",
+        "show_currency_symbol": true,
+        "language_enable": true,
+        "show_location_labels": false,
+        "follow_shop_enable": true
+      }
+    }
+  },
+  "order": [
+    "footer_shopping_info_PrGcJA",
+    "footer"
+  ]
+}
