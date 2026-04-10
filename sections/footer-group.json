@@ -17,47 +17,41 @@
         "column_f8PDBL": {
           "type": "column",
           "settings": {
-            "icon": "location",
-            "title": "Our Stores",
-            "text": "<p>London, Paris, Tokyo</p>"
+            "icon": "custom",
+            "icon_custom_image": "shopify://shop_images/d163935a21f0b69daa885c8ca14aff31.png",
+            "title": "Free Shipping over $600",
+            "text": "<p>We offer complimentary shipping over $600 order as part of ourcommitment to exceptional service.</p>"
           }
         },
         "column_9nVpjd": {
           "type": "column",
           "settings": {
-            "icon": "gift",
-            "title": "Gift Wrapping",
-            "text": "<p>Available on all orders</p>"
+            "icon": "custom",
+            "icon_custom_image": "shopify://shop_images/207ed91d9b26d712c429f90d5bf028a3.png",
+            "title": "1-Year Warranty",
+            "text": "<p>Our ski garments are built to last. On the rare occasion a repair isneeded, we offer complimentary service for 1 year.</p>"
           }
         },
         "column_VMH6pt": {
           "type": "column",
           "settings": {
-            "icon": "return",
-            "title": "Free Returns",
-            "text": "<p>Easy global returns</p>"
-          }
-        },
-        "column_73RftU": {
-          "type": "column",
-          "settings": {
-            "icon": "payment",
-            "title": "Secure Payment",
-            "text": "<p>Flexible and simple</p>"
+            "icon": "custom",
+            "icon_custom_image": "shopify://shop_images/c5332d4a9993928698ab1a9e6b3dec03.png",
+            "title": "Worldwide Delivery",
+            "text": "<p>We deliver globally with minimal to no duties and transparent costs.</p>"
           }
         }
       },
       "block_order": [
         "column_f8PDBL",
         "column_9nVpjd",
-        "column_VMH6pt",
-        "column_73RftU"
+        "column_VMH6pt"
       ],
       "settings": {
         "text_alignment": "center",
         "content_width": "page-width",
-        "icon_size": "normal",
-        "block_heading_size": "h5",
+        "icon_size": "large",
+        "block_heading_size": "h4",
         "top_border": true,
         "bottom_border": false,
         "grid_column_gap": 20,
