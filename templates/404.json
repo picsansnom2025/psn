@@ -498,6 +498,10 @@
         "border_color": "dark"
       }
     },
+    "177580391286cf1aa5": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "17757909083d153d77": {
       "type": "apps",
       "settings": {
@@ -516,6 +520,7 @@
     "collection_lookbook_eN9mmM",
     "main",
     "section_testimonials_ycnGEF",
+    "177580391286cf1aa5",
     "17757909083d153d77"
   ]
 }
