@@ -1,6 +1,156 @@
+{% doc %}
+  @prompt
+    左上角增加一个标题
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-title-block-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .ai-title-container-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+  }
+
+  .ai-title-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    font-weight: {{ block.settings.title_weight }};
+    margin: 0;
+    text-transform: {{ block.settings.title_case }};
+    letter-spacing: {{ block.settings.letter_spacing }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-title-text-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+  }
+{% endstyle %}
+
+<div class="ai-title-block-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-title-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank %}
+      <h2 class="ai-title-text-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+    {% else %}
+      <h2 class="ai-title-text-{{ ai_gen_id }}">标题文本</h2>
+    {% endif %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "左上角标题",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题文本",
+      "default": "标题文本"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "字体大小",
+      "min": 14,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "文字颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "字体粗细",
+      "options": [
+        {
+          "value": "normal",
+          "label": "正常"
+        },
+        {
+          "value": "bold",
+          "label": "粗体"
+        }
+      ],
+      "default": "bold"
+    },
+    {
+      "type": "select",
+      "id": "title_case",
+      "label": "文字大小写",
+      "options": [
+        {
+          "value": "none",
+          "label": "正常"
+        },
+        {
+          "value": "uppercase",
+          "label": "大写"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "label": "字母间距",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "间距设置"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "上下内边距",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "左右内边距",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "桌面宽度",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "左上角标题"
+    }
+  ]
+}
 {% endschema %}
