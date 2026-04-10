@@ -84,10 +84,10 @@
         "newsletter_footer_block": {
           "type": "newsletter_signup",
           "settings": {
-            "heading": "Subscribe",
-            "heading_size": "fbh-large",
+            "heading": "Newsletter",
+            "heading_size": "fbh-xxl",
             "heading_style": "normal",
-            "subheading": "<p>Be the first to know about our new products</p>",
+            "subheading": "<p>Get exclusive deals and early access to<br/>new products.</p>",
             "disclaimer_show": false,
             "disclaimer": "",
             "newsletter_form_width": "normal",
