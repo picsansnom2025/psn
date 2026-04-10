@@ -532,6 +532,89 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1775820411f00eba68": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2a74ef2_9KfNHa": {
+          "type": "ai_gen_block_2a74ef2",
+          "settings": {
+            "heading_text": "Social Media",
+            "heading_tag": "h2",
+            "alignment": "left",
+            "text_color": "#000000",
+            "font_size_mobile": 24,
+            "font_size_desktop": 32,
+            "letter_spacing": 0,
+            "line_height": 1.2,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2a74ef2_9KfNHa"
+      ],
+      "settings": {}
+    },
+    "1775819992e16b4b0f": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b6c6141_RQKFBW": {
+          "type": "ai_gen_block_b6c6141",
+          "settings": {
+            "card_width": 250,
+            "card_height": 300,
+            "card_width_tablet": 200,
+            "card_height_tablet": 240,
+            "card_width_mobile": 180,
+            "card_height_mobile": 220,
+            "card_gap": 16,
+            "card_border_radius": 8,
+            "desktop_width_percent": 100,
+            "card_1_image": "shopify://shop_images/795bd024b70253a89cdccd7b9646b46f.png",
+            "card_1_title": "@诗晨Ballet",
+            "card_1_description": "",
+            "card_2_image": "shopify://shop_images/eac098a1fab03d7da532f1fc03c3142a.png",
+            "card_2_title": "@Angelina",
+            "card_2_description": "",
+            "card_3_image": "shopify://shop_images/61f6017d4df7e84bf1809fe482410171.png",
+            "card_3_title": "@CHOCHO",
+            "card_3_description": "",
+            "card_4_image": "shopify://shop_images/caec76aca3935400bc3fd88b640559d2.png",
+            "card_4_title": "@妮可NICO",
+            "card_4_description": "",
+            "card_5_image": "shopify://shop_images/c9fd5896d18688383489ed888cd8dee6.jpg",
+            "card_5_title": "@Babybaby_Q",
+            "card_5_description": "",
+            "card_6_image": "shopify://shop_images/76c2741597565ae4e815f86a4dc8c327.png",
+            "card_6_title": "@脑细胞",
+            "card_6_description": "",
+            "card_7_image": "shopify://shop_images/f3c0691b59df0631227e32edacb7c538.jpg",
+            "card_7_title": "@倩文J",
+            "card_7_description": "",
+            "card_8_image": "shopify://shop_images/7c3ff8355dd01e6b988440cda52592d6.png",
+            "card_8_title": "@火火Jenny",
+            "card_8_description": "",
+            "text_spacing": 12,
+            "title_size": 16,
+            "title_color": "#000000",
+            "title_bottom_spacing": 4,
+            "description_size": 14,
+            "description_color": "#666666",
+            "nav_button_size": 40,
+            "nav_button_offset": 20,
+            "nav_button_bg": "#ffffff",
+            "nav_button_color": "#000000",
+            "nav_button_opacity": 90
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b6c6141_RQKFBW"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -547,6 +630,8 @@
     "1775805303df21e762",
     "section_testimonials_ycnGEF",
     "177580391286cf1aa5",
-    "17757909083d153d77"
+    "17757909083d153d77",
+    "1775820411f00eba68",
+    "1775819992e16b4b0f"
   ]
 }
