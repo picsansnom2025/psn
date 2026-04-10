@@ -98,47 +98,12 @@
             "disclaimer": "",
             "newsletter_form_width": "normal",
             "newsletter_style": "minimal",
-            "border_opacity": 60,
+            "border_opacity": 70,
             "newsletter_submit_style": "icon",
             "padding_top": 20,
             "padding_bottom": 30,
             "alignment": "center",
             "block_width": "full_width"
-          }
-        },
-        "link_list_YbfEkc": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Discover",
-            "list_type_mobile": "accordion",
-            "block_width": "column_width",
-            "alignment": "left",
-            "list_layout": "vertical",
-            "list_layout_mobile": "vertical",
-            "menu": "footer"
-          }
-        },
-        "link_list_B6bDcU": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Help",
-            "list_type_mobile": "accordion",
-            "block_width": "column_width",
-            "alignment": "left",
-            "list_layout": "vertical",
-            "list_layout_mobile": "vertical",
-            "menu": "footer"
-          }
-        },
-        "text_gyqwQi": {
-          "type": "text",
-          "settings": {
-            "heading": "Visit",
-            "subtext": "<p>Discover a shopping experience like no other in one our of unique stores.</p>",
-            "text_size": "text-normal",
-            "alignment_mobile": "left",
-            "alignment": "left",
-            "block_width": "column_width"
           }
         },
         "footer_social_media_block": {
@@ -150,15 +115,25 @@
             "block_width": "column_width",
             "link_style": "icons"
           }
+        },
+        "link_list_YbfEkc": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "list_type_mobile": "accordion",
+            "block_width": "full_width",
+            "alignment": "center",
+            "list_layout": "horizontal",
+            "list_layout_mobile": "vertical",
+            "menu": "link-list"
+          }
         }
       },
       "block_order": [
         "logo_B6PCPJ",
         "newsletter_footer_block",
-        "link_list_YbfEkc",
-        "link_list_B6bDcU",
-        "text_gyqwQi",
-        "footer_social_media_block"
+        "footer_social_media_block",
+        "link_list_YbfEkc"
       ],
       "settings": {
         "footer_font_family": "body",
