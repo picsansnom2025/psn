@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "banner_layout": "overlay",
+        "banner_height_mobile": "default",
+        "banner_height": "default",
+        "stacked_img_ratio": "landscape_21x9",
+        "banner_width": "none",
+        "txt_alignment": "center",
+        "text_width": "medium",
+        "title_size": "h1",
+        "title_margin": 10,
+        "description_enable": true,
+        "description_size": "text-body",
+        "text_indent": "none",
+        "description_padding": 40,
+        "cards_img_ratio": "portrait",
+        "cards_img_position": "left",
+        "image_padding": "page_margin",
+        "grid_spacing": "none",
+        "txt_col": "#ffffff",
+        "bg_col": "#000000",
+        "top_padding": 0,
+        "bottom_padding": 0
+      }
+    },
+    "navigation": {
+      "type": "main-collection-sub-navigation",
+      "settings": {
+        "menu": "customer-account-main-menu",
+        "alignment": "center",
+        "menu_style": "list",
+        "image_ratio": "landscape",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "image_card_CptkM6": {
+          "type": "image_card",
+          "disabled": true,
+          "settings": {
+            "grid_position": 1,
+            "card_ratio": "square",
+            "grid_colspan": "auto",
+            "card_ratio_desktop_fullwidth": "landscape-21x9",
+            "grid_rowspan": "1",
+            "match_media_height": false,
+            "caption": "",
+            "heading": "",
+            "heading_size": "h3",
+            "description": "",
+            "alignment": "center",
+            "text_position": "center",
+            "text_vertical_spacing": 10,
+            "text_padding": 10,
+            "url": "",
+            "button_show": false,
+            "button_label": "",
+            "btn_style": "solid",
+            "text_color": "#ffffff",
+            "bg_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_card_CptkM6"
+      ],
+      "settings": {
+        "products_per_page": 48,
+        "section_margins": "page-width",
+        "grid_spacing_horizontal": "normal",
+        "grid_spacing_vertical": "normal",
+        "columns_mobile": "2",
+        "columns_tablet": 4,
+        "columns_desktop": 4,
+        "enable_creative_layouts": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_price": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "navigation",
+    "product-grid"
+  ]
+}
