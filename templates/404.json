@@ -56,6 +56,7 @@
       "settings": {
         "banner_size": "banner-style-fullscreen",
         "video_url": "shopify://files/videos/1bbe15acb2114a93bf721ac8dcda9bf1_raw.mp4",
+        "video_mob_url": "shopify://files/videos/2月13日.mp4",
         "overlay_level": 0,
         "video_size": "100",
         "video_position": "center",
@@ -157,16 +158,16 @@
         "description": "",
         "hdr_alignment": "right",
         "header_style": "overlay",
-        "content_layout": "grid",
+        "content_layout": "carousel",
         "arrow_style": "solid-inverted",
-        "content_width": "page-width",
-        "grid_spacing": "default-grid",
+        "content_width": "page-width-full",
+        "grid_spacing": "no-spacing",
         "grid_columns_tablet": 2,
         "grid_columns_desktop": 2,
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "image_with_hotspots_L9JULR": {
@@ -208,8 +209,8 @@
         "hotspot_animate": true,
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "top_padding": 160,
-        "bottom_padding": 140,
+        "top_padding": 20,
+        "bottom_padding": 20,
         "top_border": true,
         "bottom_border": true,
         "border_width": "normal",
