@@ -437,6 +437,31 @@
         "txt_alignment": "center"
       }
     },
+    "1775805303df21e762": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6d17a4f_Mzt66T": {
+          "type": "ai_gen_block_6d17a4f",
+          "settings": {
+            "custom_liquid": "<div class=\"kimi-feedback\">\n  <div class=\"kimi-title\">Customer Feedback</div>\n  <div class=\"kimi-rating-num\">5.0</div>\n  <div class=\"kimi-stars\">★★★★★</div>\n</div>\n\n<style>\n.kimi-feedback{text-align:center;color:#000}\n.kimi-title{font-size:28px;font-weight:bold;margin-bottom:8px}\n.kimi-rating-num{font-size:24px;line-height:1}\n.kimi-stars{font-size:20px;letter-spacing:1px}\n</style>",
+            "desktop_width_percent": 100,
+            "padding": 20,
+            "border_radius": 0,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "heading_color": "#000000",
+            "link_color": "#0066cc",
+            "table_border_color": "#dddddd",
+            "table_header_bg": "#f4f4f4"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6d17a4f_Mzt66T"
+      ],
+      "settings": {}
+    },
     "section_testimonials_ycnGEF": {
       "type": "section-testimonials",
       "blocks": {
@@ -519,6 +544,7 @@
     "featured_collection_WpfzBX",
     "collection_lookbook_eN9mmM",
     "main",
+    "1775805303df21e762",
     "section_testimonials_ycnGEF",
     "177580391286cf1aa5",
     "17757909083d153d77"
