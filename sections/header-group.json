@@ -17,7 +17,7 @@
         "announcement_l01": {
           "type": "announcement",
           "settings": {
-            "text": "An announcement about our store",
+            "text": "Enjoy 10% off your first order | Sign up to our newsletter >",
             "link": ""
           }
         }
