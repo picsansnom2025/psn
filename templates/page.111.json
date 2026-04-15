@@ -9,6 +9,56 @@
  */
 {
   "sections": {
+    "rich_text_FEhiAF": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_f37PhB": {
+          "type": "caption",
+          "settings": {
+            "caption": "",
+            "alignment": "left",
+            "opacity": 100
+          }
+        },
+        "heading_xHCBCQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        },
+        "text_mBh4mV": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "text-std",
+            "alignment": "left",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "caption_f37PhB",
+        "heading_xHCBCQ",
+        "text_mBh4mV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -73,7 +123,7 @@
         "form_style": "outline",
         "form_labels_show": true,
         "form_button_style": "solid",
-        "form_padding_top": 0,
+        "form_padding_top": 40,
         "form_padding_bottom": 0,
         "padding_top": 80,
         "padding_bottom": 80
@@ -92,8 +142,8 @@
             "background_image": "shopify://shop_images/c9fd5896d18688383489ed888cd8dee6.jpg",
             "background_color": "#ffffff",
             "overlay_color": "#ffffff",
-            "overlay_opacity": 20,
-            "form_max_width": 600,
+            "overlay_opacity": 50,
+            "form_max_width": 650,
             "padding_vertical": 60,
             "padding_horizontal": 40,
             "border_radius": 0,
@@ -121,8 +171,8 @@
             "input_background_color": "#ffffff",
             "input_text_color": "#000000",
             "input_border_color": "#cccccc",
-            "input_border_width": 1,
-            "input_border_radius": 4,
+            "input_border_width": 2,
+            "input_border_radius": 8,
             "button_text": "Submit",
             "button_alignment": "center",
             "button_spacing": 30,
@@ -145,11 +195,17 @@
         "ai_gen_block_97701c7_4g9Nhw"
       ],
       "settings": {}
+    },
+    "1776231170122184ad": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
+    "rich_text_FEhiAF",
     "main",
     "contact_form_q4xKKd",
-    "1776230231cf766382"
+    "1776230231cf766382",
+    "1776231170122184ad"
   ]
 }
