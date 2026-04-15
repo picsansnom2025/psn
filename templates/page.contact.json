@@ -15,7 +15,7 @@
         "content_width": "page-width-narrow",
         "hdr_alignment": "center",
         "heading_hide": false,
-        "padding_top": 100,
+        "padding_top": 20,
         "padding_bottom": 60
       }
     },
