@@ -171,7 +171,7 @@
             "input_background_color": "#ffffff",
             "input_text_color": "#000000",
             "input_border_color": "#cccccc",
-            "input_border_width": 2,
+            "input_border_width": 1,
             "input_border_radius": 8,
             "button_text": "Submit",
             "button_alignment": "center",
