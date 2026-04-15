@@ -20,6 +20,77 @@
         "padding_bottom": 100
       }
     },
+    "image_banner_VJXRiE": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_9yyMtU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Return Request",
+            "heading_size": "h1",
+            "txt_alignment": "inherit"
+          }
+        },
+        "text_Xq69Cm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Upload your background image and adjust the opacity using the overlay level setting</p>",
+            "text_size": "text-std"
+          }
+        },
+        "buttons_RVg8x7": {
+          "type": "buttons",
+          "settings": {
+            "btn_one_show": true,
+            "btn_one_txt": "Button label",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid",
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_color_scheme": "default",
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_9yyMtU",
+        "text_Xq69Cm",
+        "buttons_RVg8x7"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-medium",
+        "banner_full_link": "",
+        "primary_image_size": "dt-full-bleed",
+        "image_padding": 0,
+        "main_image_animation": "none",
+        "image_blur": 0,
+        "primary_image_mobile_show": true,
+        "secondary_image_size": "dt-full-bleed",
+        "secondary_image_padding": 0,
+        "secondary_image_animation": "none",
+        "secondary_image_blur": 0,
+        "secondary_image_mobile_show": true,
+        "txt_alignment": "center",
+        "txt_position": "middle",
+        "content_width": 100,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": false,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "rgba(0,0,0,0)",
+        "overlay_level": 20
+      }
+    },
     "contact_form_q4xKKd": {
       "type": "contact-form",
       "blocks": {
@@ -81,6 +152,7 @@
   },
   "order": [
     "main",
+    "image_banner_VJXRiE",
     "contact_form_q4xKKd"
   ]
 }
