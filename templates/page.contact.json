@@ -1,1 +1,75 @@
-{"sections":{"main":{"type":"main-page","settings":{"content_width":"page-width-narrow","hdr_alignment":"center","heading_hide":false,"padding_top":100,"padding_bottom":60}},"form":{"type":"contact-form","blocks":{"field_name":{"type":"field_name","settings":{"name_field_format":"single","field_required":true}},"field_email":{"type":"field_email","settings":{}},"field_telephone":{"type":"field_telephone","settings":{"field_required":false}},"field_textarea":{"type":"field_textarea","settings":{"field_required":true,"row_height":8}}},"block_order":["field_name","field_email","field_telephone","field_textarea"],"settings":{"heading":"Send us a message","heading_size":"h2","heading_alignment":"center","form_style":"outline","form_labels_show":true,"form_button_style":"solid","form_padding_top":20,"form_padding_bottom":0,"padding_top":40,"padding_bottom":100}}},"order":["main","form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "page-width-narrow",
+        "hdr_alignment": "center",
+        "heading_hide": false,
+        "padding_top": 100,
+        "padding_bottom": 60
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "field_name": {
+          "type": "field_name",
+          "settings": {
+            "name_field_format": "single",
+            "field_required": true
+          }
+        },
+        "field_email": {
+          "type": "field_email",
+          "settings": {}
+        },
+        "field_telephone": {
+          "type": "field_telephone",
+          "settings": {
+            "field_required": false
+          }
+        },
+        "field_textarea": {
+          "type": "field_textarea",
+          "settings": {
+            "field_required": true,
+            "row_height": 8
+          }
+        }
+      },
+      "block_order": [
+        "field_name",
+        "field_email",
+        "field_telephone",
+        "field_textarea"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Send us a message",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "form_style": "outline",
+        "form_labels_show": true,
+        "form_button_style": "solid",
+        "form_padding_top": 20,
+        "form_padding_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

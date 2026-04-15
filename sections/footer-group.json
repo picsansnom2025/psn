@@ -118,7 +118,7 @@
             "block_width": "full_width",
             "alignment": "center",
             "list_layout": "horizontal",
-            "list_layout_mobile": "vertical",
+            "list_layout_mobile": "horizontal",
             "menu": "link-list"
           }
         }
