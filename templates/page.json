@@ -56,7 +56,7 @@
       ],
       "name": "t:sections.contact-form.presets.name",
       "settings": {
-        "heading": "Contact us",
+        "heading": "Order Trackr",
         "heading_size": "h2",
         "heading_alignment": "center",
         "form_style": "outline",
