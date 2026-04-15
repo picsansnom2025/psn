@@ -201,11 +201,100 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "collapsible_content_TAcKPw": {
+      "type": "collapsible-content",
+      "blocks": {
+        "heading_9cyceg": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "RETURNS"
+          }
+        },
+        "collapsible_row_BU9qFf": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What is your return policy?",
+            "content": "<p>PSN crafts garments built to last a lifetime, and we want you to love your purchase. If for any reason you are not completely satisfied, eligible items may be returned in accordance with the following terms.</p><p>· Returns must be initiated within7 days of receipt.</p><p>· Return shipping costs are the responsibility of the customer and calculated at the time of return.</p><p>· Items must be unworn, with all original tags attached and packaging intact. While trying on your garment, please be aware not to transfer makeup or other cosmetics. </p><p>· Orders placed with a discount code of 20% or less are eligible for return or exchange.</p><p>· Orders discounted by sale of 20%+ are eligible for exchange only.</p><p>· Final Sale items are not eligible for return or exchange.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_tyygac": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Return policy",
+            "content": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_tDAyDz": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "How do I submit a return?",
+            "content": "<p>To initiate a return request visit our<a href=\"/pages/return-request\" title=\"RETURN REQUEST\"> <strong>returns center.</strong></a></p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_mdz4Vi": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Shipping",
+            "content": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_GqctKp": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Manufacturing",
+            "content": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "heading_9cyceg",
+        "collapsible_row_BU9qFf",
+        "collapsible_row_tyygac",
+        "collapsible_row_tDAyDz",
+        "collapsible_row_mdz4Vi",
+        "collapsible_row_GqctKp"
+      ],
+      "settings": {
+        "section_label": "{{ page.title }}",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "center",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
     }
   },
   "order": [
     "main",
     "collapsible_content",
-    "collapsible_content_Dd9Phc"
+    "collapsible_content_Dd9Phc",
+    "collapsible_content_TAcKPw"
   ]
 }
