@@ -386,6 +386,90 @@
         "border_color": "dark"
       }
     },
+    "featured_collection_tbqDYy": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "base-layer",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "{{ section.settings.collection.title }}",
+        "heading_size": "h1",
+        "description": "",
+        "btn_enable": false,
+        "btn_label": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "products_layout": "carousel",
+        "arrow_style": "solid",
+        "content_width": "full-width-collection",
+        "no_items": 11,
+        "mobile_grid": "1",
+        "tablet_grid": "3",
+        "dt_grid": "4",
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_prices": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "rollover_titles": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "featured_collection_zng98U": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "ski-goggles",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "{{ section.settings.collection.title }}",
+        "heading_size": "h1",
+        "description": "",
+        "btn_enable": false,
+        "btn_label": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "products_layout": "carousel",
+        "arrow_style": "solid",
+        "content_width": "full-width-collection",
+        "no_items": 11,
+        "mobile_grid": "1",
+        "tablet_grid": "3",
+        "dt_grid": "4",
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_prices": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "rollover_titles": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "collection_lookbook_eN9mmM": {
       "type": "collection-lookbook",
       "name": "t:sections.collection-lookbook.presets.name",
@@ -615,6 +699,54 @@
         "ai_gen_block_b6c6141_RQKFBW"
       ],
       "settings": {}
+    },
+    "1776222063baa3f483": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4e6c818_mMPGLW": {
+          "type": "ai_gen_block_4e6c818",
+          "settings": {
+            "image": "shopify://shop_images/1_2cf37f62-427e-4567-8230-16d06d6ccbf1.jpg",
+            "banner_height_mobile": 80,
+            "banner_height_desktop": 80,
+            "border_radius": 0,
+            "desktop_width_percent": 100,
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "content_max_width": 700,
+            "text_alignment": "center",
+            "title": "<a href=\"/pages/about-us\" title=\"About Us\">About Us</a>",
+            "title_color": "#ffffff",
+            "title_size_mobile": 32,
+            "title_size_desktop": 56,
+            "title_spacing": 20,
+            "text": "<p>Undefined, I am the peak<br/><br/>PSN is the abbreviation for PICSANS NOM  <br/>It is an “unnamed peak” in the Alps  <br/><br/>The brand is dedicated to perfectly blending fashion sophistication with sport functionality  <br/>From the mountain summits to the elite court  <br/>It showcases the elegance and strength of urban women  <br/><br/>PSN hopes to empower every girl to find her “true self” in sports  <br/>To become confident, beautiful, brave, and shine brightly</p>",
+            "text_color": "#ffffff",
+            "text_size_mobile": 12,
+            "text_size_desktop": 14,
+            "text_spacing": 24,
+            "button_text": "Contact Us",
+            "button_link": "shopify://pages/contact-us-1",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_hover_background_color": "#000000",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 14,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "button_border_width": 0,
+            "button_border_color": "#ffffff",
+            "button_hover_border_color": "#000000"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4e6c818_mMPGLW"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -625,6 +757,8 @@
     "collection_lookbook_EK9rmP",
     "logo_wall_MdMe8J",
     "featured_collection_WpfzBX",
+    "featured_collection_tbqDYy",
+    "featured_collection_zng98U",
     "collection_lookbook_eN9mmM",
     "main",
     "1775805303df21e762",
@@ -632,6 +766,7 @@
     "177580391286cf1aa5",
     "17757909083d153d77",
     "1775820411f00eba68",
-    "1775819992e16b4b0f"
+    "1775819992e16b4b0f",
+    "1776222063baa3f483"
   ]
 }
