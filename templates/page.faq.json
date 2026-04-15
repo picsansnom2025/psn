@@ -46,8 +46,8 @@
         "collapsible_row_FHGiNX": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Collapsible row",
-            "content": "",
+            "title": "How long will it take to get my order?",
+            "content": "<p>We strive to process and ship orders as quickly as possible - typically within 2 business days.</p><p><br/>Delivery Times<br/>We do our best to ensure timely delivery for all orders. Please note that all delivery dates are estimated and provided directly by the carrier.</p><p><br/>Estimated delivery time by area:</p><p>Americas: 5–10 business days</p><p>Asia: 5–10 business days</p><p>Europe: 7–15 business days</p><p><br/>Tracking Your Order<br/>Once your order ships, you’ll receive a confirmation email with tracking details. If you have questions about your package’s location after shipment, please contact the shipping carrier directly, as we do not have access to packages once they leave our warehouse.<br/><br/>Signature<br/>A signature is required upon delivery for orders that do not select package insurance. If no one is available to sign, the carrier will leave a notice to arrange redelivery or pickup.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -55,8 +55,17 @@
         "collapsible_row_DUQ4MT": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Collapsible row",
-            "content": "",
+            "title": "Is a signature required?",
+            "content": "<p>A signature is required upon delivery for orders that do not select package insurance at checkout. If no one is available to sign, the carrier will leave a notice to arrange redelivery or pickup.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_wFXB8G": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Is shipping insurance offered?",
+            "content": "<p>Yes. We have partnered with a third-party insurance company to offer you protection against, loss, theft and damage during shipping. Insurance can be selected at checkout. Please note: <strong>PSN is not responsible for packages lost or stolen during transit.</strong></p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -67,7 +76,8 @@
         "heading_W9zx9b",
         "collapsible_row_8aQjkK",
         "collapsible_row_FHGiNX",
-        "collapsible_row_DUQ4MT"
+        "collapsible_row_DUQ4MT",
+        "collapsible_row_wFXB8G"
       ],
       "settings": {
         "section_label": "{{ page.title }}",
@@ -94,45 +104,81 @@
         "border_color": "dark"
       }
     },
-    "collapsible_content_DWNB7F": {
+    "collapsible_content_Dd9Phc": {
       "type": "collapsible-content",
       "blocks": {
-        "collapsible_row_DFEcpR": {
+        "heading_x8apym": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "OUR PRODUCTS"
+          }
+        },
+        "collapsible_row_ycEGGE": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Collapsible row",
-            "content": "",
+            "title": "How does PSN fit?",
+            "content": "<p>PSN designs are crafted with a tailored, performance-driven fit. Ski suits and outerwear are designed for freedom of movement with a flattering fit. Please refer to our size guide<strong> </strong>for specific measurements and fit notes by style on each product page.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
         },
-        "collapsible_row_TX3VEB": {
+        "collapsible_row_bM9NJV": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Collapsible row",
-            "content": "",
+            "title": "Are PSN ski suits waterproof?",
+            "content": "<p>All PSN ski suits and outerwear are made with waterproof or water-repellent materials, ranging from 5K to 15K ratings, providing protection against snow, sleet, and light to heavy rain. See product features for specifics by garment.</p><p>Asia: 5–10 business days</p><p>Europe: 7–15 business days</p><p><br/>Tracking Your Order<br/>Once your order ships, you’ll receive a confirmation email with tracking details. If you have questions about your package’s location after shipment, please contact the shipping carrier directly, as we do not have access to packages once they leave our warehouse.<br/><br/>Signature<br/>A signature is required upon delivery for orders that do not select package insurance. If no one is available to sign, the carrier will leave a notice to arrange redelivery or pickup.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
         },
-        "collapsible_row_GMyGjG": {
+        "collapsible_row_gx9fYQ": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Collapsible row",
-            "content": "",
+            "title": "Are PSN products sustainably made?",
+            "content": "<p>Yes. Sustainability is central to our design philosophy. We partner with certified mills and manufacturers who share our commitment to ethical production. Many of our textiles feature recycled insulation, eco-friendly water-repellent coatings. We also intentionally produce in limited quantities to reduce excess inventory and ensure each collection sells through, minimizing waste while preserving the exclusivity of every piece.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_mcTkxb": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Do you offer a warranty?",
+            "content": "<p>Yes. All PSN ski suits, ski jackets, and ski pants are backed by a <strong>one-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <strong>Warranty Policy</strong> for full details.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_jkRc8e": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "What’s the difference between waterproof and water-repellent?",
+            "content": "<p><strong>Waterproof</strong> fabrics prevent moisture from penetrating the garment, even under pressure, while <strong>water-repellent</strong> fabrics resist light snow and moisture but are not entirely impermeable. PSN’s waterproof styles are designed for demanding alpine conditions, while water-repellent styles are ideal for light weather, bluebird days, resort wear and après.</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_7reezR": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Can I wear PSN off the slopes?",
+            "content": "<p>Absolutely. PSN designs transition effortlessly from slope to street. Tailored fits, refined detailing, and technical materials make each piece functional in the mountains and stylish in urban and resort settings.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
         }
       },
       "block_order": [
-        "collapsible_row_DFEcpR",
-        "collapsible_row_TX3VEB",
-        "collapsible_row_GMyGjG"
+        "heading_x8apym",
+        "collapsible_row_ycEGGE",
+        "collapsible_row_bM9NJV",
+        "collapsible_row_gx9fYQ",
+        "collapsible_row_mcTkxb",
+        "collapsible_row_jkRc8e",
+        "collapsible_row_7reezR"
       ],
-      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
-        "section_label": "",
+        "section_label": "{{ page.title }}",
         "heading": "",
         "heading_size": "h2",
         "subheading": "",
@@ -148,7 +194,7 @@
         "accordion_title_size": "std",
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "padding_top": 80,
+        "padding_top": 40,
         "padding_bottom": 80,
         "top_border": false,
         "bottom_border": false,
@@ -160,6 +206,6 @@
   "order": [
     "main",
     "collapsible_content",
-    "collapsible_content_DWNB7F"
+    "collapsible_content_Dd9Phc"
   ]
 }
