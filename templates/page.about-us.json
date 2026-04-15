@@ -20,30 +20,30 @@
         "padding_bottom": 100
       }
     },
-    "image_with_text_hLCMP3": {
+    "image_with_text_k9gghi": {
       "type": "image-with-text",
       "blocks": {
-        "caption_zRRhW7": {
+        "caption_a4kTMk": {
           "type": "caption",
           "settings": {
             "caption": "Add a tagline"
           }
         },
-        "heading_VtEtbX": {
+        "heading_PkWXxA": {
           "type": "heading",
           "settings": {
             "heading": "Image with text",
             "heading_size": "h2"
           }
         },
-        "text_V3VwNz": {
+        "text_gYDNdp": {
           "type": "text",
           "settings": {
             "description": "<p>Pair text with an image to focus on your chosen product, collection, or brand story.</p>",
             "text_size": "std"
           }
         },
-        "button_XjEeH6": {
+        "button_Ne6wq6": {
           "type": "button",
           "settings": {
             "btn_color_scheme": "default",
@@ -60,15 +60,15 @@
         }
       },
       "block_order": [
-        "caption_zRRhW7",
-        "heading_VtEtbX",
-        "text_V3VwNz",
-        "button_XjEeH6"
+        "caption_a4kTMk",
+        "heading_PkWXxA",
+        "text_gYDNdp",
+        "button_Ne6wq6"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "section_size": "flexible",
-        "content_width": "page-width",
+        "content_width": "page-width-full-grid",
         "image_alignment": "right",
         "dt_image_width": 50,
         "card_spacing": 20,
@@ -95,6 +95,6 @@
   },
   "order": [
     "main",
-    "image_with_text_hLCMP3"
+    "image_with_text_k9gghi"
   ]
 }
