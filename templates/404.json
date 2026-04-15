@@ -37,7 +37,7 @@
             "padding_top": 20,
             "padding_bottom": 20,
             "btn_one_show": true,
-            "btn_one_txt": "Button text",
+            "btn_one_txt": "SHOP",
             "btn_one_link": "",
             "btn_one_style": "button--solid",
             "btn_two_show": false,
@@ -121,7 +121,7 @@
     "section_media_collage_b7VPDg": {
       "type": "section-media-collage",
       "blocks": {
-        "image_BjGxfw": {
+        "image_wxm9J6": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/99f1115759330c4931bc7c6de113632a.png",
@@ -147,7 +147,7 @@
         }
       },
       "block_order": [
-        "image_BjGxfw",
+        "image_wxm9J6",
         "image_fcjFnH"
       ],
       "name": "t:sections.collage.presets.name",
@@ -222,7 +222,7 @@
       "name": "t:sections.collection-lookbook.presets.name",
       "settings": {
         "collection": "arctic-collection",
-        "image": "shopify://shop_images/Generated_Image_October_28_2025_-_10_23PM.png",
+        "image": "shopify://shop_images/1_3_4d7a64ea-97bf-4745-a099-826dd7c87286.png",
         "image_ratio": "square",
         "image_alignment": "left",
         "products_layout": "slider",
