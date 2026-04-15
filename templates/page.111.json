@@ -20,77 +20,6 @@
         "padding_bottom": 100
       }
     },
-    "image_banner_VJXRiE": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_9yyMtU": {
-          "type": "heading",
-          "settings": {
-            "heading": "Return Request",
-            "heading_size": "h1",
-            "txt_alignment": "inherit"
-          }
-        },
-        "text_Xq69Cm": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Upload your background image and adjust the opacity using the overlay level setting</p>",
-            "text_size": "text-std"
-          }
-        },
-        "buttons_RVg8x7": {
-          "type": "buttons",
-          "settings": {
-            "btn_one_show": true,
-            "btn_one_txt": "Button label",
-            "btn_one_link": "",
-            "btn_one_style": "button--solid",
-            "btn_two_show": false,
-            "btn_two_txt": "Button label",
-            "btn_two_link": "",
-            "btn_two_style": "button--solid",
-            "btn_layout": "inline",
-            "btn_alignment": "auto",
-            "btn_width_mobile": "auto",
-            "btn_color_scheme": "default",
-            "padding_top": 20,
-            "padding_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "heading_9yyMtU",
-        "text_Xq69Cm",
-        "buttons_RVg8x7"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "banner_size": "banner-style-medium",
-        "banner_full_link": "",
-        "primary_image_size": "dt-full-bleed",
-        "image_padding": 0,
-        "main_image_animation": "none",
-        "image_blur": 0,
-        "primary_image_mobile_show": true,
-        "secondary_image_size": "dt-full-bleed",
-        "secondary_image_padding": 0,
-        "secondary_image_animation": "none",
-        "secondary_image_blur": 0,
-        "secondary_image_mobile_show": true,
-        "txt_alignment": "center",
-        "txt_position": "middle",
-        "content_width": 100,
-        "text_vertical_spacing": 10,
-        "top_padding": 0,
-        "bottom_padding": 0,
-        "fade_in_text": true,
-        "scroll_fade_effect": false,
-        "text_blend_effect": "none",
-        "text_color": "fg-white",
-        "bg_color": "rgba(0,0,0,0)",
-        "overlay_level": 20
-      }
-    },
     "contact_form_q4xKKd": {
       "type": "contact-form",
       "blocks": {
@@ -135,6 +64,7 @@
         "field_telephone_fQXe3b",
         "field_custom_text_pT8wFV"
       ],
+      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
         "heading": "PSN STUDIO",
@@ -148,11 +78,78 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "1776230231cf766382": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_97701c7_4g9Nhw": {
+          "type": "ai_gen_block_97701c7",
+          "settings": {
+            "heading": "PSN STUDIO",
+            "description": "<h4>Returns & Claims</h4><p>Enter your email or zip and order or tracking number to login</p>",
+            "success_message": "Thank you for contacting us. We'll get back to you soon!",
+            "desktop_width_percent": 100,
+            "background_image": "shopify://shop_images/c9fd5896d18688383489ed888cd8dee6.jpg",
+            "background_color": "#ffffff",
+            "overlay_color": "#ffffff",
+            "overlay_opacity": 20,
+            "form_max_width": 600,
+            "padding_vertical": 60,
+            "padding_horizontal": 40,
+            "border_radius": 0,
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "description_size": 16,
+            "description_spacing": 30,
+            "show_labels": false,
+            "label_size": 14,
+            "field_spacing": 15,
+            "name_label": "Name",
+            "name_placeholder": "Name",
+            "name_required": true,
+            "email_label": "Email",
+            "email_placeholder": "Email",
+            "show_phone": true,
+            "phone_label": "Phone",
+            "phone_placeholder": "Phone",
+            "phone_required": false,
+            "message_label": "Message",
+            "message_placeholder": "Comment",
+            "textarea_height": 120,
+            "input_background_color": "#ffffff",
+            "input_text_color": "#000000",
+            "input_border_color": "#cccccc",
+            "input_border_width": 1,
+            "input_border_radius": 4,
+            "button_text": "Submit",
+            "button_alignment": "center",
+            "button_spacing": 30,
+            "button_background_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#333333",
+            "button_font_size": 14,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 40,
+            "button_border_radius": 8,
+            "success_background_color": "#d4edda",
+            "success_text_color": "#155724",
+            "error_background_color": "#f8d7da",
+            "error_text_color": "#721c24"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_97701c7_4g9Nhw"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "image_banner_VJXRiE",
-    "contact_form_q4xKKd"
+    "contact_form_q4xKKd",
+    "1776230231cf766382"
   ]
 }
