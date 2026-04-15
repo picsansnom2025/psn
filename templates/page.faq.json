@@ -1,1 +1,165 @@
-{"sections":{"main":{"type":"main-page","settings":{"content_width":"page-width-medium","hdr_alignment":"center","heading_hide":false,"padding_top":100,"padding_bottom":0}},"collapsible_content":{"type":"collapsible-content","blocks":{"collapsible_row_8aQjkK":{"type":"collapsible_row","settings":{"title":"Collapsible row","content":""}},"collapsible_row_FHGiNX":{"type":"collapsible_row","settings":{"title":"Collapsible row","content":""}},"collapsible_row_DUQ4MT":{"type":"collapsible_row","settings":{"title":"Collapsible row","content":""}}},"block_order":["collapsible_row_8aQjkK","collapsible_row_FHGiNX","collapsible_row_DUQ4MT"],"settings":{"section_label":"","heading":"","heading_size":"h2","subheading":"","btn_enable":false,"btn_txt":"","btn_url":"","btn_style":"solid","btn_color_scheme":"default","content_alignment":"center","content_width":"standard","accordion_title_font":"body","accordion_title_size":"std","text_color":"fg-body","bg_color":"bg-body","padding_top":40,"padding_bottom":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}}},"order":["main","collapsible_content"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "page-width-medium",
+        "hdr_alignment": "center",
+        "heading_hide": false,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content": {
+      "type": "collapsible-content",
+      "blocks": {
+        "heading_xPHg97": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "If any questions remain unanswered, please reach out to picsansnom2022@gmail.com"
+          }
+        },
+        "heading_W9zx9b": {
+          "type": "heading",
+          "settings": {
+            "group_heading": "ORDERING & SHIPPING"
+          }
+        },
+        "collapsible_row_8aQjkK": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Do you ship globally?",
+            "content": "<p>Yes, we proudly offer at-cost international shipping to most countries worldwide. However, there are a few exceptions where we are currently unable to deliver.</p><p>We ship to:</p><p>United States, Canada, United Kingdom, France, Germany, Italy, Spain, Australia, New Zealand, Russia, Qatar, United Arab Emirates, China, Taiwan (China), Hong Kong (China), Singapore, Japan, South Korea, Malaysia, Thailand, Vietnam</p>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_FHGiNX": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Collapsible row",
+            "content": "",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_DUQ4MT": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Collapsible row",
+            "content": "",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "heading_xPHg97",
+        "heading_W9zx9b",
+        "collapsible_row_8aQjkK",
+        "collapsible_row_FHGiNX",
+        "collapsible_row_DUQ4MT"
+      ],
+      "settings": {
+        "section_label": "{{ page.title }}",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "center",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 40,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collapsible_content_DWNB7F": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_DFEcpR": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Collapsible row",
+            "content": "",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_TX3VEB": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Collapsible row",
+            "content": "",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_GMyGjG": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Collapsible row",
+            "content": "",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_DFEcpR",
+        "collapsible_row_TX3VEB",
+        "collapsible_row_GMyGjG"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "content_alignment": "center",
+        "content_width": "standard",
+        "column_layout": "1",
+        "accordion_title_font": "body",
+        "accordion_title_size": "std",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content",
+    "collapsible_content_DWNB7F"
+  ]
+}
