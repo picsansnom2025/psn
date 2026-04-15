@@ -20,57 +20,81 @@
         "padding_bottom": 100
       }
     },
-    "contact_form_MdHTmQ": {
-      "type": "contact-form",
+    "image_with_text_hLCMP3": {
+      "type": "image-with-text",
       "blocks": {
-        "field_name_han97k": {
-          "type": "field_name",
+        "caption_zRRhW7": {
+          "type": "caption",
           "settings": {
-            "name_field_format": "single",
-            "field_required": true
+            "caption": "Add a tagline"
           }
         },
-        "field_email_3Cd3Af": {
-          "type": "field_email",
-          "settings": {}
-        },
-        "field_telephone_6D7VdX": {
-          "type": "field_telephone",
+        "heading_VtEtbX": {
+          "type": "heading",
           "settings": {
-            "field_required": false
+            "heading": "Image with text",
+            "heading_size": "h2"
           }
         },
-        "field_textarea_QhUtcN": {
-          "type": "field_textarea",
+        "text_V3VwNz": {
+          "type": "text",
           "settings": {
-            "field_required": true,
-            "row_height": 8
+            "description": "<p>Pair text with an image to focus on your chosen product, collection, or brand story.</p>",
+            "text_size": "std"
+          }
+        },
+        "button_XjEeH6": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Button label",
+            "btn_link": "",
+            "btn_style": "outline",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
           }
         }
       },
       "block_order": [
-        "field_name_han97k",
-        "field_email_3Cd3Af",
-        "field_telephone_6D7VdX",
-        "field_textarea_QhUtcN"
+        "caption_zRRhW7",
+        "heading_VtEtbX",
+        "text_V3VwNz",
+        "button_XjEeH6"
       ],
-      "name": "t:sections.contact-form.presets.name",
+      "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "heading": "{{ page.title }}",
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "form_style": "outline",
-        "form_labels_show": true,
-        "form_button_style": "solid",
-        "form_padding_top": 0,
-        "form_padding_bottom": 0,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "section_size": "flexible",
+        "content_width": "page-width",
+        "image_alignment": "right",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image_ratio": "portrait",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "full",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
       }
     }
   },
   "order": [
     "main",
-    "contact_form_MdHTmQ"
+    "image_with_text_hLCMP3"
   ]
 }
