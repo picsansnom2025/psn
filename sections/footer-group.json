@@ -19,17 +19,17 @@
           "settings": {
             "icon": "custom",
             "icon_custom_image": "shopify://shop_images/d163935a21f0b69daa885c8ca14aff31.png",
-            "title": "Free Shipping over $600",
-            "text": "<p>We offer complimentary shipping over $600 order as part of ourcommitment to exceptional service.</p>"
+            "title": "Free Shipping over $180",
+            "text": "<p>We offer complimentary shipping over $180 order as part of our commitment to exceptional service.</p>"
           }
         },
         "column_9nVpjd": {
           "type": "column",
           "settings": {
             "icon": "custom",
-            "icon_custom_image": "shopify://shop_images/207ed91d9b26d712c429f90d5bf028a3.png",
-            "title": "1-Year Warranty",
-            "text": "<p>Our ski garments are built to last. On the rare occasion a repair isneeded, we offer complimentary service for 1 year.</p>"
+            "icon_custom_image": "shopify://shop_images/warrenties.png",
+            "title": "2-Year Warranty",
+            "text": "<p>Our ski garments are built to last. On the rare occasion a repair is needed, we offer complimentary service for 2 years.</p>"
           }
         },
         "column_VMH6pt": {

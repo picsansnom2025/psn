@@ -23,6 +23,14 @@
     "contact_form_dCf987": {
       "type": "contact-form",
       "blocks": {
+        "text_iRmiym": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our Client Services team will get back to you as soon as possible.</p>",
+            "text_size": "normal",
+            "opacity": 100
+          }
+        },
         "field_name_R83NrM": {
           "type": "field_name",
           "settings": {
@@ -34,12 +42,6 @@
           "type": "field_email",
           "settings": {}
         },
-        "field_telephone_AGcBr3": {
-          "type": "field_telephone",
-          "settings": {
-            "field_required": false
-          }
-        },
         "field_textarea_7XwfXg": {
           "type": "field_textarea",
           "settings": {
@@ -49,9 +51,9 @@
         }
       },
       "block_order": [
+        "text_iRmiym",
         "field_name_R83NrM",
         "field_email_CtUNwd",
-        "field_telephone_AGcBr3",
         "field_textarea_7XwfXg"
       ],
       "name": "t:sections.contact-form.presets.name",
@@ -62,15 +64,153 @@
         "form_style": "outline",
         "form_labels_show": true,
         "form_button_style": "solid",
-        "form_padding_top": 0,
-        "form_padding_bottom": 0,
+        "form_padding_top": 20,
+        "form_padding_bottom": 20,
         "padding_top": 80,
         "padding_bottom": 80
+      }
+    },
+    "logo_wall_rM9kme": {
+      "type": "logo-wall",
+      "blocks": {
+        "image_ekUq97": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3670274.png",
+            "title": "instagram",
+            "link": "https://www.instagram.com/psn_studio_picsansnom/"
+          }
+        },
+        "image_LVmiUi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pinterest-round-icon.webp",
+            "title": "pinterest",
+            "link": ""
+          }
+        },
+        "image_mCQWyM": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3046127.png",
+            "title": "tiktok",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ekUq97",
+        "image_LVmiUi",
+        "image_mCQWyM"
+      ],
+      "name": "t:sections.logo_wall.presets.name",
+      "settings": {
+        "section_label": "Follow us on social",
+        "heading": "Social Media",
+        "heading_size": "h2",
+        "subheading": "<p>Follow us on social</p>",
+        "btn_enable": false,
+        "btn_txt": "xxx",
+        "btn_link": "",
+        "btn_style": "solid",
+        "grid_style": "grid",
+        "grid_columns_mobile": "3",
+        "grid_columns_tablet": "auto",
+        "grid_columns_desktop": "auto",
+        "animation_speed": 24,
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "logo_size_mobile": 50,
+        "logo_size_tablet": 50,
+        "logo_size": 50,
+        "logo_spacing_mobile": 40,
+        "logo_spacing_tablet": 60,
+        "logo_spacing": 60,
+        "logo_colour": "colour",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "logo_wall_xbRwwH": {
+      "type": "logo-wall",
+      "blocks": {
+        "image_i6JWE4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3670274.png",
+            "title": "instagram",
+            "link": "https://www.instagram.com/psn_studio_picsansnom/"
+          }
+        },
+        "image_rLUiaP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pinterest-round-icon.webp",
+            "title": "pinterest",
+            "link": ""
+          }
+        },
+        "image_j6nxJp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3046127.png",
+            "title": "tiktok",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_i6JWE4",
+        "image_rLUiaP",
+        "image_j6nxJp"
+      ],
+      "name": "t:sections.logo_wall.presets.name",
+      "settings": {
+        "section_label": "Follow us on social",
+        "heading": "Social Media",
+        "heading_size": "h2",
+        "subheading": "<p>Follow us on social</p>",
+        "btn_enable": false,
+        "btn_txt": "xxx",
+        "btn_link": "",
+        "btn_style": "solid",
+        "grid_style": "grid",
+        "grid_columns_mobile": "3",
+        "grid_columns_tablet": "auto",
+        "grid_columns_desktop": "auto",
+        "animation_speed": 24,
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "logo_size_mobile": 50,
+        "logo_size_tablet": 50,
+        "logo_size": 50,
+        "logo_spacing_mobile": 40,
+        "logo_spacing_tablet": 60,
+        "logo_spacing": 60,
+        "logo_colour": "colour",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
       }
     }
   },
   "order": [
     "main",
-    "contact_form_dCf987"
+    "contact_form_dCf987",
+    "logo_wall_rM9kme",
+    "logo_wall_xbRwwH"
   ]
 }
