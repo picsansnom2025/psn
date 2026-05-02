@@ -70,6 +70,79 @@
         "padding_bottom": 80
       }
     },
+    "logo_wall_VHqVJe": {
+      "type": "logo-wall",
+      "blocks": {
+        "image_ET4qcp": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_TmaLG8": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_zW7CK4": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_mYxNCH": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ET4qcp",
+        "image_TmaLG8",
+        "image_zW7CK4",
+        "image_mYxNCH"
+      ],
+      "name": "t:sections.logo_wall.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "grid_style": "grid",
+        "grid_columns_mobile": "auto",
+        "grid_columns_tablet": "auto",
+        "grid_columns_desktop": "auto",
+        "animation_speed": 24,
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "logo_size_mobile": 80,
+        "logo_size_tablet": 80,
+        "logo_size": 80,
+        "logo_spacing_mobile": 40,
+        "logo_spacing_tablet": 60,
+        "logo_spacing": 60,
+        "logo_colour": "colour",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "logo_wall_rM9kme": {
       "type": "logo-wall",
       "blocks": {
@@ -210,6 +283,7 @@
   "order": [
     "main",
     "contact_form_dCf987",
+    "logo_wall_VHqVJe",
     "logo_wall_rM9kme",
     "logo_wall_xbRwwH"
   ]
