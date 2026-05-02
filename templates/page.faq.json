@@ -19,15 +19,35 @@
         "padding_bottom": 0
       }
     },
+    "1777745491e2309ebd": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_37326c7_YHeUjy": {
+          "type": "ai_gen_block_37326c7",
+          "settings": {
+            "text": "If any questions remain unanswered, please reach out to picsansnom2022@gmail.com",
+            "font_size": 16,
+            "font_size_mobile": 14,
+            "text_color": "#000000",
+            "text_alignment": "center",
+            "font_weight": "400",
+            "text_transform": "none",
+            "font_style": "normal",
+            "line_height": 150,
+            "letter_spacing": 0,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_37326c7_YHeUjy"
+      ],
+      "settings": {}
+    },
     "collapsible_content": {
       "type": "collapsible-content",
       "blocks": {
-        "heading_xPHg97": {
-          "type": "heading",
-          "settings": {
-            "group_heading": "If any questions remain unanswered, please reach out to picsansnom2022@gmail.com"
-          }
-        },
         "heading_W9zx9b": {
           "type": "heading",
           "settings": {
@@ -72,7 +92,6 @@
         }
       },
       "block_order": [
-        "heading_xPHg97",
         "heading_W9zx9b",
         "collapsible_row_8aQjkK",
         "collapsible_row_FHGiNX",
@@ -293,6 +312,7 @@
   },
   "order": [
     "main",
+    "1777745491e2309ebd",
     "collapsible_content",
     "collapsible_content_Dd9Phc",
     "collapsible_content_TAcKPw"

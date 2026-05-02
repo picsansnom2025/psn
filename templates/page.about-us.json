@@ -20,31 +20,110 @@
         "padding_bottom": 100
       }
     },
+    "1777743487d0e47b52": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_50e342e_ryLNfL": {
+          "type": "ai_gen_block_50e342e",
+          "settings": {
+            "image": "shopify://shop_images/image_-_2024-02-21T082345.866.webp",
+            "text": "OUR HISTORY",
+            "text_color": "#ffffff",
+            "text_alignment": "center",
+            "text_weight": "bold",
+            "text_case": "none",
+            "text_size_mobile": 44,
+            "text_size_tablet": 70,
+            "text_size_desktop": 100,
+            "text_offset_bottom": 0,
+            "text_padding_horizontal": 40,
+            "enable_text_shadow": true,
+            "text_shadow_opacity": 0.5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_50e342e_ryLNfL"
+      ],
+      "settings": {}
+    },
+    "rich_text_78aKKA": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_Lg6BTh": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "alignment": "left",
+            "opacity": 100
+          }
+        },
+        "heading_C6xpPw": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR FUNDATION",
+            "heading_size": "h2",
+            "alignment": "left"
+          }
+        },
+        "text_dGtCRh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "text_size": "text-std",
+            "alignment": "left",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "caption_Lg6BTh",
+        "heading_C6xpPw",
+        "text_dGtCRh"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-01",
+        "bg_color": "bg-01",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "image_with_text_k9gghi": {
       "type": "image-with-text",
       "blocks": {
         "caption_a4kTMk": {
           "type": "caption",
           "settings": {
-            "caption": "Add a tagline"
+            "caption": "FUNDING A PROJECT OUT OF PURE LOVE"
           }
         },
         "heading_PkWXxA": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "FUNDER",
             "heading_size": "h2"
           }
         },
         "text_gYDNdp": {
           "type": "text",
           "settings": {
-            "description": "<p>Pair text with an image to focus on your chosen product, collection, or brand story.</p>",
+            "description": "<p></p><p></p><p></p><p></p><p>Azur graduated from ESSEC Business School in France,double-majoring in Luxury Management and Corporate Finance.</p><p>Azur previously worked at Prada and MAD Luxury Consulting inParis, advising luxury clients including Hermès and Chanel. In 2021, she appeared on the financial workplace reality show <em>Shining You</em>, where she earned a ticket to a top investment bank to embark on her career as a financial analyst, working on IPOs and M&A deals for top consumer brands. In 2025, she founded PSN Studio, a women's skiing and tennis brand dedicated to creating sportswear that blends functionality, aesthetics, and spiritual empowerment.</p><p></p><p>Azur is a sports enthusiast who enjoys skiing, marathons, and diving. She is also a content creator, managing her social media account on RedNote.</p>",
             "text_size": "std"
           }
         },
         "button_Ne6wq6": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "btn_color_scheme": "default",
             "button_width_mobile": "default",
@@ -72,6 +151,7 @@
         "image_alignment": "right",
         "dt_image_width": 50,
         "card_spacing": 20,
+        "image": "shopify://shop_images/1_d798fa88-ce0d-44ca-8576-2f479de19968.jpg",
         "image_ratio": "portrait",
         "secondary_image_scale": "small",
         "txt_alignment": "left",
@@ -83,18 +163,182 @@
         "text_horizontal_position": "center",
         "text_color": "fg-body",
         "bg_color": "bg-body",
-        "top_padding": 80,
-        "bottom_padding": 80,
+        "top_padding": 0,
+        "bottom_padding": 0,
         "border_vertical": false,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "image_with_text_e83Uaw": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_m83UXr": {
+          "type": "caption",
+          "settings": {
+            "caption": "FUNDING A PROJECT OUT OF PURE LOVE"
+          }
+        },
+        "heading_RcbqHN": {
+          "type": "heading",
+          "settings": {
+            "heading": "FUNDER",
+            "heading_size": "h2"
+          }
+        },
+        "text_HwHQCJ": {
+          "type": "text",
+          "settings": {
+            "description": "<p></p><p></p><p></p><p></p><p>Azur graduated from ESSEC Business School in France,double-majoring in Luxury Management and Corporate Finance.</p><p>Azur previously worked at Prada and MAD Luxury Consulting inParis, advising luxury clients including Hermès and Chanel. In 2021, she appeared on the financial workplace reality show <em>Shining You</em>, where she earned a ticket to a top investment bank to embark on her career as a financial analyst, working on IPOs and M&A deals for top consumer brands. In 2025, she founded PSN Studio, a women's skiing and tennis brand dedicated to creating sportswear that blends functionality, aesthetics, and spiritual empowerment.</p><p></p><p>Azur is a sports enthusiast who enjoys skiing, marathons, and diving. She is also a content creator, managing her social media account on RedNote.</p>",
+            "text_size": "std"
+          }
+        },
+        "button_PHUD4y": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Button label",
+            "btn_link": "",
+            "btn_style": "link",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_m83UXr",
+        "heading_RcbqHN",
+        "text_HwHQCJ",
+        "button_PHUD4y"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width-full-grid",
+        "image_alignment": "left",
+        "dt_image_width": 50,
+        "card_spacing": 20,
+        "image": "shopify://shop_images/61f6017d4df7e84bf1809fe482410171.png",
+        "image_ratio": "portrait",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "full",
+        "text_horizontal_position": "center",
+        "text_color": "fg-04",
+        "bg_color": "bg-04",
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "video_with_text_aUcqQL": {
+      "type": "video-with-text",
+      "blocks": {
+        "caption_bkNy6t": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline"
+          }
+        },
+        "heading_JcCPEg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Video with text",
+            "heading_size": "h2"
+          }
+        },
+        "text_eaj9MQ": {
+          "type": "text",
+          "settings": {
+            "description": "<p>Pair text with a video to focus on your chosen product, collection, or brand story.</p>",
+            "text_size": "std"
+          }
+        }
+      },
+      "block_order": [
+        "caption_bkNy6t",
+        "heading_JcCPEg",
+        "text_eaj9MQ"
+      ],
+      "name": "t:sections.video-with-text.presets.name",
+      "settings": {
+        "section_size": "flexible",
+        "card_spacing": 20,
+        "content_width": "page-width-full-grid",
+        "video_url": "shopify://files/videos/2月13日.mp4",
+        "image_ratio": "portrait",
+        "autoplay": true,
+        "enable_video_looping": true,
+        "secondary_image_scale": "small",
+        "dt_image_width": 50,
+        "video_alignment": "right",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 20,
+        "txt_padding_bottom_mobile": 20,
+        "txt_vertical_padding": 0,
+        "text_width": "full",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "border_vertical": false,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "full",
+        "border_color": "dark"
+      }
+    },
+    "section_text_ticker_WATLjj": {
+      "type": "section-text-ticker",
+      "blocks": {
+        "text_ybDYTm": {
+          "type": "text",
+          "settings": {
+            "text": "An announcement or message about our brand or store"
+          }
+        }
+      },
+      "block_order": [
+        "text_ybDYTm"
+      ],
+      "name": "t:sections.text-ticker.presets.name",
+      "settings": {
+        "font_size": "text-std",
+        "vertical_padding": 20,
+        "horizontal_padding": 30,
+        "anim_speed": 8,
+        "text_color": "fg-01",
+        "bg_color": "bg-01",
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "full",
+        "border_color": "light"
+      }
     }
   },
   "order": [
     "main",
-    "image_with_text_k9gghi"
+    "1777743487d0e47b52",
+    "rich_text_78aKKA",
+    "image_with_text_k9gghi",
+    "image_with_text_e83Uaw",
+    "video_with_text_aUcqQL",
+    "section_text_ticker_WATLjj"
   ]
 }
