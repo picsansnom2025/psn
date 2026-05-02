@@ -1,6 +1,287 @@
+{% doc %}
+  @prompt
+    生成一个section，可以上传一张跟屏幕一样宽的图片，一行可编辑的大字与图片的底边对齐
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-fullwidth-image-text-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  .ai-fullwidth-image-text-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ai-fullwidth-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-fullwidth-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    min-height: 400px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-fullwidth-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 400px;
+  }
+
+  .ai-fullwidth-text-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: {{ block.settings.text_offset_bottom }}px;
+    left: 0;
+    right: 0;
+    padding: 0 {{ block.settings.text_padding_horizontal }}px;
+    z-index: 2;
+  }
+
+  .ai-fullwidth-text-inner-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size_mobile }}px;
+    color: {{ block.settings.text_color }};
+    font-weight: {{ block.settings.text_weight }};
+    text-align: {{ block.settings.text_alignment }};
+    margin: 0;
+    line-height: 1.2;
+    text-transform: {{ block.settings.text_case }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .ai-fullwidth-text-inner-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_tablet }}px;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .ai-fullwidth-text-inner-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_desktop }}px;
+    }
+  }
+
+  {% if block.settings.enable_text_shadow %}
+    .ai-fullwidth-text-inner-{{ ai_gen_id }} {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, {{ block.settings.text_shadow_opacity }});
+    }
+  {% endif %}
+{% endstyle %}
+
+<fullwidth-image-text-{{ ai_gen_id }}
+  class="ai-fullwidth-image-text-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-fullwidth-image-text-container-{{ ai_gen_id }}">
+    {% if block.settings.image %}
+      <img
+        src="{{ block.settings.image | image_url: width: 2400 }}"
+        alt="{{ block.settings.image.alt | escape }}"
+        loading="lazy"
+        width="{{ block.settings.image.width }}"
+        height="{{ block.settings.image.height }}"
+        class="ai-fullwidth-image-{{ ai_gen_id }}"
+      >
+    {% else %}
+      <div class="ai-fullwidth-image-placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+
+    <div class="ai-fullwidth-text-{{ ai_gen_id }}">
+      {% if block.settings.text != blank %}
+        <h2 class="ai-fullwidth-text-inner-{{ ai_gen_id }}">{{ block.settings.text }}</h2>
+      {% endif %}
+    </div>
+  </div>
+</fullwidth-image-text-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class FullwidthImageText{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.style.display = 'block';
+      }
+    }
+
+    customElements.define('fullwidth-image-text-{{ ai_gen_id }}', FullwidthImageText{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Image with text",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Your headline here"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "bold",
+          "label": "Bold"
+        }
+      ],
+      "default": "bold"
+    },
+    {
+      "type": "select",
+      "id": "text_case",
+      "label": "Text case",
+      "options": [
+        {
+          "value": "none",
+          "label": "Normal"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Font size (mobile)",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "text_size_tablet",
+      "label": "Font size (tablet)",
+      "min": 30,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "text_size_desktop",
+      "label": "Font size (desktop)",
+      "min": 30,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Position"
+    },
+    {
+      "type": "range",
+      "id": "text_offset_bottom",
+      "label": "Distance from bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "text_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Text shadow"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_text_shadow",
+      "label": "Enable text shadow",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_opacity",
+      "label": "Shadow opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text"
+    }
+  ]
+}
 {% endschema %}
