@@ -16,7 +16,27 @@
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+.contact-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0 32px;
+  flex-wrap: wrap;
 }
+.contact-logo-row__item { flex: 0 0 auto; }
+.contact-logo-row__item img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.25s ease;
+  display: block;
+}
+.contact-logo-row__item img:hover { opacity: 1; }
+
+}
+
 {%- endstyle -%}
 
 <div class="lcontact-form contact-form-style--{{ section.settings.form_style }}{% unless section.settings.form_labels_show %} contact-form--no-labels{% endunless %}">
@@ -28,6 +48,27 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
+
+    {%- for block in section.blocks -%}
+  {%- if block.type == 'logo_row' -%}
+    <div class="contact-logo-row" {{ block.shopify_attributes }}>
+      {%- for i in (1..3) -%}
+        {%- assign logo_key = 'logo_' | append: i -%}
+        {%- assign link_key = 'link_' | append: i -%}
+        {%- assign logo_img = block.settings[logo_key] -%}
+        {%- assign logo_link = block.settings[link_key] -%}
+        {%- if logo_img != blank -%}
+          <div class="contact-logo-row__item">
+            {%- if logo_link != blank -%}<a href="{{ logo_link }}" target="_blank" rel="noopener noreferrer">{%- endif -%}
+            {{- logo_img | image_url: width: 300 | image_tag: loading: 'lazy', alt: logo_img.alt | default: '' -}}
+            {%- if logo_link != blank -%}</a>{%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+{%- endfor -%}
+
     {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
       {%- if form.posted_successfully? -%}
         <h3 class="form-status form-status-success-heading form-status-list form__message align-{{ section.settings.heading_alignment }}" tabindex="-1" autofocus>
@@ -550,7 +591,21 @@ document.addEventListener("DOMContentLoaded", function () {
           "default": 100
         }
       ]
-    }
+    },
+    {
+  "type": "logo_row",
+  "name": "Logo 行",
+  "limit": 1,
+  "settings": [
+    { "type": "image_picker", "id": "logo_1", "label": "Logo 1" },
+    { "type": "url", "id": "link_1", "label": "Logo 1 链接" },
+    { "type": "image_picker", "id": "logo_2", "label": "Logo 2" },
+    { "type": "url", "id": "link_2", "label": "Logo 2 链接" },
+    { "type": "image_picker", "id": "logo_3", "label": "Logo 3" },
+    { "type": "url", "id": "link_3", "label": "Logo 3 链接" }
+  ]
+}
+
   ],
   "presets": [
     {
