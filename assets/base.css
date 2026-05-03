@@ -3762,7 +3762,20 @@ body:has(.header-bar--page-margins) .shopify-policy__container {
     padding-top: calc(var(--site-header-height-desktop) + 80px);
   }
 }
-.contact-logo-row{
-  width: clamp(24px, 4vw, 48px);
+/* Contact page logo row - responsive */
+.contact-logo-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  width: 100%;
+}
+
+.contact-logo-row img {
+  width: auto;
+  max-width: 30%;
   height: auto;
+  flex-shrink: 1;
+  object-fit: contain;
 }
