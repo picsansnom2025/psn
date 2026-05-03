@@ -32,7 +32,7 @@
             "text_alignment": "center",
             "text_weight": "bold",
             "text_case": "none",
-            "text_size_mobile": 44,
+            "text_size_mobile": 36,
             "text_size_tablet": 70,
             "text_size_desktop": 100,
             "text_offset_bottom": 0,
