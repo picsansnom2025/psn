@@ -107,7 +107,7 @@
             "link_icon": "measurement",
             "popup_display_type": "modal",
             "popup_width": "normal",
-            "page": ""
+            "page": "{{ product.metafields.custom.size_chart.value }}"
           }
         },
         "inventory_zeVG83": {
