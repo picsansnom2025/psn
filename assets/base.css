@@ -3762,9 +3762,3 @@ body:has(.header-bar--page-margins) .shopify-policy__container {
     padding-top: calc(var(--site-header-height-desktop) + 80px);
   }
 }
-/* Logo 行图标自适应缩放 */
-[id*="contact_form"] .logo-row img,
-[id*="contact_form"] .logo-row svg {
-  width: clamp(24px, 4vw, 48px);
-  height: auto;
-}
