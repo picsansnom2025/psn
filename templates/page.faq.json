@@ -67,7 +67,16 @@
           "type": "collapsible_row",
           "settings": {
             "title": "How long will it take to get my order?",
-            "content": "<p>We strive to process and ship orders as quickly as possible - typically within 2 business days.</p><p><br/>Delivery Times<br/>We do our best to ensure timely delivery for all orders. Please note that all delivery dates are estimated and provided directly by the carrier.</p><p><br/>Estimated delivery time by area:</p><p>Americas: 5–10 business days</p><p>Asia: 5–10 business days</p><p>Europe: 7–15 business days</p><p><br/>Tracking Your Order<br/>Once your order ships, you’ll receive a confirmation email with tracking details. If you have questions about your package’s location after shipment, please contact the shipping carrier directly, as we do not have access to packages once they leave our warehouse.<br/><br/>Signature<br/>A signature is required upon delivery for orders that do not select package insurance. If no one is available to sign, the carrier will leave a notice to arrange redelivery or pickup.</p>",
+            "content": "<p>We strive to process and ship orders as quickly as possible - typically within 2 business days.</p><p><br/><strong>Delivery Times</strong><br/>We do our best to ensure timely delivery for all orders. Please note that all delivery dates are estimated and provided directly by the carrier.</p><p><br/>Estimated delivery time by area:</p><ul><li>Americas: 5–10 business days</li><li>Asia: 5–10 business days</li><li>Europe: 7–15 business days</li></ul>",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
+        "collapsible_row_MmYz8U": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Tracking Your Order",
+            "content": "<p>Once your order ships, you’ll receive a confirmation email with tracking details. If you have questions about your package’s location after shipment, please contact the shipping carrier directly, as we do not have access to packages once they leave our warehouse.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -85,7 +94,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "Is shipping insurance offered?",
-            "content": "<p>Yes. We have partnered with a third-party insurance company to offer you protection against, loss, theft and damage during shipping. Insurance can be selected at checkout. Please note: <strong>PSN is not responsible for packages lost or stolen during transit.</strong></p>",
+            "content": "<p>Yes. We have partnered with a third-party insurance company to offer you protection against, loss, theft and damage during shipping. Insurance can be selected at checkout. Please note: <strong>PSN Studio is not responsible for packages lost or stolen during transit.</strong></p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -95,6 +104,7 @@
         "heading_W9zx9b",
         "collapsible_row_8aQjkK",
         "collapsible_row_FHGiNX",
+        "collapsible_row_MmYz8U",
         "collapsible_row_DUQ4MT",
         "collapsible_row_wFXB8G"
       ],
@@ -135,8 +145,8 @@
         "collapsible_row_ycEGGE": {
           "type": "collapsible_row",
           "settings": {
-            "title": "How does PSN fit?",
-            "content": "<p>PSN designs are crafted with a tailored, performance-driven fit. Ski suits and outerwear are designed for freedom of movement with a flattering fit. Please refer to our size guide<strong> </strong>for specific measurements and fit notes by style on each product page.</p>",
+            "title": "How does PSN Studio fit?",
+            "content": "<p>PSN Studio designs are crafted with a tailored, performance-driven fit. Ski suits and outerwear are designed for freedom of movement with a flattering fit. Please refer to our size guide<strong> </strong>for specific measurements and fit notes by style on each product page.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -144,8 +154,8 @@
         "collapsible_row_bM9NJV": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Are PSN ski suits waterproof?",
-            "content": "<p>All PSN ski suits and outerwear are made with waterproof or water-repellent materials, ranging from 5K to 15K ratings, providing protection against snow, sleet, and light to heavy rain. See product features for specifics by garment.</p><p>Asia: 5–10 business days</p><p>Europe: 7–15 business days</p><p><br/>Tracking Your Order<br/>Once your order ships, you’ll receive a confirmation email with tracking details. If you have questions about your package’s location after shipment, please contact the shipping carrier directly, as we do not have access to packages once they leave our warehouse.<br/><br/>Signature<br/>A signature is required upon delivery for orders that do not select package insurance. If no one is available to sign, the carrier will leave a notice to arrange redelivery or pickup.</p>",
+            "title": "Are PSN Studio ski suits waterproof?",
+            "content": "<p>All PSN Studio ski suits and outerwear are made with waterproof or water-repellent materials, ranging from 8K to 15K ratings, providing protection against snow, sleet, and light to heavy rain. See product features for specifics by garment.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -153,7 +163,7 @@
         "collapsible_row_gx9fYQ": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Are PSN products sustainably made?",
+            "title": "Are PSN Studio products sustainably made?",
             "content": "<p>Yes. Sustainability is central to our design philosophy. We partner with certified mills and manufacturers who share our commitment to ethical production. Many of our textiles feature recycled insulation, eco-friendly water-repellent coatings. We also intentionally produce in limited quantities to reduce excess inventory and ensure each collection sells through, minimizing waste while preserving the exclusivity of every piece.</p>",
             "media_ratio": "fit",
             "media_width": 50
@@ -163,7 +173,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "Do you offer a warranty?",
-            "content": "<p>Yes. All PSN ski suits, ski jackets, and ski pants are backed by a <strong>one-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <strong>Warranty Policy</strong> for full details.</p>",
+            "content": "<p>Yes. All PSN Studio ski suits, ski jackets, and ski pants are backed by a <strong>two-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <strong>Warranty Policy</strong> for full details.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -172,7 +182,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "What’s the difference between waterproof and water-repellent?",
-            "content": "<p><strong>Waterproof</strong> fabrics prevent moisture from penetrating the garment, even under pressure, while <strong>water-repellent</strong> fabrics resist light snow and moisture but are not entirely impermeable. PSN’s waterproof styles are designed for demanding alpine conditions, while water-repellent styles are ideal for light weather, bluebird days, resort wear and après.</p>",
+            "content": "<p><strong>Waterproof</strong> fabrics prevent moisture from penetrating the garment, even under pressure, while <strong>water-repellent</strong> fabrics resist light snow and moisture but are not entirely impermeable. PSN Studio’s waterproof styles are designed for demanding alpine conditions, while water-repellent styles are ideal for light weather, bluebird days, resort wear and après.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -180,8 +190,8 @@
         "collapsible_row_7reezR": {
           "type": "collapsible_row",
           "settings": {
-            "title": "Can I wear PSN off the slopes?",
-            "content": "<p>Absolutely. PSN designs transition effortlessly from slope to street. Tailored fits, refined detailing, and technical materials make each piece functional in the mountains and stylish in urban and resort settings.</p>",
+            "title": "Can I wear PSN Studio off the slopes?",
+            "content": "<p>Absolutely. PSN Studio designs transition effortlessly from slope to street. Tailored fits, refined detailing, and technical materials make each piece functional in the mountains and stylish in urban and resort settings.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -234,16 +244,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "What is your return policy?",
-            "content": "<p>PSN crafts garments built to last a lifetime, and we want you to love your purchase. If for any reason you are not completely satisfied, eligible items may be returned in accordance with the following terms.</p><p>· Returns must be initiated within7 days of receipt.</p><p>· Return shipping costs are the responsibility of the customer and calculated at the time of return.</p><p>· Items must be unworn, with all original tags attached and packaging intact. While trying on your garment, please be aware not to transfer makeup or other cosmetics. </p><p>· Orders placed with a discount code of 20% or less are eligible for return or exchange.</p><p>· Orders discounted by sale of 20%+ are eligible for exchange only.</p><p>· Final Sale items are not eligible for return or exchange.</p>",
-            "media_ratio": "fit",
-            "media_width": 50
-          }
-        },
-        "collapsible_row_tyygac": {
-          "type": "collapsible_row",
-          "settings": {
-            "title": "Return policy",
-            "content": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+            "content": "<p>PSN Studio crafts garments built to last a lifetime, and we want you to love your purchase. If for any reason you are not completely satisfied, eligible items may be returned in accordance with the following terms.</p><p>· Returns must be initiated within7 days of receipt.</p><p>· Return shipping costs are the responsibility of the customer and calculated at the time of return.</p><p>· Items must be unworn, with all original tags attached and packaging intact. While trying on your garment, please be aware not to transfer makeup or other cosmetics. </p><p>· Orders placed with a discount code of 20% or less are eligible for return or exchange.</p><p>· Orders discounted by sale of 20%+ are eligible for exchange only.</p><p>· Final Sale items are not eligible for return or exchange.</p><p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -256,33 +257,12 @@
             "media_ratio": "fit",
             "media_width": 50
           }
-        },
-        "collapsible_row_mdz4Vi": {
-          "type": "collapsible_row",
-          "settings": {
-            "title": "Shipping",
-            "content": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
-            "media_ratio": "fit",
-            "media_width": 50
-          }
-        },
-        "collapsible_row_GqctKp": {
-          "type": "collapsible_row",
-          "settings": {
-            "title": "Manufacturing",
-            "content": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
-            "media_ratio": "fit",
-            "media_width": 50
-          }
         }
       },
       "block_order": [
         "heading_9cyceg",
         "collapsible_row_BU9qFf",
-        "collapsible_row_tyygac",
-        "collapsible_row_tDAyDz",
-        "collapsible_row_mdz4Vi",
-        "collapsible_row_GqctKp"
+        "collapsible_row_tDAyDz"
       ],
       "settings": {
         "section_label": "{{ page.title }}",
