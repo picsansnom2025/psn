@@ -173,7 +173,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "Do you offer a warranty?",
-            "content": "<p>Yes. All PSN Studio ski suits, ski jackets, and ski pants are backed by a <strong>two-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <strong>Warranty Policy</strong> for full details.</p>",
+            "content": "<p>Yes. All PSN Studio ski suits, ski jackets, and ski pants are backed by a <strong>two-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <a href=\"/pages/1-year-warranty\" title=\"1 YEAR WARRANTY\"><strong>Warranty Policy</strong></a> for full details.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
@@ -244,7 +244,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "What is your return policy?",
-            "content": "<p>PSN Studio crafts garments built to last a lifetime, and we want you to love your purchase. If for any reason you are not completely satisfied, eligible items may be returned in accordance with the following terms.</p><p>· Returns must be initiated within7 days of receipt.</p><p>· Return shipping costs are the responsibility of the customer and calculated at the time of return.</p><p>· Items must be unworn, with all original tags attached and packaging intact. While trying on your garment, please be aware not to transfer makeup or other cosmetics. </p><p>· Orders placed with a discount code of 20% or less are eligible for return or exchange.</p><p>· Orders discounted by sale of 20%+ are eligible for exchange only.</p><p>· Final Sale items are not eligible for return or exchange.</p><p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+            "content": "<p>PSN Studio crafts garments built to last a lifetime, and we want you to love your purchase. If for any reason you are not completely satisfied, eligible items may be returned in accordance with the following terms.</p><ul><li>Returns must be initiated within7 days of receipt.</li><li>Return shipping costs are the responsibility of the customer and calculated at the time of return.</li><li>Items must be unworn, with all original tags attached and packaging intact. While trying on your garment, please be aware not to transfer makeup or other cosmetics. </li><li>Orders placed with a discount code of 20% or less are eligible for return or exchange.</li><li>Orders discounted by sale of 20%+ are eligible for exchange only.</li><li>Final Sale items are not eligible for return or exchange.</li></ul><p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
