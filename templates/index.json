@@ -1,1 +1,872 @@
-{"sections":{"video_banner_hRpm4d":{"type":"video-banner","blocks":{"heading_DQMTFQ":{"type":"heading","settings":{"heading":"Tapestry of Vibrance","heading_size":"h1","txt_alignment":"inherit"}},"text_VtHgEw":{"type":"text","settings":{"text":"<p><em>Premium, aesthetic design for a modern mindset<\/em><\/p>","text_size":"text-std"}},"buttons_wGNbXK":{"type":"buttons","settings":{"btn_layout":"inline","btn_alignment":"auto","btn_width_mobile":"auto","btn_color_scheme":"white","padding_top":20,"padding_bottom":20,"btn_one_show":true,"btn_one_txt":"Shop Now","btn_one_link":"","btn_one_style":"button--outline","btn_two_show":false,"btn_two_txt":"Button text","btn_two_link":"","btn_two_style":"button--solid"}}},"block_order":["heading_DQMTFQ","text_VtHgEw","buttons_wGNbXK"],"settings":{"banner_size":"banner-style-large","video_url":"shopify:\/\/files\/videos\/*1.MOV","overlay_level":0,"video_size":"100","video_position":"center","video_margin_mobile":0,"video_margin_desktop":0,"enable_playback_pause":true,"enable_audio":true,"txt_position":"bottom_left","txt_alignment":"left","content_width":100,"text_vertical_spacing":10,"top_padding":0,"bottom_padding":20,"fade_in_text":true,"scroll_fade_effect":true,"text_blend_effect":"none","text_color":"fg-white","bg_color":"#000000"}},"image_banner_YKgCbG":{"type":"image-banner","blocks":{"heading_UfmrtC":{"type":"heading","settings":{"heading":"Heading","heading_size":"h1","txt_alignment":"inherit"}},"text_UDGAfe":{"type":"text","settings":{"text":"<p>Talk about your brand, product or content<\/p>","text_size":"text-std"}},"buttons_mDekRE":{"type":"buttons","settings":{"btn_one_show":true,"btn_one_txt":"Button label","btn_one_link":"","btn_one_style":"button--solid","btn_two_show":false,"btn_two_txt":"Button label","btn_two_link":"","btn_two_style":"button--solid","btn_layout":"inline","btn_alignment":"auto","btn_width_mobile":"auto","btn_color_scheme":"default","padding_top":20,"padding_bottom":20}}},"block_order":["heading_UfmrtC","text_UDGAfe","buttons_mDekRE"],"name":"t:sections.image-banner.presets.name","settings":{"banner_size":"banner-style-fullscreen","banner_full_link":"","image":"shopify:\/\/shop_images\/4399_wide_copy.jpg","primary_image_size":"dt-full-bleed","image_padding":0,"main_image_animation":"none","image_blur":0,"primary_image_mobile_show":true,"secondary_image_size":"dt-full-bleed","secondary_image_padding":0,"secondary_image_animation":"none","secondary_image_blur":0,"secondary_image_mobile_show":true,"txt_alignment":"right","txt_position":"middle","content_width":100,"text_vertical_spacing":10,"top_padding":0,"bottom_padding":0,"fade_in_text":true,"scroll_fade_effect":false,"text_blend_effect":"none","text_color":"fg-white","bg_color":"rgba(0,0,0,0)","overlay_level":0}},"collection_cards_NUtLmW":{"type":"collection-cards","blocks":{"featured_collection_ez9gT3":{"type":"featured_collection","settings":{"collection":"frontpage","image":"shopify:\/\/shop_images\/Man-skateboard-white-trainer_copy.jpg","description":"tes","button_label":"Shop Now"}},"featured_collection_m6qdpH":{"type":"featured_collection","settings":{"collection":"","description":"","button_label":"Shop Now"}}},"block_order":["featured_collection_ez9gT3","featured_collection_m6qdpH"],"name":"t:sections.collection-cards.presets.name","settings":{"section_layout":"grid","arrow_style":"solid","grid_layout_mobile":"2","grid_layout_tablet":2,"grid_layout_desktop":2,"grid_spacing_vertical":0,"grid_spacing_horizontal":"default","content_width":"page-width","content_alignment":"center","section_label":"","heading":"","heading_size":"h2","sub_heading":"","btn_enable":false,"btn_txt":"","btn_url":"","btn_style":"solid","btn_color_scheme":"default","btn_position_mobile":"bottom","btn_position_desktop":"bottom","card_layout":"overlay","card_ratio":"square","card_heading_visibility":"rollover","card_heading_position":"center","card_heading_size":"normal","media_radius_top_only":false,"show_card_buttons":true,"cards_button_position":"inline","cards_button_style":"link--underlined","text_color":"fg-body","bg_color":"bg-body","padding_top":80,"padding_bottom":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"section_media_collage_NNF9Qn":{"type":"section-media-collage","blocks":{"image_HdN89E":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Man-skateboard-white-trainer_copy.jpg","image_size":"half_width","image_ratio":"square","image_padding_mobile":0,"image_padding":0,"image_offset_vertical":0,"image_offset_horizontal":0}},"image_zyFmxp":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/BOH_3207_copy_1.jpg","image_size":"half_width","image_ratio":"square","image_padding_mobile":0,"image_padding":0,"image_offset_vertical":0,"image_offset_horizontal":0}}},"block_order":["image_HdN89E","image_zyFmxp"],"name":"t:sections.collage.presets.name","settings":{"section_label":"","heading":"","heading_size":"h2","description":"","hdr_alignment":"center","header_style":"normal","content_layout":"grid","arrow_style":"solid-inverted","content_width":"page-width-full","grid_spacing":"no-spacing","grid_columns_tablet":2,"grid_columns_desktop":2,"text_color":"fg-body","bg_color":"bg-body","padding_top":80,"padding_bottom":80}},"featured_collection":{"type":"featured-collection","custom_css":[],"settings":{"collection":"frontpage","content_alignment":"center","section_label":"","heading":"New Arrivals","heading_size":"h2","description":"","btn_enable":true,"btn_label":"Shop All","btn_style":"solid","btn_position_mobile":"bottom","btn_position_desktop":"bottom","products_layout":"carousel","arrow_style":"solid-inverted","content_width":"page-width","no_items":8,"mobile_grid":"2","tablet_grid":"3","dt_grid":"3","card_image_display":"second_image_hover","pagination_color_scheme":"body","show_prices":true,"show_vendor":false,"show_swatches":false,"show_color_count":false,"show_rating":true,"enable_quick_add":false,"rollover_titles":false,"text_color":"fg-body","bg_color":"bg-body","btn_color_scheme":"default","padding_top":80,"padding_bottom":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"collection_cards":{"type":"collection-cards","blocks":{"featured_collection_YY8DAN":{"type":"featured_collection","settings":{"collection":"frontpage","video":"shopify:\/\/files\/videos\/*1.MOV","description":"tetst","button_label":"Shop Now"}},"featured_collection_Unk3dj":{"type":"featured_collection","settings":{"collection":"","description":"","button_label":"Shop Now"}},"featured_collection_B3jLY6":{"type":"featured_collection","settings":{"collection":"","description":"","button_label":"Shop Now"}}},"block_order":["featured_collection_YY8DAN","featured_collection_Unk3dj","featured_collection_B3jLY6"],"settings":{"section_layout":"slider","arrow_style":"outline-inverted","grid_layout_mobile":"2","grid_layout_tablet":3,"grid_layout_desktop":3,"grid_spacing_vertical":20,"grid_spacing_horizontal":"default","content_width":"page-width","content_alignment":"center","section_label":"","heading":"Collections","heading_size":"h2","sub_heading":"","btn_enable":false,"btn_txt":"","btn_url":"","btn_style":"solid","btn_color_scheme":"default","btn_position_mobile":"bottom","btn_position_desktop":"bottom","card_layout":"stacked","card_ratio":"portrait","card_heading_visibility":"normal","card_heading_position":"center","card_heading_size":"normal","media_radius_top_only":false,"show_card_buttons":false,"cards_button_position":"inline","cards_button_style":"button--solid","text_color":"fg-body","bg_color":"bg-body","padding_top":80,"padding_bottom":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"collection_list_pBf6he":{"type":"collection-list","blocks":{"featured_collection_cjGg8g":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_bdEV3B":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_3787ak":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_ypmiP9":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_B6y9PF":{"type":"featured_collection","settings":{"collection":""}},"featured_collection_4CG4FX":{"type":"featured_collection","settings":{"collection":""}}},"block_order":["featured_collection_cjGg8g","featured_collection_bdEV3B","featured_collection_3787ak","featured_collection_ypmiP9","featured_collection_B6y9PF","featured_collection_4CG4FX"],"name":"t:sections.collection-list.presets.name","settings":{"header_alignment":"center","section_label":"","heading":"Collections","heading_size":"h2","sub_heading":"","link_style":"text","list_separator":"none","list_font_size":"text-large","section_layout":"vertical","content_alignment":"center","content_width":"page-width","list_width":"50","list_borders":true,"images_enable":true,"rollover_image_position":"center","show_first_image":true,"show_first_image_mobile":true,"mobile_image_position":"last","image_ratio":"portrait","image_size":"medium","btn_enable":false,"btn_txt":"","btn_url":"","btn_style":"solid","btn_position_mobile":"bottom","btn_position_desktop":"bottom","btn_color_scheme":"default","text_color":"fg-body","bg_color":"bg-01","padding_top":80,"padding_bottom":60,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"section_content_cards_XzPFVx":{"type":"section-content-cards","blocks":{"card_Mgg3Mb":{"type":"card","settings":{"image_overlay":0,"title":"Card","sub_title":"","link_label":"","link":"","show_popup":false,"media_aspect_ratio":"1x1","popup_title":"","popup_description":"","popup_link_label":"","popup_link":"","popup_link_style":"text"}},"card_ptzJqw":{"type":"card","settings":{"image_overlay":0,"title":"Card","sub_title":"","link_label":"","link":"","show_popup":false,"media_aspect_ratio":"1x1","popup_title":"","popup_description":"","popup_link_label":"","popup_link":"","popup_link_style":"text"}}},"block_order":["card_Mgg3Mb","card_ptzJqw"],"name":"t:sections.content_cards.presets.name","settings":{"section_label":"","heading":"","heading_size":"h2","subheading":"","hdr_alignment":"center","card_text_color":"fg-white","text_alignment":"center","text_position":"bottom","card_heading_size":"h3","card_text_padding_mobile":20,"card_text_padding":20,"show_link_labels":true,"link_all":true,"card_link_style":"text","card_link_color":"match","image_ratio":"square","popup_type":"modal","popup_icon_style":"minimal","grid_layout_mobile":"1","grid_stacking_mobile":"vertical","grid_columns":2,"grid_layout":"equal","grid_spacing":"normal","section_margins":"page-width","btn_enable":false,"btn_txt":"","btn_url":"","btn_style":"solid","btn_color_scheme":"default","btn_position_mobile":"bottom","btn_position_desktop":"bottom","text_color":"fg-body","bg_color":"bg-body","section_padding_top":40,"section_padding_bottom":40,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"featured_product_7EazyT":{"type":"featured-product","blocks":{"title_xQ8gbp":{"type":"title","settings":{"heading_size":"h2"}},"price_g6t6Hq":{"type":"price","settings":{"price_show_discount":true,"price_show_taxes":true,"block_padding_top":10,"block_padding_bottom":10}},"button_MrtrBk":{"type":"button","settings":{"button_type":"buy","button_text":"Shop now","button_style":"solid","button_width_mobile":"full-width","button_width_desktop":"default"}}},"block_order":["title_xQ8gbp","price_g6t6Hq","button_MrtrBk"],"name":"t:sections.featured-product.presets.name","settings":{"product":"test-shoe","show_tag":false,"image":"shopify:\/\/shop_images\/Web_Trainer_colorblock_Green.jpg","image_ratio":"portrait","main_media_width":50,"secondary_image_scale":"small","text_color":"fg-body","bg_color":"bg-body","btn_color_scheme":"default","top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark","txt_alignment":"left","txt_vertical_alignment":"middle","txt_vertical_padding":0,"content_width":"page-width","image_alignment":"right","card_spacing":20,"top_padding":80,"bottom_padding":80}},"section_featured_style_gallery":{"type":"section-featured-style-gallery","blocks":{"image_GRCcMk":{"type":"image","settings":{"preview_title":"","title":"Shop this style","sub_title":"","description":"","product_one":"test-shoe","product_one_pos_x":40,"product_one_pos_y":60,"product_two":"","product_two_pos_x":60,"product_two_pos_y":80,"product_three":"","product_three_pos_x":20,"product_three_pos_y":70}},"image_XM9D6Y":{"type":"image","settings":{"preview_title":"","title":"Shop this style","sub_title":"","description":"","product_one":"","product_one_pos_x":40,"product_one_pos_y":60,"product_two":"","product_two_pos_x":60,"product_two_pos_y":80,"product_three":"","product_three_pos_x":20,"product_three_pos_y":70}},"image_UjpL4W":{"type":"image","settings":{"preview_title":"","title":"Shop this style","sub_title":"","description":"","product_one":"","product_one_pos_x":40,"product_one_pos_y":60,"product_two":"","product_two_pos_x":60,"product_two_pos_y":80,"product_three":"","product_three_pos_x":20,"product_three_pos_y":70}},"image_mhLGUi":{"type":"image","settings":{"preview_title":"","title":"Shop this style","sub_title":"","description":"","product_one":"","product_one_pos_x":40,"product_one_pos_y":60,"product_two":"","product_two_pos_x":60,"product_two_pos_y":80,"product_three":"","product_three_pos_x":20,"product_three_pos_y":70}}},"block_order":["image_GRCcMk","image_XM9D6Y","image_UjpL4W","image_mhLGUi"],"disabled":true,"settings":{"section_label":"","heading":"Featured Styles","sub_heading":"","heading_size":"h2","content_alignment":"center","thumbnails_layout":"carousel","arrow_style":"solid-inverted","grid_layout_mobile":"2","grid_layout_tablet":3,"grid_layout_desktop":4,"image_ratio":"portrait","show_hotspots":false,"hotspot_color":"white","show_thumbnail_title":true,"preview_title_position":"default","pagination_enable":false,"show_price":true,"show_vendor":false,"show_links":false,"link_label":"Shop now","text_color":"fg-body","bg_color":"bg-body","padding_top":80,"padding_bottom":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"multicolumn_zgGmet":{"type":"multicolumn","blocks":{"column_BBcXdp":{"type":"column","settings":{"column_span":"1","title":"Our Ethos","heading_top_margin":0,"heading_margin":5,"text":"<p>Crafted with the finest botanical extracts and ingredients, each product reflects a harmonious blend of tradition and innovation.<\/p>","block_btn_style":"button button--outline","link_label":"Discover","link":""}},"column_THbkW8":{"type":"column","settings":{"column_span":"1","title":"Our Stores","heading_top_margin":0,"heading_margin":5,"text":"<p>Each of our brand stores offers a curated experience, showcasing the unique spirit behind our products. Explore and find.<\/p>","block_btn_style":"button button--outline","link_label":"Explore","link":""}}},"block_order":["column_BBcXdp","column_THbkW8"],"settings":{"section_label":"","heading":"The Maison","heading_size":"h2","hdr_alignment":"center","subheading":"","btn_enable":false,"btn_txt":"","btn_link":"","btn_style":"solid","btn_position_mobile":"bottom","btn_position_desktop":"bottom","grid_layout":"stacked","arrow_style":"solid-inverted","arrow_position":"middle","grid_columns":2,"grid_column_gap":40,"keylines_show":true,"keyline_opacity":20,"column_layout":"stacked","column_vertical_alignment":"top","card_image_alignment":"center","image_size":"full-width","image_ratio":"fit","text_alignment":"center","column_heading_size":"h3","block_button_width":"auto","link_opening":"page","text_color":"fg-body","bg_color":"bg-body","btn_color_scheme":"default","top_padding":80,"bottom_padding":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}},"rich_text_TagPrr":{"type":"rich-text","blocks":{"caption_BgEAEk":{"type":"caption","settings":{"caption":"Our Story","alignment":"center","opacity":100}},"text_FCNxYR":{"type":"text","settings":{"text":"<p>Our brand is a tribute to nature's timeless allure and formulations that embody the essence of alpine purity and sophistication. Thoughtful and sustainable design extends to everything we produce.<\/p>","text_size":"text-large","alignment":"center","text_indent":"noindent"}},"button_irMiCV":{"type":"button","settings":{"alignment":"center","btn_layout":"inline","btn_color_scheme":"default","btn_one_show":true,"btn_one_txt":"Our Story","btn_one_link":"","btn_one_style":"button--outline","btn_two_show":false,"btn_two_txt":"Button text","btn_two_link":"","btn_two_style":"button--solid"}}},"block_order":["caption_BgEAEk","text_FCNxYR","button_irMiCV"],"settings":{"content_width":"page-width-medium","content_horizontal_position":"center","bg_image_darken":0,"bg_image_blur":0,"text_color":"fg-body","bg_color":"bg-01","padding_top":80,"padding_bottom":80,"top_border":false,"bottom_border":false,"border_width":"normal","border_color":"dark"}}},"order":["video_banner_hRpm4d","collection_cards_NUtLmW","image_banner_YKgCbG","section_media_collage_NNF9Qn","featured_collection","collection_cards","collection_list_pBf6he","section_content_cards_XzPFVx","featured_product_7EazyT","section_featured_style_gallery","multicolumn_zgGmet","rich_text_TagPrr"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_banner_hRpm4d": {
+      "type": "video-banner",
+      "blocks": {
+        "heading_DQMTFQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tapestry of Vibrance",
+            "heading_size": "h1",
+            "txt_alignment": "inherit"
+          }
+        },
+        "text_VtHgEw": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Premium, aesthetic design for a modern mindset</em></p>",
+            "text_size": "text-std"
+          }
+        },
+        "buttons_wGNbXK": {
+          "type": "buttons",
+          "settings": {
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_color_scheme": "white",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "btn_one_show": true,
+            "btn_one_txt": "Shop Now",
+            "btn_one_link": "",
+            "btn_one_style": "button--outline",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DQMTFQ",
+        "text_VtHgEw",
+        "buttons_wGNbXK"
+      ],
+      "settings": {
+        "banner_size": "banner-style-large",
+        "overlay_level": 0,
+        "video_size": "100",
+        "video_position": "center",
+        "video_margin_mobile": 0,
+        "video_margin_desktop": 0,
+        "enable_playback_pause": true,
+        "enable_audio": true,
+        "txt_position": "bottom_left",
+        "txt_alignment": "left",
+        "content_width": 100,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 20,
+        "fade_in_text": true,
+        "scroll_fade_effect": true,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "#000000"
+      }
+    },
+    "image_banner_YKgCbG": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_UfmrtC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heading",
+            "heading_size": "h1",
+            "txt_alignment": "inherit"
+          }
+        },
+        "text_UDGAfe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Talk about your brand, product or content</p>",
+            "text_size": "text-std"
+          }
+        },
+        "buttons_mDekRE": {
+          "type": "buttons",
+          "settings": {
+            "btn_one_show": true,
+            "btn_one_txt": "Button label",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid",
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_color_scheme": "default",
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_UfmrtC",
+        "text_UDGAfe",
+        "buttons_mDekRE"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-fullscreen",
+        "banner_full_link": "",
+        "image": "shopify://shop_images/4399_wide_copy.jpg",
+        "primary_image_size": "dt-full-bleed",
+        "image_padding": 0,
+        "main_image_animation": "none",
+        "image_blur": 0,
+        "primary_image_mobile_show": true,
+        "secondary_image_size": "dt-full-bleed",
+        "secondary_image_padding": 0,
+        "secondary_image_animation": "none",
+        "secondary_image_blur": 0,
+        "secondary_image_mobile_show": true,
+        "txt_alignment": "right",
+        "txt_position": "middle",
+        "content_width": 100,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": false,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "rgba(0,0,0,0)",
+        "overlay_level": 0
+      }
+    },
+    "collection_cards_NUtLmW": {
+      "type": "collection-cards",
+      "blocks": {
+        "featured_collection_ez9gT3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage",
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "description": "tes",
+            "button_label": "Shop Now"
+          }
+        },
+        "featured_collection_m6qdpH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_ez9gT3",
+        "featured_collection_m6qdpH"
+      ],
+      "name": "t:sections.collection-cards.presets.name",
+      "settings": {
+        "section_layout": "grid",
+        "arrow_style": "solid",
+        "grid_layout_mobile": "2",
+        "grid_layout_tablet": 2,
+        "grid_layout_desktop": 2,
+        "grid_spacing_vertical": 0,
+        "grid_spacing_horizontal": "default",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "card_layout": "overlay",
+        "card_ratio": "square",
+        "card_heading_visibility": "rollover",
+        "card_heading_position": "center",
+        "card_heading_size": "normal",
+        "media_radius_top_only": false,
+        "show_card_buttons": true,
+        "cards_button_position": "inline",
+        "cards_button_style": "link--underlined",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "section_media_collage_NNF9Qn": {
+      "type": "section-media-collage",
+      "blocks": {
+        "image_HdN89E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        },
+        "image_zyFmxp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
+            "image_size": "half_width",
+            "image_ratio": "square",
+            "image_padding_mobile": 0,
+            "image_padding": 0,
+            "image_offset_vertical": 0,
+            "image_offset_horizontal": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_HdN89E",
+        "image_zyFmxp"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "description": "",
+        "hdr_alignment": "center",
+        "header_style": "normal",
+        "content_layout": "grid",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width-full",
+        "grid_spacing": "no-spacing",
+        "grid_columns_tablet": 2,
+        "grid_columns_desktop": 2,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "collection": "frontpage",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "New Arrivals",
+        "heading_size": "h2",
+        "description": "",
+        "btn_enable": true,
+        "btn_label": "Shop All",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "products_layout": "carousel",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width",
+        "no_items": 8,
+        "mobile_grid": "2",
+        "tablet_grid": "3",
+        "dt_grid": "3",
+        "card_image_display": "second_image_hover",
+        "pagination_color_scheme": "body",
+        "show_prices": true,
+        "show_vendor": false,
+        "show_swatches": false,
+        "show_color_count": false,
+        "show_rating": true,
+        "enable_quick_add": false,
+        "rollover_titles": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collection_cards": {
+      "type": "collection-cards",
+      "blocks": {
+        "featured_collection_YY8DAN": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "frontpage",
+            "description": "tetst",
+            "button_label": "Shop Now"
+          }
+        },
+        "featured_collection_Unk3dj": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        },
+        "featured_collection_B3jLY6": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "",
+            "description": "",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_YY8DAN",
+        "featured_collection_Unk3dj",
+        "featured_collection_B3jLY6"
+      ],
+      "settings": {
+        "section_layout": "slider",
+        "arrow_style": "outline-inverted",
+        "grid_layout_mobile": "2",
+        "grid_layout_tablet": 3,
+        "grid_layout_desktop": 3,
+        "grid_spacing_vertical": 20,
+        "grid_spacing_horizontal": "default",
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "Collections",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "card_layout": "stacked",
+        "card_ratio": "portrait",
+        "card_heading_visibility": "normal",
+        "card_heading_position": "center",
+        "card_heading_size": "normal",
+        "media_radius_top_only": false,
+        "show_card_buttons": false,
+        "cards_button_position": "inline",
+        "cards_button_style": "button--solid",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "collection_list_pBf6he": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_cjGg8g": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_bdEV3B": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_3787ak": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_ypmiP9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_B6y9PF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_4CG4FX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_cjGg8g",
+        "featured_collection_bdEV3B",
+        "featured_collection_3787ak",
+        "featured_collection_ypmiP9",
+        "featured_collection_B6y9PF",
+        "featured_collection_4CG4FX"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "header_alignment": "center",
+        "section_label": "",
+        "heading": "Collections",
+        "heading_size": "h2",
+        "sub_heading": "",
+        "link_style": "text",
+        "list_separator": "none",
+        "list_font_size": "text-large",
+        "section_layout": "vertical",
+        "content_alignment": "center",
+        "content_width": "page-width",
+        "list_width": "50",
+        "list_borders": true,
+        "images_enable": true,
+        "rollover_image_position": "center",
+        "show_first_image": true,
+        "show_first_image_mobile": true,
+        "mobile_image_position": "last",
+        "image_ratio": "portrait",
+        "image_size": "medium",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "btn_color_scheme": "default",
+        "text_color": "fg-body",
+        "bg_color": "bg-01",
+        "padding_top": 80,
+        "padding_bottom": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "section_content_cards_XzPFVx": {
+      "type": "section-content-cards",
+      "blocks": {
+        "card_Mgg3Mb": {
+          "type": "card",
+          "settings": {
+            "image_overlay": 0,
+            "title": "Card",
+            "sub_title": "",
+            "link_label": "",
+            "link": "",
+            "show_popup": false,
+            "media_aspect_ratio": "1x1",
+            "popup_title": "",
+            "popup_description": "",
+            "popup_link_label": "",
+            "popup_link": "",
+            "popup_link_style": "text"
+          }
+        },
+        "card_ptzJqw": {
+          "type": "card",
+          "settings": {
+            "image_overlay": 0,
+            "title": "Card",
+            "sub_title": "",
+            "link_label": "",
+            "link": "",
+            "show_popup": false,
+            "media_aspect_ratio": "1x1",
+            "popup_title": "",
+            "popup_description": "",
+            "popup_link_label": "",
+            "popup_link": "",
+            "popup_link_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "card_Mgg3Mb",
+        "card_ptzJqw"
+      ],
+      "name": "t:sections.content_cards.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "hdr_alignment": "center",
+        "card_text_color": "fg-white",
+        "text_alignment": "center",
+        "text_position": "bottom",
+        "card_heading_size": "h3",
+        "card_text_padding_mobile": 20,
+        "card_text_padding": 20,
+        "show_link_labels": true,
+        "link_all": true,
+        "card_link_style": "text",
+        "card_link_color": "match",
+        "image_ratio": "square",
+        "popup_type": "modal",
+        "popup_icon_style": "minimal",
+        "grid_layout_mobile": "1",
+        "grid_stacking_mobile": "vertical",
+        "grid_columns": 2,
+        "grid_layout": "equal",
+        "grid_spacing": "normal",
+        "section_margins": "page-width",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "section_padding_top": 40,
+        "section_padding_bottom": 40,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "featured_product_7EazyT": {
+      "type": "featured-product",
+      "blocks": {
+        "title_xQ8gbp": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price_g6t6Hq": {
+          "type": "price",
+          "settings": {
+            "price_show_discount": true,
+            "price_show_taxes": true,
+            "block_padding_top": 10,
+            "block_padding_bottom": 10
+          }
+        },
+        "button_MrtrBk": {
+          "type": "button",
+          "settings": {
+            "button_type": "buy",
+            "button_text": "Shop now",
+            "button_style": "solid",
+            "button_width_mobile": "full-width",
+            "button_width_desktop": "default"
+          }
+        }
+      },
+      "block_order": [
+        "title_xQ8gbp",
+        "price_g6t6Hq",
+        "button_MrtrBk"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "test-shoe",
+        "show_tag": false,
+        "image": "shopify://shop_images/Web_Trainer_colorblock_Green.jpg",
+        "image_ratio": "portrait",
+        "main_media_width": 50,
+        "secondary_image_scale": "small",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_vertical_padding": 0,
+        "content_width": "page-width",
+        "image_alignment": "right",
+        "card_spacing": 20,
+        "top_padding": 80,
+        "bottom_padding": 80
+      }
+    },
+    "section_featured_style_gallery": {
+      "type": "section-featured-style-gallery",
+      "blocks": {
+        "image_GRCcMk": {
+          "type": "image",
+          "settings": {
+            "preview_title": "",
+            "title": "Shop this style",
+            "sub_title": "",
+            "description": "",
+            "product_one": "test-shoe",
+            "product_one_pos_x": 40,
+            "product_one_pos_y": 60,
+            "product_two": "",
+            "product_two_pos_x": 60,
+            "product_two_pos_y": 80,
+            "product_three": "",
+            "product_three_pos_x": 20,
+            "product_three_pos_y": 70
+          }
+        },
+        "image_XM9D6Y": {
+          "type": "image",
+          "settings": {
+            "preview_title": "",
+            "title": "Shop this style",
+            "sub_title": "",
+            "description": "",
+            "product_one": "",
+            "product_one_pos_x": 40,
+            "product_one_pos_y": 60,
+            "product_two": "",
+            "product_two_pos_x": 60,
+            "product_two_pos_y": 80,
+            "product_three": "",
+            "product_three_pos_x": 20,
+            "product_three_pos_y": 70
+          }
+        },
+        "image_UjpL4W": {
+          "type": "image",
+          "settings": {
+            "preview_title": "",
+            "title": "Shop this style",
+            "sub_title": "",
+            "description": "",
+            "product_one": "",
+            "product_one_pos_x": 40,
+            "product_one_pos_y": 60,
+            "product_two": "",
+            "product_two_pos_x": 60,
+            "product_two_pos_y": 80,
+            "product_three": "",
+            "product_three_pos_x": 20,
+            "product_three_pos_y": 70
+          }
+        },
+        "image_mhLGUi": {
+          "type": "image",
+          "settings": {
+            "preview_title": "",
+            "title": "Shop this style",
+            "sub_title": "",
+            "description": "",
+            "product_one": "",
+            "product_one_pos_x": 40,
+            "product_one_pos_y": 60,
+            "product_two": "",
+            "product_two_pos_x": 60,
+            "product_two_pos_y": 80,
+            "product_three": "",
+            "product_three_pos_x": 20,
+            "product_three_pos_y": 70
+          }
+        }
+      },
+      "block_order": [
+        "image_GRCcMk",
+        "image_XM9D6Y",
+        "image_UjpL4W",
+        "image_mhLGUi"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_label": "",
+        "heading": "Featured Styles",
+        "sub_heading": "",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "thumbnails_layout": "carousel",
+        "arrow_style": "solid-inverted",
+        "grid_layout_mobile": "2",
+        "grid_layout_tablet": 3,
+        "grid_layout_desktop": 4,
+        "image_ratio": "portrait",
+        "show_hotspots": false,
+        "hotspot_color": "white",
+        "show_thumbnail_title": true,
+        "preview_title_position": "default",
+        "pagination_enable": false,
+        "show_price": true,
+        "show_vendor": false,
+        "show_links": false,
+        "link_label": "Shop now",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "multicolumn_zgGmet": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BBcXdp": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "title": "Our Ethos",
+            "heading_top_margin": 0,
+            "heading_margin": 5,
+            "text": "<p>Crafted with the finest botanical extracts and ingredients, each product reflects a harmonious blend of tradition and innovation.</p>",
+            "block_btn_style": "button button--outline",
+            "link_label": "Discover",
+            "link": ""
+          }
+        },
+        "column_THbkW8": {
+          "type": "column",
+          "settings": {
+            "column_span": "1",
+            "title": "Our Stores",
+            "heading_top_margin": 0,
+            "heading_margin": 5,
+            "text": "<p>Each of our brand stores offers a curated experience, showcasing the unique spirit behind our products. Explore and find.</p>",
+            "block_btn_style": "button button--outline",
+            "link_label": "Explore",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BBcXdp",
+        "column_THbkW8"
+      ],
+      "settings": {
+        "section_label": "",
+        "heading": "The Maison",
+        "heading_size": "h2",
+        "hdr_alignment": "center",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "grid_layout": "stacked",
+        "arrow_style": "solid-inverted",
+        "arrow_position": "middle",
+        "grid_columns": 2,
+        "grid_column_gap": 40,
+        "keylines_show": true,
+        "keyline_opacity": 20,
+        "column_layout": "stacked",
+        "column_vertical_alignment": "top",
+        "card_image_alignment": "center",
+        "image_size": "full-width",
+        "image_ratio": "fit",
+        "text_alignment": "center",
+        "column_heading_size": "h3",
+        "block_button_width": "auto",
+        "link_opening": "page",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "rich_text_TagPrr": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_BgEAEk": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our Story",
+            "alignment": "center",
+            "opacity": 100
+          }
+        },
+        "text_FCNxYR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our brand is a tribute to nature's timeless allure and formulations that embody the essence of alpine purity and sophistication. Thoughtful and sustainable design extends to everything we produce.</p>",
+            "text_size": "text-large",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        },
+        "button_irMiCV": {
+          "type": "button",
+          "settings": {
+            "alignment": "center",
+            "btn_layout": "inline",
+            "btn_color_scheme": "default",
+            "btn_one_show": true,
+            "btn_one_txt": "Our Story",
+            "btn_one_link": "",
+            "btn_one_style": "button--outline",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_BgEAEk",
+        "text_FCNxYR",
+        "button_irMiCV"
+      ],
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-01",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    }
+  },
+  "order": [
+    "video_banner_hRpm4d",
+    "collection_cards_NUtLmW",
+    "image_banner_YKgCbG",
+    "section_media_collage_NNF9Qn",
+    "featured_collection",
+    "collection_cards",
+    "collection_list_pBf6he",
+    "section_content_cards_XzPFVx",
+    "featured_product_7EazyT",
+    "section_featured_style_gallery",
+    "multicolumn_zgGmet",
+    "rich_text_TagPrr"
+  ]
+}
