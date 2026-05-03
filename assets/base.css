@@ -3785,4 +3785,8 @@ body:has(.header-bar--page-margins) .shopify-policy__container {
     max-width: none;
     width: auto;
   }
+
+  .contact-logo-row {
+    gap: 30px;
+  }
 }
