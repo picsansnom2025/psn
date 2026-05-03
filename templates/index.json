@@ -74,78 +74,6 @@
         "bg_color": "#000000"
       }
     },
-    "image_banner_YKgCbG": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_UfmrtC": {
-          "type": "heading",
-          "settings": {
-            "heading": "Heading",
-            "heading_size": "h1",
-            "txt_alignment": "inherit"
-          }
-        },
-        "text_UDGAfe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Talk about your brand, product or content</p>",
-            "text_size": "text-std"
-          }
-        },
-        "buttons_mDekRE": {
-          "type": "buttons",
-          "settings": {
-            "btn_one_show": true,
-            "btn_one_txt": "Button label",
-            "btn_one_link": "",
-            "btn_one_style": "button--solid",
-            "btn_two_show": false,
-            "btn_two_txt": "Button label",
-            "btn_two_link": "",
-            "btn_two_style": "button--solid",
-            "btn_layout": "inline",
-            "btn_alignment": "auto",
-            "btn_width_mobile": "auto",
-            "btn_color_scheme": "default",
-            "padding_top": 20,
-            "padding_bottom": 20
-          }
-        }
-      },
-      "block_order": [
-        "heading_UfmrtC",
-        "text_UDGAfe",
-        "buttons_mDekRE"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "banner_size": "banner-style-fullscreen",
-        "banner_full_link": "",
-        "image": "shopify://shop_images/4399_wide_copy.jpg",
-        "primary_image_size": "dt-full-bleed",
-        "image_padding": 0,
-        "main_image_animation": "none",
-        "image_blur": 0,
-        "primary_image_mobile_show": true,
-        "secondary_image_size": "dt-full-bleed",
-        "secondary_image_padding": 0,
-        "secondary_image_animation": "none",
-        "secondary_image_blur": 0,
-        "secondary_image_mobile_show": true,
-        "txt_alignment": "right",
-        "txt_position": "middle",
-        "content_width": 100,
-        "text_vertical_spacing": 10,
-        "top_padding": 0,
-        "bottom_padding": 0,
-        "fade_in_text": true,
-        "scroll_fade_effect": false,
-        "text_blend_effect": "none",
-        "text_color": "fg-white",
-        "bg_color": "rgba(0,0,0,0)",
-        "overlay_level": 0
-      }
-    },
     "collection_cards_NUtLmW": {
       "type": "collection-cards",
       "blocks": {
@@ -153,7 +81,6 @@
           "type": "featured_collection",
           "settings": {
             "collection": "frontpage",
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
             "description": "tes",
             "button_label": "Shop Now"
           }
@@ -212,13 +139,83 @@
         "border_color": "dark"
       }
     },
+    "image_banner_YKgCbG": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_UfmrtC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Heading",
+            "heading_size": "h1",
+            "txt_alignment": "inherit"
+          }
+        },
+        "text_UDGAfe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Talk about your brand, product or content</p>",
+            "text_size": "text-std"
+          }
+        },
+        "buttons_mDekRE": {
+          "type": "buttons",
+          "settings": {
+            "btn_one_show": true,
+            "btn_one_txt": "Button label",
+            "btn_one_link": "",
+            "btn_one_style": "button--solid",
+            "btn_two_show": false,
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid",
+            "btn_layout": "inline",
+            "btn_alignment": "auto",
+            "btn_width_mobile": "auto",
+            "btn_color_scheme": "default",
+            "padding_top": 20,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading_UfmrtC",
+        "text_UDGAfe",
+        "buttons_mDekRE"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "banner_size": "banner-style-fullscreen",
+        "banner_full_link": "",
+        "primary_image_size": "dt-full-bleed",
+        "image_padding": 0,
+        "main_image_animation": "none",
+        "image_blur": 0,
+        "primary_image_mobile_show": true,
+        "secondary_image_size": "dt-full-bleed",
+        "secondary_image_padding": 0,
+        "secondary_image_animation": "none",
+        "secondary_image_blur": 0,
+        "secondary_image_mobile_show": true,
+        "txt_alignment": "right",
+        "txt_position": "middle",
+        "content_width": 100,
+        "text_vertical_spacing": 10,
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "fade_in_text": true,
+        "scroll_fade_effect": false,
+        "text_blend_effect": "none",
+        "text_color": "fg-white",
+        "bg_color": "rgba(0,0,0,0)",
+        "overlay_level": 0
+      }
+    },
     "section_media_collage_NNF9Qn": {
       "type": "section-media-collage",
       "blocks": {
         "image_HdN89E": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
             "image_size": "half_width",
             "image_ratio": "square",
             "image_padding_mobile": 0,
@@ -230,7 +227,6 @@
         "image_zyFmxp": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
             "image_size": "half_width",
             "image_ratio": "square",
             "image_padding_mobile": 0,
@@ -589,7 +585,6 @@
       "settings": {
         "product": "test-shoe",
         "show_tag": false,
-        "image": "shopify://shop_images/Web_Trainer_colorblock_Green.jpg",
         "image_ratio": "portrait",
         "main_media_width": 50,
         "secondary_image_scale": "small",
@@ -797,6 +792,177 @@
         "border_color": "dark"
       }
     },
+    "blocks_rMPEF3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6d17a4f_LgcMXb": {
+          "type": "ai_gen_block_6d17a4f",
+          "settings": {
+            "custom_liquid": "<div class=\"kimi-feedback\">\n  <div class=\"kimi-title\">Customer Feedback</div>\n  <div class=\"kimi-rating-num\">5.0</div>\n  <div class=\"kimi-stars\">★★★★★</div>\n</div>\n\n<style>\n.kimi-feedback{text-align:center;color:#000}\n.kimi-title{font-size:28px;font-weight:bold;margin-bottom:8px}\n.kimi-rating-num{font-size:24px;line-height:1}\n.kimi-stars{font-size:20px;letter-spacing:1px}\n</style>",
+            "desktop_width_percent": 100,
+            "padding": 20,
+            "border_radius": 0,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "heading_color": "#000000",
+            "link_color": "#0066cc",
+            "table_border_color": "#dddddd",
+            "table_header_bg": "#f4f4f4"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6d17a4f_LgcMXb"
+      ],
+      "name": "testimonials title",
+      "settings": {}
+    },
+    "section_testimonials_6KeQzF": {
+      "type": "section-testimonials",
+      "blocks": {
+        "testimonial_te9idU": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "PERFECT SKI PANTS!",
+            "caption": "",
+            "star_rating": 5
+          }
+        },
+        "testimonial_f6ajUA": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Ski Goggles",
+            "caption": "",
+            "star_rating": 5
+          }
+        },
+        "testimonial_83yybi": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Ski Wear",
+            "caption": "",
+            "star_rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_te9idU",
+        "testimonial_f6ajUA",
+        "testimonial_83yybi"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "section_layout": "grid",
+        "section_label": "",
+        "heading": "",
+        "subheading": "",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "show_ratings": true,
+        "show_captions": true,
+        "show_logos": false,
+        "image_size": 80,
+        "quote_font_size": "normal",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 40,
+        "bottom_padding": 30,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "blocks_WkG7Yz": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2a74ef2_WGEJYn": {
+          "type": "ai_gen_block_2a74ef2",
+          "settings": {
+            "heading_text": "Social Media",
+            "heading_tag": "h2",
+            "alignment": "left",
+            "text_color": "#000000",
+            "font_size_mobile": 24,
+            "font_size_desktop": 32,
+            "letter_spacing": 0,
+            "line_height": 1.2,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2a74ef2_WGEJYn"
+      ],
+      "settings": {}
+    },
+    "blocks_P76qdM": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b6c6141_jK6faX": {
+          "type": "ai_gen_block_b6c6141",
+          "settings": {
+            "card_width": 250,
+            "card_height": 300,
+            "card_width_tablet": 200,
+            "card_height_tablet": 240,
+            "card_width_mobile": 180,
+            "card_height_mobile": 220,
+            "card_gap": 16,
+            "card_border_radius": 8,
+            "desktop_width_percent": 100,
+            "card_1_image": "shopify://shop_images/795bd024b70253a89cdccd7b9646b46f.png",
+            "card_1_title": "@诗晨Ballet",
+            "card_1_description": "",
+            "card_2_image": "shopify://shop_images/eac098a1fab03d7da532f1fc03c3142a.png",
+            "card_2_title": "@Angelina",
+            "card_2_description": "",
+            "card_3_image": "shopify://shop_images/61f6017d4df7e84bf1809fe482410171.png",
+            "card_3_title": "@CHOCHO",
+            "card_3_description": "",
+            "card_4_image": "shopify://shop_images/caec76aca3935400bc3fd88b640559d2.png",
+            "card_4_title": "@妮可NICO",
+            "card_4_description": "",
+            "card_5_image": "shopify://shop_images/c9fd5896d18688383489ed888cd8dee6.jpg",
+            "card_5_title": "@Babybaby_Q",
+            "card_5_description": "",
+            "card_6_image": "shopify://shop_images/76c2741597565ae4e815f86a4dc8c327.png",
+            "card_6_title": "@脑细胞",
+            "card_6_description": "",
+            "card_7_image": "shopify://shop_images/f3c0691b59df0631227e32edacb7c538.jpg",
+            "card_7_title": "@倩文J",
+            "card_7_description": "",
+            "card_8_image": "shopify://shop_images/7c3ff8355dd01e6b988440cda52592d6.png",
+            "card_8_title": "@火火Jenny",
+            "card_8_description": "",
+            "text_spacing": 12,
+            "title_size": 16,
+            "title_color": "#000000",
+            "title_bottom_spacing": 4,
+            "description_size": 14,
+            "description_color": "#666666",
+            "nav_button_size": 40,
+            "nav_button_offset": 20,
+            "nav_button_bg": "#ffffff",
+            "nav_button_color": "#000000",
+            "nav_button_opacity": 90
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b6c6141_jK6faX"
+      ],
+      "name": "social media carousel",
+      "settings": {}
+    },
     "rich_text_TagPrr": {
       "type": "rich-text",
       "blocks": {
@@ -853,6 +1019,56 @@
         "border_width": "normal",
         "border_color": "dark"
       }
+    },
+    "blocks_d3HDcx": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4e6c818_kKM99q": {
+          "type": "ai_gen_block_4e6c818",
+          "settings": {
+            "image": "shopify://shop_images/1_2cf37f62-427e-4567-8230-16d06d6ccbf1.jpg",
+            "banner_height_mobile": 80,
+            "banner_height_desktop": 80,
+            "border_radius": 0,
+            "desktop_width_percent": 100,
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_opacity": 30,
+            "content_max_width": 700,
+            "text_alignment": "center",
+            "title": "<a href=\"/pages/about-us\" title=\"About Us\">About Us</a>",
+            "title_color": "#ffffff",
+            "title_size_mobile": 32,
+            "title_size_desktop": 56,
+            "title_spacing": 20,
+            "text": "<p>Undefined, I am the peak<br/><br/>PSN is the abbreviation for PICSANS NOM  <br/>It is an “unnamed peak” in the Alps  <br/><br/>The brand is dedicated to perfectly blending fashion sophistication with sport functionality  <br/>From the mountain summits to the elite court  <br/>It showcases the elegance and strength of urban women  <br/><br/>PSN hopes to empower every girl to find her “true self” in sports  <br/>To become confident, beautiful, brave, and shine brightly</p>",
+            "text_color": "#ffffff",
+            "text_size_mobile": 12,
+            "text_size_desktop": 14,
+            "text_spacing": 24,
+            "button_text": "Contact Us",
+            "button_link": "shopify://pages/contact-us-1",
+            "button_background_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_hover_background_color": "#000000",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 14,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "button_border_width": 0,
+            "button_border_color": "#ffffff",
+            "button_hover_border_color": "#000000"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4e6c818_kKM99q"
+      ],
+      "disabled": true,
+      "name": "about us",
+      "settings": {}
     }
   },
   "order": [
@@ -867,6 +1083,11 @@
     "featured_product_7EazyT",
     "section_featured_style_gallery",
     "multicolumn_zgGmet",
-    "rich_text_TagPrr"
+    "blocks_rMPEF3",
+    "section_testimonials_6KeQzF",
+    "blocks_WkG7Yz",
+    "blocks_P76qdM",
+    "rich_text_TagPrr",
+    "blocks_d3HDcx"
   ]
 }

@@ -9,6 +9,73 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "txt_alignment": "center"
+      }
+    },
+    "section_testimonials_ycnGEF": {
+      "type": "section-testimonials",
+      "blocks": {
+        "testimonial_fzQYtf": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "PERFECT SKI PANTS!",
+            "caption": "",
+            "star_rating": 5
+          }
+        },
+        "testimonial_wBWN6A": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Ski Goggles",
+            "caption": "",
+            "star_rating": 5
+          }
+        },
+        "testimonial_LPqhj3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Ski Wear",
+            "caption": "",
+            "star_rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_fzQYtf",
+        "testimonial_wBWN6A",
+        "testimonial_LPqhj3"
+      ],
+      "name": "t:sections.testimonials.presets.name",
+      "settings": {
+        "section_layout": "grid",
+        "section_label": "",
+        "heading": "",
+        "subheading": "",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "show_ratings": true,
+        "show_captions": true,
+        "show_logos": false,
+        "image_size": 80,
+        "quote_font_size": "normal",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "btn_color_scheme": "default",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 40,
+        "bottom_padding": 30,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "video_banner_EPXhix": {
       "type": "video-banner",
       "blocks": {
@@ -514,13 +581,6 @@
         "border_color": "dark"
       }
     },
-    "main": {
-      "type": "main-404",
-      "disabled": true,
-      "settings": {
-        "txt_alignment": "center"
-      }
-    },
     "1775805303df21e762": {
       "type": "_blocks",
       "blocks": {
@@ -545,77 +605,6 @@
         "ai_gen_block_6d17a4f_Mzt66T"
       ],
       "settings": {}
-    },
-    "section_testimonials_ycnGEF": {
-      "type": "section-testimonials",
-      "blocks": {
-        "testimonial_fzQYtf": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "PERFECT SKI PANTS!",
-            "caption": "",
-            "star_rating": 5
-          }
-        },
-        "testimonial_wBWN6A": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "Ski Goggles",
-            "caption": "",
-            "star_rating": 5
-          }
-        },
-        "testimonial_LPqhj3": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "Ski Wear",
-            "caption": "",
-            "star_rating": 5
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_fzQYtf",
-        "testimonial_wBWN6A",
-        "testimonial_LPqhj3"
-      ],
-      "name": "t:sections.testimonials.presets.name",
-      "settings": {
-        "section_layout": "grid",
-        "section_label": "",
-        "heading": "",
-        "subheading": "",
-        "heading_size": "h2",
-        "content_alignment": "center",
-        "show_ratings": true,
-        "show_captions": true,
-        "show_logos": false,
-        "image_size": 80,
-        "quote_font_size": "normal",
-        "btn_enable": false,
-        "btn_txt": "",
-        "btn_url": "",
-        "btn_style": "solid",
-        "btn_color_scheme": "default",
-        "text_color": "fg-body",
-        "bg_color": "bg-body",
-        "top_padding": 40,
-        "bottom_padding": 30,
-        "top_border": false,
-        "bottom_border": false,
-        "border_width": "normal",
-        "border_color": "dark"
-      }
-    },
-    "177580391286cf1aa5": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "17757909083d153d77": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
     },
     "1775820411f00eba68": {
       "type": "_blocks",
@@ -750,6 +739,7 @@
     }
   },
   "order": [
+    "main",
     "video_banner_EPXhix",
     "rich_text_k7aWX4",
     "section_media_collage_b7VPDg",
@@ -760,11 +750,8 @@
     "featured_collection_tbqDYy",
     "featured_collection_zng98U",
     "collection_lookbook_eN9mmM",
-    "main",
     "1775805303df21e762",
     "section_testimonials_ycnGEF",
-    "177580391286cf1aa5",
-    "17757909083d153d77",
     "1775820411f00eba68",
     "1775819992e16b4b0f",
     "1776222063baa3f483"
