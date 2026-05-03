@@ -3774,8 +3774,15 @@ body:has(.header-bar--page-margins) .shopify-policy__container {
 
 .contact-logo-row img {
   width: auto;
-  max-width: 10%;
+  max-width: 30%;
   height: auto;
   flex-shrink: 1;
   object-fit: contain;
+}
+@media screen and (max-width: 749px) {
+  .contact-logo-row img {
+    max-height: 30px;
+    max-width: none;
+    width: auto;
+  }
 }
