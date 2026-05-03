@@ -163,7 +163,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "content": "<p>Add a summary about your returns policy and if required include a link to your full information.</p>",
+            "content": "<p>12345<a href=\"/blogs/1\" title=\"1\">/blogs/1</a></p>",
             "page": ""
           }
         }
