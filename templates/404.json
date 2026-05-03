@@ -38,7 +38,7 @@
             "padding_bottom": 20,
             "btn_one_show": true,
             "btn_one_txt": "SHOP",
-            "btn_one_link": "",
+            "btn_one_link": "shopify://metaobjects/111111/111111-gscqiwtt",
             "btn_one_style": "button--solid",
             "btn_two_show": false,
             "btn_two_txt": "Button text",
