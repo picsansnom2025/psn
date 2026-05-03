@@ -97,15 +97,14 @@
         },
         "870625ea-f97e-4cab-b3b3-04010a7854a5": {
           "type": "popup",
-          "disabled": true,
           "settings": {
-            "text": "Pop-up link",
+            "text": "Size Chart",
             "padding_top": 0,
             "padding_bottom": 0,
-            "link_style": "text",
+            "link_style": "button-outline",
             "text_alignment": "left",
-            "text_size": "small",
-            "link_icon": "none",
+            "text_size": "body",
+            "link_icon": "measurement",
             "popup_display_type": "modal",
             "popup_width": "normal",
             "page": ""
@@ -144,9 +143,7 @@
             "grid_columns_desktop": "auto",
             "grid_spacing_mobile": 24,
             "grid_spacing_desktop": 24,
-            "icon_one_image": "shopify://shop_images/package-box.png",
             "icon_one_label": "Free Shipping",
-            "icon_two_image": "shopify://shop_images/package-box.png",
             "icon_two_label": "Free Returns",
             "icon_three_label": "",
             "icon_four_label": "",
@@ -365,7 +362,6 @@
           "type": "column",
           "settings": {
             "column_span": "1",
-            "image": "shopify://shop_images/BOH_3207_copy_1.jpg",
             "title": "Column",
             "heading_top_margin": 15,
             "heading_margin": 5,
@@ -379,7 +375,6 @@
           "type": "column",
           "settings": {
             "column_span": "1",
-            "image": "shopify://shop_images/Man-skateboard-white-trainer_copy.jpg",
             "title": "Column",
             "heading_top_margin": 15,
             "heading_margin": 5,
@@ -393,7 +388,6 @@
           "type": "column",
           "settings": {
             "column_span": "1",
-            "image": "shopify://shop_images/untitled-5877-WEB_M_68dfb52d-f563-45ce-82b0-fadab11b46e4.jpg",
             "title": "Column",
             "heading_top_margin": 15,
             "heading_margin": 5,
