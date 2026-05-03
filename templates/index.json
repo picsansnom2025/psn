@@ -74,6 +74,47 @@
         "bg_color": "#000000"
       }
     },
+    "rich_text_XxjLti": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FQpwaH": {
+          "type": "heading",
+          "settings": {
+            "heading": "ALPINE ESCAPE",
+            "heading_size": "h2",
+            "alignment": "center"
+          }
+        },
+        "text_tdXfMx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Combining sophistication and technical materials, the CHANEL COCO NEIGE 2025/26 collection offers an elegant wardrobe.<br/>Starring actress and House ambassador Nana Komatsu, the campaign is inspired by Gabrielle Chanel's love of the mountains.</p>",
+            "text_size": "text-std",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FQpwaH",
+        "text_tdXfMx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "content_width": "page-width",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "collection_cards_NUtLmW": {
       "type": "collection-cards",
       "blocks": {
@@ -133,6 +174,89 @@
         "bg_color": "bg-body",
         "padding_top": 80,
         "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "logo_wall_eaWKw3": {
+      "type": "logo-wall",
+      "blocks": {
+        "image_HXKyYP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/VOGUE_LOGO.svg",
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_HjEqab": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Harper_s_Bazaar_Logo_svg.webp",
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_hPawTq": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_9hRMD3": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        },
+        "image_kixKAq": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_HXKyYP",
+        "image_HjEqab",
+        "image_hPawTq",
+        "image_9hRMD3",
+        "image_kixKAq"
+      ],
+      "name": "t:sections.logo_wall.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "",
+        "heading_size": "h2",
+        "subheading": "",
+        "btn_enable": false,
+        "btn_txt": "",
+        "btn_link": "",
+        "btn_style": "solid",
+        "grid_style": "grid",
+        "grid_columns_mobile": "auto",
+        "grid_columns_tablet": "auto",
+        "grid_columns_desktop": "auto",
+        "animation_speed": 24,
+        "content_width": "page-width",
+        "content_alignment": "center",
+        "logo_size_mobile": 80,
+        "logo_size_tablet": 80,
+        "logo_size": 80,
+        "logo_spacing_mobile": 40,
+        "logo_spacing_tablet": 60,
+        "logo_spacing": 60,
+        "logo_colour": "colour",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "top_padding": 80,
+        "bottom_padding": 80,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -371,6 +495,53 @@
         "padding_bottom": 80,
         "top_border": false,
         "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_hotspots_9z3H4A": {
+      "type": "image-with-hotspots",
+      "blocks": {
+        "hotspot_XFEGKX": {
+          "type": "hotspot",
+          "settings": {
+            "product": "lecorset-tank-bodysuit-1",
+            "pos_x": 60,
+            "pos_y": 40
+          }
+        },
+        "hotspot_maRhfh": {
+          "type": "hotspot",
+          "settings": {
+            "product": "eco-faux-fur-ski-jacket",
+            "pos_x": 45,
+            "pos_y": 35
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_XFEGKX",
+        "hotspot_maRhfh"
+      ],
+      "name": "t:sections.image_with_hotspots.presets.name",
+      "settings": {
+        "section_label": "",
+        "heading": "Shop the look",
+        "subheading": "",
+        "content_alignment": "left",
+        "image": "shopify://shop_images/1_3.png",
+        "image_ratio": "landscape-16x9",
+        "content_width": "page-width-full",
+        "hotspot_style": "minimal",
+        "hotspot_color": "light",
+        "hotspot_desktop_interaction": "hover",
+        "hotspot_animate": true,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 20,
+        "bottom_padding": 20,
+        "top_border": true,
+        "bottom_border": true,
         "border_width": "normal",
         "border_color": "dark"
       }
@@ -1073,21 +1244,24 @@
   },
   "order": [
     "video_banner_hRpm4d",
+    "rich_text_XxjLti",
     "collection_cards_NUtLmW",
+    "logo_wall_eaWKw3",
     "image_banner_YKgCbG",
     "section_media_collage_NNF9Qn",
     "featured_collection",
     "collection_cards",
+    "image_with_hotspots_9z3H4A",
     "collection_list_pBf6he",
     "section_content_cards_XzPFVx",
     "featured_product_7EazyT",
     "section_featured_style_gallery",
     "multicolumn_zgGmet",
+    "rich_text_TagPrr",
     "blocks_rMPEF3",
     "section_testimonials_6KeQzF",
     "blocks_WkG7Yz",
     "blocks_P76qdM",
-    "rich_text_TagPrr",
     "blocks_d3HDcx"
   ]
 }

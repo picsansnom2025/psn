@@ -59,7 +59,7 @@
         "keylines_show": true,
         "keylines_to_edge": false,
         "keyline_colour": "0",
-        "text_color": "fg-body",
+        "text_color": "fg-01",
         "bg_color": "bg-body",
         "top_padding": 40,
         "bottom_padding": 40
