@@ -3787,6 +3787,6 @@ body:has(.header-bar--page-margins) .shopify-policy__container {
   }
 
   .contact-logo-row {
-    gap: 30px;
+    gap: 20px;
   }
 }
