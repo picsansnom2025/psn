@@ -3762,3 +3762,7 @@ body:has(.header-bar--page-margins) .shopify-policy__container {
     padding-top: calc(var(--site-header-height-desktop) + 80px);
   }
 }
+.contact-logo-row{
+  width: clamp(24px, 4vw, 48px);
+  height: auto;
+}
