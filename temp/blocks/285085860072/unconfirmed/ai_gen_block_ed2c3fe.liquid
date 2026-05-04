@@ -1,6 +1,208 @@
+{% doc %}
+  @prompt
+    增加一个section让我来放一个metafield，这个metafield是图片形式的
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-metafield-image-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-metafield-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    border-radius: {{ block.settings.border_radius }}px;
+    overflow: hidden;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-metafield-image-wrapper-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-metafield-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    min-height: 300px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-metafield-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .ai-metafield-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-metafield-caption-{{ ai_gen_id }} {
+    margin-top: {{ block.settings.caption_spacing }}px;
+    text-align: {{ block.settings.caption_alignment }};
+    color: {{ block.settings.caption_color }};
+    font-size: {{ block.settings.caption_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-metafield-image-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-metafield-image-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-metafield-image-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.metafield_image != blank %}
+      <img
+        src="{{ block.settings.metafield_image | image_url: width: 2000 }}"
+        alt="{{ block.settings.metafield_image.alt | escape }}"
+        loading="lazy"
+        width="{{ block.settings.metafield_image.width }}"
+        height="{{ block.settings.metafield_image.height }}"
+      >
+    {% else %}
+      <div class="ai-metafield-image-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <div class="ai-metafield-empty-state-{{ ai_gen_id }}">
+          请在设置中选择 metafield 图片
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if block.settings.show_caption and block.settings.caption != blank %}
+    <div class="ai-metafield-caption-{{ ai_gen_id }}">
+      {{ block.settings.caption }}
+    </div>
+  {% endif %}
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Metafield 图片",
+  "settings": [
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
+    {
+      "type": "image_picker",
+      "id": "metafield_image",
+      "label": "Metafield 图片"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "桌面端宽度",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "圆角",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "图片说明"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_caption",
+      "label": "显示图片说明",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "说明文字"
+    },
+    {
+      "type": "range",
+      "id": "caption_size",
+      "label": "说明文字大小",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "caption_alignment",
+      "label": "说明文字对齐",
+      "options": [
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "right",
+          "label": "右对齐"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "caption_color",
+      "label": "说明文字颜色",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "caption_spacing",
+      "label": "说明文字间距",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Metafield 图片"
+    }
+  ]
+}
 {% endschema %}
