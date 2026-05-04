@@ -1,6 +1,405 @@
+{% doc %}
+  @prompt
+    「新增 section」增加Judge.me 添加评论组件
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-judgeme-reviews-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-judgeme-reviews-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-judgeme-reviews-header-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.header_spacing }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-judgeme-reviews-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 {{ block.settings.title_spacing }}px;
+  }
+
+  .ai-judgeme-reviews-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+  }
+
+  .ai-judgeme-widget-wrapper-{{ ai_gen_id }} {
+    margin-top: {{ block.settings.widget_spacing }}px;
+  }
+
+  .ai-judgeme-empty-state-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: {{ block.settings.empty_state_bg }};
+    border-radius: {{ block.settings.border_radius }}px;
+    border: 1px dashed {{ block.settings.empty_state_border }};
+  }
+
+  .ai-judgeme-empty-state-{{ ai_gen_id }} p {
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-judgeme-reviews-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.7 }}px {{ block.settings.padding_horizontal | times: 0.7 }}px {{ block.settings.padding_bottom | times: 0.7 }}px;
+    }
+
+    .ai-judgeme-reviews-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .ai-judgeme-reviews-subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<judgeme-reviews-{{ ai_gen_id }}
+  class="ai-judgeme-reviews-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-judgeme-reviews-container-{{ ai_gen_id }}">
+    {% if block.settings.show_header %}
+      <div class="ai-judgeme-reviews-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-judgeme-reviews-title-{{ ai_gen_id }}">
+            {{ block.settings.title }}
+          </h2>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <div class="ai-judgeme-reviews-subtitle-{{ ai_gen_id }}">
+            {{ block.settings.subtitle }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-judgeme-widget-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.widget_type == 'reviews' %}
+        <div
+          class="jdgm-widget jdgm-review-widget"
+          data-id="{{ product.id }}"
+          data-auto-install="false"
+        >
+          {{ product.metafields.judgeme.widget }}
+        </div>
+      {% elsif block.settings.widget_type == 'carousel' %}
+        <div
+          class="jdgm-carousel-wrapper"
+          data-id="{{ product.id }}"
+          data-auto-install="false"
+        >
+          {{ product.metafields.judgeme.carousel }}
+        </div>
+      {% elsif block.settings.widget_type == 'ugc' %}
+        <div
+          class="jdgm-ugc-media-wrapper"
+          data-id="{{ product.id }}"
+        >
+          {{ product.metafields.judgeme.ugc_media }}
+        </div>
+      {% endif %}
+
+      {% if product.metafields.judgeme.widget == blank and block.settings.show_empty_state %}
+        <div class="ai-judgeme-empty-state-{{ ai_gen_id }}">
+          <p>{{ block.settings.empty_state_text }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</judgeme-reviews-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class JudgemeReviews{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.initJudgeme();
+      }
+
+      initJudgeme() {
+        if (typeof window.jdgm !== 'undefined' && window.jdgm.customRenderWidgets) {
+          window.jdgm.customRenderWidgets();
+        } else {
+          const checkJudgeme = setInterval(() => {
+            if (typeof window.jdgm !== 'undefined' && window.jdgm.customRenderWidgets) {
+              window.jdgm.customRenderWidgets();
+              clearInterval(checkJudgeme);
+            }
+          }, 100);
+
+          setTimeout(() => {
+            clearInterval(checkJudgeme);
+          }, 5000);
+        }
+      }
+    }
+
+    customElements.define('judgeme-reviews-{{ ai_gen_id }}', JudgemeReviews{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Judge.me 评论",
+  "settings": [
+    {
+      "type": "header",
+      "content": "组件类型"
+    },
+    {
+      "type": "select",
+      "id": "widget_type",
+      "label": "评论组件类型",
+      "options": [
+        {
+          "value": "reviews",
+          "label": "评论列表"
+        },
+        {
+          "value": "carousel",
+          "label": "评论轮播"
+        },
+        {
+          "value": "ugc",
+          "label": "用户图片"
+        }
+      ],
+      "default": "reviews"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "桌面端宽度",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "最大宽度",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "标题设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header",
+      "label": "显示标题区域",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题",
+      "default": "顾客评价"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "副标题",
+      "default": "查看真实顾客的使用反馈"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "标题字号",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "副标题字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "文本对齐",
+      "options": [
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "right",
+          "label": "右对齐"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "label": "标题间距",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "标题区域底部间距",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "标题颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "副标题颜色",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "间距设置"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "左右边距",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "widget_spacing",
+      "label": "组件顶部间距",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "样式设置"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "圆角大小",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "空状态设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_empty_state",
+      "label": "显示空状态提示",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "empty_state_text",
+      "label": "空状态提示文本",
+      "default": "暂无评论，成为第一个评价的顾客吧"
+    },
+    {
+      "type": "color",
+      "id": "empty_state_bg",
+      "label": "空状态背景色",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "empty_state_border",
+      "label": "空状态边框色",
+      "default": "#e0e0e0"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Judge.me 评论"
+    }
+  ]
+}
 {% endschema %}
