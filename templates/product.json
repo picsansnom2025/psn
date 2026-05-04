@@ -162,8 +162,8 @@
         "collapsible_tab_xVtpDM": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Size Guide",
-            "content": "",
+            "heading": "Delivery",
+            "content": "<p>refer to boandtee</p>",
             "page": "size-chart"
           }
         }
