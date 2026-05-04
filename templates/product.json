@@ -152,11 +152,11 @@
             "page": "size-chart"
           }
         },
-        "cross_links_Y8G4EH": {
+        "cross_links_VBJVii": {
           "type": "cross_links",
           "settings": {
-            "heading": "YOU MAY ALSO LIKE",
-            "label": "{{ product.title }}",
+            "heading": "you may also like",
+            "label": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products_display.value }}",
             "link_type": "thumbnail",
             "show_color_label": true
           }
@@ -177,7 +177,7 @@
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "collapsible_tab_xVtpDM",
-        "cross_links_Y8G4EH"
+        "cross_links_VBJVii"
       ],
       "custom_css": [],
       "settings": {
