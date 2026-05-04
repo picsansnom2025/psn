@@ -1,6 +1,282 @@
+{% doc %}
+  @prompt
+    在这里加一个地方放metaobject
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-metaobject-display-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-metaobject-container-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.spacing }}px;
+  }
+
+  .ai-metaobject-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .ai-metaobject-content-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.content_size }}px;
+    line-height: 1.6;
+  }
+
+  .ai-metaobject-empty-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-metaobject-field-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-metaobject-field-label-{{ ai_gen_id }} {
+    font-weight: 600;
+    font-size: {{ block.settings.label_size }}px;
+    color: {{ block.settings.label_color }};
+  }
+
+  .ai-metaobject-field-value-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.content_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-metaobject-display-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-metaobject-display-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.metaobject != blank %}
+    {% assign metaobject_data = metaobjects[block.settings.metaobject] %}
+    
+    <div class="ai-metaobject-container-{{ ai_gen_id }}">
+      {% if block.settings.show_title and metaobject_data.title %}
+        <h3 class="ai-metaobject-title-{{ ai_gen_id }}">
+          {{ metaobject_data.title }}
+        </h3>
+      {% endif %}
+
+      {% if block.settings.show_description and metaobject_data.description %}
+        <div class="ai-metaobject-content-{{ ai_gen_id }}">
+          {{ metaobject_data.description }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.show_all_fields %}
+        {% for field in metaobject_data.fields %}
+          <div class="ai-metaobject-field-{{ ai_gen_id }}">
+            <div class="ai-metaobject-field-label-{{ ai_gen_id }}">
+              {{ field.key | replace: '_', ' ' | capitalize }}
+            </div>
+            <div class="ai-metaobject-field-value-{{ ai_gen_id }}">
+              {% if field.type == 'file_reference' %}
+                {% if field.value.media_type == 'image' %}
+                  <img 
+                    src="{{ field.value | image_url: width: 600 }}" 
+                    alt="{{ field.value.alt | escape }}"
+                    loading="lazy"
+                    style="max-width: 100%; height: auto; border-radius: {{ block.settings.image_radius }}px;"
+                  >
+                {% else %}
+                  {{ field.value }}
+                {% endif %}
+              {% elsif field.type == 'list.file_reference' %}
+                {% for item in field.value %}
+                  {% if item.media_type == 'image' %}
+                    <img 
+                      src="{{ item | image_url: width: 600 }}" 
+                      alt="{{ item.alt | escape }}"
+                      loading="lazy"
+                      style="max-width: 100%; height: auto; border-radius: {{ block.settings.image_radius }}px; margin-bottom: 10px;"
+                    >
+                  {% endif %}
+                {% endfor %}
+              {% elsif field.type == 'rich_text' %}
+                {{ field.value }}
+              {% else %}
+                {{ field.value }}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="ai-metaobject-empty-{{ ai_gen_id }}">
+      请在设置中选择一个 metaobject
+    </div>
+  {% endif %}
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Metaobject 显示",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Metaobject"
+    },
+    {
+      "type": "metaobject",
+      "id": "metaobject",
+      "label": "选择 metaobject",
+      "metaobject_type": "product_review"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "显示标题",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "显示描述",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_all_fields",
+      "label": "显示所有字段",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "样式"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "桌面宽度",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "内边距",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "间距",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "圆角",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "图片圆角",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "颜色"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文本颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "标签颜色",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "字体大小"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "标题大小",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "label_size",
+      "label": "标签大小",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "content_size",
+      "label": "内容大小",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Metaobject 显示"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
