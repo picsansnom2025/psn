@@ -95,21 +95,6 @@
             "border_bottom": false
           }
         },
-        "870625ea-f97e-4cab-b3b3-04010a7854a5": {
-          "type": "popup",
-          "settings": {
-            "text": "Size Chart",
-            "padding_top": 0,
-            "padding_bottom": 0,
-            "link_style": "button-outline",
-            "text_alignment": "left",
-            "text_size": "body",
-            "link_icon": "measurement",
-            "popup_display_type": "modal",
-            "popup_width": "normal",
-            "page": "{{ product.metafields.custom.size_chart.value }}"
-          }
-        },
         "inventory_zeVG83": {
           "type": "inventory",
           "settings": {
@@ -162,8 +147,8 @@
         "collapsible_tab_xVtpDM": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "content": "<p>12345<a href=\"/blogs/1\" title=\"1\">/blogs/1</a></p>",
+            "heading": "Size Guide",
+            "content": "",
             "page": ""
           }
         }
@@ -178,7 +163,6 @@
         "d397b53e-d0be-4717-805f-6ee8a8d247bf",
         "colorway_swatches_iLdUWU",
         "099f936f-1f52-44f2-8d7b-0188fbd363d5",
-        "870625ea-f97e-4cab-b3b3-04010a7854a5",
         "inventory_zeVG83",
         "buy_buttons",
         "icon_grid_6dazna",
