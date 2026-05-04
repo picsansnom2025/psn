@@ -144,21 +144,27 @@
             "page": ""
           }
         },
+        "cross_links_VBJVii": {
+          "type": "cross_links",
+          "settings": {
+            "heading": "you may also like",
+            "label": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products_display.value }}{{ product.metafields[\"shopify--discovery--product_search_boost\"].queries | metafield_text }}",
+            "link_type": "thumbnail",
+            "show_color_label": true
+          }
+        },
+        "product_specifications_7DHjUE": {
+          "type": "product_specifications",
+          "settings": {
+            "title": "Specifications{{ product.metafields[\"shopify--discovery--product_search_boost\"].queries | metafield_text }}"
+          }
+        },
         "collapsible_tab_xVtpDM": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Size Guide",
             "content": "",
             "page": "size-chart"
-          }
-        },
-        "cross_links_VBJVii": {
-          "type": "cross_links",
-          "settings": {
-            "heading": "you may also like",
-            "label": "{{ product.metafields[\"shopify--discovery--product_recommendation\"].related_products_display.value }}",
-            "link_type": "thumbnail",
-            "show_color_label": true
           }
         }
       },
@@ -176,8 +182,9 @@
         "buy_buttons",
         "icon_grid_6dazna",
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
-        "collapsible_tab_xVtpDM",
-        "cross_links_VBJVii"
+        "cross_links_VBJVii",
+        "product_specifications_7DHjUE",
+        "collapsible_tab_xVtpDM"
       ],
       "custom_css": [],
       "settings": {
