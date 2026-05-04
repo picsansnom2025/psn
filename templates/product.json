@@ -243,6 +243,32 @@
         "border_color": "dark"
       }
     },
+    "1777917546b859f363": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ed2c3fe_4bekcM": {
+          "type": "ai_gen_block_ed2c3fe",
+          "settings": {
+            "metafield_image": "{{ closest.product.metafields.custom.size_guide.value }}",
+            "desktop_width_percent": 100,
+            "border_radius": 0,
+            "background_color": "#ffffff",
+            "show_caption": false,
+            "caption": "",
+            "caption_size": 14,
+            "caption_alignment": "center",
+            "caption_color": "#666666",
+            "caption_spacing": 12
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ed2c3fe_4bekcM"
+      ],
+      "name": "Size",
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -294,31 +320,6 @@
         "border_width": "normal",
         "border_color": "dark"
       }
-    },
-    "1777917546b859f363": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_ed2c3fe_4bekcM": {
-          "type": "ai_gen_block_ed2c3fe",
-          "settings": {
-            "metafield_image": "{{ closest.product.metafields.custom.size_guide.value }}",
-            "desktop_width_percent": 100,
-            "border_radius": 0,
-            "background_color": "#ffffff",
-            "show_caption": true,
-            "caption": "Size Guide",
-            "caption_size": 14,
-            "caption_alignment": "center",
-            "caption_color": "#666666",
-            "caption_spacing": 12
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_ed2c3fe_4bekcM"
-      ],
-      "settings": {}
     },
     "rich_text_XwVKQK": {
       "type": "rich-text",
@@ -473,9 +474,9 @@
   },
   "order": [
     "main",
+    "1777917546b859f363",
     "related-products",
     "complementary-products",
-    "1777917546b859f363",
     "rich_text_XwVKQK",
     "multicolumn_WwfBp7"
   ]
