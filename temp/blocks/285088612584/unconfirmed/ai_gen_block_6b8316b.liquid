@@ -1,6 +1,201 @@
+{% doc %}
+  @prompt
+    「新增 section」增加Judge.me 添加评论组件, 我的意思是嵌入Judge.me这个应用程序 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-app-embed-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-app-embed-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .ai-app-embed-header-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.header_spacing }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-app-embed-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-app-embed-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.7 }}px {{ block.settings.padding_horizontal | times: 0.7 }}px {{ block.settings.padding_bottom | times: 0.7 }}px;
+    }
+
+    .ai-app-embed-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="ai-app-embed-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-app-embed-container-{{ ai_gen_id }}">
+    {% if block.settings.show_title and block.settings.title != blank %}
+      <div class="ai-app-embed-header-{{ ai_gen_id }}">
+        <h2 class="ai-app-embed-title-{{ ai_gen_id }}">
+          {{ block.settings.title }}
+        </h2>
+      </div>
+    {% endif %}
+
+    <div id="judgeme_product_reviews"></div>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Judge.me 评论",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "此区块将显示 Judge.me 应用的产品评论。请确保已安装并启用 Judge.me 应用。"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "桌面端宽度",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "最大宽度",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "标题"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "显示标题",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "标题文本",
+      "default": "顾客评价"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "标题字号",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "文本对齐",
+      "options": [
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "right",
+          "label": "右对齐"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "标题底部间距",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "颜色"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "标题颜色",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "间距"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "左右边距",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "presets": [
+    {
+      "name": "Judge.me 评论"
+    }
+  ]
+}
 {% endschema %}
