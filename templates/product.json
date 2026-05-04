@@ -269,6 +269,33 @@
       "name": "Size",
       "settings": {}
     },
+    "1777918628c77a1ded": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6b8316b_x4DGg8": {
+          "type": "ai_gen_block_6b8316b",
+          "settings": {
+            "desktop_width_percent": 100,
+            "max_width": 1200,
+            "show_title": true,
+            "title": "顾客评价",
+            "title_size": 28,
+            "text_alignment": "center",
+            "header_spacing": 30,
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "padding_horizontal": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6b8316b_x4DGg8"
+      ],
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -475,6 +502,7 @@
   "order": [
     "main",
     "1777917546b859f363",
+    "1777918628c77a1ded",
     "related-products",
     "complementary-products",
     "rich_text_XwVKQK",
