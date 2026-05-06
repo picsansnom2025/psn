@@ -501,6 +501,15 @@
     "collapsible_content_9gHTV4": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_kCjAVd": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Delivery",
+            "content": "",
+            "media_ratio": "fit",
+            "media_width": 50
+          }
+        },
         "collapsible_row_zQhkg3": {
           "type": "collapsible_row",
           "settings": {
@@ -521,6 +530,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_kCjAVd",
         "collapsible_row_zQhkg3",
         "collapsible_row_EgyzDz"
       ],
