@@ -17,7 +17,7 @@
         "banner_height": "default",
         "stacked_img_ratio": "landscape_21x9",
         "banner_width": "none",
-        "txt_alignment": "center",
+        "txt_alignment": "left",
         "text_width": "medium",
         "title_size": "h1",
         "title_margin": 10,
