@@ -136,14 +136,6 @@
             "icon_six_label": ""
           }
         },
-        "5c65d55b-9f21-4d69-b50a-6219b616bb68": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Product Details",
-            "content": "<p>{{ product.metafields.custom.details | metafield_tag }}</p>",
-            "page": ""
-          }
-        },
         "cross_links_VBJVii": {
           "type": "cross_links",
           "settings": {
@@ -159,17 +151,16 @@
             "title": "Specifications{{ product.metafields[\"shopify--discovery--product_search_boost\"].queries | metafield_text }}"
           }
         },
-        "collapsible_tab_xVtpDM": {
+        "5c65d55b-9f21-4d69-b50a-6219b616bb68": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Delivery",
-            "content": "{{ block.settings.page.content }}",
-            "page": "delivery"
+            "heading": "Product Details",
+            "content": "<p>{{ product.metafields.custom.details | metafield_tag }}</p>",
+            "page": ""
           }
         },
         "collapsible_tab_3kGtaH": {
           "type": "collapsible_tab",
-          "disabled": true,
           "settings": {
             "heading": "Delivery",
             "content": "",
@@ -198,10 +189,9 @@
         "inventory_zeVG83",
         "buy_buttons",
         "icon_grid_6dazna",
-        "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "cross_links_VBJVii",
         "product_specifications_7DHjUE",
-        "collapsible_tab_xVtpDM",
+        "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "collapsible_tab_3kGtaH",
         "button_nHFB6G"
       ],
