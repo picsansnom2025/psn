@@ -163,8 +163,16 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Delivery",
-            "content": "<p>refer to boandtee</p>",
+            "content": "<p>Delivery to</p><p><br/>  <a href=\"#\">UK</a> <br/>  <a href=\"#\">EUROPE</a> <br/>  <a href=\"#\">USA</a> <br/>  <a href=\"#\">CANADA</a> <br/>  <a href=\"#\">AUSTRALIA</a><br/></p>",
             "page": "size-chart"
+          }
+        },
+        "button_nHFB6G": {
+          "type": "button",
+          "settings": {
+            "link": "",
+            "button_label": "",
+            "button_style": "outline"
           }
         }
       },
@@ -184,7 +192,8 @@
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "cross_links_VBJVii",
         "product_specifications_7DHjUE",
-        "collapsible_tab_xVtpDM"
+        "collapsible_tab_xVtpDM",
+        "button_nHFB6G"
       ],
       "custom_css": [],
       "settings": {
