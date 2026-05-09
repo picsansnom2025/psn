@@ -163,7 +163,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Delivery",
-            "content": "",
+            "content": "{{ block.settings.page.content }}",
             "page": "delivery"
           }
         },
