@@ -163,7 +163,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Delivery",
-            "content": "<p>Delivery to</p><p><br/>  <a href=\"#\">UK</a> <br/>  <a href=\"#\">EUROPE</a> <br/>  <a href=\"#\">USA</a> <br/>  <a href=\"#\">CANADA</a> <br/>  <a href=\"#\">AUSTRALIA</a><br/></p>",
+            "content": "",
             "page": "size-chart"
           }
         },
