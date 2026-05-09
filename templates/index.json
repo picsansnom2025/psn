@@ -963,6 +963,63 @@
         "border_color": "dark"
       }
     },
+    "rich_text_TagPrr": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_BgEAEk": {
+          "type": "caption",
+          "settings": {
+            "caption": "Our Story",
+            "alignment": "center",
+            "opacity": 100
+          }
+        },
+        "text_FCNxYR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our brand is a tribute to nature's timeless allure and formulations that embody the essence of alpine purity and sophistication. Thoughtful and sustainable design extends to everything we produce.</p>",
+            "text_size": "text-large",
+            "alignment": "center",
+            "text_indent": "noindent"
+          }
+        },
+        "button_irMiCV": {
+          "type": "button",
+          "settings": {
+            "alignment": "center",
+            "btn_layout": "inline",
+            "btn_color_scheme": "default",
+            "btn_one_show": true,
+            "btn_one_txt": "Our Story",
+            "btn_one_link": "",
+            "btn_one_style": "button--outline",
+            "btn_two_show": false,
+            "btn_two_txt": "Button text",
+            "btn_two_link": "",
+            "btn_two_style": "button--solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_BgEAEk",
+        "text_FCNxYR",
+        "button_irMiCV"
+      ],
+      "settings": {
+        "content_width": "page-width-medium",
+        "content_horizontal_position": "center",
+        "bg_image_darken": 0,
+        "bg_image_blur": 0,
+        "text_color": "fg-body",
+        "bg_color": "bg-01",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
     "blocks_rMPEF3": {
       "type": "_blocks",
       "blocks": {
@@ -1101,7 +1158,7 @@
             "card_4_image": "shopify://shop_images/caec76aca3935400bc3fd88b640559d2.png",
             "card_4_title": "@妮可NICO",
             "card_4_description": "",
-            "card_5_image": "shopify://shop_images/c9fd5896d18688383489ed888cd8dee6.jpg",
+            "card_5_image": "shopify://shop_images/WechatIMG4468.jpg",
             "card_5_title": "@Babybaby_Q",
             "card_5_description": "",
             "card_6_image": "shopify://shop_images/76c2741597565ae4e815f86a4dc8c327.png",
@@ -1133,63 +1190,6 @@
       ],
       "name": "social media carousel",
       "settings": {}
-    },
-    "rich_text_TagPrr": {
-      "type": "rich-text",
-      "blocks": {
-        "caption_BgEAEk": {
-          "type": "caption",
-          "settings": {
-            "caption": "Our Story",
-            "alignment": "center",
-            "opacity": 100
-          }
-        },
-        "text_FCNxYR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our brand is a tribute to nature's timeless allure and formulations that embody the essence of alpine purity and sophistication. Thoughtful and sustainable design extends to everything we produce.</p>",
-            "text_size": "text-large",
-            "alignment": "center",
-            "text_indent": "noindent"
-          }
-        },
-        "button_irMiCV": {
-          "type": "button",
-          "settings": {
-            "alignment": "center",
-            "btn_layout": "inline",
-            "btn_color_scheme": "default",
-            "btn_one_show": true,
-            "btn_one_txt": "Our Story",
-            "btn_one_link": "",
-            "btn_one_style": "button--outline",
-            "btn_two_show": false,
-            "btn_two_txt": "Button text",
-            "btn_two_link": "",
-            "btn_two_style": "button--solid"
-          }
-        }
-      },
-      "block_order": [
-        "caption_BgEAEk",
-        "text_FCNxYR",
-        "button_irMiCV"
-      ],
-      "settings": {
-        "content_width": "page-width-medium",
-        "content_horizontal_position": "center",
-        "bg_image_darken": 0,
-        "bg_image_blur": 0,
-        "text_color": "fg-body",
-        "bg_color": "bg-01",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "top_border": false,
-        "bottom_border": false,
-        "border_width": "normal",
-        "border_color": "dark"
-      }
     },
     "blocks_d3HDcx": {
       "type": "_blocks",
