@@ -169,6 +169,7 @@
         },
         "collapsible_tab_3kGtaH": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Delivery",
             "content": "",
