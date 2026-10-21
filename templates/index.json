@@ -12,26 +12,11 @@
     "video_banner_hRpm4d": {
       "type": "video-banner",
       "blocks": {
-        "heading_DQMTFQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Tapestry of Vibrance",
-            "heading_size": "h1",
-            "txt_alignment": "inherit"
-          }
-        },
-        "text_VtHgEw": {
-          "type": "text",
-          "settings": {
-            "text": "<p><em>Premium, aesthetic design for a modern mindset</em></p>",
-            "text_size": "text-std"
-          }
-        },
         "buttons_wGNbXK": {
           "type": "buttons",
           "settings": {
             "btn_layout": "inline",
-            "btn_alignment": "auto",
+            "btn_alignment": "center",
             "btn_width_mobile": "auto",
             "btn_color_scheme": "white",
             "padding_top": 20,
@@ -48,12 +33,11 @@
         }
       },
       "block_order": [
-        "heading_DQMTFQ",
-        "text_VtHgEw",
         "buttons_wGNbXK"
       ],
       "settings": {
         "banner_size": "banner-style-large",
+        "video_url": "shopify://files/videos/topbanner.mov",
         "overlay_level": 0,
         "video_size": "100",
         "video_position": "center",
@@ -80,7 +64,7 @@
         "heading_FQpwaH": {
           "type": "heading",
           "settings": {
-            "heading": "ALPINE ESCAPE",
+            "heading": "BEYOND DEFINITION ",
             "heading_size": "h2",
             "alignment": "center"
           }
@@ -88,7 +72,7 @@
         "text_tdXfMx": {
           "type": "text",
           "settings": {
-            "text": "<p>Combining sophistication and technical materials, the CHANEL COCO NEIGE 2025/26 collection offers an elegant wardrobe.<br/>Starring actress and House ambassador Nana Komatsu, the campaign is inspired by Gabrielle Chanel's love of the mountains.</p>",
+            "text": "<p>Combining refined elegance with advanced technical materials,&nbsp;<br/>the PSN Winter 2026/27 Alpine Collection reimagines the modern alpine wardrobe.</p><p>Inspired by the spirit of the Alps,&nbsp;<br/>each piece is designed for women who move with strength,&nbsp;grace, and their own definition of greatness.</p>",
             "text_size": "text-std",
             "alignment": "center",
             "text_indent": "noindent"
