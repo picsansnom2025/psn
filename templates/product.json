@@ -259,7 +259,7 @@
           "type": "ai_gen_block_ed2c3fe",
           "settings": {
             "metafield_image": "{{ closest.product.metafields.custom.size_guide.value }}",
-            "desktop_width_percent": 100,
+            "desktop_width_percent": 60,
             "border_radius": 0,
             "background_color": "#ffffff",
             "show_caption": false,
