@@ -4426,3 +4426,23 @@ body:has(.header-bar--page-margins) .customer h1 {
 .ecomsend__Popover__Widget {
   z-index: 90 !important;
 }
+
+.header-group {
+  transition: transform 320ms ease;
+}
+
+.header-group.is-header-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-group {
+    transition: opacity 200ms ease;
+  }
+
+  .header-group.is-header-hidden {
+    transform: none;
+    opacity: 0;
+  }
+}
