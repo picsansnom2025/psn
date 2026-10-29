@@ -133,7 +133,18 @@
 {% assign more_variants_exist = true %}
 {% endif %}
 
-{% if pccount == 0 %}
+{% assign variant_image_count = 0 %}
+{% for option in card_product.options_with_values %}
+  {% if color_names contains option.name %}
+    {% for value in option.values %}
+      {% if value.variant.featured_media and forloop.index < 5 %}
+        {% assign variant_image_count = variant_image_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% if pccount == 0 or variant_image_count == 0 %}
 {% assign static_images = true %}
 
 {% else %}
