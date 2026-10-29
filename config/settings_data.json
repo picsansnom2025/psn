@@ -34,7 +34,7 @@
     "announcement_bg_col": "#222222",
     "bar_fg_col": "#000000",
     "bar_bg_col": "#ffffffad",
-    "dd_txt_col": "#85745c",
+    "dd_txt_col": "#000000",
     "dd_bg_col": "#ffffff",
     "type_header_font": "instrument_sans_n6",
     "type_body_font": "instrument_sans_n4",
