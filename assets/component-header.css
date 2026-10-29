@@ -4427,3 +4427,7 @@ body:has(.header-bar--page-margins) .customer h1 {
     max-width: min(72vw, 240px) !important;
   }
 }
+
+.ecomsend__Popover__Widget {
+  z-index: 90 !important;
+}
