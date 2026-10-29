@@ -87,6 +87,7 @@
 {% if flexbasisnumb == 3 %}
 @media only screen and (max-width: 1024px) {
   .footer-blocks-container {
+    display: grid;
     grid-template-columns: 1fr;
   }
   .footer-block-fw {
@@ -95,6 +96,18 @@
   .footer-logo-block {
     order: -1;
     justify-self: center;
+  }
+  .footer-block-newsletter,
+  .footer-block-linklist-column {
+    justify-self: center;
+    text-align: center;
+    max-width: 360px;
+  }
+  .footer-block-newsletter .newsletter-form,
+  .footer-block-newsletter .footer-newsletter-heading-text,
+  .footer-block-linklist-column .footer-block-linklist-ul {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 1025px) {
