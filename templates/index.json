@@ -311,7 +311,7 @@
         "mobile_grid": "2",
         "tablet_grid": "3",
         "dt_grid": "4",
-        "card_image_display": "second_image_hover",
+        "card_image_display": "variant_thumbnails",
         "pagination_color_scheme": "body",
         "show_prices": true,
         "show_vendor": false,

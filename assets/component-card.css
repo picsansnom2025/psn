@@ -612,6 +612,14 @@ h3 .vendor--style-faded {
   height: auto;
 }
 
+.card-product--variant-thumbnail .swatch {
+  cursor: pointer;
+}
+
+.pc-thumb-radio:checked + label .swatch {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #111;
+}
+
 .card-product--variant-unavailable {
   opacity: 1;
 }

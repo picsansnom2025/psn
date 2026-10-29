@@ -96,6 +96,8 @@
     "card_text_padding": 0,
     "card_text_border": false,
     "card_price_position": "right",
+    "card_variant_color_display": "swatch",
+    "card_variant_color_position": "bottom",
     "card_badge_position": "top-left",
     "badges_show_sale": true,
     "collection_card_text_alignment": "center",

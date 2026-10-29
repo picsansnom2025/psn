@@ -1248,3 +1248,11 @@ function initializeSwipeFunctionality(container = document) {
 // Call the function on page load
 initializeSwipeFunctionality();
 
+document.addEventListener('click', function (event) {
+  const thumb = event.target.closest('.card-product--variant-thumbnail');
+  if (!thumb) return;
+  event.preventDefault();
+  const input = thumb.querySelector('.pc-thumb-radio');
+  if (input) input.checked = true;
+});
+

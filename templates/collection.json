@@ -90,7 +90,7 @@
         "enable_creative_layouts": false,
         "enable_filtering": true,
         "enable_sorting": true,
-        "card_image_display": "second_image_hover",
+        "card_image_display": "variant_thumbnails",
         "pagination_color_scheme": "body",
         "show_price": true,
         "show_vendor": false,
