@@ -97,7 +97,7 @@
         "main_menu": "main-menu",
         "secondary_menu": "",
         "secondary_menu_desktop": "",
-        "header_bar_width": "page-margins",
+        "header_bar_width": "full",
         "header_scroll_behaviour": "sticky",
         "desktop_nav_position": "inline",
         "desktop_nav_breakpoint": "auto",
