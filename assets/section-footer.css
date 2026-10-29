@@ -1300,7 +1300,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
   column-gap: 22px;
   row-gap: 6px;
 }
