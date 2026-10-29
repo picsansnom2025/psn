@@ -4372,6 +4372,7 @@ body:has(.header-bar--page-margins) .customer h1 {
 .hdr-nav-desktop .hdr-nav-primary-level-ul > li:hover > a::after,
 .hdr-nav-desktop .hdr-nav-primary-level-ul > li:focus-within > a::after {
   transform: scaleX(1);
+  background: currentColor;
 }
 
 .header--logo a,
