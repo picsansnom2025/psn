@@ -163,7 +163,7 @@ iwt-slideshow.image-cover-wrapper {
 
 .iwt-slide-controls {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 50%;
   bottom: 20px;
   display: flex;
@@ -180,22 +180,36 @@ iwt-slideshow.image-cover-wrapper {
 
 .iwt-slide-progress {
   position: absolute;
+  inset: 0;
   z-index: 2;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.35);
-  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
 }
 
-.iwt-slide-progress-bar {
-  display: block;
-  height: 100%;
-  width: 100%;
+iwt-slideshow.is-playing .iwt-slide-progress,
+iwt-slideshow.is-paused .iwt-slide-progress {
+  opacity: 1;
+}
+
+.iwt-slide-progress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--iwt-progress, 0) * 100%);
+  right: 0;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.iwt-slide-progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--iwt-progress, 0) * 100%);
+  width: 2px;
   background: #fff;
-  transform: scaleX(0);
-  transform-origin: left center;
+  transform: translateX(-1px);
 }
 
 .iwt-slide-btn,
@@ -256,6 +270,10 @@ iwt-slideshow.image-cover-wrapper {
   .iwt-slide-btn,
   .iwt-slide-dot {
     transition: none;
+  }
+
+  .iwt-slide-progress {
+    opacity: 0;
   }
 
   .iwt-slide-btn:active,

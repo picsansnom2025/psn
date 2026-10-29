@@ -294,6 +294,8 @@
         if (!this.autoplay || this.reducedMotion || this.slides.length < 2) return;
         if (this.hovered || !this.inView || document.hidden || this.playing) return;
         this.playing = true;
+        this.classList.add('is-playing');
+        this.classList.remove('is-paused');
         this.startedAt = performance.now() - this.elapsed;
         this.tick();
       }
@@ -302,6 +304,8 @@
         if (this.playing) {
           this.elapsed = performance.now() - this.startedAt;
           this.playing = false;
+          this.classList.remove('is-playing');
+          this.classList.toggle('is-paused', this.elapsed > 40);
         }
         if (this.frame) cancelAnimationFrame(this.frame);
         this.frame = null;
@@ -323,7 +327,7 @@
       }
 
       setProgress(value) {
-        if (this.progressBar) this.progressBar.style.transform = `scaleX(${value})`;
+        this.style.setProperty('--iwt-progress', String(value));
       }
 
       render() {
@@ -347,6 +351,7 @@
         this.render();
         this.elapsed = 0;
         this.startedAt = performance.now();
+        this.classList.remove('is-paused');
         this.setProgress(0);
       }
     }
