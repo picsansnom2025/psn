@@ -403,7 +403,7 @@
 {% endif %}
 
 {% comment %} CLICKABLE THUMBNAILS - POSITION BOTTOM {% endcomment %}
-{% if variant_image_browsing and show_swiping_images == false and show_secondary_image == false and settings.card_variant_color_position == 'top' %}
+{% if variant_image_browsing and variant_image_count > 1 and show_swiping_images == false and show_secondary_image == false and settings.card_variant_color_position == 'top' %}
 <div class="product-card--image-browsing-thumbnails pcibt--top align-{{ settings.card_text_alignment }}">
   {% for option in card_product.options_with_values %}
   {% if color_names contains option.name %}
@@ -637,7 +637,7 @@
 {% comment %}END OF COLOR SWATCHES - POSITION BOTTOM{% endcomment %}
 
 {% comment %} CLICKABLE THUMBNAILS - POSITION BOTTOM {% endcomment %}
-{% if variant_image_browsing and show_swiping_images == false and show_secondary_image == false and settings.card_variant_color_position == 'bottom' %}
+{% if variant_image_browsing and variant_image_count > 1 and show_swiping_images == false and show_secondary_image == false and settings.card_variant_color_position == 'bottom' %}
 <div class="product-card--image-browsing-thumbnails pcibt--bottom align-{{ settings.card_text_alignment }}">
   {% for option in card_product.options_with_values %}
   {% if color_names contains option.name %}
