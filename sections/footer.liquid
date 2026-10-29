@@ -120,17 +120,17 @@
     align-items: center;
   }
   .footer-block-newsletter {
-    justify-self: start;
+    justify-self: end;
     align-self: center;
     max-width: 360px;
   }
   .footer-logo-block {
     justify-self: center;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .footer-block-linklist-column {
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     width: max-content;
     max-width: 280px;
@@ -173,6 +173,13 @@
     column-gap: {{ section.settings.footer_horizontal_spacing_desktop }}px;
   }  
 }
+{% if flexbasisnumb == 3 %}
+@media only screen and (min-width: 1025px) {
+  .site-footer .footer-blocks-container {
+    column-gap: 72px;
+  }
+}
+{% endif %}
   
 {%- endstyle -%}  
 
