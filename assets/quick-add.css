@@ -300,6 +300,7 @@ body:has(.cart-ui-word) .icon-qa-plus {
   .product-card-quick-add.quick-add-desktop-hover .quick-add {
     opacity: 0;
     visibility: visible;
+    transition: opacity 250ms ease, visibility 250ms ease;
   }
   .product-upsell-block-list .product-card-quick-add {
     position: relative;
@@ -310,7 +311,6 @@ body:has(.cart-ui-word) .icon-qa-plus {
   .card-product:hover .product-card-quick-add.quick-add-desktop-hover .quick-add {
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
   }
   .product-card-quick-add.quick-add-desktop-hover .quick-add:has(button:focus-visible) {
     visibility: visible;
@@ -506,6 +506,10 @@ body:has(.full-width-announcement-bar) .quick-add-modal__content {
   appearance: none;
   background: none;
   background-color: none;
+}
+
+.quick-add-modal__toggle {
+  transition: opacity 240ms ease, color 240ms ease;
 }
 
 .quick-add-modal__toggle:hover {

@@ -263,6 +263,24 @@ iwt-slideshow.is-paused .iwt-slide-progress {
   background: #fff;
 }
 
+.image-with-text-footer .button {
+  transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease, opacity 280ms ease;
+}
+
+.image-with-text-footer .button--outline:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.image-with-text-footer .button--solid:hover {
+  opacity: 0.72;
+}
+
+.image-with-text-footer .button:active {
+  opacity: 0.72;
+}
+
 .iwt-slide-dot.is-active {
   transform: scale(1.15);
 }

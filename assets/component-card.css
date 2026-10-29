@@ -211,6 +211,29 @@
   margin-bottom: 3px;
   overflow-wrap: break-word;
   font-family: var(--font-body-family);
+  transition: opacity 240ms ease;
+}
+
+.card-product--text-section-link:hover .card-product--title {
+  opacity: 0.55;
+}
+
+.card-product--text-section-link:has(.card-product--variant-thumbnail:hover) .card-product--title {
+  opacity: 1;
+}
+
+.card-product .quick-add__submit {
+  transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease, opacity 280ms ease;
+}
+
+.card-product .quick-add__submit:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.card-product .quick-add__submit:active {
+  opacity: 0.72;
 }
 
 .card-title-font-family-body {

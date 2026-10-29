@@ -1260,6 +1260,10 @@
   transition: opacity 240ms ease;
 }
 
+.site-footer .field__input {
+  transition: border-color 240ms ease;
+}
+
 .site-footer .footer-block-linklist-ul a:hover,
 .site-footer .footer-policies-linklist a:hover,
 .site-footer .sub-footer-section button:hover,
