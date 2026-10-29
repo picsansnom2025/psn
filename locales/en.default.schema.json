@@ -3513,6 +3513,12 @@
         "main_image": {
           "label": "Image"
         },
+        "autoplay": {
+          "label": "Autoplay images"
+        },
+        "autoplay_speed": {
+          "label": "Autoplay speed"
+        },
         "secondary_image": {
           "label": "Secondary image"
         },

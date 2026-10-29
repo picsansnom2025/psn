@@ -127,7 +127,7 @@
 <div class="image-cover-container">
 {% if iwt_slides.size > 0 %}
 {% if iwt_slides.size > 1 %}
-<iwt-slideshow class="image-cover-wrapper iwt-slides">
+<iwt-slideshow class="image-cover-wrapper iwt-slides" data-autoplay="{{ section.settings.autoplay }}" data-interval="{{ section.settings.autoplay_speed | times: 1000 }}">
 {% else %}
 <div class="image-cover-wrapper iwt-slides">
 {% endif %}
@@ -243,6 +243,11 @@
         this.querySelector('[data-iwt-next]')?.addEventListener('click', () => this.show(this.index + 1));
         this.dots.forEach((dot, index) => dot.addEventListener('click', () => this.show(index)));
         this.pointerX = null;
+        this.autoplay = this.dataset.autoplay === 'true';
+        this.interval = Number(this.dataset.interval) || 5000;
+        this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this.hovered = false;
+        this.inView = false;
         this.addEventListener('pointerdown', (event) => {
           if (event.target.closest('button')) return;
           this.pointerX = event.clientX;
@@ -254,6 +259,43 @@
           if (Math.abs(delta) < 40) return;
           this.show(this.index + (delta < 0 ? 1 : -1));
         });
+        this.addEventListener('mouseenter', () => {
+          this.hovered = true;
+          this.pause();
+        });
+        this.addEventListener('mouseleave', () => {
+          this.hovered = false;
+          this.play();
+        });
+        this.onVisibility = () => {
+          if (document.hidden) this.pause();
+          else this.play();
+        };
+        document.addEventListener('visibilitychange', this.onVisibility);
+        this.observer = new IntersectionObserver((entries) => {
+          this.inView = entries.some((entry) => entry.isIntersecting);
+          if (this.inView) this.play();
+          else this.pause();
+        }, { threshold: 0.4 });
+        this.observer.observe(this);
+      }
+
+      disconnectedCallback() {
+        this.pause();
+        this.observer?.disconnect();
+        document.removeEventListener('visibilitychange', this.onVisibility);
+      }
+
+      play() {
+        if (!this.autoplay || this.reducedMotion || this.slides.length < 2) return;
+        if (this.hovered || !this.inView || document.hidden) return;
+        this.pause();
+        this.timer = window.setInterval(() => this.show(this.index + 1), this.interval);
+      }
+
+      pause() {
+        if (this.timer) window.clearInterval(this.timer);
+        this.timer = null;
       }
 
       show(index) {
@@ -271,6 +313,7 @@
           if (active) dot.setAttribute('aria-current', 'true');
           else dot.removeAttribute('aria-current');
         });
+        if (this.timer) this.play();
       }
     }
 
@@ -397,6 +440,22 @@
         }
       ],
       "default": "portrait"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:sections.image-with-text.settings.autoplay.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "s",
+      "label": "t:sections.image-with-text.settings.autoplay_speed.label",
+      "default": 5
     },
     {
       "type": "image_picker",
