@@ -534,24 +534,15 @@
       {% endif %}
     {% endfor %}
     {% endif %}
-    {% if markets == true %}
-      <li>
-      {% if section.settings.location_enable and localization.available_countries.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.country_label' | t }}: {% endif %}<button class="button--inline-underline market-selector--opener">{% if section.settings.location_format == 'code' %}{{ localization.country.iso_code | upcase }}{% else %}{{ localization.country.name }}{% endif %}{% if section.settings.show_currency_symbol %} ({{ localization.country.currency.symbol }}){% endif %}</button>{% endif %}
-      {% if section.settings.location_enable and localization.available_countries.size > 1 and section.settings.language_enable and localization.available_languages.size > 1 %}<span class="footer-lang-bullet">&bull;</span>{% endif %}
-      {% if section.settings.language_enable and localization.available_languages.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.language_label' | t }}: {% endif %}<button class="button--inline-underline market-language-selector--opener" id="langSelectorOpener" aria-label="{{ localization.language.endonym_name | capitalize }}">{{ localization.language.endonym_name | capitalize }}</button>{% endif %}        
-      </li>
-    {% endif %}
   </ul>
 </div>
 {% endif %}
 
-{% if section.settings.show_policies == false and markets == true and section.settings.sub_footer_linklist == blank %}
-<div class="sub-footer-section">
-  <ul class="footer-policies-linklist" role="list">
-    <li>{% if section.settings.location_enable and localization.available_countries.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.country_label' | t }}: {% endif %}<button class="button--inline-underline market-selector--opener">{% if section.settings.location_format == 'code' %}{{ localization.country.iso_code | upcase }}{% else %}{{ localization.country.name }}{% endif %}{% if section.settings.show_currency_symbol %} ({{ localization.country.currency.symbol }}){% endif %}</button>{% endif %}
-    {% if section.settings.location_enable and localization.available_countries.size > 1 and section.settings.language_enable and localization.available_languages.size > 1 %}<span class="footer-lang-bullet">&bull;</span>{% endif %}
-    {% if section.settings.language_enable and localization.available_languages.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.language_label' | t }}: {% endif %}<button class="button--inline-underline market-language-selector--opener" id="langSelectorOpener" aria-label="{{ localization.language.endonym_name | capitalize }}">{{ localization.language.endonym_name | capitalize }}</button>{% endif %}</li>
-  </ul>
+{% if markets == true %}
+<div class="sub-footer-section sub-footer-markets">
+  {% if section.settings.location_enable and localization.available_countries.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.country_label' | t }}: {% endif %}<button class="button--inline-underline market-selector--opener">{% if section.settings.location_format == 'code' %}{{ localization.country.iso_code | upcase }}{% else %}{{ localization.country.name }}{% endif %}{% if section.settings.show_currency_symbol %} ({{ localization.country.currency.symbol }}){% endif %}</button>{% endif %}
+  {% if section.settings.location_enable and localization.available_countries.size > 1 and section.settings.language_enable and localization.available_languages.size > 1 %}<span class="footer-lang-bullet">&bull;</span>{% endif %}
+  {% if section.settings.language_enable and localization.available_languages.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.language_label' | t }}: {% endif %}<button class="button--inline-underline market-language-selector--opener" id="langSelectorOpener" aria-label="{{ localization.language.endonym_name | capitalize }}">{{ localization.language.endonym_name | capitalize }}</button>{% endif %}
 </div>
 {% endif %}
 
