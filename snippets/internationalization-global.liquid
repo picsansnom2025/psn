@@ -9,6 +9,9 @@ var locselectorpanel = document.getElementById('locSelectorPanel');
 var locselectorpanelbg = document.getElementById('locSelectorPanelBg');
 var locselectorclose = document.getElementById('locSelectorCloseBtn');
 
+if (locselectorpanelbg) document.body.appendChild(locselectorpanelbg);
+if (locselectorpanel) document.body.appendChild(locselectorpanel);
+
 if (locselectoropeners.length > 0) {
   locselectoropeners.forEach(function(opener) {
     function openLocSelector(event) {
