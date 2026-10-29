@@ -149,6 +149,7 @@
       {% endfor %}
     </div>
     <button type="button" class="iwt-slide-btn iwt-slide-btn--next" data-iwt-next aria-label="{{ 'sections.slideshow.next_slideshow' | t }}">{% render 'icon-arrow' %}</button>
+    <div class="iwt-slide-progress" data-iwt-progress aria-hidden="true"><span class="iwt-slide-progress-bar" data-iwt-progress-bar></span></div>
   </div>
 </iwt-slideshow>
 {% else %}
@@ -248,6 +249,9 @@
         this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         this.hovered = false;
         this.inView = false;
+        this.playing = false;
+        this.elapsed = 0;
+        this.progressBar = this.querySelector('[data-iwt-progress-bar]');
         this.addEventListener('pointerdown', (event) => {
           if (event.target.closest('button')) return;
           this.pointerX = event.clientX;
@@ -288,20 +292,41 @@
 
       play() {
         if (!this.autoplay || this.reducedMotion || this.slides.length < 2) return;
-        if (this.hovered || !this.inView || document.hidden) return;
-        this.pause();
-        this.timer = window.setInterval(() => this.show(this.index + 1), this.interval);
+        if (this.hovered || !this.inView || document.hidden || this.playing) return;
+        this.playing = true;
+        this.startedAt = performance.now() - this.elapsed;
+        this.tick();
       }
 
       pause() {
-        if (this.timer) window.clearInterval(this.timer);
-        this.timer = null;
+        if (this.playing) {
+          this.elapsed = performance.now() - this.startedAt;
+          this.playing = false;
+        }
+        if (this.frame) cancelAnimationFrame(this.frame);
+        this.frame = null;
       }
 
-      show(index) {
-        const count = this.slides.length;
-        if (!count) return;
-        this.index = (index + count) % count;
+      tick() {
+        if (!this.playing) return;
+        const elapsed = performance.now() - this.startedAt;
+        const progress = Math.min(elapsed / this.interval, 1);
+        this.setProgress(progress);
+        if (progress >= 1) {
+          this.index = (this.index + 1) % this.slides.length;
+          this.render();
+          this.elapsed = 0;
+          this.startedAt = performance.now();
+          this.setProgress(0);
+        }
+        this.frame = requestAnimationFrame(() => this.tick());
+      }
+
+      setProgress(value) {
+        if (this.progressBar) this.progressBar.style.transform = `scaleX(${value})`;
+      }
+
+      render() {
         this.slides.forEach((slide, slideIndex) => {
           const active = slideIndex === this.index;
           slide.classList.toggle('is-active', active);
@@ -313,7 +338,16 @@
           if (active) dot.setAttribute('aria-current', 'true');
           else dot.removeAttribute('aria-current');
         });
-        if (this.timer) this.play();
+      }
+
+      show(index) {
+        const count = this.slides.length;
+        if (!count) return;
+        this.index = (index + count) % count;
+        this.render();
+        this.elapsed = 0;
+        this.startedAt = performance.now();
+        this.setProgress(0);
       }
     }
 
