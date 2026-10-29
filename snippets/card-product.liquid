@@ -146,6 +146,10 @@
 
 {% if pccount == 0 or variant_image_count == 0 %}
 {% assign static_images = true %}
+{% if images.size > 1 %}
+{% assign show_secondary_image = true %}
+{% assign static_images = false %}
+{% endif %}
 
 {% else %}
 
@@ -164,6 +168,29 @@
     {% endfor %}
   {% endif %}
   {% endfor %}
+  {% assign shown_image = card_product.featured_media %}
+  {% assign shown_found = false %}
+  {% for option in card_product.options_with_values %}
+    {% if shown_found == false and color_names contains option.name %}
+      {% for value in option.values %}
+        {% if shown_found == false and value.variant.featured_media %}
+          {% assign shown_image = value.variant.featured_media %}
+          {% assign shown_found = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% assign hover_image = nil %}
+  {% for image in images %}
+    {% if hover_image == nil and image != shown_image %}
+      {% assign hover_image = image %}
+    {% endif %}
+  {% endfor %}
+  {% if hover_image %}
+  <div class="card-product--card-hover-image">
+    {{ hover_image | image_url: width: media_size | image_tag: loading: 'lazy' }}
+  </div>
+  {% endif %}
 </div>
 </div>
 {% endif %}

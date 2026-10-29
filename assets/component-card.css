@@ -465,6 +465,31 @@ h3 .vendor--style-faded {
   object-fit: cover;  
 }
 
+.card-product--card-hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.card-product--card-hover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 1025px) {
+  .card-product:hover:not(:has(.pc-thumb-radio:checked)):not(:has(.card-product--variant-thumbnail:hover)) .card-product--card-hover-image {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .card-product--variant-main-image:nth-child(2), 
 .card-product--variant-main-image:nth-child(3), 
 .card-product--variant-main-image:nth-child(4), 
@@ -632,6 +657,7 @@ h3 .vendor--style-faded {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .card-product--card-hover-image,
   .card-product--variant-thumbnail .card-product-variant-swatch,
   .card-product--variant-thumbnail .swatch {
     transition: none;
