@@ -147,7 +147,7 @@
         "sub_footer_border_width": "full",
         "sub_footer_layout": "single",
         "sub_footer_alignment": "align-left",
-        "sub_footer_linklist": "footer-policies",
+        "sub_footer_linklist": "",
         "sub_footer_single_link": "",
         "sub_footer_single_link_label": "",
         "show_policies": true,
