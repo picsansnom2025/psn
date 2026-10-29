@@ -198,7 +198,7 @@ iwt-slideshow.is-paused .iwt-slide-progress {
   bottom: 0;
   left: calc(var(--iwt-progress, 0) * 100%);
   right: 0;
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .iwt-slide-progress::after {
@@ -207,8 +207,9 @@ iwt-slideshow.is-paused .iwt-slide-progress {
   top: 0;
   bottom: 0;
   left: calc(var(--iwt-progress, 0) * 100%);
-  width: 2px;
+  width: 3px;
   background: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
   transform: translateX(-1px);
 }
 
