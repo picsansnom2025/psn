@@ -1368,16 +1368,19 @@
   }
   .site-footer .sub-footer.sub-footer-layout-single .sub-footer-credits-section {
     grid-column: 1;
+    grid-row: 1;
     justify-self: start;
     flex: none;
   }
   .site-footer .sub-footer.sub-footer-layout-single > .sub-footer-section:not(.sub-footer-credits-section):not(.sub-footer-social) {
     grid-column: 2;
+    grid-row: 1;
     justify-self: center;
     flex: none;
   }
   .site-footer .sub-footer.sub-footer-layout-single > .sub-footer-social {
     grid-column: 3;
+    grid-row: 1;
     justify-self: end;
     margin-left: 0;
   }
