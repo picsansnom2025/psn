@@ -1256,3 +1256,23 @@ document.addEventListener('click', function (event) {
   if (input) input.checked = true;
 });
 
+document.addEventListener('pointerover', function (event) {
+  if (event.pointerType === 'touch') return;
+  const thumb = event.target.closest('.card-product--variant-thumbnail');
+  if (!thumb) return;
+  const card = thumb.closest('.card');
+  const index = thumb.getAttribute('data-variant-index');
+  if (!card || !index) return;
+  card.setAttribute('data-swatch-preview', index);
+});
+
+document.addEventListener('pointerout', function (event) {
+  if (event.pointerType === 'touch') return;
+  const row = event.target.closest('.product-card--image-browsing-thumbnails');
+  if (!row) return;
+  const next = event.relatedTarget;
+  if (next && row.contains(next)) return;
+  const card = row.closest('.card');
+  if (card) card.removeAttribute('data-swatch-preview');
+});
+

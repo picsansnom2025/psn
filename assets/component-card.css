@@ -507,7 +507,7 @@ h3 .vendor--style-faded {
 }
 
 @media only screen and (min-width: 1025px) {
-  .card-product:hover:not(:has(.card-product--variant-thumbnail:hover)) .card-product--card-hover-image {
+  .card-product:hover:not(:has(.card-product--variant-thumbnail:hover)):not([data-swatch-preview]) .card-product--card-hover-image {
     opacity: 1;
     visibility: visible;
   }
@@ -609,6 +609,49 @@ h3 .vendor--style-faded {
   visibility: visible;
 }
 
+.card[data-swatch-preview] .card-product--variant-main-image:nth-child(n+2) {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.card[data-swatch-preview="1"] .card-product--variant-main-image[data-variant-index="1"],
+.card[data-swatch-preview="2"] .card-product--variant-main-image[data-variant-index="2"],
+.card[data-swatch-preview="3"] .card-product--variant-main-image[data-variant-index="3"],
+.card[data-swatch-preview="4"] .card-product--variant-main-image[data-variant-index="4"],
+.card[data-swatch-preview="5"] .card-product--variant-main-image[data-variant-index="5"],
+.card[data-swatch-preview="6"] .card-product--variant-main-image[data-variant-index="6"],
+.card[data-swatch-preview="7"] .card-product--variant-main-image[data-variant-index="7"],
+.card[data-swatch-preview="8"] .card-product--variant-main-image[data-variant-index="8"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.card[data-swatch-preview] .pc-thumb-radio:checked + label .swatch {
+  box-shadow: none;
+}
+
+.card[data-swatch-preview="1"] .card-product--variant-thumbnail[data-variant-index="1"] .card-product-variant-swatch,
+.card[data-swatch-preview="2"] .card-product--variant-thumbnail[data-variant-index="2"] .card-product-variant-swatch,
+.card[data-swatch-preview="3"] .card-product--variant-thumbnail[data-variant-index="3"] .card-product-variant-swatch,
+.card[data-swatch-preview="4"] .card-product--variant-thumbnail[data-variant-index="4"] .card-product-variant-swatch,
+.card[data-swatch-preview="5"] .card-product--variant-thumbnail[data-variant-index="5"] .card-product-variant-swatch,
+.card[data-swatch-preview="6"] .card-product--variant-thumbnail[data-variant-index="6"] .card-product-variant-swatch,
+.card[data-swatch-preview="7"] .card-product--variant-thumbnail[data-variant-index="7"] .card-product-variant-swatch,
+.card[data-swatch-preview="8"] .card-product--variant-thumbnail[data-variant-index="8"] .card-product-variant-swatch {
+  transform: scale(1.12);
+}
+
+.card[data-swatch-preview="1"] .card-product--variant-thumbnail[data-variant-index="1"] .swatch,
+.card[data-swatch-preview="2"] .card-product--variant-thumbnail[data-variant-index="2"] .swatch,
+.card[data-swatch-preview="3"] .card-product--variant-thumbnail[data-variant-index="3"] .swatch,
+.card[data-swatch-preview="4"] .card-product--variant-thumbnail[data-variant-index="4"] .swatch,
+.card[data-swatch-preview="5"] .card-product--variant-thumbnail[data-variant-index="5"] .swatch,
+.card[data-swatch-preview="6"] .card-product--variant-thumbnail[data-variant-index="6"] .swatch,
+.card[data-swatch-preview="7"] .card-product--variant-thumbnail[data-variant-index="7"] .swatch,
+.card[data-swatch-preview="8"] .card-product--variant-thumbnail[data-variant-index="8"] .swatch {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 2px #111;
+}
+
 .card-product--variant-thumbnails-list {
   width: 100%;
   display: flex;
@@ -670,7 +713,8 @@ h3 .vendor--style-faded {
     transition: none;
   }
 
-  .card-product--variant-thumbnail:hover .card-product-variant-swatch {
+  .card-product--variant-thumbnail:hover .card-product-variant-swatch,
+  .card[data-swatch-preview] .card-product--variant-thumbnail .card-product-variant-swatch {
     transform: none;
   }
 }
