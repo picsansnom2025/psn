@@ -194,23 +194,17 @@ iwt-slideshow.is-paused .iwt-slide-progress {
 .iwt-slide-progress::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(var(--iwt-progress, 0) * 100%);
-  right: 0;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) calc(var(--iwt-progress, 0) * 100% - 16%),
+    rgba(0, 0, 0, 0.16) calc(var(--iwt-progress, 0) * 100% + 12%),
+    rgba(0, 0, 0, 0.16) 100%
+  );
 }
 
 .iwt-slide-progress::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(var(--iwt-progress, 0) * 100%);
-  width: 3px;
-  background: #fff;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
-  transform: translateX(-1px);
+  content: none;
 }
 
 .iwt-slide-btn,
