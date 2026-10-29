@@ -666,10 +666,53 @@
   body:has(.full-width-announcement-bar) .header-bar--page-margins .dd-panel-drawer {
     padding-top: calc(var(--site-header-height-desktop) + 55px);
   }
+
+  .hdr-logo-scale .header-bar-inner {
+    height: auto;
+    min-height: calc(var(--hdr-pad, 0px) + var(--hdr-bar, {{ nb_base_height }}px));
+    padding-top: var(--hdr-pad, 0px);
+    transition: background-color 0.3s linear, color 0.3s linear, border-color 0.3s linear, box-shadow 0.3s linear;
+  }
+  .hdr-logo-scale .header-mobile-logo,
+  .hdr-logo-scale .header-desktop-logo {
+    position: absolute;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+    top: var(--hdr-logo-top, 0px);
+    width: var(--hdr-logo-w, {{ section.settings.logo_size }}px);
+    margin: 0;
+    pointer-events: none;
+  }
+  .hdr-logo-scale .header-mobile-logo a,
+  .hdr-logo-scale .header-desktop-logo a {
+    pointer-events: auto;
+  }
+  .hdr-logo-scale .header-desktop-logo .header--logo,
+  .hdr-logo-scale .header-mobile-logo .header--logo,
+  .hdr-logo-scale .header-desktop-logo .header--logo img,
+  .hdr-logo-scale .header-mobile-logo .header--logo img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+  .hdr-logo-scale .header-bar--left,
+  .hdr-logo-scale .header-bar--shopping-tools {
+    position: relative;
+    z-index: 4;
+  }
+  @media only screen and (min-width: 1025px) {
+    .hdr-logo-scale .header-bar-inner {
+      min-height: calc(var(--hdr-pad, 0px) + var(--hdr-bar, {{ nb_base_height_dt }}px));
+    }
+    .hdr-logo-scale .header-desktop-logo {
+      width: var(--hdr-logo-w, {{ section.settings.logo_size_dt }}px);
+    }
+  }
  
 {%- endstyle -%}
 
-<header id="SiteHeader" class="header-bar mm-width-{{ main_menu_width }}px amc-width-{{ menu_width_estimate }}px lv-13-1-0 header-fixed{% if settings.bar_bg_col.alpha < 1 %} hbi-semi-transparent{% endif %}{% if header_color_scheme_singular %} hbi-color-singular{% endif %}{% if section.settings.header_scroll_behaviour == 'scroll' %} hb-scroll-behaviour--scroll{% endif %} header-width-{{ section.settings.header_hoz_width }} hb-{{ section.settings.desktop_nav_position }}{% if header_transparent %} hdr-trans-hp{% endif %} header-bar--{{ section.settings.header_bar_width }} {{ link_list_breakpoint }}">
+<header id="SiteHeader" class="header-bar mm-width-{{ main_menu_width }}px amc-width-{{ menu_width_estimate }}px lv-13-1-0 header-fixed{% if settings.bar_bg_col.alpha < 1 %} hbi-semi-transparent{% endif %}{% if header_color_scheme_singular %} hbi-color-singular{% endif %}{% if section.settings.header_scroll_behaviour == 'scroll' %} hb-scroll-behaviour--scroll{% endif %} header-width-{{ section.settings.header_hoz_width }} hb-{{ section.settings.desktop_nav_position }}{% if header_transparent %} hdr-trans-hp{% endif %} header-bar--{{ section.settings.header_bar_width }} {{ link_list_breakpoint }}"{% if header_transparent %} data-logo-scale="true" data-logo-rest-desktop="{{ section.settings.logo_size_dt }}" data-logo-rest-mobile="{{ section.settings.logo_size }}" data-logo-bar-desktop="{{ nb_base_height_dt }}" data-logo-bar-mobile="{{ nb_base_height }}"{% endif %}>
 <div id="SiteHeaderInner" class="header-bar-inner{% if section.settings.backdrop_blur %} hbi-backdrop-filter{% endif %} hbi-logo-position-mobile--{{ section.settings.logo_mobile_position }} hbi-logo-position-desktop--{{ section.settings.logo_dt_position }}{% if requires_stack %} header-bar-inner-stacked{% endif %}{% if section.settings.logo_dt_position == 'center' and section.settings.desktop_nav_position == 'inline' %} header-bar-inner--navlist-left{% endif %}{% if section.settings.logo_dt_position == 'left' and section.settings.desktop_nav_position == 'inline' %} header-bar-inner--navlist-center{% endif %}{% if section.settings.logo_size_dt < 150 %} header-bar--dt-logo-small{% endif %}{% if section.settings.logo_size_dt > 240 %} header-bar--dt-logo-large{% endif %} nav-cornerrad-{{ navcornerradius }}">
 {% if requires_stack %}
 <div class="header-bar-inner-top{% if section.settings.logo_dt_position == 'top_center' %} header-bar-inner-top--center-logo{% else %} header-bar-inner-top--left-logo{% endif %}{% if section.settings.logo_mobile_position == 'left' %} header-bar-inner-top--mobile-left-logo{% endif %}">

@@ -133,6 +133,61 @@ window.addEventListener('scroll', function() {
 });
 }
 
+const logoScaleHeader = document.getElementById('SiteHeader');
+if (logoScaleHeader && logoScaleHeader.dataset.logoScale === 'true' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  logoScaleHeader.classList.add('hdr-logo-scale');
+  const logoScaleRange = 320;
+  const logoScaleDesktop = window.matchMedia('(min-width: 1025px)');
+  let logoScaleFrame = 0;
+
+  const updateLogoScale = () => {
+    const desktop = logoScaleDesktop.matches;
+    const wrap = logoScaleHeader.querySelector(desktop ? '.header-desktop-logo' : '.header-mobile-logo');
+    const image = wrap && wrap.querySelector('img');
+    if (!wrap || !image || !image.naturalWidth) return;
+
+    const progress = Math.min(1, Math.max(0, window.scrollY / logoScaleRange));
+    const ratio = image.naturalWidth / image.naturalHeight;
+    const restWidth = parseFloat(desktop ? logoScaleHeader.dataset.logoRestDesktop : logoScaleHeader.dataset.logoRestMobile);
+    const barHeight = parseFloat(desktop ? logoScaleHeader.dataset.logoBarDesktop : logoScaleHeader.dataset.logoBarMobile);
+    const heroHeight = desktop ? 128 : 72;
+    const heroWidth = Math.max(restWidth, Math.min(window.innerWidth * (desktop ? 0.9 : 0.78), heroHeight * ratio));
+    const width = heroWidth + (restWidth - heroWidth) * progress;
+    const height = width / ratio;
+    const pad = (1 - progress) * (height + 12);
+    const inner = logoScaleHeader.querySelector('.header-bar-inner');
+    const top = inner.offsetTop + pad + progress * Math.max(0, (barHeight - height) / 2) + (1 - progress) * 4;
+
+    logoScaleHeader.style.setProperty('--hdr-pad', pad + 'px');
+    logoScaleHeader.style.setProperty('--hdr-bar', barHeight + 'px');
+    logoScaleHeader.style.setProperty('--hdr-logo-w', width + 'px');
+    logoScaleHeader.style.setProperty('--hdr-logo-top', top + 'px');
+
+    const headerHeight = logoScaleHeader.offsetHeight;
+    if (desktop) {
+      document.documentElement.style.setProperty('--site-header-height-desktop', headerHeight + 'px');
+    } else {
+      document.documentElement.style.setProperty('--site-header-height-mobile', headerHeight + 'px');
+    }
+  };
+
+  const requestLogoScale = () => {
+    if (logoScaleFrame) return;
+    logoScaleFrame = window.requestAnimationFrame(() => {
+      logoScaleFrame = 0;
+      updateLogoScale();
+    });
+  };
+
+  const logoImage = logoScaleHeader.querySelector('.header-desktop-logo img, .header-mobile-logo img');
+  if (logoImage && !logoImage.complete) {
+    logoImage.addEventListener('load', requestLogoScale, { once: true });
+  }
+  window.addEventListener('scroll', requestLogoScale, { passive: true });
+  window.addEventListener('resize', requestLogoScale);
+  requestLogoScale();
+}
+
 // Menu drawer opening and closing
 
 var navdrawermobile = document.getElementById('mobNavDrawer');

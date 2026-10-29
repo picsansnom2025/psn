@@ -90,8 +90,8 @@
         "image_Dg9MtT"
       ],
       "settings": {
-        "logo_mobile_position": "left",
-        "logo_dt_position": "left",
+        "logo_mobile_position": "center",
+        "logo_dt_position": "center",
         "logo_size": 125,
         "logo_size_dt": 175,
         "main_menu": "main-menu",
