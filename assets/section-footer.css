@@ -1280,7 +1280,7 @@
 .site-footer .sub-footer.sub-footer-layout-single {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
   column-gap: 28px;
   row-gap: 8px;
@@ -1290,7 +1290,7 @@
   order: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   column-gap: 18px;
   row-gap: 4px;
   width: auto;
@@ -1363,7 +1363,7 @@
   .site-footer .sub-footer.sub-footer-layout-single {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    align-items: baseline;
+    align-items: center;
     column-gap: 24px;
   }
   .site-footer .sub-footer.sub-footer-layout-single .sub-footer-credits-section {
