@@ -293,7 +293,7 @@
       "type": "featured-collection",
       "custom_css": [],
       "settings": {
-        "collection": "frontpage",
+        "collection": "ski-jackets",
         "content_alignment": "center",
         "section_label": "",
         "heading": "New Arrivals",
@@ -304,13 +304,13 @@
         "btn_style": "solid",
         "btn_position_mobile": "bottom",
         "btn_position_desktop": "bottom",
-        "products_layout": "carousel",
+        "products_layout": "grid",
         "arrow_style": "solid-inverted",
         "content_width": "page-width",
         "no_items": 8,
         "mobile_grid": "2",
         "tablet_grid": "3",
-        "dt_grid": "3",
+        "dt_grid": "4",
         "card_image_display": "second_image_hover",
         "pagination_color_scheme": "body",
         "show_prices": true,
@@ -325,6 +325,79 @@
         "btn_color_scheme": "default",
         "padding_top": 80,
         "padding_bottom": 80,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
+    },
+    "image_with_text_home": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_home": {
+          "type": "caption",
+          "settings": {
+            "caption": "Where elegance meets performance"
+          }
+        },
+        "heading_home": {
+          "type": "heading",
+          "settings": {
+            "heading": "Beyond Definition",
+            "heading_size": "h2"
+          }
+        },
+        "text_home": {
+          "type": "text",
+          "settings": {
+            "description": "<p>PSN, short for PIC SANS NOM, takes inspiration from an unnamed peak in the Alps. Without a fixed name or definition, it represents limitless possibility.</p><p>Founded in 2025, PSN is a women’s alpine and activewear brand created for women who embody strength, elegance, and an independent spirit.</p>",
+            "text_size": "std"
+          }
+        },
+        "button_home": {
+          "type": "button",
+          "settings": {
+            "btn_color_scheme": "default",
+            "button_width_mobile": "default",
+            "btn_txt": "Shop Now",
+            "btn_link": "shopify://collections/shop-all-ski",
+            "btn_style": "outline",
+            "btn_two_enable": false,
+            "button_layout": "stacked",
+            "btn_two_txt": "Button label",
+            "btn_two_link": "",
+            "btn_two_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "caption_home",
+        "heading_home",
+        "text_home",
+        "button_home"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "section_size": "flexible",
+        "content_width": "page-width-full-grid",
+        "image_alignment": "right",
+        "dt_image_width": 50,
+        "card_spacing": 0,
+        "image": "shopify://shop_images/1_d798fa88-ce0d-44ca-8576-2f479de19968.jpg",
+        "image_ratio": "portrait",
+        "secondary_image_scale": "small",
+        "txt_alignment": "left",
+        "txt_vertical_alignment": "middle",
+        "txt_padding_top_mobile": 40,
+        "txt_padding_bottom_mobile": 40,
+        "txt_vertical_padding": 40,
+        "text_width": "full",
+        "text_horizontal_position": "center",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "top_padding": 0,
+        "bottom_padding": 0,
+        "border_vertical": false,
         "top_border": false,
         "bottom_border": false,
         "border_width": "normal",
@@ -1165,6 +1238,7 @@
     "image_banner_YKgCbG",
     "section_media_collage_NNF9Qn",
     "featured_collection",
+    "image_with_text_home",
     "collection_cards",
     "image_with_hotspots_9z3H4A",
     "collection_list_pBf6he",
