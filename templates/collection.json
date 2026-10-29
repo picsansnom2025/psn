@@ -17,7 +17,7 @@
         "banner_height": "default",
         "stacked_img_ratio": "landscape_21x9",
         "banner_width": "none",
-        "txt_alignment": "left",
+        "txt_alignment": "center",
         "text_width": "medium",
         "title_size": "h1",
         "title_margin": 10,
@@ -37,6 +37,7 @@
     },
     "navigation": {
       "type": "main-collection-sub-navigation",
+      "disabled": true,
       "settings": {
         "menu": "customer-account-main-menu",
         "alignment": "center",
@@ -98,7 +99,7 @@
         "show_color_count": false,
         "show_rating": false,
         "enable_quick_add": true,
-        "padding_top": 40,
+        "padding_top": 10,
         "padding_bottom": 80
       }
     }
