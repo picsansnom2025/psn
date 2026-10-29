@@ -84,6 +84,41 @@
 }
 {% endif %}
 
+{% if flexbasisnumb == 3 %}
+@media only screen and (max-width: 1024px) {
+  .footer-blocks-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-block-fw {
+    grid-column: auto;
+  }
+  .footer-logo-block {
+    order: -1;
+    justify-self: center;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .footer-blocks-container {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+  }
+  .footer-block-newsletter {
+    justify-self: start;
+    align-self: center;
+    max-width: 360px;
+  }
+  .footer-logo-block {
+    justify-self: center;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .footer-block-linklist-column {
+    justify-self: start;
+    align-self: center;
+  }
+}
+{% endif %}
+
 .site-footer {
   padding: {{ section.settings.footer_padding_vertical | times: 0.8 | round }}px 0 15px 0;
 }
@@ -174,10 +209,17 @@
 {% when 'logo' %}
 {% unless block.settings.logo_full_width %}
 <style>
-    .footer-logo-block img {
+  .footer-logo-block img {
     width: {{ block.settings.logo_size }}px;
     max-width: 100%;
     height: auto;
+  }
+  .footer-logo-block img.footer-logo-mark {
+    width: 108px;
+    height: 96px;
+    max-width: none;
+    object-fit: cover;
+    object-position: left center;
   }
 </style>
 {% endunless %}
@@ -186,22 +228,32 @@
     opacity: {{ block.settings.logo_opacity }}%;
     padding-top: {{ block.settings.logo_padding_top }}px;
     padding-bottom: {{ block.settings.logo_padding_bottom }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 <div class="{% if block.settings.block_width == 'full_width' %}footer-block-fw{% else %}footer-block-column{% endif %} footer-logo-block footer-image-block-{{ block.settings.image_size }}{% if block.settings.alignment == 'center' %} align-center{% endif %}" {{ block.shopify_attributes }}>
   {% if block.settings.logo %}
   {%- assign logo_alt = block.settings.logo.alt | default: shop.name -%}
   {% assign logo_render_size = block.settings.logo_size | times: 2 %}
+  {% assign logo_class = '' %}
+  {% if block.settings.logo.aspect_ratio > 3 %}
+    {% assign logo_render_size = 1600 %}
+    {% assign logo_class = 'footer-logo-mark' %}
+  {% endif %}
   {% if block.settings.logo.width > 2999 %}
   {% assign logo_full_width_render_size = 3000 %}
   {% else %}
   {% assign logo_full_width_render_size = block.settings.logo.width %}  
   {% endif %}
+  <a href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}">
   {% if block.settings.logo_full_width %}
-    {{ block.settings.logo | image_url: width: logo_full_width_render_size | image_tag: loading: 'lazy', alt: logo_alt }}
+    {{ block.settings.logo | image_url: width: logo_full_width_render_size | image_tag: loading: 'lazy', alt: logo_alt, class: logo_class }}
   {% else %}
-    {{ block.settings.logo | image_url: width: logo_render_size | image_tag: loading: 'lazy', alt: logo_alt }}
+    {{ block.settings.logo | image_url: width: logo_render_size | image_tag: loading: 'lazy', alt: logo_alt, class: logo_class }}
   {% endif %}
+  </a>
   {% endif %}
 </div>
  

@@ -70,34 +70,34 @@
       "blocks": {
         "logo_B6PCPJ": {
           "type": "logo",
-          "disabled": true,
           "settings": {
-            "logo_size": 150,
-            "logo_full_width": true,
+            "logo": "shopify://shop_images/PSN_LOGO_WT_1.png",
+            "logo_size": 100,
+            "logo_full_width": false,
             "logo_opacity": 100,
-            "alignment": "left",
-            "logo_padding_top": 20,
-            "logo_padding_bottom": 20,
-            "block_width": "full_width"
+            "alignment": "center",
+            "logo_padding_top": 0,
+            "logo_padding_bottom": 0,
+            "block_width": "column_width"
           }
         },
         "newsletter_footer_block": {
           "type": "newsletter_signup",
           "settings": {
             "heading": "Newsletter",
-            "heading_size": "fbh-xxl",
+            "heading_size": "fbh-large",
             "heading_style": "normal",
-            "subheading": "<p>Get exclusive deals and early access to<br/>new products.</p>",
+            "subheading": "<p>Get exclusive deals and early access to new products.</p>",
             "disclaimer_show": false,
             "disclaimer": "",
-            "newsletter_form_width": "normal",
+            "newsletter_form_width": "full_width",
             "newsletter_style": "minimal",
             "border_opacity": 70,
             "newsletter_submit_style": "icon",
-            "padding_top": 20,
-            "padding_bottom": 30,
-            "alignment": "center",
-            "block_width": "full_width"
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "alignment": "left",
+            "block_width": "column_width"
           }
         },
         "footer_social_media_block": {
@@ -114,51 +114,51 @@
           "type": "link_list",
           "settings": {
             "heading": "",
-            "list_type_mobile": "accordion",
-            "block_width": "full_width",
-            "alignment": "center",
-            "list_layout": "horizontal",
-            "list_layout_mobile": "horizontal",
+            "list_type_mobile": "normal",
+            "block_width": "column_width",
+            "alignment": "left",
+            "list_layout": "vertical",
+            "list_layout_mobile": "vertical",
             "menu": "link-list"
           }
         }
       },
-      "block_order": [
-        "logo_B6PCPJ",
+        "block_order": [
         "newsletter_footer_block",
-        "footer_social_media_block",
-        "link_list_YbfEkc"
+        "logo_B6PCPJ",
+        "link_list_YbfEkc",
+        "footer_social_media_block"
       ],
       "settings": {
         "footer_font_family": "body",
         "footer_font_size": "body",
         "footer_heading_size": "normal",
         "footer_heading_style": "normal",
-        "footer_heading_opacity": 60,
-        "footer_horizontal_spacing_desktop": 20,
-        "footer_padding_vertical": 40,
-        "footer_padding_bottom": 20,
+        "footer_heading_opacity": 100,
+        "footer_horizontal_spacing_desktop": 48,
+        "footer_padding_vertical": 70,
+        "footer_padding_bottom": 40,
         "text_color": "fg-04",
         "bg_color": "bg-04",
         "main_footer_border": 0,
         "main_footer_border_color": "dark",
         "sub_footer_border": true,
-        "sub_footer_border_color": "dark",
+        "sub_footer_border_color": "light",
         "sub_footer_border_width": "full",
-        "sub_footer_layout": "two-column",
-        "sub_footer_alignment": "align-center",
-        "sub_footer_linklist": "",
+        "sub_footer_layout": "single",
+        "sub_footer_alignment": "align-left",
+        "sub_footer_linklist": "footer-policies",
         "sub_footer_single_link": "",
         "sub_footer_single_link_label": "",
         "show_policies": true,
-        "show_powered_by": true,
+        "show_powered_by": false,
         "payment_enable": false,
         "location_enable": true,
         "location_format": "code",
         "show_currency_symbol": true,
         "language_enable": true,
         "show_location_labels": false,
-        "follow_shop_enable": true
+        "follow_shop_enable": false
       }
     }
   },
