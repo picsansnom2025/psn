@@ -222,7 +222,7 @@
               {{ 'hero-apparel-1' | placeholder_svg_tag }}
               {% if i == 1 %}
                 <div class="ai-carousel-empty-state-{{ ai_gen_id }}">
-                  添加幻灯片图片
+                  Add a slide image
                 </div>
               {% endif %}
             </div>
@@ -255,7 +255,7 @@
     {% if block.settings.show_navigation %}
       <button
         class="ai-carousel-nav-{{ ai_gen_id }} ai-carousel-nav-prev-{{ ai_gen_id }}"
-        aria-label="上一张"
+        aria-label="Previous slide"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +272,7 @@
 
       <button
         class="ai-carousel-nav-{{ ai_gen_id }} ai-carousel-nav-next-{{ ai_gen_id }}"
-        aria-label="下一张"
+        aria-label="Next slide"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +295,7 @@
         <button
           class="ai-carousel-dot-{{ ai_gen_id }} {% if i == 1 %}active{% endif %}"
           data-slide="{{ i }}"
-          aria-label="转到幻灯片 {{ i }}"
+          aria-label="Go to slide {{ i }}"
         ></button>
       {% endfor %}
     </div>
@@ -588,19 +588,19 @@
       "type": "text",
       "id": "slide_1_title",
       "label": "标题",
-      "default": "欢迎来到我们的商店"
+      "default": "Welcome"
     },
     {
       "type": "textarea",
       "id": "slide_1_description",
       "label": "描述",
-      "default": "发现我们的最新系列"
+      "default": "Discover the latest collection"
     },
     {
       "type": "text",
       "id": "slide_1_button_text",
       "label": "按钮文本",
-      "default": "立即购买"
+      "default": "Shop Now"
     },
     {
       "type": "url",
