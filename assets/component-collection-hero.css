@@ -249,13 +249,21 @@ body:has(.hbi-semi-transparent) .collection-banner.cb-height-mobile--slim {
 .collection-banner-std {
   text-align: left;
   box-sizing: border-box;
-  margin-top: 60px;
-  margin-bottom: 20px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.collection-banner-std .align-center h1 {
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  margin-bottom: 0;
+  font-weight: 500;
 }
 
 body:has(.hbi-semi-transparent) .collection-banner-std, 
 body:has(.header-bar--page-margins) .collection-banner-std {
-  margin-top: calc(var(--site-header-height-mobile) + 60px)
+  margin-top: calc(var(--site-header-height-mobile) + 28px)
 }
 
 .collection-banner-std .collection-banner-title {
@@ -321,11 +329,11 @@ body:has(.header-bar--page-margins) .collection-banner-std {
 
 @media only screen and (min-width: 750px) {
   .collection-banner-std {
-    margin-top: 80px;
+    margin-top: 32px;
   }
   body:has(.hbi-semi-transparent) .collection-banner-std, 
   body:has(.header-bar--page-margins) .collection-banner-std {
-    margin-top: calc(var(--site-header-height-mobile) + 80px)
+    margin-top: calc(var(--site-header-height-mobile) + 32px)
   }
   .page-width .collection-banner-bg-img {
     left: var(--page-margin-tablet);
@@ -335,11 +343,11 @@ body:has(.header-bar--page-margins) .collection-banner-std {
 
 @media only screen and (min-width: 1025px) {
   .collection-banner-std {
-    margin-top: 80px;
+    margin-top: 28px;
   }
   body:has(.hbi-semi-transparent) .collection-banner-std, 
   body:has(.header-bar--page-margins) .collection-banner-std {
-    margin-top: calc(var(--site-header-height-desktop) + 80px)
+    margin-top: calc(var(--site-header-height-desktop) + 28px)
   } 
 }
 
