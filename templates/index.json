@@ -97,7 +97,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "collection_cards_NUtLmW": {
       "type": "collection-cards",
@@ -162,7 +163,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "image_banner_YKgCbG": {
       "type": "image-banner",
@@ -233,7 +235,8 @@
         "text_color": "fg-white",
         "bg_color": "rgba(0,0,0,0)",
         "overlay_level": 0
-      }
+      },
+      "disabled": true
     },
     "section_media_collage_NNF9Qn": {
       "type": "section-media-collage",
@@ -283,7 +286,8 @@
         "bg_color": "bg-body",
         "padding_top": 80,
         "padding_bottom": 80
-      }
+      },
+      "disabled": true
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -398,7 +402,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "image_with_hotspots_9z3H4A": {
       "type": "image-with-hotspots",
@@ -445,7 +450,8 @@
         "bottom_border": true,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "collection_list_pBf6he": {
       "type": "collection-list",
@@ -532,7 +538,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "section_content_cards_XzPFVx": {
       "type": "section-content-cards",
@@ -617,7 +624,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "featured_product_7EazyT": {
       "type": "featured-product",
@@ -675,7 +683,8 @@
         "card_spacing": 20,
         "top_padding": 80,
         "bottom_padding": 80
-      }
+      },
+      "disabled": true
     },
     "section_featured_style_gallery": {
       "type": "section-featured-style-gallery",
@@ -862,7 +871,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "rich_text_TagPrr": {
       "type": "rich-text",
@@ -919,7 +929,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "blocks_rMPEF3": {
       "type": "_blocks",
@@ -945,7 +956,8 @@
         "ai_gen_block_6d17a4f_LgcMXb"
       ],
       "name": "testimonials title",
-      "settings": {}
+      "settings": {},
+      "disabled": true
     },
     "section_testimonials_6KeQzF": {
       "type": "section-testimonials",
@@ -1006,7 +1018,8 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      }
+      },
+      "disabled": true
     },
     "blocks_WkG7Yz": {
       "type": "_blocks",
@@ -1030,7 +1043,8 @@
       "block_order": [
         "ai_gen_block_2a74ef2_WGEJYn"
       ],
-      "settings": {}
+      "settings": {},
+      "disabled": true
     },
     "blocks_P76qdM": {
       "type": "_blocks",
@@ -1090,7 +1104,8 @@
         "ai_gen_block_b6c6141_jK6faX"
       ],
       "name": "social media carousel",
-      "settings": {}
+      "settings": {},
+      "disabled": true
     },
     "blocks_d3HDcx": {
       "type": "_blocks",
