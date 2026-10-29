@@ -172,7 +172,7 @@
         "enable_international": true,
         "show_currency": true,
         "international_icon": "arrow",
-        "enable_language_selector": true,
+        "enable_language_selector": false,
         "social_show": false,
         "social_heading": "INS",
         "social_alignment": "center",

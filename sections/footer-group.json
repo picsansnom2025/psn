@@ -156,7 +156,7 @@
         "location_enable": true,
         "location_format": "code",
         "show_currency_symbol": true,
-        "language_enable": true,
+        "language_enable": false,
         "show_location_labels": false,
         "follow_shop_enable": false
       }
