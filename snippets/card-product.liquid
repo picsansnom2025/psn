@@ -417,8 +417,7 @@
         type="radio"
         name="pc-thumb-{{ card_product.id }}"
         id="pc-thumb-{{ card_product.id }}-{{ idx }}"
-        data-variant-index="{{ idx }}"
-        {% if forloop.first %}checked{% endif %}>        
+        data-variant-index="{{ idx }}">        
         <label for="pc-thumb-{{ card_product.id }}-{{ idx }}" data-variant-index="{{ idx }}">
         {% if variant_thumbnail_view == 'image' %}
         {{ value.variant.featured_media | image_url: width: 80 | image_tag: loading: 'lazy' }}
@@ -651,8 +650,7 @@
         type="radio"
         name="pc-thumb-{{ card_product.id }}"
         id="pc-thumb-{{ card_product.id }}-{{ idx }}"
-        data-variant-index="{{ idx }}"
-        {% if forloop.first %}checked{% endif %}>        
+        data-variant-index="{{ idx }}">        
         <label for="pc-thumb-{{ card_product.id }}-{{ idx }}" data-variant-index="{{ idx }}">
         {% if variant_thumbnail_view == 'image' %}
         {{ value.variant.featured_media | image_url: width: 80 | image_tag: loading: 'lazy' }}
