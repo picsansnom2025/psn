@@ -538,16 +538,15 @@
 </div>
 {% endif %}
 
+<div class="sub-footer-section sub-footer-credits-section">
+<span class="sub-footer-copyright{% if section.settings.show_powered_by or section.settings.sub_footer_single_link_label != blank %} sub-footer-span-rm{% endif %}">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</span>
 {% if markets == true %}
-<div class="sub-footer-section sub-footer-markets">
+<span class="sub-footer-markets">
   {% if section.settings.location_enable and localization.available_countries.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.country_label' | t }}: {% endif %}<button class="button--inline-underline market-selector--opener">{% if section.settings.location_format == 'code' %}{{ localization.country.iso_code | upcase }}{% else %}{{ localization.country.name }}{% endif %}{% if section.settings.show_currency_symbol %} ({{ localization.country.currency.symbol }}){% endif %}</button>{% endif %}
   {% if section.settings.location_enable and localization.available_countries.size > 1 and section.settings.language_enable and localization.available_languages.size > 1 %}<span class="footer-lang-bullet">&bull;</span>{% endif %}
   {% if section.settings.language_enable and localization.available_languages.size > 1 %}{% if section.settings.show_location_labels %}{{ 'localization.language_label' | t }}: {% endif %}<button class="button--inline-underline market-language-selector--opener" id="langSelectorOpener" aria-label="{{ localization.language.endonym_name | capitalize }}">{{ localization.language.endonym_name | capitalize }}</button>{% endif %}
-</div>
+</span>
 {% endif %}
-
-<div class="sub-footer-section sub-footer-credits-section">
-<span class="sub-footer-copyright{% if section.settings.show_powered_by or section.settings.sub_footer_single_link_label != blank %} sub-footer-span-rm{% endif %}">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</span>
 {% if section.settings.sub_footer_single_link_label != blank %}<a class="sub-footer-single-link{% if section.settings.show_powered_by %} sub-footer-sl-rm{% endif %}" href="{{ section.settings.sub_footer_single_link }}">{{ section.settings.sub_footer_single_link_label }}</a>{% endif %}
 {% if section.settings.show_powered_by %}{{ powered_by_link }}{% endif %}
 </div>
@@ -570,6 +569,12 @@
 
 {% if section.settings.follow_shop_enable %}  
 <div class="sub-footer-section sub-footer-follow-on-shop">{% # theme-check-disable %}{{ shop | login_button: action: 'follow' }}{% # theme-check-enable %}</div>
+{% endif %}
+
+{% if social_media_exists %}
+<div class="sub-footer-section sub-footer-social">
+  {% render 'social-channels-icon-list' %}
+</div>
 {% endif %}
 
 </div>  
