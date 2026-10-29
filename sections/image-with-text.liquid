@@ -115,9 +115,6 @@
 
 <div class="image-with-text--image image-ratio-{{ section.settings.image_ratio }}">
 
-<div class="image-cover-container">
-<div class="image-cover-wrapper">
-{% if section.settings.image %}
 {% assign image_render_size = 1800 %}
 {% if section.settings.dt_image_width < 50 %}
   {% assign image_render_size = 1600 %}
@@ -125,11 +122,47 @@
 {% if section.settings.dt_image_width < 60 %}
   {% assign image_render_size = 2000 %}
 {% endif %}
-{{ section.settings.image | image_url: width: image_render_size | image_tag: loading: 'lazy' }}
+{% assign iwt_slides = section.blocks | where: 'type', 'image' %}
+
+<div class="image-cover-container">
+{% if iwt_slides.size > 0 %}
+{% if iwt_slides.size > 1 %}
+<iwt-slideshow class="image-cover-wrapper iwt-slides">
 {% else %}
-{% render 'media-placeholder-scenic', style: 1 %}
+<div class="image-cover-wrapper iwt-slides">
 {% endif %}
+  {% for block in iwt_slides %}
+  <div class="iwt-slide{% if forloop.first %} is-active{% endif %}" data-iwt-slide {{ block.shopify_attributes }}{% unless forloop.first %} aria-hidden="true"{% endunless %}>
+    {% if block.settings.image %}
+      {{ block.settings.image | image_url: width: image_render_size | image_tag: loading: 'lazy' }}
+    {% else %}
+      {% render 'media-placeholder-scenic', style: 1 %}
+    {% endif %}
+  </div>
+  {% endfor %}
+  {% if iwt_slides.size > 1 %}
+  <div class="iwt-slide-controls">
+    <button type="button" class="iwt-slide-btn iwt-slide-btn--prev" data-iwt-prev aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}">{% render 'icon-arrow' %}</button>
+    <div class="iwt-slide-dots">
+      {% for block in iwt_slides %}
+      <button type="button" class="iwt-slide-dot{% if forloop.first %} is-active{% endif %}" data-iwt-dot aria-label="{{ 'sections.slideshow.slide' | t }} {{ forloop.index }}"{% if forloop.first %} aria-current="true"{% endif %}></button>
+      {% endfor %}
+    </div>
+    <button type="button" class="iwt-slide-btn iwt-slide-btn--next" data-iwt-next aria-label="{{ 'sections.slideshow.next_slideshow' | t }}">{% render 'icon-arrow' %}</button>
+  </div>
+</iwt-slideshow>
+{% else %}
 </div>
+{% endif %}
+{% elsif section.settings.image %}
+<div class="image-cover-wrapper">
+{{ section.settings.image | image_url: width: image_render_size | image_tag: loading: 'lazy' }}
+</div>
+{% else %}
+<div class="image-cover-wrapper">
+{% render 'media-placeholder-scenic', style: 1 %}
+</div>
+{% endif %}
 </div>
 
 </div>
@@ -197,6 +230,54 @@
 {% endif %}
   
 </div>
+
+{% if iwt_slides.size > 1 %}
+<script>
+  if (!customElements.get('iwt-slideshow')) {
+    class IwtSlideshow extends HTMLElement {
+      connectedCallback() {
+        this.slides = Array.from(this.querySelectorAll('[data-iwt-slide]'));
+        this.dots = Array.from(this.querySelectorAll('[data-iwt-dot]'));
+        this.index = Math.max(0, this.slides.findIndex((slide) => slide.classList.contains('is-active')));
+        this.querySelector('[data-iwt-prev]')?.addEventListener('click', () => this.show(this.index - 1));
+        this.querySelector('[data-iwt-next]')?.addEventListener('click', () => this.show(this.index + 1));
+        this.dots.forEach((dot, index) => dot.addEventListener('click', () => this.show(index)));
+        this.pointerX = null;
+        this.addEventListener('pointerdown', (event) => {
+          if (event.target.closest('button')) return;
+          this.pointerX = event.clientX;
+        });
+        this.addEventListener('pointerup', (event) => {
+          if (this.pointerX == null) return;
+          const delta = event.clientX - this.pointerX;
+          this.pointerX = null;
+          if (Math.abs(delta) < 40) return;
+          this.show(this.index + (delta < 0 ? 1 : -1));
+        });
+      }
+
+      show(index) {
+        const count = this.slides.length;
+        if (!count) return;
+        this.index = (index + count) % count;
+        this.slides.forEach((slide, slideIndex) => {
+          const active = slideIndex === this.index;
+          slide.classList.toggle('is-active', active);
+          slide.toggleAttribute('aria-hidden', !active);
+        });
+        this.dots.forEach((dot, dotIndex) => {
+          const active = dotIndex === this.index;
+          dot.classList.toggle('is-active', active);
+          if (active) dot.setAttribute('aria-current', 'true');
+          else dot.removeAttribute('aria-current');
+        });
+      }
+    }
+
+    customElements.define('iwt-slideshow', IwtSlideshow);
+  }
+</script>
+{% endif %}
 
 {% schema %}
   {
@@ -810,6 +891,17 @@
             }
     		],
           "default": "solid"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:sections.image-with-text.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.image-with-text.blocks.image.settings.image.label"
         }
       ]
     }

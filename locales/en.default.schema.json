@@ -3565,6 +3565,14 @@
             }
           }
         },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
         "button": {
           "name": "Button",
           "settings": {

@@ -368,19 +368,47 @@
             "btn_two_link": "",
             "btn_two_style": "solid"
           }
+        },
+        "image_fur": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/61f6017d4df7e84bf1809fe482410171.png"
+          }
+        },
+        "image_ballet": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/84.jpg"
+          }
+        },
+        "image_merino": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/70.jpg"
+          }
+        },
+        "image_trench": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/96.jpg"
+          }
         }
       },
       "block_order": [
         "caption_home",
         "heading_home",
         "text_home",
-        "button_home"
+        "button_home",
+        "image_fur",
+        "image_ballet",
+        "image_merino",
+        "image_trench"
       ],
       "name": "Image with text",
       "settings": {
         "section_size": "flexible",
         "content_width": "page-width-full-grid",
-        "image_alignment": "right",
+        "image_alignment": "left",
         "dt_image_width": 50,
         "card_spacing": 0,
         "image": "shopify://shop_images/61f6017d4df7e84bf1809fe482410171.png",
