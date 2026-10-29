@@ -87,27 +87,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Dropdown menu interaction
 if (!document.querySelector('.nav-desktop-dd-btn-clickable')) {
-  const navDesktopButtons = document.querySelectorAll('.nav-desktop-dd-btn');
-  const headerMegaFwLists = document.querySelectorAll('.header-nav-desktop-dd-panel');
   const gcHeader = document.querySelector('.header-bar-inner');
-    
-  function applyBackgroundColor() {
-    gcHeader.classList.add('hovered');
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  if (gcHeader && canHover) {
+    gcHeader.addEventListener('mouseenter', function() {
+      gcHeader.classList.add('hovered');
+    });
+    gcHeader.addEventListener('mouseleave', function() {
+      gcHeader.classList.remove('hovered');
+    });
   }
-  
-  function removeBackgroundColor() {
-    gcHeader.classList.remove('hovered');
-  }
-  
-  navDesktopButtons.forEach((navDesktopButton) => {
-    navDesktopButton.addEventListener('mouseover', applyBackgroundColor);
-    navDesktopButton.addEventListener('mouseout', removeBackgroundColor);
-  });
-  
-  headerMegaFwLists.forEach((headerMegaFwList) => {
-    headerMegaFwList.addEventListener('mouseover', applyBackgroundColor);
-    headerMegaFwList.addEventListener('mouseout', removeBackgroundColor);
-  });
 }
 
 // Scrolling transition for transparent header option
