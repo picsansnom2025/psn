@@ -4421,3 +4421,9 @@ body:has(.header-bar--page-margins) .customer h1 {
   }
 
 }
+
+@media only screen and (max-width: 450px) {
+  .hbi-logo-position-mobile--center .header-mobile-logo .header--logo {
+    max-width: min(72vw, 240px) !important;
+  }
+}
