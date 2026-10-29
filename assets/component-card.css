@@ -612,12 +612,34 @@ h3 .vendor--style-faded {
   height: auto;
 }
 
-.card-product--variant-thumbnail .swatch {
-  cursor: pointer;
+.card-product--variant-thumbnail .card-product-variant-swatch {
+  transition: transform 0.25s ease;
 }
 
+.card-product--variant-thumbnail .swatch {
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+
+.card-product--variant-thumbnail:hover .card-product-variant-swatch {
+  transform: scale(1.12);
+}
+
+.card-product--variant-thumbnail:hover .swatch,
+.pc-thumb-radio:focus-visible + label .swatch,
 .pc-thumb-radio:checked + label .swatch {
   box-shadow: 0 0 0 1px #fff, 0 0 0 2px #111;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-product--variant-thumbnail .card-product-variant-swatch,
+  .card-product--variant-thumbnail .swatch {
+    transition: none;
+  }
+
+  .card-product--variant-thumbnail:hover .card-product-variant-swatch {
+    transform: none;
+  }
 }
 
 .card-product--variant-unavailable {
