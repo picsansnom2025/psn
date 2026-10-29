@@ -156,7 +156,7 @@ if (logoScaleHeader && logoScaleHeader.dataset.logoScale === 'true' && !window.m
     const height = width / ratio;
     const pad = (1 - progress) * (height + 12);
     const inner = logoScaleHeader.querySelector('.header-bar-inner');
-    const top = inner.offsetTop + pad + progress * Math.max(0, (barHeight - height) / 2) + (1 - progress) * 4;
+    const top = inner.offsetTop + (1 - progress) * 4 + progress * (pad + Math.max(0, (barHeight - height) / 2));
 
     logoScaleHeader.style.setProperty('--hdr-pad', pad + 'px');
     logoScaleHeader.style.setProperty('--hdr-bar', barHeight + 'px');
