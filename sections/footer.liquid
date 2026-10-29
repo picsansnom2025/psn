@@ -529,9 +529,9 @@
     {% endfor %}
     {% if section.settings.show_policies %}
     {% for policy in shop.policies %}
-      {% if policy != blank %}
+      {% unless policy == blank or policy.url contains 'contact-information' %}
         <li><a href="{{ policy.url }}">{{ policy.title }}</a></li>
-      {% endif %}
+      {% endunless %}
     {% endfor %}
     {% endif %}
   </ul>
