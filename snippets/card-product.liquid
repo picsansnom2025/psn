@@ -129,7 +129,8 @@
   {% endfor %}
 {% endif %}
 {% endfor %}
-{% if pccount > 4 %}
+{% assign swatch_limit = 8 %}
+{% if pccount > swatch_limit %}
 {% assign more_variants_exist = true %}
 {% endif %}
 
@@ -137,7 +138,7 @@
 {% for option in card_product.options_with_values %}
   {% if color_names contains option.name %}
     {% for value in option.values %}
-      {% if value.variant.featured_media and forloop.index < 5 %}
+      {% if value.variant.featured_media and forloop.index <= swatch_limit %}
         {% assign variant_image_count = variant_image_count | plus: 1 %}
       {% endif %}
     {% endfor %}
@@ -159,7 +160,7 @@
   {% if color_names contains option.name %}
     {% for value in option.values %}
       {% if value.variant.featured_media %}
-        {% if forloop.index < 5 %}
+        {% if forloop.index <= swatch_limit %}
       <div data-variant-index="{{ forloop.index }}" class="card-product--variant-main-image{% unless available %} card-product--variant-unavailable{% endunless %}">
       {{ value.variant.featured_media | image_url: width: media_size | image_tag: loading: 'lazy' }}
       </div>
@@ -437,7 +438,7 @@
     {% for value in option.values %}
       {% if value.variant.featured_media %}
       {%- assign idx = forloop.index -%}
-      {% if idx < 5 %}
+      {% if idx <= swatch_limit %}
       <div data-variant-index="{{ forloop.index }}" class="card-product--variant-thumbnail{% unless available %} card-product--variant-unavailable{% endunless %}">
         <input
         class="pc-thumb-radio visually-hidden"
@@ -460,7 +461,7 @@
     {% endfor %}
   {% endif %} 
 {% endfor %}
-{% if more_variants_exist %}<div class="card-product--variant-thumbnail-more">+ {{ pccount | minus: 5 }}</div>{% endif %}
+{% if more_variants_exist %}<div class="card-product--variant-thumbnail-more">+ {{ pccount | minus: swatch_limit }}</div>{% endif %}
 </div>
 
 {% comment %} Show single thumbnail if no variants {% endcomment %}
@@ -670,7 +671,7 @@
     {% for value in option.values %}
       {% if value.variant.featured_media %}
       {%- assign idx = forloop.index -%}
-      {% if idx < 5 %}
+      {% if idx <= swatch_limit %}
       <div data-variant-index="{{ forloop.index }}" class="card-product--variant-thumbnail{% unless available %} card-product--variant-unavailable{% endunless %}">
         <input
         class="pc-thumb-radio visually-hidden"
@@ -693,7 +694,7 @@
     {% endfor %}
   {% endif %} 
 {% endfor %}
-{% if more_variants_exist %}<div class="card-product--variant-thumbnail-more">+ {{ pccount | minus: 5 }}</div>{% endif %}
+{% if more_variants_exist %}<div class="card-product--variant-thumbnail-more">+ {{ pccount | minus: swatch_limit }}</div>{% endif %}
 </div>
 
 {% comment %} Show single thumbnail if no variants {% endcomment %}

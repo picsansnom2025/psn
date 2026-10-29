@@ -513,10 +513,7 @@ h3 .vendor--style-faded {
   }
 }
 
-.card-product--variant-main-image:nth-child(2), 
-.card-product--variant-main-image:nth-child(3), 
-.card-product--variant-main-image:nth-child(4), 
-.card-product--variant-main-image:nth-child(5) {
+.card-product--variant-main-image:nth-child(n+2) {
   position: absolute;
   top: 0;
   left: 0;
@@ -583,46 +580,33 @@ h3 .vendor--style-faded {
   border-radius: var(--product-card-image-radius-small);
 }
 
-.card:has(.card-product--variant-thumbnail[data-variant-index="1"]:hover)
-  .card-product--variant-main-image[data-variant-index="1"],
-.card:has(.card-product--variant-thumbnail[data-variant-index="2"]:hover)
-  .card-product--variant-main-image[data-variant-index="2"],
-.card:has(.card-product--variant-thumbnail[data-variant-index="3"]:hover)
-  .card-product--variant-main-image[data-variant-index="3"],
-.card:has(.card-product--variant-thumbnail[data-variant-index="4"]:hover)
-  .card-product--variant-main-image[data-variant-index="4"],
-.card:has(.card-product--variant-thumbnail[data-variant-index="5"]:hover)
-  .card-product--variant-main-image[data-variant-index="5"] {
-  opacity: 1; 
+.card:has(.pc-thumb-radio[data-variant-index="1"]:checked) .card-product--variant-main-image[data-variant-index="1"],
+.card:has(.pc-thumb-radio[data-variant-index="2"]:checked) .card-product--variant-main-image[data-variant-index="2"],
+.card:has(.pc-thumb-radio[data-variant-index="3"]:checked) .card-product--variant-main-image[data-variant-index="3"],
+.card:has(.pc-thumb-radio[data-variant-index="4"]:checked) .card-product--variant-main-image[data-variant-index="4"],
+.card:has(.pc-thumb-radio[data-variant-index="5"]:checked) .card-product--variant-main-image[data-variant-index="5"],
+.card:has(.pc-thumb-radio[data-variant-index="6"]:checked) .card-product--variant-main-image[data-variant-index="6"],
+.card:has(.pc-thumb-radio[data-variant-index="7"]:checked) .card-product--variant-main-image[data-variant-index="7"],
+.card:has(.pc-thumb-radio[data-variant-index="8"]:checked) .card-product--variant-main-image[data-variant-index="8"] {
+  opacity: 1;
   visibility: visible;
 }
 
-.card:has(.pc-thumb-radio[data-variant-index="1"]:checked)
-  .card-product--variant-main-image[data-variant-index="1"],
-.card:has(.pc-thumb-radio[data-variant-index="2"]:checked)
-  .card-product--variant-main-image[data-variant-index="2"],
-.card:has(.pc-thumb-radio[data-variant-index="3"]:checked)
-  .card-product--variant-main-image[data-variant-index="3"],
-.card:has(.pc-thumb-radio[data-variant-index="4"]:checked)
-  .card-product--variant-main-image[data-variant-index="4"],
-.card:has(.pc-thumb-radio[data-variant-index="5"]:checked)
-  .card-product--variant-main-image[data-variant-index="5"] {
-  opacity: 1; 
-  visibility: visible;
-}
-
-.card:has(.card-product--variant-thumbnail[data-variant-index="1"]:hover) .card-product--variant-main-image[data-variant-index="2"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="1"]:hover) .card-product--variant-main-image[data-variant-index="3"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="1"]:hover) .card-product--variant-main-image[data-variant-index="4"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="1"]:hover) .card-product--variant-main-image[data-variant-index="5"],  
-.card:has(.card-product--variant-thumbnail[data-variant-index="2"]:hover) .card-product--variant-main-image[data-variant-index="3"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="2"]:hover) .card-product--variant-main-image[data-variant-index="4"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="2"]:hover) .card-product--variant-main-image[data-variant-index="5"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="3"]:hover) .card-product--variant-main-image[data-variant-index="4"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="3"]:hover) .card-product--variant-main-image[data-variant-index="5"], 
-.card:has(.card-product--variant-thumbnail[data-variant-index="4"]:hover) .card-product--variant-main-image[data-variant-index="5"] {
+.card:has(.card-product--variant-thumbnail:hover) .card-product--variant-main-image[data-variant-index]:nth-child(n+2) {
   opacity: 0;
   visibility: hidden;
+}
+
+.card:has(.card-product--variant-thumbnail[data-variant-index="1"]:hover) .card-product--variant-main-image[data-variant-index="1"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="2"]:hover) .card-product--variant-main-image[data-variant-index="2"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="3"]:hover) .card-product--variant-main-image[data-variant-index="3"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="4"]:hover) .card-product--variant-main-image[data-variant-index="4"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="5"]:hover) .card-product--variant-main-image[data-variant-index="5"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="6"]:hover) .card-product--variant-main-image[data-variant-index="6"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="7"]:hover) .card-product--variant-main-image[data-variant-index="7"],
+.card:has(.card-product--variant-thumbnail[data-variant-index="8"]:hover) .card-product--variant-main-image[data-variant-index="8"] {
+  opacity: 1;
+  visibility: visible;
 }
 
 .card-product--variant-thumbnails-list {
