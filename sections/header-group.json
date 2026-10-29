@@ -124,7 +124,7 @@
         "menu_viewall_mobile_label": "Shop All",
         "menu_viewall_mobile_position": "first",
         "dd_icon": "none",
-        "dd_highlight_style": "opacity",
+        "dd_highlight_style": "underline",
         "dd_menu_link_rollover_style": "opacity",
         "header_dropdown_panel_width": "dd-panel-full-width",
         "dropdown_drawer_layout": "one-column",
