@@ -82,13 +82,13 @@
       <span class="variant-label--text">{{ value }}</span>
       {{ label_unavailable }}
     </label>
+    {% if thumbnail_variants contains option.name and show_variant_images and selector_order == 1 %}</div>{% endif %}
+    {% if visual_variants contains option.name and swatches == true %}</div>{% endif %}
     {% if visual_variants contains option.name and swatches == true and value.variant.featured_media %}
       <span class="color-swatch-preview" aria-hidden="true">
         {{ value.variant.featured_media | image_url: width: 280 | image_tag: loading: 'lazy', widths: '140, 280', sizes: '112px', alt: '' }}
       </span>
     {% endif %}
-    {% if thumbnail_variants contains option.name and show_variant_images and selector_order == 1 %}</div>{% endif %}
-    {% if visual_variants contains option.name and swatches == true %}</div>{% endif %}
 
   {% endif %}
   {% if picker_type == 'dropdown' %}   

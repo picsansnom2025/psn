@@ -2854,8 +2854,9 @@ a.product__text {
   padding-right: 100px;
 }
 
-.option-color-picker-wrapper:has(.color-swatch-preview) {
-  position: static;
+.radio-options-wrapper:has(.color-swatch-preview) .option-color-picker-wrapper {
+  position: relative;
+  cursor: pointer;
 }
 
 .color-swatch-preview {
@@ -2882,7 +2883,7 @@ a.product__text {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .option-color-picker-wrapper:hover .color-swatch-preview {
+  .option-color-picker-wrapper:hover + .color-swatch-preview {
     opacity: 1;
     visibility: visible;
   }
@@ -3028,8 +3029,9 @@ a.product__text {
   width: 26px;
   height: 26px;
   top: -4px;
-  left: -6px;  
+  left: -6px;
   clip: auto;
+  cursor: pointer;
 }
 
 .product-form__input .option-color-picker-wrapper input[type=radio]:focus-visible {
