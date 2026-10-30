@@ -11,7 +11,6 @@
   "sections": {
     "main": {
       "type": "main-search",
-      "disabled": true,
       "settings": {
         "title_alignment": "center",
         "title_size": "h1",
@@ -20,13 +19,13 @@
         "columns_desktop": 4,
         "enable_sorting": true,
         "enable_filtering": true,
-        "card_image_display": "second_image_hover",
+        "card_image_display": "variant_thumbnails",
         "pagination_color_scheme": "body",
         "show_price": true,
         "show_vendor": false,
-        "show_swatches": false,
+        "show_swatches": true,
         "show_color_count": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "article_show_date": true,
         "article_show_author": true,
         "padding_top": 100,
@@ -67,6 +66,7 @@
         "featured_collection_dfRcci"
       ],
       "name": "t:sections.collection-cards.presets.name",
+      "disabled": true,
       "settings": {
         "section_layout": "grid",
         "arrow_style": "solid",
@@ -110,6 +110,7 @@
     "featured_collection_yECxie": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.name",
+      "disabled": true,
       "settings": {
         "collection": "",
         "content_alignment": "center",
