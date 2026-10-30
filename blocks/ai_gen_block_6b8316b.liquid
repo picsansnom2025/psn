@@ -81,6 +81,7 @@
 
   #judgeme_product_reviews .jm-review-item {
     border-color: rgba(var(--color-foreground-rgb), 0.15);
+    animation: psn-review-item-in 320ms ease;
   }
 
   #judgeme_product_reviews .jm-reviewer-avatar,
@@ -104,6 +105,10 @@
     opacity: 0.55;
   }
 
+  #judgeme_product_reviews .jm-action-buttons__button:active {
+    opacity: 0.35;
+  }
+
   #judgeme_product_reviews .jm-button--secondary,
   #judgeme_product_reviews .jm-sort-filter,
   #judgeme_product_reviews .jdgm-sort-dropdown {
@@ -114,8 +119,14 @@
     transition: background-color 240ms ease, border-color 240ms ease;
   }
 
-  #judgeme_product_reviews .jm-button--secondary:hover {
+  #judgeme_product_reviews .jm-button--secondary:hover,
+  #judgeme_product_reviews .jm-sort-filter:hover {
     background: rgba(var(--color-foreground-rgb), 0.04);
+  }
+
+  #judgeme_product_reviews .jm-button--secondary:active,
+  #judgeme_product_reviews .jm-sort-filter:active {
+    background: rgba(var(--color-foreground-rgb), 0.08);
   }
 
   .jdgm-write-review-modal {
@@ -137,6 +148,21 @@
     border: 1px solid rgba(var(--color-foreground-rgb), 0.2);
     background: var(--color-background);
     color: var(--color-foreground);
+    transition: border-color 240ms ease;
+  }
+
+  .jdgm-write-review-modal__field-input:focus {
+    border-color: var(--color-foreground);
+  }
+
+  .jdgm-write-review-modal[style*="display: block"] .jdgm-write-review-modal__overlay,
+  .jdgm-write-review-modal[style*="display: flex"] .jdgm-write-review-modal__overlay {
+    animation: psn-review-overlay-in 280ms ease;
+  }
+
+  .jdgm-write-review-modal[style*="display: block"] .jdgm-write-review-modal__content,
+  .jdgm-write-review-modal[style*="display: flex"] .jdgm-write-review-modal__content {
+    animation: psn-review-panel-in 320ms ease;
   }
 
   .jdgm-write-review-modal__btn,
@@ -164,20 +190,54 @@
 
   .jdgm-write-review-modal .jdgm-star {
     color: var(--color-foreground) !important;
+    transition: color 240ms ease, transform 240ms ease;
   }
 
   .jdgm-write-review-modal .jdgm-star.jdgm--off {
     color: rgba(var(--color-foreground-rgb), 0.28) !important;
   }
 
+  .jdgm-write-review-modal .jdgm-star:hover {
+    transform: scale(1.08);
+  }
+
+  @keyframes psn-review-item-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes psn-review-overlay-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes psn-review-panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    #judgeme_product_reviews .jm-action-buttons__button,
-    #judgeme_product_reviews .jm-button--secondary,
-    #judgeme_product_reviews .jm-sort-filter,
-    .jdgm-write-review-modal__btn,
-    .jdgm-write-review-modal__nav-btn-next,
-    .jdgm-write-review-modal__nav-btn-close {
-      transition: none;
+    #judgeme_product_reviews .jm-review-item,
+    .jdgm-write-review-modal__overlay,
+    .jdgm-write-review-modal__content {
+      animation: none;
+    }
+
+    .jdgm-write-review-modal .jdgm-star {
+      transform: none;
+      transition: color 240ms ease;
     }
   }
 
