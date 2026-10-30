@@ -88,13 +88,19 @@
       return;
     }
 
+    function hideCredit() {
+      root.querySelectorAll('p, small').forEach(function (el) {
+        if (el.textContent.trim() === 'Powered by BestTrack') {
+          el.style.setProperty('display', 'none', 'important');
+        }
+      });
+    }
+
     var watch = new MutationObserver(function () {
-      if (root.childElementCount > 0) {
-        root.classList.add('is-ready');
-        watch.disconnect();
-      }
+      if (root.childElementCount > 0) root.classList.add('is-ready');
+      hideCredit();
     });
-    watch.observe(root, { childList: true });
+    watch.observe(root, { childList: true, subtree: true });
 
     fetch(source, { credentials: 'same-origin' })
       .then(function (response) {
