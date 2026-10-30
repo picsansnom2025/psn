@@ -89,6 +89,8 @@
     "card_corner_radius": 0,
     "card_img_aspect_ratio": "portrait",
     "card_media_bg_col": "rgba(0,0,0,0)",
+    "card_variant_color_display": "swatch",
+    "card_variant_color_position": "bottom",
     "card_show_product_type": true,
     "card_text_alignment": "center",
     "card_text_top_padding": 15,
@@ -96,8 +98,6 @@
     "card_text_padding": 0,
     "card_text_border": false,
     "card_price_position": "right",
-    "card_variant_color_display": "swatch",
-    "card_variant_color_position": "bottom",
     "card_badge_position": "top-left",
     "badges_show_sale": true,
     "collection_card_text_alignment": "center",
@@ -165,6 +165,18 @@
         "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
         "disabled": false,
         "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "13047258039897440615": {
+        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+          "widget_type": "review-widget"
+        }
       }
     }
   },
