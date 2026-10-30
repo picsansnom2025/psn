@@ -653,9 +653,13 @@
   }
   .product-main-section-layout-wide .product-main-media-section {
     width: 68.5%;
+    padding-left: var(--page-margin-desktop);
   }
   .product-main-section-layout-wide .product-main-info-section {
     width: 31.5%;
+  }
+  .product-main-section-layout-wide .product-main-info-section .product__info-container {
+    max-width: none;
   }
   .product-template-dt-stacked .product-main-info-section {
     width: 100%;
