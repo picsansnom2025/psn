@@ -1,0 +1,7 @@
+{%- if settings.favicon != blank -%}
+  {%- if settings.favicon.aspect_ratio > 3 -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 180, height: 180, crop: 'left' }}">
+  {%- else -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
+  {%- endif -%}
+{%- endif -%}
