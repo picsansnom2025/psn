@@ -44,6 +44,7 @@
         "text_mBh4mV"
       ],
       "name": "t:sections.rich-text.presets.name",
+      "disabled": true,
       "settings": {
         "content_width": "page-width",
         "content_horizontal_position": "center",
@@ -76,7 +77,7 @@
         "text_KGgAPw": {
           "type": "text",
           "settings": {
-            "text": "<h4>Returns & Claims</h4><p>Enter your email or zip and order or tracking number to login</p>",
+            "text": "<p>Start a return or file a claim. Our Client Services team will get back to you as soon as possible.</p>",
             "text_size": "normal",
             "opacity": 100
           }
@@ -92,18 +93,19 @@
           "type": "field_email",
           "settings": {}
         },
-        "field_telephone_fQXe3b": {
-          "type": "field_telephone",
-          "settings": {
-            "field_required": false
-          }
-        },
         "field_custom_text_pT8wFV": {
           "type": "field_custom_text",
           "settings": {
-            "label": "Comment",
-            "placeholder": "Comment",
+            "label": "Order number",
+            "placeholder": "Order number",
             "field_required": false
+          }
+        },
+        "field_textarea_return": {
+          "type": "field_textarea",
+          "settings": {
+            "field_required": true,
+            "row_height": 8
           }
         }
       },
@@ -111,26 +113,26 @@
         "text_KGgAPw",
         "field_name_kfBYAt",
         "field_email_BdqPTG",
-        "field_telephone_fQXe3b",
-        "field_custom_text_pT8wFV"
+        "field_custom_text_pT8wFV",
+        "field_textarea_return"
       ],
-      "disabled": true,
       "name": "t:sections.contact-form.presets.name",
       "settings": {
-        "heading": "PSN STUDIO",
+        "heading": "Return Request",
         "heading_size": "h2",
         "heading_alignment": "center",
         "form_style": "outline",
         "form_labels_show": true,
         "form_button_style": "solid",
-        "form_padding_top": 40,
-        "form_padding_bottom": 0,
+        "form_padding_top": 20,
+        "form_padding_bottom": 20,
         "padding_top": 80,
         "padding_bottom": 80
       }
     },
     "1776230231cf766382": {
       "type": "_blocks",
+      "disabled": true,
       "blocks": {
         "ai_gen_block_97701c7_4g9Nhw": {
           "type": "ai_gen_block_97701c7",
@@ -198,6 +200,7 @@
     },
     "1776231170122184ad": {
       "type": "_blocks",
+      "disabled": true,
       "settings": {}
     }
   },
