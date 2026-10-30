@@ -73,8 +73,8 @@
         "heading_C6xpPw",
         "text_dGtCRh"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "content_width": "page-width",
         "content_horizontal_position": "center",
@@ -293,8 +293,8 @@
       "block_order": [
         "text_ybDYTm"
       ],
-      "name": "t:sections.text-ticker.presets.name",
       "disabled": true,
+      "name": "t:sections.text-ticker.presets.name",
       "settings": {
         "font_size": "text-std",
         "vertical_padding": 20,

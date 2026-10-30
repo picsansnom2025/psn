@@ -42,11 +42,18 @@
 
   .ai-fullwidth-text-{{ ai_gen_id }} {
     position: absolute;
-    bottom: {{ block.settings.text_offset_bottom }}px;
     left: 0;
     right: 0;
     padding: 0 {{ block.settings.text_padding_horizontal }}px;
     z-index: 2;
+    {% if block.settings.text_vertical_position == 'center' %}
+      top: 50%;
+      transform: translateY(-50%);
+    {% elsif block.settings.text_vertical_position == 'top' %}
+      top: {{ block.settings.text_offset_bottom }}px;
+    {% else %}
+      bottom: {{ block.settings.text_offset_bottom }}px;
+    {% endif %}
   }
 
   .ai-fullwidth-text-inner-{{ ai_gen_id }} {
@@ -239,9 +246,29 @@
       "content": "Position"
     },
     {
+      "type": "select",
+      "id": "text_vertical_position",
+      "label": "Vertical position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "bottom"
+    },
+    {
       "type": "range",
       "id": "text_offset_bottom",
-      "label": "Distance from bottom",
+      "label": "Distance from edge",
       "min": 0,
       "max": 100,
       "step": 5,
