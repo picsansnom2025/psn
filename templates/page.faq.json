@@ -173,7 +173,7 @@
           "type": "collapsible_row",
           "settings": {
             "title": "Do you offer a warranty?",
-            "content": "<p>Yes. All PSN Studio ski suits, ski jackets, and ski pants are backed by a <strong>two-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <a href=\"/pages/1-year-warranty\" title=\"1 YEAR WARRANTY\"><strong>Warranty Policy</strong></a> for full details.</p>",
+            "content": "<p>Yes. All PSN Studio ski suits, ski jackets, and ski pants are backed by a <strong>two-year warranty</strong> covering seams, zippers, and hardware. We stand behind the quality of every garment and will repair eligible issues free of charge during this period. Please see our <a href=\"/pages/2-year-warranty\" title=\"2-YEAR WARRANTY\"><strong>Warranty Policy</strong></a> for full details.</p>",
             "media_ratio": "fit",
             "media_width": 50
           }
