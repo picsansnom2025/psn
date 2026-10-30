@@ -55,7 +55,7 @@
           "type": "heading",
           "settings": {
             "heading": "BEYOND DEFINITION",
-            "heading_size": "h2",
+            "heading_size": "h3",
             "alignment": "left"
           }
         },
@@ -74,6 +74,7 @@
         "text_dGtCRh"
       ],
       "name": "t:sections.rich-text.presets.name",
+      "disabled": true,
       "settings": {
         "content_width": "page-width",
         "content_horizontal_position": "center",
@@ -95,14 +96,14 @@
         "caption_a4kTMk": {
           "type": "caption",
           "settings": {
-            "caption": "01"
+            "caption": "WHERE ELEGANCE MEETS PERFORMANCE"
           }
         },
         "heading_PkWXxA": {
           "type": "heading",
           "settings": {
             "heading": "BEYOND DEFINITION",
-            "heading_size": "h2"
+            "heading_size": "h3"
           }
         },
         "text_gYDNdp": {
@@ -139,9 +140,9 @@
       "settings": {
         "section_size": "flexible",
         "content_width": "page-width-full-grid",
-        "image_alignment": "right",
+        "image_alignment": "left",
         "dt_image_width": 50,
-        "card_spacing": 20,
+        "card_spacing": 0,
         "image": "shopify://shop_images/1_d798fa88-ce0d-44ca-8576-2f479de19968.jpg",
         "image_ratio": "portrait",
         "secondary_image_scale": "small",
@@ -149,8 +150,8 @@
         "txt_vertical_alignment": "middle",
         "txt_padding_top_mobile": 20,
         "txt_padding_bottom_mobile": 20,
-        "txt_vertical_padding": 0,
-        "text_width": "full",
+        "txt_vertical_padding": 50,
+        "text_width": "medium",
         "text_horizontal_position": "center",
         "text_color": "fg-body",
         "bg_color": "bg-body",
@@ -169,14 +170,14 @@
         "caption_m83UXr": {
           "type": "caption",
           "settings": {
-            "caption": "02"
+            "caption": ""
           }
         },
         "heading_RcbqHN": {
           "type": "heading",
           "settings": {
             "heading": "ELEGANCE IN MOTION",
-            "heading_size": "h2"
+            "heading_size": "h3"
           }
         },
         "text_HwHQCJ": {
@@ -198,7 +199,7 @@
         "content_width": "page-width-full-grid",
         "image_alignment": "left",
         "dt_image_width": 50,
-        "card_spacing": 20,
+        "card_spacing": 0,
         "image": "shopify://shop_images/61f6017d4df7e84bf1809fe482410171.png",
         "image_ratio": "portrait",
         "secondary_image_scale": "small",
@@ -206,11 +207,11 @@
         "txt_vertical_alignment": "middle",
         "txt_padding_top_mobile": 20,
         "txt_padding_bottom_mobile": 20,
-        "txt_vertical_padding": 0,
-        "text_width": "full",
+        "txt_vertical_padding": 50,
+        "text_width": "medium",
         "text_horizontal_position": "center",
-        "text_color": "fg-04",
-        "bg_color": "bg-04",
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
         "top_padding": 0,
         "bottom_padding": 0,
         "border_vertical": false,
@@ -226,14 +227,14 @@
         "caption_bkNy6t": {
           "type": "caption",
           "settings": {
-            "caption": "03"
+            "caption": ""
           }
         },
         "heading_JcCPEg": {
           "type": "heading",
           "settings": {
             "heading": "DEFINE YOUR OWN PEAK",
-            "heading_size": "h2"
+            "heading_size": "h3"
           }
         },
         "text_eaj9MQ": {
@@ -252,7 +253,7 @@
       "name": "t:sections.video-with-text.presets.name",
       "settings": {
         "section_size": "flexible",
-        "card_spacing": 20,
+        "card_spacing": 0,
         "content_width": "page-width-full-grid",
         "video_url": "shopify://files/videos/618_raw.MP4",
         "image_ratio": "portrait",
@@ -265,8 +266,8 @@
         "txt_vertical_alignment": "middle",
         "txt_padding_top_mobile": 20,
         "txt_padding_bottom_mobile": 20,
-        "txt_vertical_padding": 0,
-        "text_width": "full",
+        "txt_vertical_padding": 50,
+        "text_width": "medium",
         "text_horizontal_position": "center",
         "text_color": "fg-body",
         "bg_color": "bg-body",
@@ -293,6 +294,7 @@
         "text_ybDYTm"
       ],
       "name": "t:sections.text-ticker.presets.name",
+      "disabled": true,
       "settings": {
         "font_size": "text-std",
         "vertical_padding": 20,
