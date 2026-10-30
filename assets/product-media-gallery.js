@@ -406,7 +406,50 @@ if (!window.isQuickAddModal) {
   
       // Set the current slide to display: block
       slides[index - 1].style.display = 'block';
+      slideIndex = index;
   }
+
+  let modalWheelLocked = false;
+
+  document.addEventListener('wheel', function (event) {
+      const modal = document.getElementById('galModal');
+      if (!modal || !modal.classList.contains('open')) return;
+      if (modal.classList.contains('gallery-mega-zoom')) return;
+
+      const target = event.target;
+      if (target instanceof Element && target.closest('.thumbnails, .modal-thumbs-track-scroller')) return;
+
+      event.preventDefault();
+      if (modalWheelLocked) return;
+
+      const delta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+      if (Math.abs(delta) < 8) return;
+
+      const slides = document.getElementsByClassName('galSlides');
+      if (!slides.length) return;
+
+      let index = typeof slideIndex === 'number' ? slideIndex : 1;
+      for (let i = 0; i < slides.length; i++) {
+          if (slides[i].style.display !== 'none') {
+              index = i + 1;
+              break;
+          }
+      }
+
+      modalWheelLocked = true;
+      currentSlide(index + (delta > 0 ? 1 : -1));
+      pauseGalleryMedia();
+      resetZoomLevel();
+
+      const activeThumb = document.querySelector('.lightbox-thumbnail-active');
+      if (activeThumb) {
+          activeThumb.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
+
+      window.setTimeout(function () {
+          modalWheelLocked = false;
+      }, 320);
+  }, { passive: false });
 
 
   // Toggle zoom function
