@@ -2849,13 +2849,22 @@ a.product__text {
   margin-bottom: 0;
 }
 
+.radio-options-wrapper:has(.color-swatch-preview) {
+  position: relative;
+  padding-right: 116px;
+}
+
+.option-color-picker-wrapper:has(.color-swatch-preview) {
+  position: static;
+}
+
 .color-swatch-preview {
   position: absolute;
   z-index: 4;
-  left: 50%;
-  bottom: calc(100% + 10px);
-  width: 112px;
-  margin-left: -56px;
+  top: 50%;
+  right: 0;
+  width: 104px;
+  margin-top: -65px;
   aspect-ratio: 4 / 5;
   background: rgba(var(--color-foreground-rgb), 0.04);
   border: 1px solid rgba(var(--color-foreground-rgb), 0.12);
