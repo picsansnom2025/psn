@@ -2882,8 +2882,7 @@ a.product__text {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .option-color-picker-wrapper:hover .color-swatch-preview,
-  .option-color-picker-wrapper:focus-within .color-swatch-preview {
+  .option-color-picker-wrapper:hover .color-swatch-preview {
     opacity: 1;
     visibility: visible;
   }
