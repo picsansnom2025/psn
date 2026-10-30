@@ -91,6 +91,65 @@
         jdgm.data.reviewWidget[{{ review_product.id }}] = {{ review_product.metafields.judgeme.review_widget_data }};
       </script>
     {% endif %}
+    <script>
+      (function () {
+        var productId = {{ review_product.id }};
+        var attempts = 0;
+
+        function cachedCount() {
+          var data = window.jdgm && jdgm.data && jdgm.data.reviewWidget && jdgm.data.reviewWidget[productId];
+          return (data && Number(data.number_of_reviews)) || 0;
+        }
+
+        function widgetSrc() {
+          var entries = performance.getEntriesByType('resource');
+          var index = entries.length;
+          while (index--) {
+            if (/\/review_widget\.js(?:\?|$)/.test(entries[index].name)) {
+              return entries[index].name.split('?')[0];
+            }
+          }
+          return '';
+        }
+
+        function tick() {
+          var box = document.getElementById('judgeme_product_reviews');
+          if (!box || !window.jdgm || !box.__vue_app__) {
+            if (attempts < 20) {
+              attempts += 1;
+              window.setTimeout(tick, 300);
+            }
+            return;
+          }
+          if (cachedCount() > 0 || box.dataset.psnReviewsFresh === '1') return;
+          var src = widgetSrc();
+          if (!src || !jdgm.shopDomain) return;
+          fetch(
+            'https://api.judge.me/reviews/reviews_for_widget?shop_domain=' +
+              encodeURIComponent(jdgm.shopDomain()) +
+              '&platform=shopify&product_id=' +
+              productId +
+              '&page=1'
+          )
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (data) {
+              if (!data || !data.number_of_reviews || data.number_of_reviews <= cachedCount()) return;
+              jdgm.data ||= {};
+              jdgm.data.reviewWidget ||= {};
+              jdgm.data.reviewWidget[productId] = data;
+              if (box.__vue_app__) box.__vue_app__.unmount();
+              box.innerHTML = '';
+              box.dataset.psnReviewsFresh = '1';
+              return import(src + '?psn=' + Date.now());
+            })
+            .catch(function () {});
+        }
+
+        tick();
+      })();
+    </script>
   </div>
 </div>
 
