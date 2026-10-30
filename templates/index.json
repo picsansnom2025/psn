@@ -83,6 +83,7 @@
         "heading_FQpwaH",
         "text_tdXfMx"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "content_width": "page-width",
@@ -97,8 +98,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "collection_cards_NUtLmW": {
       "type": "collection-cards",
@@ -124,6 +124,7 @@
         "featured_collection_ez9gT3",
         "featured_collection_m6qdpH"
       ],
+      "disabled": true,
       "name": "t:sections.collection-cards.presets.name",
       "settings": {
         "section_layout": "grid",
@@ -163,8 +164,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "image_banner_YKgCbG": {
       "type": "image-banner",
@@ -209,6 +209,7 @@
         "text_UDGAfe",
         "buttons_mDekRE"
       ],
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "banner_size": "banner-style-fullscreen",
@@ -235,8 +236,7 @@
         "text_color": "fg-white",
         "bg_color": "rgba(0,0,0,0)",
         "overlay_level": 0
-      },
-      "disabled": true
+      }
     },
     "section_media_collage_NNF9Qn": {
       "type": "section-media-collage",
@@ -268,6 +268,7 @@
         "image_HdN89E",
         "image_zyFmxp"
       ],
+      "disabled": true,
       "name": "t:sections.collage.presets.name",
       "settings": {
         "section_label": "",
@@ -286,8 +287,7 @@
         "bg_color": "bg-body",
         "padding_top": 80,
         "padding_bottom": 80
-      },
-      "disabled": true
+      }
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -467,6 +467,7 @@
         "featured_collection_Unk3dj",
         "featured_collection_B3jLY6"
       ],
+      "disabled": true,
       "settings": {
         "section_layout": "slider",
         "arrow_style": "outline-inverted",
@@ -505,8 +506,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "image_with_hotspots_9z3H4A": {
       "type": "image-with-hotspots",
@@ -532,6 +532,7 @@
         "hotspot_XFEGKX",
         "hotspot_maRhfh"
       ],
+      "disabled": true,
       "name": "t:sections.image_with_hotspots.presets.name",
       "settings": {
         "section_label": "",
@@ -553,8 +554,7 @@
         "bottom_border": true,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "collection_list_pBf6he": {
       "type": "collection-list",
@@ -604,6 +604,7 @@
         "featured_collection_B6y9PF",
         "featured_collection_4CG4FX"
       ],
+      "disabled": true,
       "name": "t:sections.collection-list.presets.name",
       "settings": {
         "header_alignment": "center",
@@ -641,8 +642,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "section_content_cards_XzPFVx": {
       "type": "section-content-cards",
@@ -686,6 +686,7 @@
         "card_Mgg3Mb",
         "card_ptzJqw"
       ],
+      "disabled": true,
       "name": "t:sections.content_cards.presets.name",
       "settings": {
         "section_label": "",
@@ -727,8 +728,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "featured_product_7EazyT": {
       "type": "featured-product",
@@ -764,6 +764,7 @@
         "price_g6t6Hq",
         "button_MrtrBk"
       ],
+      "disabled": true,
       "name": "t:sections.featured-product.presets.name",
       "settings": {
         "product": "test-shoe",
@@ -786,8 +787,7 @@
         "card_spacing": 20,
         "top_padding": 80,
         "bottom_padding": 80
-      },
-      "disabled": true
+      }
     },
     "section_featured_style_gallery": {
       "type": "section-featured-style-gallery",
@@ -937,6 +937,7 @@
         "column_BBcXdp",
         "column_THbkW8"
       ],
+      "disabled": true,
       "settings": {
         "section_label": "",
         "heading": "The Maison",
@@ -974,8 +975,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "rich_text_TagPrr": {
       "type": "rich-text",
@@ -1019,6 +1019,7 @@
         "text_FCNxYR",
         "button_irMiCV"
       ],
+      "disabled": true,
       "settings": {
         "content_width": "page-width-medium",
         "content_horizontal_position": "center",
@@ -1032,8 +1033,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "blocks_rMPEF3": {
       "type": "_blocks",
@@ -1058,9 +1058,9 @@
       "block_order": [
         "ai_gen_block_6d17a4f_LgcMXb"
       ],
+      "disabled": true,
       "name": "testimonials title",
-      "settings": {},
-      "disabled": true
+      "settings": {}
     },
     "section_testimonials_6KeQzF": {
       "type": "section-testimonials",
@@ -1095,6 +1095,7 @@
         "testimonial_f6ajUA",
         "testimonial_83yybi"
       ],
+      "disabled": true,
       "name": "t:sections.testimonials.presets.name",
       "settings": {
         "section_layout": "grid",
@@ -1121,8 +1122,7 @@
         "bottom_border": false,
         "border_width": "normal",
         "border_color": "dark"
-      },
-      "disabled": true
+      }
     },
     "blocks_WkG7Yz": {
       "type": "_blocks",
@@ -1146,8 +1146,8 @@
       "block_order": [
         "ai_gen_block_2a74ef2_WGEJYn"
       ],
-      "settings": {},
-      "disabled": true
+      "disabled": true,
+      "settings": {}
     },
     "blocks_P76qdM": {
       "type": "_blocks",
@@ -1206,9 +1206,9 @@
       "block_order": [
         "ai_gen_block_b6c6141_jK6faX"
       ],
+      "disabled": true,
       "name": "social media carousel",
-      "settings": {},
-      "disabled": true
+      "settings": {}
     },
     "blocks_d3HDcx": {
       "type": "_blocks",
@@ -1237,7 +1237,7 @@
             "text_size_desktop": 14,
             "text_spacing": 24,
             "button_text": "Contact Us",
-            "button_link": "shopify://pages/contact-us-1",
+            "button_link": "shopify://pages/contact",
             "button_background_color": "#ffffff",
             "button_text_color": "#000000",
             "button_hover_background_color": "#000000",
