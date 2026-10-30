@@ -3,7 +3,7 @@
    Modal shell uses existing product-popup-modal CSS from section-main-product.css. */
 
 /* Quick add and this dialog both use z-index 101. Opened from a product card, the size guide sits behind the quick add panel. */
-#SizeGuideModal[open] {
+.size-guide-modal[open] {
   z-index: 110;
 }
 
@@ -40,13 +40,13 @@
 }
 
 /* Remove header divider */
-#SizeGuideModal .modal-header {
+.size-guide-modal .modal-header {
   border-bottom: none;
   box-shadow: none;
 }
 
 /* Reduce content top padding so description sits closer to title */
-#SizeGuideModal .product-popup-modal__content-info {
+.size-guide-modal .product-popup-modal__content-info {
   padding-top: 0.5rem;
 }
 
@@ -60,7 +60,7 @@
 
 /* Constrain modal width on desktop */
 @media screen and (min-width: 750px) {
-  #SizeGuideModal .product-popup-modal__content {
+  .size-guide-modal .product-popup-modal__content {
     max-width: 920px;
   }
 }
@@ -77,7 +77,7 @@
 }
 
 /* Measurements table */
-#SizeGuideModal .size-guide-modal__measurements table {
+.size-guide-modal .size-guide-modal__measurements table {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
@@ -85,8 +85,8 @@
   table-layout: fixed;
 }
 
-#SizeGuideModal .size-guide-modal__measurements th,
-#SizeGuideModal .size-guide-modal__measurements td {
+.size-guide-modal .size-guide-modal__measurements th,
+.size-guide-modal .size-guide-modal__measurements td {
   padding: 10px 8px;
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -94,7 +94,7 @@
   word-wrap: break-word;
 }
 
-#SizeGuideModal .size-guide-modal__measurements th {
+.size-guide-modal .size-guide-modal__measurements th {
   background: #111;
   color: #fff;
   font-size: 12px;
@@ -102,27 +102,27 @@
   border-bottom: 0;
 }
 
-#SizeGuideModal .size-guide-modal__measurements tbody tr:nth-child(even) td {
+.size-guide-modal .size-guide-modal__measurements tbody tr:nth-child(even) td {
   background: #f0f0f0;
 }
 
-#SizeGuideModal .size-guide-modal__measurements tbody tr:last-child td {
+.size-guide-modal .size-guide-modal__measurements tbody tr:last-child td {
   border-bottom: none;
 }
 
 @media screen and (max-width: 749px) {
-  #SizeGuideModal .product-popup-modal__content-info {
+  .size-guide-modal .product-popup-modal__content-info {
     overflow-x: auto;
   }
 
-  #SizeGuideModal .product-popup-modal__content-info table {
+  .size-guide-modal .product-popup-modal__content-info table {
     display: table;
     white-space: normal;
     max-width: 100%;
   }
 
-  #SizeGuideModal .size-guide-modal__measurements th,
-  #SizeGuideModal .size-guide-modal__measurements td {
+  .size-guide-modal .size-guide-modal__measurements th,
+  .size-guide-modal .size-guide-modal__measurements td {
     font-size: 11px;
     padding: 8px 4px;
   }

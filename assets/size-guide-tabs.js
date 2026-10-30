@@ -13,7 +13,7 @@
     if (!tab || tab.classList.contains('size-guide-modal__tab--active')) return;
 
     const target = tab.dataset.tab;
-    const modal = tab.closest('#SizeGuideModal');
+    const modal = tab.closest('.size-guide-modal');
     if (!modal) return;
 
     modal.querySelectorAll('.size-guide-modal__tab').forEach(function (t) {

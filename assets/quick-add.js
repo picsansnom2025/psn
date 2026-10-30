@@ -14,6 +14,7 @@ if (!customElements.get('quick-add-modal')) {
       hide(preventFocus = false) {
         const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
         if (cartNotification) cartNotification.setActiveElement(this.openedBy);
+        this.removeQuickAddSizeGuide();
         this.modalContent.innerHTML = '';
 
         if (preventFocus) this.openedBy = null;
@@ -74,8 +75,13 @@ if (!customElements.get('quick-add-modal')) {
         const productPopup = productElement.querySelector('.product-popup-modal__opener');
         if (productPopup) productPopup.remove();
 
+        this.keepProductSizeGuide(productElement);
+
         const modalDialog = productElement.querySelectorAll('modal-dialog');
-        if (modalDialog) modalDialog.forEach((modal) => modal.remove());
+        if (modalDialog) modalDialog.forEach((modal) => {
+          if (modal.id === this.sizeGuideModalId) return;
+          modal.remove();
+        });
 
         const hTitle = productElement.querySelectorAll('h1');
         if (hTitle) hTitle.forEach(modal => modal.remove());
@@ -107,6 +113,37 @@ if (!customElements.get('quick-add-modal')) {
         const ProductIcons = productElement.querySelectorAll('.product-feature-icon-grid--wrapper');
         if (ProductIcons) ProductIcons.forEach(modal => modal.remove());
 
+      }
+
+      keepProductSizeGuide(productElement) {
+        const sizeGuide = productElement.querySelector('#SizeGuideModal');
+        if (!sizeGuide) {
+          this.sizeGuideModalId = null;
+          return;
+        }
+
+        const uniqueId = `${this.id}-SizeGuide`;
+        const existing = document.getElementById(uniqueId);
+        if (existing) existing.remove();
+
+        sizeGuide.id = uniqueId;
+        sizeGuide.classList.add('size-guide-modal');
+        const closeButton = sizeGuide.querySelector('[id^="ModalClose-"]');
+        if (closeButton) closeButton.id = `ModalClose-${uniqueId}`;
+        productElement.querySelectorAll('[data-modal="#SizeGuideModal"]').forEach((opener) => {
+          opener.setAttribute('data-modal', `#${uniqueId}`);
+        });
+        this.sizeGuideModalId = uniqueId;
+      }
+
+      removeQuickAddSizeGuide() {
+        if (!this.sizeGuideModalId) return;
+        const sizeGuide = document.getElementById(this.sizeGuideModalId);
+        if (sizeGuide) {
+          if (sizeGuide.hasAttribute('open')) sizeGuide.hide();
+          sizeGuide.remove();
+        }
+        this.sizeGuideModalId = null;
       }
 
       preventDuplicatedIDs(productElement) {

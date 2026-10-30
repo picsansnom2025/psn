@@ -13,7 +13,7 @@
 {% assign fit_blocks = section.blocks | where: 'type', 'size_guide_fit' %}
 {% if measure_blocks.size > 0 or size_guide.measurements.value.headers or size_guide.womens_measurements.value.headers %}
 {{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
-<modal-dialog id="SizeGuideModal" class="product-popup-modal">
+<modal-dialog id="SizeGuideModal" class="product-popup-modal size-guide-modal">
   <div role="dialog" aria-label="{% if measure_blocks.size > 0 %}{{ section.settings.size_guide_heading | default: 'Size Guide' }}{% elsif size_guide.product_type.value != blank %}{{ size_guide.product_type.value }} Size Guide{% else %}Size Guide{% endif %}" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
     <div class="modal-header">
       <button id="ModalClose-SizeGuide" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
