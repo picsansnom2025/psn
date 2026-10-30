@@ -37,7 +37,8 @@
     }
   {% endif %}
 
-  #judgeme_product_reviews {
+  #judgeme_product_reviews,
+  #judgeme_product_reviews .jm-review-widget {
     --jm-review-widget-text-color: var(--color-foreground) !important;
     --jm-review-widget-lighter-text-color: rgba(var(--color-foreground-rgb), 0.55) !important;
     --jm-review-widget-star-and-histogram-color: var(--color-foreground) !important;
@@ -69,8 +70,13 @@
 
   #judgeme_product_reviews .jm-reviewer-info__name,
   #judgeme_product_reviews .jm-review-content__title,
+  #judgeme_product_reviews .jm-review-content__body,
   #judgeme_product_reviews .jm-average-rating-display {
     color: var(--color-foreground);
+  }
+
+  #judgeme_product_reviews .jm-reviewer-info__details .jm-text:not(.jm-reviewer-info__name) {
+    color: rgba(var(--color-foreground-rgb), 0.55);
   }
 
   #judgeme_product_reviews .jm-review-item {
