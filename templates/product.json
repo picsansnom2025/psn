@@ -254,6 +254,7 @@
     },
     "1777917546b859f363": {
       "type": "_blocks",
+      "disabled": true,
       "blocks": {
         "ai_gen_block_ed2c3fe_4bekcM": {
           "type": "ai_gen_block_ed2c3fe",

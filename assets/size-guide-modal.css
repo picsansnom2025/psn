@@ -56,29 +56,71 @@
 /* Constrain modal width on desktop */
 @media screen and (min-width: 750px) {
   #SizeGuideModal .product-popup-modal__content {
-    max-width: 580px;
+    max-width: 920px;
   }
 }
 
-/* Measurements table */
-.size-guide-modal__measurements table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.size-guide-modal__measurements th,
-.size-guide-modal__measurements td {
-  padding: 0.5rem 0.75rem;
-  text-align: left;
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
-}
-
-.size-guide-modal__measurements th {
+.size-guide-modal__chart-label {
+  margin: 0 0 10px;
+  font-size: 13px;
   font-weight: 600;
+  text-align: center;
 }
 
-.size-guide-modal__measurements tbody tr:last-child td {
+.size-guide-modal__measurements + .size-guide-modal__measurements {
+  margin-top: 28px;
+}
+
+/* Measurements table */
+#SizeGuideModal .size-guide-modal__measurements table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  box-shadow: none;
+  table-layout: fixed;
+}
+
+#SizeGuideModal .size-guide-modal__measurements th,
+#SizeGuideModal .size-guide-modal__measurements td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+#SizeGuideModal .size-guide-modal__measurements th {
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 0;
+}
+
+#SizeGuideModal .size-guide-modal__measurements tbody tr:nth-child(even) td {
+  background: #f0f0f0;
+}
+
+#SizeGuideModal .size-guide-modal__measurements tbody tr:last-child td {
   border-bottom: none;
+}
+
+@media screen and (max-width: 749px) {
+  #SizeGuideModal .product-popup-modal__content-info {
+    overflow-x: auto;
+  }
+
+  #SizeGuideModal .product-popup-modal__content-info table {
+    display: table;
+    white-space: normal;
+    max-width: 100%;
+  }
+
+  #SizeGuideModal .size-guide-modal__measurements th,
+  #SizeGuideModal .size-guide-modal__measurements td {
+    font-size: 11px;
+    padding: 8px 4px;
+  }
 }
 
 /* Gendered measurement tabs */

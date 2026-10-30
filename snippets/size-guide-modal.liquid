@@ -12,12 +12,12 @@
 {% if size_guide %}
 {{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
 <modal-dialog id="SizeGuideModal" class="product-popup-modal">
-  <div role="dialog" aria-label="{{ size_guide.product_type.value }} Size Guide" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
+  <div role="dialog" aria-label="{% if size_guide.product_type.value != blank %}{{ size_guide.product_type.value }} Size Guide{% else %}Size Guide{% endif %}" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
     <div class="modal-header">
       <button id="ModalClose-SizeGuide" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
         {% render 'icon-close' %}
       </button>
-      <span class="dialog-title">{{ size_guide.product_type.value }} Size Guide</span>
+      <span class="dialog-title">{% if size_guide.product_type.value != blank %}{{ size_guide.product_type.value }} Size Guide{% else %}Size Guide{% endif %}</span>
     </div>
     {% if size_guide.fit_description.value %}
       <p class="size-guide-modal__fit-description">{{ size_guide.fit_description.value }}</p>
@@ -149,6 +149,104 @@
                   {% endfor %}
                 </tr>
               {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <div class="size-guide-modal__measurements">
+          <table>
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Hips (cm)</th>
+                <th>Waist (cm)</th>
+                <th>Bust (cm)</th>
+                <th>Thigh (cm)</th>
+                <th>Length (cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XS</td>
+                <td>84</td>
+                <td>64</td>
+                <td>76–86</td>
+                <td>52</td>
+                <td>102</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td>88</td>
+                <td>68</td>
+                <td>80–90</td>
+                <td>54</td>
+                <td>104</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>93</td>
+                <td>73</td>
+                <td>85–95</td>
+                <td>56.6</td>
+                <td>106</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>98</td>
+                <td>78</td>
+                <td>90–100</td>
+                <td>59</td>
+                <td>108</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="size-guide-modal__measurements">
+          <p class="size-guide-modal__chart-label">Height (cm)</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Weight (kg)</th>
+                <th>150–155</th>
+                <th>155–160</th>
+                <th>160–165</th>
+                <th>165–170</th>
+                <th>170–178</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40–45</td>
+                <td>XS</td>
+                <td>XS</td>
+                <td>XS</td>
+                <td>XS</td>
+                <td>XS/S</td>
+              </tr>
+              <tr>
+                <td>45–50</td>
+                <td>S</td>
+                <td>S</td>
+                <td>XS</td>
+                <td>XS</td>
+                <td>XS/S</td>
+              </tr>
+              <tr>
+                <td>50–55</td>
+                <td>M</td>
+                <td>S/M</td>
+                <td>S</td>
+                <td>S</td>
+                <td>S</td>
+              </tr>
+              <tr>
+                <td>55–60</td>
+                <td>L</td>
+                <td>M/L</td>
+                <td>M</td>
+                <td>M</td>
+                <td>M</td>
+              </tr>
             </tbody>
           </table>
         </div>
