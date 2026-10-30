@@ -70,14 +70,14 @@
             "pill_additional_options_display": "accordion",
             "show_labels": true,
             "show_puncuation": false,
-            "swatch_label_position": "below",
+            "swatch_label_position": "inline",
             "border_top": false,
             "border_bottom": false,
             "use_variant_images": false,
             "thumbnail_variants_label": "Color",
-            "use_color_swatches": false,
-            "color_swatches_style": "square",
-            "color_swatch_size": "normal",
+            "use_color_swatches": true,
+            "color_swatches_style": "round",
+            "color_swatch_size": "large",
             "visual_variants_array": "Colour, Color",
             "color_swatches_array": "White - #f2f2f2\nBlack - #000000\nNavy - #233756\nRed - #912014\nDark Grey - #333333"
           }

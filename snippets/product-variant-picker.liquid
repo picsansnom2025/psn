@@ -41,7 +41,7 @@
 
 {%- if block.settings.picker_type == 'button' or block.settings.picker_type == 'minimal' -%}
     <fieldset class="js product-form__input product-form__input--pill">
-      <legend class="form__label{% if labels == false %} visually-hidden{% endif %}">{{ option.name }}{% if block.settings.show_puncuation %}:{% endif %}
+      <legend class="form__label{% if labels == false %} visually-hidden{% endif %}">{{ option.name }}{% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}:{% elsif block.settings.show_puncuation %}:{% endif %}
         {% if thumbnail_variants contains option.name and show_variant_images and swatch_label_position == 'inline' %}
           <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
         {% endif %}

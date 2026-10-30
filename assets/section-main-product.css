@@ -2849,6 +2849,44 @@ a.product__text {
   margin-bottom: 0;
 }
 
+.color-swatch-preview {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  width: 112px;
+  margin-left: -56px;
+  aspect-ratio: 4 / 5;
+  background: rgba(var(--color-foreground-rgb), 0.04);
+  border: 1px solid rgba(var(--color-foreground-rgb), 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  transition: opacity 240ms ease, visibility 240ms ease;
+}
+
+.color-swatch-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .option-color-picker-wrapper:hover .color-swatch-preview,
+  .option-color-picker-wrapper:focus-within .color-swatch-preview {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .color-swatch-preview {
+    transition: opacity 240ms ease;
+  }
+}
+
 
 /* Badges */
 
