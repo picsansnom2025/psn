@@ -53,7 +53,15 @@
       </div>
     {% endif %}
 
-    <div id="judgeme_product_reviews"></div>
+    {% assign review_product = closest.product | default: product %}
+    <div
+      id="judgeme_product_reviews"
+      class="jdgm-widget jdgm-review-widget"
+      data-id="{{ review_product.id }}"
+      data-product-id="{{ review_product.id }}"
+    >
+      {{ review_product.metafields.judgeme.widget }}
+    </div>
   </div>
 </div>
 
