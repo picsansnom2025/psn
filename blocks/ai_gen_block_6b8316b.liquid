@@ -129,6 +129,44 @@
     background: rgba(var(--color-foreground-rgb), 0.08);
   }
 
+  #judgeme_product_reviews .jm-rating-filter__tag {
+    background: transparent !important;
+    color: var(--color-foreground) !important;
+    border: 1px solid rgba(var(--color-foreground-rgb), 0.2);
+    border-radius: 0;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 240ms ease, color 240ms ease, border-color 240ms ease;
+  }
+
+  #judgeme_product_reviews .jm-rating-filter__star {
+    font-size: 20px !important;
+    line-height: 1;
+    color: rgba(var(--color-foreground-rgb), 0.35);
+    transition: color 240ms ease, transform 240ms ease;
+  }
+
+  #judgeme_product_reviews .jm-rating-filter__tag:hover {
+    border-color: var(--color-foreground);
+    background: rgba(var(--color-foreground-rgb), 0.04) !important;
+  }
+
+  #judgeme_product_reviews .jm-rating-filter__tag:hover .jm-rating-filter__star {
+    color: var(--color-foreground);
+    transform: scale(1.08);
+  }
+
+  #judgeme_product_reviews .jm-rating-filter__tag--selected {
+    background: var(--color-foreground) !important;
+    color: var(--color-background) !important;
+    border-color: var(--color-foreground);
+  }
+
+  #judgeme_product_reviews .jm-rating-filter__tag--selected .jm-rating-filter__star {
+    color: var(--color-background);
+  }
+
   .jdgm-write-review-modal {
     --jm-widget-primary-color: var(--color-foreground) !important;
     --jm-review-widget-form-button-color: var(--color-foreground) !important;
@@ -235,7 +273,8 @@
       animation: none;
     }
 
-    .jdgm-write-review-modal .jdgm-star {
+    .jdgm-write-review-modal .jdgm-star,
+    #judgeme_product_reviews .jm-rating-filter__star {
       transform: none;
       transition: color 240ms ease;
     }
