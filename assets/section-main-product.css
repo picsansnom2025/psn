@@ -2851,7 +2851,7 @@ a.product__text {
 
 .radio-options-wrapper:has(.color-swatch-preview) {
   position: relative;
-  padding-right: 116px;
+  padding-right: 100px;
 }
 
 .option-color-picker-wrapper:has(.color-swatch-preview) {
@@ -2861,10 +2861,9 @@ a.product__text {
 .color-swatch-preview {
   position: absolute;
   z-index: 4;
-  top: 50%;
   right: 0;
-  width: 104px;
-  margin-top: -65px;
+  bottom: 0;
+  width: 88px;
   aspect-ratio: 4 / 5;
   background: rgba(var(--color-foreground-rgb), 0.04);
   border: 1px solid rgba(var(--color-foreground-rgb), 0.12);
