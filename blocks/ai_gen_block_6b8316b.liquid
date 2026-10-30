@@ -29,6 +29,13 @@
     margin: 0;
   }
 
+  {% if block.settings.show_title %}
+    .ai-app-embed-{{ ai_gen_id }} .jm-review-widget-minimal-header__title,
+    .ai-app-embed-{{ ai_gen_id }} .jm-stack:has(> .jm-review-widget-minimal-header__title) {
+      display: none;
+    }
+  {% endif %}
+
   @media screen and (max-width: 749px) {
     .ai-app-embed-{{ ai_gen_id }} {
       padding: {{ block.settings.padding_top | times: 0.7 }}px {{ block.settings.padding_horizontal | times: 0.7 }}px {{ block.settings.padding_bottom | times: 0.7 }}px;
