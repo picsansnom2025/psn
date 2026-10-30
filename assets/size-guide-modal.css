@@ -2,6 +2,11 @@
    Only styles specific to size guide content.
    Modal shell uses existing product-popup-modal CSS from section-main-product.css. */
 
+/* Quick add and this dialog both use z-index 101. Opened from a product card, the size guide sits behind the quick add panel. */
+#SizeGuideModal[open] {
+  z-index: 110;
+}
+
 /* Trigger: button styled as text link */
 .size-guide-trigger {
   background: none;
