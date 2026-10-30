@@ -11,13 +11,12 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
-        "content_width": "page-width-medium",
+        "content_width": "page-width",
         "hdr_alignment": "center",
         "heading_hide": false,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "contact_form_tmDwBc": {
