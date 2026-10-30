@@ -54,14 +54,36 @@
     {% endif %}
 
     {% assign review_product = closest.product | default: product %}
+    {% assign has_legacy_widget = false %}
+    {% if review_product.metafields.judgeme.widget.size > 20 %}
+      {% assign has_legacy_widget = true %}
+    {% endif %}
+    <div style="clear:both"></div>
     <div
       id="judgeme_product_reviews"
       class="jdgm-widget jdgm-review-widget"
+      data-product-title="{{ review_product.title | escape }}"
       data-id="{{ review_product.id }}"
       data-product-id="{{ review_product.id }}"
+      data-widget="review"
+      data-auto-install="false"
+      data-shop-reviews-count="{{ shop.metafields.judgeme.shop_reviews_count | default: 0 | escape }}"
+      data-entry-point="review_widget.js"
+      data-entry-key="review-widget/main.js"
     >
-      {{ review_product.metafields.judgeme.widget }}
+      {% if has_legacy_widget %}
+        <div class="jdgm-legacy-widget-content" style="display: none;">
+          {{ review_product.metafields.judgeme.widget }}
+        </div>
+      {% endif %}
     </div>
+    {% if review_product.metafields.judgeme.review_widget_data %}
+      <script>
+        jdgm.data ||= {};
+        jdgm.data.reviewWidget ||= {};
+        jdgm.data.reviewWidget[{{ review_product.id }}] = {{ review_product.metafields.judgeme.review_widget_data }};
+      </script>
+    {% endif %}
   </div>
 </div>
 
