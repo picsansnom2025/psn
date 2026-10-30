@@ -1,0 +1,173 @@
+{%- style -%}
+  .order-tracker-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.8 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.8 | round: 0 }}px;
+  }
+
+  .order-tracker-{{ section.id }} .order-tracker__root {
+    min-height: 520px;
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  .order-tracker-{{ section.id }} .order-tracker__root.is-ready {
+    opacity: 1;
+  }
+
+  .order-tracker-{{ section.id }} .order-tracker__fallback {
+    margin: 0;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .order-tracker-{{ section.id }} .order-tracker__fallback a {
+    color: inherit;
+    transition: opacity 200ms ease;
+  }
+
+  .order-tracker-{{ section.id }} .order-tracker__fallback a:hover {
+    opacity: 0.6;
+  }
+
+  @media screen and (min-width: 750px) {
+    .order-tracker-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .order-tracker-{{ section.id }} .order-tracker__root,
+    .order-tracker-{{ section.id }} .order-tracker__fallback a {
+      transition: none;
+    }
+
+    .order-tracker-{{ section.id }} .order-tracker__root {
+      opacity: 1;
+    }
+  }
+{%- endstyle -%}
+
+<div class="order-tracker-{{ section.id }}">
+  <div id="besttrack-tracking-page-root" class="order-tracker__root" data-order-tracker-root></div>
+  <p class="order-tracker__fallback" hidden>
+    {{ section.settings.unavailable_text }}
+    <a href="{{ section.settings.app_path }}">{{ section.settings.fallback_link_label }}</a>
+  </p>
+</div>
+
+<script>
+  (function () {
+    var root = document.querySelector('#besttrack-tracking-page-root');
+    if (!root || root.dataset.bound === 'true') return;
+    root.dataset.bound = 'true';
+
+    var source = {{ section.settings.app_path | json }};
+    var fallback = root.parentElement.querySelector('.order-tracker__fallback');
+
+    function showFallback() {
+      root.hidden = true;
+      if (fallback) fallback.hidden = false;
+    }
+
+    function copyConfig(doc, id) {
+      var node = doc.getElementById(id);
+      if (!node || !node.textContent.trim()) return false;
+      var existing = document.getElementById(id);
+      if (existing) existing.remove();
+      var el = document.createElement('script');
+      el.type = 'application/json';
+      el.id = id;
+      el.textContent = node.textContent;
+      document.body.appendChild(el);
+      return true;
+    }
+
+    if (!source) {
+      showFallback();
+      return;
+    }
+
+    var watch = new MutationObserver(function () {
+      if (root.childElementCount > 0) {
+        root.classList.add('is-ready');
+        watch.disconnect();
+      }
+    });
+    watch.observe(root, { childList: true });
+
+    fetch(source, { credentials: 'same-origin' })
+      .then(function (response) {
+        if (!response.ok) throw new Error('unavailable');
+        return response.text();
+      })
+      .then(function (html) {
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        var ready = copyConfig(doc, 'besttrack-published-document') && copyConfig(doc, 'besttrack-page-bootstrap');
+        if (!ready) throw new Error('unavailable');
+        var script = document.createElement('script');
+        script.src = 'https://platform.bestrack.com/storefront/tracking-page.js';
+        script.onerror = showFallback;
+        document.body.appendChild(script);
+      })
+      .catch(showFallback);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Order tracker",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "app_path",
+      "label": "BestTrack page",
+      "default": "/apps/bestrack",
+      "info": "The tracker on this page is loaded from the BestTrack app. Shopify keeps the app at this address."
+    },
+    {
+      "type": "text",
+      "id": "unavailable_text",
+      "label": "Message if tracking cannot load",
+      "default": "Order tracking is unavailable right now."
+    },
+    {
+      "type": "text",
+      "id": "fallback_link_label",
+      "label": "Backup link label",
+      "default": "Track your order"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Order tracker"
+    }
+  ]
+}
+{% endschema %}
