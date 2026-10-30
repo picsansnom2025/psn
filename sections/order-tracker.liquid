@@ -96,9 +96,26 @@
       });
     }
 
+    function hideAppRecommendations() {
+      root.querySelectorAll('h2, h3').forEach(function (heading) {
+        if (heading.textContent.trim().toLowerCase().indexOf('you may also like') !== 0) return;
+        var block = heading.parentElement;
+        while (block && block !== root) {
+          if (block.querySelector('input, form')) return;
+          var parent = block.parentElement;
+          if (!parent || parent === root || parent.querySelector('input, form')) {
+            block.style.setProperty('display', 'none', 'important');
+            return;
+          }
+          block = parent;
+        }
+      });
+    }
+
     var watch = new MutationObserver(function () {
       if (root.childElementCount > 0) root.classList.add('is-ready');
       hideCredit();
+      hideAppRecommendations();
     });
     watch.observe(root, { childList: true, subtree: true });
 

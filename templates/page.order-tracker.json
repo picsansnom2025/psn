@@ -78,11 +78,53 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "shop-all-ski",
+        "content_alignment": "center",
+        "section_label": "",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "description": "",
+        "btn_enable": false,
+        "btn_label": "Shop All",
+        "btn_style": "solid",
+        "btn_position_mobile": "bottom",
+        "btn_position_desktop": "bottom",
+        "products_layout": "carousel",
+        "arrow_style": "solid-inverted",
+        "content_width": "page-width",
+        "no_items": 8,
+        "mobile_grid": "2",
+        "tablet_grid": "4",
+        "dt_grid": "4",
+        "card_image_display": "variant_thumbnails",
+        "pagination_color_scheme": "body",
+        "show_prices": true,
+        "show_vendor": false,
+        "show_swatches": true,
+        "show_color_count": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "rollover_titles": false,
+        "text_color": "fg-body",
+        "bg_color": "bg-body",
+        "btn_color_scheme": "default",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "top_border": false,
+        "bottom_border": false,
+        "border_width": "normal",
+        "border_color": "dark"
+      }
     }
   },
   "order": [
     "main",
     "order_tracker",
+    "featured_collection",
     "contact_form_tmDwBc"
   ]
 }
