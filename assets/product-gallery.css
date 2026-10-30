@@ -70,33 +70,18 @@
 
 .product-media-image .magnify-icon {
   opacity: 1;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 0 0 18px;
-  cursor: zoom-in;
-  transition: opacity 240ms ease;
+  padding: 0;
+  cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA/SURBVFhH7c4xCgAgDATB/P/T2mhnIZgQhFm4MmFC+r2x1hYAAABAGWA/zt51p+OMpVf2+DYAAACAdoD0WMQEVNxTrTEmtnkAAAAASUVORK5CYII=") 16 16, crosshair;
 }
 
 .product-media-image .magnify-icon .icon {
-  width: 18px;
-  height: 18px;
-  transition: opacity 240ms ease;
+  display: none;
 }
 
 @media only screen and (min-width: 950px) {
   .product-media-image:hover .magnify-icon {
     opacity: 1;
-    cursor: zoom-in;
-  }
-  .product-media-image:hover .magnify-icon .icon {
-    opacity: 0.55;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .product-media-image .magnify-icon,
-  .product-media-image .magnify-icon .icon {
-    transition: none;
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA/SURBVFhH7c4xCgAgDATB/P/T2mhnIZgQhFm4MmFC+r2x1hYAAABAGWA/zt51p+OMpVf2+DYAAACAdoD0WMQEVNxTrTEmtnkAAAAASUVORK5CYII=") 16 16, crosshair;
   }
 }
 
