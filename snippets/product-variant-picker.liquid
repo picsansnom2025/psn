@@ -19,8 +19,6 @@
   {% assign swatch_state = false %}
 {% endif %}
 
-{% assign size_guide_metaobject = product.metafields.custom.size_guide.value %}
-
 {%- unless product.has_only_default_variant -%}
 
 {% assign optionscount = 0 %}
@@ -50,7 +48,8 @@
         {% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}
           <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
         {% endif %}
-        {% if option.name == 'Size' and size_guide_metaobject %}
+        {% assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure' %}
+        {% if option.name == 'Size' and size_guide_rows.size > 0 %}
           <modal-opener data-modal="#SizeGuideModal">
             <button type="button" class="size-guide-trigger" aria-haspopup="dialog">Size Guide</button>
           </modal-opener>
@@ -122,7 +121,8 @@
     <div class="product-form__input product-form__input--dropdown">
       <label class="form__label{% if labels == false %} visually-hidden{% endif %}" for="Option-{{ section.id }}-{{ forloop.index0 }}">
         {{ option.name }}{% if block.settings.show_puncuation %}:{% endif %}
-        {% if option.name == 'Size' and size_guide_metaobject %}
+        {% assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure' %}
+        {% if option.name == 'Size' and size_guide_rows.size > 0 %}
           <modal-opener data-modal="#SizeGuideModal">
             <button type="button" class="size-guide-trigger" aria-haspopup="dialog">Size Guide</button>
           </modal-opener>
