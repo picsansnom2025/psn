@@ -212,6 +212,7 @@ if (!customElements.get('product-info')) {
         if (!input || !this.isColorOptionChange({ target: input })) return;
         const mediaId = input.dataset.variantMediaId;
         if (!mediaId) return;
+        this.pendingColorMediaId = mediaId;
         const now = Date.now();
         if (this.lastColorMediaId === mediaId && now - (this.lastColorScrollAt || 0) < 50) return;
         this.lastColorMediaId = mediaId;
@@ -219,9 +220,17 @@ if (!customElements.get('product-info')) {
         this.showVariantMedia(mediaId);
       }
 
+      settleColorScroll() {
+        const mediaId = this.pendingColorMediaId;
+        if (!mediaId) return;
+        this.pendingColorMediaId = null;
+        requestAnimationFrame(() => this.showVariantMedia(mediaId));
+      }
+
       handleUpdateProductInfo(productUrl) {
         return (html) => {
           this.updateOptionValues(html);
+          this.settleColorScroll();
           const incomplete = !!this.variantSelectors && !this.hasCompleteOptionSelection();
           const variant = incomplete ? null : this.getSelectedVariant(html);
 
