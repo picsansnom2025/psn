@@ -170,7 +170,7 @@
               </thead>
               <tbody>
                 {% for row in measure_blocks %}
-                  <tr>
+                  <tr {{ row.shopify_attributes }}>
                     <td>{{ row.settings.size }}</td>
                     <td>{{ row.settings.hips }}</td>
                     <td>{{ row.settings.waist }}</td>
@@ -199,7 +199,7 @@
               </thead>
               <tbody>
                 {% for row in fit_blocks %}
-                  <tr>
+                  <tr {{ row.shopify_attributes }}>
                     <td>{{ row.settings.weight }}</td>
                     <td>{{ row.settings.col_1 }}</td>
                     <td>{{ row.settings.col_2 }}</td>

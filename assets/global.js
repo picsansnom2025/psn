@@ -542,7 +542,11 @@ class ModalDialog extends HTMLElement {
   connectedCallback() {
     if (this.moved) return;
     this.moved = true;
+    const duplicates = [...document.querySelectorAll(`[id="${this.id}"]`)].filter((node) => node !== this);
+    const wasOpen = duplicates.some((node) => node.hasAttribute('open'));
+    duplicates.forEach((node) => node.remove());
     document.body.appendChild(this);
+    if (wasOpen) this.show();
   }
 
   show(opener) {
