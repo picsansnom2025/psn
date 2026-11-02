@@ -26,11 +26,6 @@ if (!customElements.get('product-info')) {
         );
         this.initQuantityHandlers();
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
-
-        if (this.dataset.updateUrl === 'true' && new URLSearchParams(window.location.search).has('variant')) {
-          const variant = this.getSelectedVariant(this);
-          this.showVariantMedia(variant?.featured_media?.id);
-        }
       }
 
       addPreProcessCallback(callback) {
