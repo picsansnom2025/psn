@@ -507,7 +507,7 @@ h3 .vendor--style-faded {
 }
 
 @media only screen and (min-width: 1025px) {
-  .card-product:hover:not(:has(.card-product--variant-thumbnail:hover)):not([data-swatch-preview]) .card-product--card-hover-image {
+  .card-product:hover:not(:has(.card-product--variant-thumbnail:hover)):not([data-swatch-preview]):not(:has(.pc-thumb-radio:checked)) .card-product--card-hover-image {
     opacity: 1;
     visibility: visible;
   }

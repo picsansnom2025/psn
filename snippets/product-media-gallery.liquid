@@ -1,8 +1,10 @@
 {{ 'product-gallery.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'video-player.js' | asset_url }}" defer="defer"></script>
 
-{% assign current_variant = product.selected_or_first_available_variant %}
-{% assign featured_media = current_variant.featured_media %}
+{% comment %}
+  Keep the admin media order. Choosing a color scrolls to that image instead of moving it to the front.
+{% endcomment %}
+{% assign featured_media = nil %}
 
 {% if video_autoplay %}
   {% assign autoplay = true %}

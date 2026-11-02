@@ -26,6 +26,11 @@ if (!customElements.get('product-info')) {
         );
         this.initQuantityHandlers();
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
+
+        if (this.dataset.updateUrl === 'true' && new URLSearchParams(window.location.search).has('variant')) {
+          const variant = this.getSelectedVariant(this);
+          this.showVariantMedia(variant?.featured_media?.id);
+        }
       }
 
       addPreProcessCallback(callback) {
@@ -62,6 +67,7 @@ if (!customElements.get('product-info')) {
       handleOptionValueChange({ data: { event, target, selectedOptionValues } }) {
         if (!this.contains(event.target)) return;
 
+        this.pendingMediaScroll = this.isColorOptionChange(event);
         this.resetProductFormState();
 
         const productUrl = target.dataset.productUrl || this.pendingRequestUrl || this.dataset.url;
@@ -187,17 +193,6 @@ if (!customElements.get('product-info')) {
             }
           };
 
-          sliderArrows();
-          thumbnailsScroll();
-
-          // Re-initiate carousel pagination active states
-          const slidesContainer = document.getElementById('SlidesCon');
-          if (slidesContainer) {
-            slidesContainer.addEventListener('scroll', function() {
-              handleScroll(); // Call handleScroll function
-            });
-          }
-          
           updateSourceFromDestination('price');
           updateSourceFromDestination('Sku', ({ classList }) => classList.contains('hidden'));
           updateSourceFromDestination('Inventory', ({ innerText }) => innerText === '');
@@ -322,37 +317,34 @@ if (!customElements.get('product-info')) {
         });
       }
 
-      updateMedia(html, variantFeaturedMediaId) {
-        if (!variantFeaturedMediaId) return;
+      isColorOptionChange(event) {
+        const fieldset = event?.target?.closest('fieldset');
+        const legend = fieldset?.querySelector('legend');
+        const name = (legend?.childNodes?.[0]?.textContent || '').trim();
+        return /^(color|colour|colors|colours|couleur|farbe|colore|cor|kleur|färg|väri|颜色|色)\b/i.test(name);
+      }
 
-        const srcId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
-        const galSource = html.getElementById(`pageGallery-${srcId}`);
-        const galDestination = document.getElementById(`pageGallery-${this.dataset.section}`);
+      showVariantMedia(mediaId) {
+        if (!mediaId) return;
+        const slide = this.querySelector(`#SlidesCon [data-media-id="${mediaId}"]`);
+        if (!slide) return;
 
-        if (!galSource || !galDestination) return;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const behavior = reduceMotion ? 'auto' : 'smooth';
+        const scroller = slide.parentElement;
 
-        const isAndroid = /Android/i.test(navigator.userAgent);
-        const yBefore = isAndroid ? window.scrollY : 0;
-
-        // Lock height to prevent collapse during innerHTML swap
-        let prevHeight = 0;
-        if (isAndroid) {
-          prevHeight = galDestination.offsetHeight;
-          if (prevHeight) galDestination.style.minHeight = `${prevHeight}px`;
+        if (scroller && scroller.scrollWidth > scroller.clientWidth + 4) {
+          scroller.scrollTo({ left: slide.offsetLeft, behavior });
+          return;
         }
 
-        galDestination.innerHTML = galSource.innerHTML;
+        slide.scrollIntoView({ behavior, block: 'nearest', inline: 'nearest' });
+      }
 
-        if (isAndroid) {
-          requestAnimationFrame(() => {
-            window.scrollTo(0, yBefore);
-            setTimeout(() => window.scrollTo(0, yBefore), 120);
-            // Release min-height after things have had a moment to lay out
-            setTimeout(() => {
-              galDestination.style.minHeight = '';
-            }, 250);
-          });
-        }
+      updateMedia(_html, variantFeaturedMediaId) {
+        if (!this.pendingMediaScroll) return;
+        this.pendingMediaScroll = false;
+        this.showVariantMedia(variantFeaturedMediaId);
       }
 
       setQuantityBoundries() {
