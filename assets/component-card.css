@@ -521,6 +521,13 @@ h3 .vendor--style-faded {
   opacity: 0;
 }
 
+.card:has(.pc-thumb-radio:checked) .card-product--default-media,
+.card:has(.card-product--variant-thumbnail:hover) .card-product--default-media,
+.card[data-swatch-preview] .card-product--default-media {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .product-card--image-browsing-thumbnails {
   display: flex;
   column-gap: 5px;

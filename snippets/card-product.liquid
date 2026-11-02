@@ -156,6 +156,15 @@
 
 <div class="pc-image-browse">
 <div class="card-product--image product-card--image-browsing-main-images">
+  {% if card_product.featured_media %}
+  <div class="card-product--variant-main-image card-product--default-media">
+    {% if lazy_load %}
+      {{ card_product.featured_media | image_url: width: media_size | image_tag: loading: 'lazy' }}
+    {% else %}
+      {{ card_product.featured_media | image_url: width: media_size | image_tag }}
+    {% endif %}
+  </div>
+  {% endif %}
   {% for option in card_product.options_with_values %}
   {% if color_names contains option.name %}
     {% for value in option.values %}
@@ -170,17 +179,6 @@
   {% endif %}
   {% endfor %}
   {% assign shown_image = card_product.featured_media %}
-  {% assign shown_found = false %}
-  {% for option in card_product.options_with_values %}
-    {% if shown_found == false and color_names contains option.name %}
-      {% for value in option.values %}
-        {% if shown_found == false and value.variant.featured_media %}
-          {% assign shown_image = value.variant.featured_media %}
-          {% assign shown_found = true %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
   {% assign hover_image = nil %}
   {% for image in images %}
     {% if hover_image == nil and image != shown_image %}
