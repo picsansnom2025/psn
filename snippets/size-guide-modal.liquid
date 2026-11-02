@@ -11,6 +11,8 @@
 {% assign size_guide = product.metafields.custom.size_guide.value %}
 {% assign measure_blocks = section.blocks | where: 'type', 'size_guide_measure' %}
 {% assign fit_blocks = section.blocks | where: 'type', 'size_guide_fit' %}
+{% assign measure_head = section.blocks | where: 'type', 'size_guide_measure_head' | first %}
+{% assign fit_head = section.blocks | where: 'type', 'size_guide_fit_head' | first %}
 {% if measure_blocks.size > 0 or size_guide.measurements.value.headers or size_guide.womens_measurements.value.headers %}
 {{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
 <modal-dialog id="SizeGuideModal" class="product-popup-modal size-guide-modal">
@@ -159,13 +161,13 @@
           <div class="size-guide-modal__measurements">
             <table>
               <thead>
-                <tr>
-                  <th>{{ section.settings.size_guide_col_size | default: 'Size' }}</th>
-                  <th>{{ section.settings.size_guide_col_hips | default: 'Hips (cm)' }}</th>
-                  <th>{{ section.settings.size_guide_col_waist | default: 'Waist (cm)' }}</th>
-                  <th>{{ section.settings.size_guide_col_bust | default: 'Bust (cm)' }}</th>
-                  <th>{{ section.settings.size_guide_col_thigh | default: 'Thigh (cm)' }}</th>
-                  <th>{{ section.settings.size_guide_col_length | default: 'Length (cm)' }}</th>
+                <tr {% if measure_head %}{{ measure_head.shopify_attributes }}{% endif %}>
+                  <th>{% if measure_head %}{{ measure_head.settings.size }}{% else %}{{ section.settings.size_guide_col_size | default: 'Size' }}{% endif %}</th>
+                  <th>{% if measure_head %}{{ measure_head.settings.hips }}{% else %}{{ section.settings.size_guide_col_hips | default: 'Hips (cm)' }}{% endif %}</th>
+                  <th>{% if measure_head %}{{ measure_head.settings.waist }}{% else %}{{ section.settings.size_guide_col_waist | default: 'Waist (cm)' }}{% endif %}</th>
+                  <th>{% if measure_head %}{{ measure_head.settings.bust }}{% else %}{{ section.settings.size_guide_col_bust | default: 'Bust (cm)' }}{% endif %}</th>
+                  <th>{% if measure_head %}{{ measure_head.settings.thigh }}{% else %}{{ section.settings.size_guide_col_thigh | default: 'Thigh (cm)' }}{% endif %}</th>
+                  <th>{% if measure_head %}{{ measure_head.settings.length }}{% else %}{{ section.settings.size_guide_col_length | default: 'Length (cm)' }}{% endif %}</th>
                 </tr>
               </thead>
               <tbody>
@@ -185,16 +187,16 @@
         {% endif %}
         {% if fit_blocks.size > 0 %}
           <div class="size-guide-modal__measurements">
-            <p class="size-guide-modal__chart-label">{{ section.settings.size_guide_height_label | default: 'Height (cm)' }}</p>
+            <p class="size-guide-modal__chart-label">{% if fit_head %}{{ fit_head.settings.label }}{% else %}{{ section.settings.size_guide_height_label | default: 'Height (cm)' }}{% endif %}</p>
             <table>
               <thead>
-                <tr>
-                  <th>{{ section.settings.size_guide_weight_label | default: 'Weight (kg)' }}</th>
-                  <th>{{ section.settings.size_guide_height_1 }}</th>
-                  <th>{{ section.settings.size_guide_height_2 }}</th>
-                  <th>{{ section.settings.size_guide_height_3 }}</th>
-                  <th>{{ section.settings.size_guide_height_4 }}</th>
-                  <th>{{ section.settings.size_guide_height_5 }}</th>
+                <tr {% if fit_head %}{{ fit_head.shopify_attributes }}{% endif %}>
+                  <th>{% if fit_head %}{{ fit_head.settings.weight }}{% else %}{{ section.settings.size_guide_weight_label | default: 'Weight (kg)' }}{% endif %}</th>
+                  <th>{% if fit_head %}{{ fit_head.settings.col_1 }}{% else %}{{ section.settings.size_guide_height_1 }}{% endif %}</th>
+                  <th>{% if fit_head %}{{ fit_head.settings.col_2 }}{% else %}{{ section.settings.size_guide_height_2 }}{% endif %}</th>
+                  <th>{% if fit_head %}{{ fit_head.settings.col_3 }}{% else %}{{ section.settings.size_guide_height_3 }}{% endif %}</th>
+                  <th>{% if fit_head %}{{ fit_head.settings.col_4 }}{% else %}{{ section.settings.size_guide_height_4 }}{% endif %}</th>
+                  <th>{% if fit_head %}{{ fit_head.settings.col_5 }}{% else %}{{ section.settings.size_guide_height_5 }}{% endif %}</th>
                 </tr>
               </thead>
               <tbody>

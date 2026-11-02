@@ -175,6 +175,14 @@
             "button_style": "outline"
           }
         },
+        "sg_measure_head": {
+          "type": "size_guide_measure_head",
+          "settings": { "size": "Size", "hips": "Hips (cm)", "waist": "Waist (cm)", "bust": "Bust (cm)", "thigh": "Thigh (cm)", "length": "Length (cm)" }
+        },
+        "sg_fit_head": {
+          "type": "size_guide_fit_head",
+          "settings": { "label": "Height (cm)", "weight": "Weight (kg)", "col_1": "150–155", "col_2": "155–160", "col_3": "160–165", "col_4": "165–170", "col_5": "170–178" }
+        },
         "sg_measure_xs": {
           "type": "size_guide_measure",
           "settings": { "size": "XS", "hips": "84", "waist": "64", "bust": "76–86", "thigh": "52", "length": "102" }
@@ -226,6 +234,8 @@
         "5c65d55b-9f21-4d69-b50a-6219b616bb68",
         "collapsible_tab_3kGtaH",
         "button_nHFB6G",
+        "sg_measure_head",
+        "sg_fit_head",
         "sg_measure_xs",
         "sg_measure_s",
         "sg_measure_m",
