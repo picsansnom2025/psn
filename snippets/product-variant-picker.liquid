@@ -43,10 +43,10 @@
     <fieldset class="js product-form__input product-form__input--pill">
       <legend class="form__label{% if labels == false %} visually-hidden{% endif %}">{{ option.name }}{% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}:{% elsif block.settings.show_puncuation %}:{% endif %}
         {% if thumbnail_variants contains option.name and show_variant_images and swatch_label_position == 'inline' %}
-          <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
+          <span class="caption product-color-swatch-label">{% if product.selected_variant %}{{ option.selected_value }}{% endif %}</span>
         {% endif %}
         {% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}
-          <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
+          <span class="caption product-color-swatch-label">{% if product.selected_variant %}{{ option.selected_value }}{% endif %}</span>
         {% endif %}
         {% assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure' %}
         {% if option.name == 'Size' and size_guide_rows.size > 0 %}
@@ -65,7 +65,7 @@
             {{ option.selected_value.variant.featured_media | image_url: width: 50 | image_tag: loading: 'lazy' }}
             </span>
           {% endif %}
-          <span class="text">{{ option.selected_value }}</span>
+          <span class="text">{% if product.selected_variant %}{{ option.selected_value }}{% endif %}</span>
           <span class="options-count">
             <a href="{{ product.url }}">{{ 'products.product.choose_options' | t }}
             {% if optionsdisplaytype == 'accordion' and settings.accordion_icon == 'arrow' %}{% render 'icon-caret' %}{% endif %}
@@ -108,10 +108,10 @@
     </fieldset>
 
 {% if thumbnail_variants contains option.name and show_variant_images and swatch_label_position == 'below' and isopener == false %}
-  <div class="caption product-color-swatch-label">{{ option.selected_value }}</div>
+  <div class="caption product-color-swatch-label">{% if product.selected_variant %}{{ option.selected_value }}{% endif %}</div>
 {% endif %}
 {% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'below' and isopener == false %}
-  <div class="caption product-color-swatch-label">{{ option.selected_value }}</div>
+  <div class="caption product-color-swatch-label">{% if product.selected_variant %}{{ option.selected_value }}{% endif %}</div>
 {% endif %}
 
 
@@ -157,7 +157,7 @@
   {% render 'size-guide-modal', product: product %}
 
 <script type="application/json" data-selected-variant>
-      {{ product.selected_or_first_available_variant | json }}
+      {{ product.selected_variant | json }}
 </script>
 
 </variant-selects>
