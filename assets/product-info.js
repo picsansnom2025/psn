@@ -24,6 +24,16 @@ if (!customElements.get('product-info')) {
           PUB_SUB_EVENTS.optionValueSelectionChange,
           this.handleOptionValueChange.bind(this)
         );
+        this.addEventListener('pointerdown', (event) => {
+          const input = this.optionInputFromEvent(event);
+          this.repeatColorInput = input?.checked && this.isColorOptionChange({ target: input }) ? input : null;
+        });
+        this.addEventListener('click', (event) => {
+          const input = this.optionInputFromEvent(event);
+          if (!input || input !== this.repeatColorInput) return;
+          this.repeatColorInput = null;
+          this.showVariantMedia(input.dataset.variantMediaId);
+        });
         this.initQuantityHandlers();
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
 
@@ -315,6 +325,15 @@ if (!customElements.get('product-info')) {
             if (isAccordion) localStorage.setItem(drawerKey, isOpen.toString());
           });
         });
+      }
+
+      optionInputFromEvent(event) {
+        const direct = event.target.closest?.('input[type="radio"]');
+        if (direct) return direct;
+        const label = event.target.closest?.('label[for]');
+        if (!label) return null;
+        const id = label.getAttribute('for');
+        return id ? this.querySelector(`[id="${CSS.escape(id)}"]`) : null;
       }
 
       isColorOptionChange(event) {

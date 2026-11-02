@@ -61,6 +61,9 @@
       name="{{ input_name | escape }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
+      {% if value.variant.featured_media %}
+        data-variant-media-id="{{ value.variant.featured_media.id }}"
+      {% endif %}
       {% if value.selected %}
         checked
       {% endif %}
