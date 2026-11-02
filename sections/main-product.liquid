@@ -705,15 +705,9 @@
             {%- when 'price' -%}
             {% assign pricesizeclass = block.settings.price_size %}
               <div class="product-price-block{% if block.settings.price_show_taxes %} tax-position--{{ block.settings.price_taxes_position }}{% endif %} no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                {%- liquid
-                  assign price_use_variant = false
-                  if product.selected_variant or product.has_only_default_variant
-                    assign price_use_variant = true
-                  endif
-                -%}
                 {%- render 'price',
                   product: product,
-                  use_variant: price_use_variant,
+                  use_variant: true,
                   show_discounts: block.settings.show_discounts,
                   price_class: pricesizeclass
                 -%}
@@ -734,7 +728,7 @@
               <div {{ block.shopify_attributes }}>
                 {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                 {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
-                  <input type="hidden" name="id" value="{% if product.selected_variant %}{{ product.selected_variant.id }}{% elsif product.has_only_default_variant %}{{ product.selected_or_first_available_variant.id }}{% endif %}">
+                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
@@ -742,39 +736,33 @@
               
               {%- when 'inventory' -%}
 
-              {%- liquid
-                assign inventory_variant = product.selected_variant
-                if product.has_only_default_variant
-                  assign inventory_variant = product.selected_or_first_available_variant
-                endif
-              -%}
               <div class="product-inventory-container{% if block.settings.inventory-color-coded %} inventory-color-coded{% endif %} inventory-display-type-{{ block.settings.inventory_display }}" {{ block.shopify_attributes }}>            
-              <p class="product__inventory text-small no-js-hidden{% if inventory_variant == nil %} hidden{% elsif inventory_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
+              <p class="product__inventory text-small no-js-hidden{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
                               {{ block.shopify_attributes }}
                               id="Inventory-{{ section.id }}"
                               role="status"
                             >
-              {%- if inventory_variant.inventory_management == 'shopify' -%}
+              {%- if product.selected_or_first_available_variant.inventory_management == 'shopify' -%}
               
               {% if block.settings.inventory_display == 'quantity' %}
-              <span class="inventory-display--quantity{% if inventory_variant.inventory_quantity == 0 %} inventory-display--quantity-zero{% endif %}{% if inventory_variant.inventory_quantity > 0 and inventory_variant.inventory_quantity <= block.settings.inventory_threshold %} inventory-display--quantity-low{% endif %}"><span class="inventory-number">{{ inventory_variant.inventory_quantity }}</span>&nbsp;{{- 'products.product.inventory_in_stock' | t -}}</span>
+              <span class="inventory-display--quantity{% if product.selected_or_first_available_variant.inventory_quantity == 0 %} inventory-display--quantity-zero{% endif %}{% if product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold %} inventory-display--quantity-low{% endif %}"><span class="inventory-number">{{ product.selected_or_first_available_variant.inventory_quantity }}</span>&nbsp;{{- 'products.product.inventory_in_stock' | t -}}</span>
               {% endif %}
 
               {% if block.settings.inventory_display == 'status' %}
 
-              {%- if inventory_variant.inventory_quantity == 0 and inventory_variant.inventory_policy == 'deny' -%}
+              {%- if product.selected_or_first_available_variant.inventory_quantity == 0 and product.selected_or_first_available_variant.inventory_policy == 'deny' -%}
               <span class="inventory-display--message inventory-display--quantity-zero">{{- 'products.product.inventory_out_of_stock' | t -}}</span>
               {%- endif -%}
 
-              {%- if inventory_variant.inventory_quantity == 0 and inventory_variant.inventory_policy == 'continue' -%}
+              {%- if product.selected_or_first_available_variant.inventory_quantity == 0 and product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
               <span class="inventory-display--message inventory-display--quantity-normal{% if block.settings.hide_if_in_stock %} inventory--hide-in-stock{% endif %}">{{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}</span>
               {%- endif -%}
               
-              {%- if inventory_variant.inventory_quantity > 0 and inventory_variant.inventory_quantity <= block.settings.inventory_threshold and block.settings.inventory_threshold > 0 -%}
+              {%- if product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold and block.settings.inventory_threshold > 0 -%}
               <span class="inventory-display--message inventory-display--quantity-low">{{- 'products.product.inventory_low_stock' | t -}}</span>
               {%- endif -%}     
 
-              {%- if inventory_variant.inventory_quantity > 0 and inventory_variant.inventory_quantity > block.settings.inventory_threshold -%}
+              {%- if product.selected_or_first_available_variant.inventory_quantity > 0 and product.selected_or_first_available_variant.inventory_quantity > block.settings.inventory_threshold -%}
               <span class="inventory-display--message inventory-display--quantity-normal{% if block.settings.hide_if_in_stock %} inventory--hide-in-stock{% endif %}">{{- 'products.product.inventory_in_stock' | t -}}</span>
               {%- endif -%}
 

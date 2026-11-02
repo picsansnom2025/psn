@@ -24,21 +24,6 @@
         assign show_dynamic_checkout = true
       endif
 
-      assign current_variant = product.selected_variant
-      if product.has_only_default_variant
-        assign current_variant = product.selected_or_first_available_variant
-      endif
-      assign quantity_rule_soldout = false
-      if current_variant
-        assign check_against_inventory = true
-        if current_variant.inventory_management != 'shopify' or current_variant.inventory_policy == 'continue'
-          assign check_against_inventory = false
-        endif
-        if current_variant.quantity_rule.min > current_variant.inventory_quantity and check_against_inventory
-          assign quantity_rule_soldout = true
-        endif
-      endif
-
       assign add_label = 'products.product.add_to_cart' | t
       if template contains 'preorder' or template contains 'pre-order' or product.tags contains 'pre-order' or product.tags contains 'Pre-order' or product.tags contains 'preorder' or product.tags contains 'Preorder'
         assign add_label = 'products.product.pre_order' | t
@@ -67,10 +52,10 @@
         <input
           type="hidden"
           name="id"
-          value="{{ current_variant.id }}"
-          {% if current_variant.available == false
+          value="{{ product.selected_or_first_available_variant.id }}"
+          {% if product.selected_or_first_available_variant.available == false
             or quantity_rule_soldout
-            or current_variant == null
+            or product.selected_or_first_available_variant == null
           %}
             disabled
           {% endif %}
@@ -82,22 +67,31 @@
         {%- endif -%}
 
         <div class="product-form__buttons">
+          {%- liquid
+            assign check_against_inventory = true
+            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+              assign check_against_inventory = false
+            endif
+            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+              assign quantity_rule_soldout = true
+            endif
+          -%}
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
             class="product-form__submit button button--full-width button--{{ style }}{% if template contains 'preorder' or template contains 'pre-order' or product.tags contains 'pre-order' or product.tags contains 'Pre-order' or product.tags contains 'preorder' or product.tags contains 'Preorder' %} button--preorder{% endif %}"
-            {% if current_variant == null
-              or current_variant.available == false
+            {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
+              or product.selected_or_first_available_variant == null
             %}
               disabled
             {% endif %}
           >
             <span>
-              {%- if current_variant == null -%}
-                {{ 'products.product.choose_options' | t }}
-              {%- elsif current_variant.available == false or quantity_rule_soldout -%}
+              {%- if product.selected_or_first_available_variant == null -%}
+                {{ 'products.product.unavailable' | t }}
+              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
                 {{ add_label }}

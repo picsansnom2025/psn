@@ -24,13 +24,13 @@ if (!customElements.get('product-info')) {
           PUB_SUB_EVENTS.optionValueSelectionChange,
           this.handleOptionValueChange.bind(this)
         );
-        this.addEventListener('click', (event) => {
-          const input = event.target.closest('input[type="radio"]');
-          if (!input || !this.contains(input)) return;
-          this.scrollToColor(input);
-        });
         this.initQuantityHandlers();
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
+
+        if (this.dataset.updateUrl === 'true' && new URLSearchParams(window.location.search).has('variant')) {
+          const variant = this.getSelectedVariant(this);
+          this.showVariantMedia(variant?.featured_media?.id);
+        }
       }
 
       addPreProcessCallback(callback) {
@@ -67,9 +67,7 @@ if (!customElements.get('product-info')) {
       handleOptionValueChange({ data: { event, target, selectedOptionValues } }) {
         if (!this.contains(event.target)) return;
 
-        this.selectedOptionValueIds = selectedOptionValues;
-        this.scrollToColor(event.target);
-        this.pendingMediaScroll = false;
+        this.pendingMediaScroll = this.isColorOptionChange(event);
         this.resetProductFormState();
 
         const productUrl = target.dataset.productUrl || this.pendingRequestUrl || this.dataset.url;
@@ -164,89 +162,23 @@ if (!customElements.get('product-info')) {
       updateOptionValues(html) {
         const variantSelects = html.querySelector('variant-selects');
         if (variantSelects) {
-          this.applyCheckedOptions(variantSelects);
           HTMLUpdateUtility.viewTransition(this.variantSelectors, variantSelects, this.preProcessHtmlCallbacks);
         }
       }
 
-      applyCheckedOptions(variantSelects) {
-        const ids = new Set((this.selectedOptionValueIds || []).map(String));
-        if (!ids.size) return;
-
-        variantSelects.querySelectorAll('[data-option-value-id]').forEach((el) => {
-          const selected = ids.has(String(el.dataset.optionValueId));
-          if (el.tagName === 'OPTION') {
-            el.toggleAttribute('selected', selected);
-            return;
-          }
-          if (el instanceof HTMLInputElement && el.type === 'radio') {
-            el.toggleAttribute('checked', selected);
-          }
-        });
-
-        variantSelects.querySelectorAll('fieldset').forEach((fieldset) => {
-          const checked = fieldset.querySelector('input[type="radio"][checked]');
-          const name = checked ? checked.value : '';
-          fieldset.querySelectorAll('.product-color-swatch-label').forEach((label) => {
-            label.textContent = name;
-          });
-          const sibling = fieldset.nextElementSibling;
-          if (sibling?.classList.contains('product-color-swatch-label')) {
-            sibling.textContent = name;
-          }
-        });
-      }
-
-      hasCompleteOptionSelection() {
-        const root = this.variantSelectors;
-        if (!root) return false;
-        const fieldsets = [...root.querySelectorAll('fieldset')];
-        const selects = [...root.querySelectorAll('select')];
-        if (!fieldsets.length && !selects.length) return false;
-        if (fieldsets.some((fieldset) => !fieldset.querySelector('input[type="radio"]:checked'))) return false;
-        if (selects.some((select) => !select.value)) return false;
-        return true;
-      }
-
-      scrollToColor(input) {
-        if (!input || !this.isColorOptionChange({ target: input })) return;
-        const mediaId = input.dataset.variantMediaId;
-        if (!mediaId) return;
-        this.pendingColorMediaId = mediaId;
-        const now = Date.now();
-        if (this.lastColorMediaId === mediaId && now - (this.lastColorScrollAt || 0) < 50) return;
-        this.lastColorMediaId = mediaId;
-        this.lastColorScrollAt = now;
-        this.showVariantMedia(mediaId);
-      }
-
-      settleColorScroll() {
-        const mediaId = this.pendingColorMediaId;
-        if (!mediaId) return;
-        this.pendingColorMediaId = null;
-        requestAnimationFrame(() => this.showVariantMedia(mediaId));
-      }
-
       handleUpdateProductInfo(productUrl) {
         return (html) => {
-          this.updateOptionValues(html);
-          this.settleColorScroll();
-          const incomplete = !!this.variantSelectors && !this.hasCompleteOptionSelection();
-          const variant = incomplete ? null : this.getSelectedVariant(html);
+          const variant = this.getSelectedVariant(html);
 
           this.pickupAvailability?.update(variant);
+          this.updateOptionValues(html);
           this.updateURL(productUrl, variant?.id);
           this.updateVariantInputs(variant?.id);
 
           initVariantDrawer();
 
           if (!variant) {
-            this.productForm?.toggleSubmitButton(
-              true,
-              incomplete ? window.variantStrings.chooseOptions : window.variantStrings.unavailable
-            );
-            this.querySelector(`#Inventory-${this.dataset.section}`)?.classList.add('hidden');
-            if (!incomplete) this.setUnavailable();
+            this.setUnavailable();
             return;
           }
 
@@ -292,7 +224,6 @@ if (!customElements.get('product-info')) {
         ).forEach((productForm) => {
           const input = productForm.querySelector('input[name="id"]');
           input.value = variantId ?? '';
-          input.disabled = !variantId;
           input.dispatchEvent(new Event('change', { bubbles: true }));
         });
       }

@@ -61,10 +61,7 @@
       name="{{ input_name | escape }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
-      {% if value.variant.featured_media %}
-        data-variant-media-id="{{ value.variant.featured_media.id }}"
-      {% endif %}
-      {% if product.selected_variant and value.selected %}
+      {% if value.selected %}
         checked
       {% endif %}
       {% if option_disabled %}
@@ -98,7 +95,7 @@
     <option
       id="{{ input_id }}"
       value="{{ value | escape }}"
-      {% if product.selected_variant and value.selected %}
+      {% if value.selected %}
         selected="selected"
       {% endif %}
       {% if swatch_value and picker_type == 'swatch_dropdown' %}
