@@ -55,7 +55,17 @@
 {% assign image_resolution = 'high' %}
 {% endif %}
 
-<div class="section-container featured-collection-section fcs-align-{{ section.settings.content_alignment }} fcs-collection-qty-{{ section.settings.collection.products.size }} section-{{ section.id }} color-scheme-{{ section.settings.text_color }} color-scheme-{{ section.settings.bg_color }}">
+{% assign featured_qty = section.settings.collection.products.size %}
+{% if section.settings.product_source == 'manual' %}
+  {% assign featured_qty = 0 %}
+  {% for block in section.blocks %}
+    {% if block.type == 'product' and block.settings.product != blank %}
+      {% assign featured_qty = featured_qty | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="section-container featured-collection-section fcs-align-{{ section.settings.content_alignment }} fcs-collection-qty-{{ featured_qty }} section-{{ section.id }} color-scheme-{{ section.settings.text_color }} color-scheme-{{ section.settings.bg_color }}">
 
 {% if section.settings.top_border %}
 <hr class="section-border section-border-color-{{ section.settings.border_color }} section-border-width-{{ section.settings.border_width }}">
@@ -109,7 +119,45 @@
 
 <div{% if section.settings.products_layout == 'carousel' %} class="slider-outer-wrapper slider-arrows-position-{{ settings.carousel_arrow_position }}"{% else %} class="featured-collection-static-grid-wrapper {{ section.settings.content_width }}"{% endif %} id="slider-{{ section.id }}">
   <ul role="list" class="grid{% if section.settings.products_layout == 'carousel' %} slider-grid slider-element{% endif %} featured-collection-grid slider-grid--columns-mobile-{{ section.settings.mobile_grid }} slider-grid--columns-tablet-{{ section.settings.tablet_grid }} slider-grid--columns-desktop-{{ section.settings.dt_grid }}">
-    {% if section.settings.collection != blank %}
+    {% if section.settings.product_source == 'manual' and featured_qty > 0 %}
+
+    {% assign shown_products = 0 %}
+    {% for block in section.blocks %}
+      {% if block.type == 'product' and block.settings.product != blank %}
+        {% assign shown_products = shown_products | plus: 1 %}
+        {% if shown_products <= prod_limit %}
+          {% assign product = block.settings.product %}
+          {% assign lazy_load = false %}
+          {%- if shown_products > 2 -%}
+            {%- assign lazy_load = true -%}
+          {%- endif -%}
+          <li class="grid__item featured-collection-grid-item{% if section.settings.rollover_titles %} fc-card-rollover-title{% endif %}" {{ block.shopify_attributes }}>
+            {% render 'card-product',
+              card_product: product,
+              media_aspect_ratio: card_media_aspect_ratio,
+              show_secondary_image: show_secondary_image,
+              show_swiping_images: show_swiping_images,
+              pagination_color_scheme: section.settings.pagination_color_scheme,
+              variant_thumbnail_browsing: variant_thumbnail_browsing,
+              show_rating: section.settings.show_rating,
+              show_price: section.settings.show_prices,
+              price_position: settings.card_price_position,
+              show_sale_badges: settings.badges_show_sale,
+              show_vendor: section.settings.show_vendor,
+              show_vendor_inline: settings.card_show_vendor_inline,
+              show_quick_add: section.settings.enable_quick_add,
+              show_swatches: section.settings.show_swatches,
+              show_color_count: section.settings.show_color_count,
+              lazy_load: lazy_load,
+              image_resolution: image_resolution,
+              section_id: section.id
+            %}
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% elsif section.settings.product_source != 'manual' and section.settings.collection != blank %}
     
     {% for product in section.settings.collection.products limit: prod_limit %}
     {% assign lazy_load = false %}
@@ -171,14 +219,20 @@
     {% endif %}
   </ul>
 
-{% if section.settings.products_layout == 'carousel' and section.settings.collection.products.size > max_in_view and section.settings.no_items > max_in_view %}
+{% if section.settings.products_layout == 'carousel' and featured_qty > max_in_view and section.settings.no_items > max_in_view %}
 <div class="slider-arrows arrow-style-{{ section.settings.arrow_style }}">
   <button class="slider-arrow-left" aria-label="{{ 'accessibility.left' | t }}">{% render 'icon-arrow-slider' %}</button>
   <button class="slider-arrow-right" aria-label="{{ 'accessibility.right' | t }}">{% render 'icon-arrow-slider' %}</button>
 </div>
 {% endif %}
 
-{% if section.settings.collection == blank and section.settings.no_items > max_in_view and section.settings.products_layout == 'carousel' %}
+{% assign show_placeholder_cards = false %}
+{% if section.settings.product_source == 'manual' and featured_qty == 0 %}
+  {% assign show_placeholder_cards = true %}
+{% elsif section.settings.product_source != 'manual' and section.settings.collection == blank %}
+  {% assign show_placeholder_cards = true %}
+{% endif %}
+{% if show_placeholder_cards and section.settings.no_items > max_in_view and section.settings.products_layout == 'carousel' %}
 <div class="slider-arrows arrow-style-{{ section.settings.arrow_style }}">
   <button class="slider-arrow-left" aria-label="{{ 'accessibility.left' | t }}">{% render 'icon-arrow-slider' %}</button>
   <button class="slider-arrow-right" aria-label="{{ 'accessibility.right' | t }}">{% render 'icon-arrow-slider' %}</button>
@@ -224,6 +278,23 @@
       "templates": ["password", "cart"]
     },
     "settings": [
+    {
+      "type": "select",
+      "id": "product_source",
+      "label": "t:sections.featured-collection.settings.product_source.label",
+      "info": "t:sections.featured-collection.settings.product_source.info",
+      "options": [
+        {
+          "value": "collection",
+          "label": "t:sections.featured-collection.settings.product_source.options__1.label"
+        },
+        {
+          "value": "manual",
+          "label": "t:sections.featured-collection.settings.product_source.options__2.label"
+        }
+      ],
+      "default": "collection"
+    },
     {
       "type": "collection",
       "id": "collection",
@@ -727,6 +798,20 @@
       "default": "dark"
     }
     ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "t:sections.featured-collection.blocks.product.name",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "t:sections.featured-collection.blocks.product.settings.product.label"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 32,
   "presets": [
     {
       "name": "t:sections.featured-collection.name"
