@@ -13,15 +13,23 @@
 {% assign fit_blocks = section.blocks | where: 'type', 'size_guide_fit' %}
 {% assign measure_head = section.blocks | where: 'type', 'size_guide_measure_head' | first %}
 {% assign fit_head = section.blocks | where: 'type', 'size_guide_fit_head' | first %}
-{% if measure_blocks.size > 0 or size_guide.measurements.value.headers or size_guide.womens_measurements.value.headers %}
+{% assign size_guide_title = 'Size Guide' %}
+{% if measure_blocks.size > 0 or fit_blocks.size > 0 %}
+  {% if section.settings.size_guide_heading != blank %}
+    {% assign size_guide_title = section.settings.size_guide_heading %}
+  {% endif %}
+{% elsif size_guide.product_type.value != blank %}
+  {% assign size_guide_title = size_guide.product_type.value | append: ' Size Guide' %}
+{% endif %}
+{% if measure_blocks.size > 0 or fit_blocks.size > 0 or size_guide.measurements.value.headers or size_guide.womens_measurements.value.headers %}
 {{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
 <modal-dialog id="SizeGuideModal" class="product-popup-modal size-guide-modal">
-  <div role="dialog" aria-label="{% if measure_blocks.size > 0 %}{{ section.settings.size_guide_heading | default: 'Size Guide' }}{% elsif size_guide.product_type.value != blank %}{{ size_guide.product_type.value }} Size Guide{% else %}Size Guide{% endif %}" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
+  <div role="dialog" aria-label="{{ size_guide_title }}" aria-modal="true" class="product-popup-modal__content" tabindex="-1">
     <div class="modal-header">
       <button id="ModalClose-SizeGuide" type="button" class="product-popup-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
         {% render 'icon-close' %}
       </button>
-      <span class="dialog-title">{% if measure_blocks.size > 0 %}{{ section.settings.size_guide_heading | default: 'Size Guide' }}{% elsif size_guide.product_type.value != blank %}{{ size_guide.product_type.value }} Size Guide{% else %}Size Guide{% endif %}</span>
+      <span class="dialog-title">{{ size_guide_title }}</span>
     </div>
     {% if size_guide.fit_description.value %}
       <p class="size-guide-modal__fit-description">{{ size_guide.fit_description.value }}</p>
@@ -186,12 +194,25 @@
           </div>
         {% endif %}
         {% if fit_blocks.size > 0 %}
+          {% capture fit_axis_height %}{% if fit_head %}{{ fit_head.settings.label }}{% else %}{{ section.settings.size_guide_height_label | default: 'Height (cm)' }}{% endif %}{% endcapture %}
+          {% capture fit_axis_weight %}{% if fit_head %}{{ fit_head.settings.weight }}{% else %}{{ section.settings.size_guide_weight_label | default: 'Weight (kg)' }}{% endif %}{% endcapture %}
           <div class="size-guide-modal__measurements">
-            <p class="size-guide-modal__chart-label">{% if fit_head %}{{ fit_head.settings.label }}{% else %}{{ section.settings.size_guide_height_label | default: 'Height (cm)' }}{% endif %}</p>
+            {% unless section.settings.size_guide_corner_axis %}
+              <p class="size-guide-modal__chart-label">{{ fit_axis_height | strip }}</p>
+            {% endunless %}
             <table>
               <thead>
                 <tr {% if fit_head %}{{ fit_head.shopify_attributes }}{% endif %}>
-                  <th>{% if fit_head %}{{ fit_head.settings.weight }}{% else %}{{ section.settings.size_guide_weight_label | default: 'Weight (kg)' }}{% endif %}</th>
+                  <th>
+                    {% if section.settings.size_guide_corner_axis %}
+                      <span class="size-guide-modal__corner">
+                        <span class="size-guide-modal__corner-height">{{ fit_axis_height | strip }}</span>
+                        <span class="size-guide-modal__corner-weight">{{ fit_axis_weight | strip }}</span>
+                      </span>
+                    {% else %}
+                      {{ fit_axis_weight | strip }}
+                    {% endif %}
+                  </th>
                   <th>{% if fit_head %}{{ fit_head.settings.col_1 }}{% else %}{{ section.settings.size_guide_height_1 }}{% endif %}</th>
                   <th>{% if fit_head %}{{ fit_head.settings.col_2 }}{% else %}{{ section.settings.size_guide_height_2 }}{% endif %}</th>
                   <th>{% if fit_head %}{{ fit_head.settings.col_3 }}{% else %}{{ section.settings.size_guide_height_3 }}{% endif %}</th>
@@ -214,6 +235,9 @@
             </table>
           </div>
         {% endif %}
+      {% endif %}
+      {% if section.settings.size_guide_note != blank %}
+        <div class="size-guide-modal__note">{{ section.settings.size_guide_note | newline_to_br }}</div>
       {% endif %}
     </div>
   </div>

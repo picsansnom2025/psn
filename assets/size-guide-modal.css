@@ -72,6 +72,36 @@
   text-align: center;
 }
 
+.size-guide-modal__corner {
+  position: relative;
+  display: block;
+  min-height: 36px;
+}
+
+.size-guide-modal__corner-height,
+.size-guide-modal__corner-weight {
+  position: absolute;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.size-guide-modal__corner-height {
+  top: 0;
+  right: 0;
+}
+
+.size-guide-modal__corner-weight {
+  bottom: 0;
+  left: 0;
+}
+
+.size-guide-modal__note {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.55;
+  text-align: left;
+}
+
 .size-guide-modal__measurements + .size-guide-modal__measurements {
   margin-top: 28px;
 }
