@@ -178,8 +178,8 @@
         "sg_fit_head": {
           "type": "size_guide_fit_head",
           "settings": {
-            "label": "Height",
-            "weight": "Weight",
+            "label": "Height (cm)",
+            "weight": "Weight (kg)",
             "col_1": "≤159",
             "col_2": "160-164",
             "col_3": "165-169",
@@ -342,8 +342,8 @@
         "size_guide_col_bust": "Bust (cm)",
         "size_guide_col_thigh": "Thigh (cm)",
         "size_guide_col_length": "Length (cm)",
-        "size_guide_height_label": "Height",
-        "size_guide_weight_label": "Weight",
+        "size_guide_height_label": "Height (cm)",
+        "size_guide_weight_label": "Weight (kg)",
         "size_guide_height_1": "≤159",
         "size_guide_height_2": "160-164",
         "size_guide_height_3": "165-169",

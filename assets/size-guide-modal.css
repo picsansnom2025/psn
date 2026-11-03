@@ -74,7 +74,7 @@
 
 .size-guide-modal .size-guide-modal__measurements table:has(.size-guide-modal__corner) th:first-child,
 .size-guide-modal .size-guide-modal__measurements table:has(.size-guide-modal__corner) td:first-child {
-  width: 88px;
+  width: 108px;
 }
 
 .size-guide-modal .size-guide-modal__measurements th:has(.size-guide-modal__corner) {
@@ -85,7 +85,7 @@
 .size-guide-modal__corner {
   position: relative;
   display: block;
-  min-height: 64px;
+  min-height: 72px;
 }
 
 .size-guide-modal__corner-line {
@@ -105,19 +105,21 @@
 .size-guide-modal__corner-height,
 .size-guide-modal__corner-weight {
   position: absolute;
-  line-height: 1.2;
+  max-width: 72%;
+  line-height: 1.15;
   font-size: 11px;
-  white-space: nowrap;
 }
 
 .size-guide-modal__corner-height {
   top: 6px;
   right: 6px;
+  text-align: right;
 }
 
 .size-guide-modal__corner-weight {
   bottom: 6px;
   left: 6px;
+  text-align: left;
 }
 
 .size-guide-modal__note {
