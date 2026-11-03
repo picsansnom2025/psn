@@ -48,8 +48,17 @@
         {% if visual_variants contains option.name and swatch_state == true and swatch_label_position == 'inline' %}
           <span class="caption product-color-swatch-label">{{ option.selected_value }}</span>
         {% endif %}
-        {% assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure' %}
-        {% if option.name == 'Size' and size_guide_rows.size > 0 %}
+        {% liquid
+          assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure'
+          assign size_guide_fit_rows = section.blocks | where: 'type', 'size_guide_fit'
+          assign show_size_guide = false
+          if size_guide_rows.size > 0 or size_guide_fit_rows.size > 0
+            if option.name == 'Size' or option.name contains '尺寸' or option.name contains '尺码'
+              assign show_size_guide = true
+            endif
+          endif
+        %}
+        {% if show_size_guide %}
           <modal-opener data-modal="#SizeGuideModal">
             <button type="button" class="size-guide-trigger" aria-haspopup="dialog">Size Guide</button>
           </modal-opener>
@@ -121,8 +130,17 @@
     <div class="product-form__input product-form__input--dropdown">
       <label class="form__label{% if labels == false %} visually-hidden{% endif %}" for="Option-{{ section.id }}-{{ forloop.index0 }}">
         {{ option.name }}{% if block.settings.show_puncuation %}:{% endif %}
-        {% assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure' %}
-        {% if option.name == 'Size' and size_guide_rows.size > 0 %}
+        {% liquid
+          assign size_guide_rows = section.blocks | where: 'type', 'size_guide_measure'
+          assign size_guide_fit_rows = section.blocks | where: 'type', 'size_guide_fit'
+          assign show_size_guide = false
+          if size_guide_rows.size > 0 or size_guide_fit_rows.size > 0
+            if option.name == 'Size' or option.name contains '尺寸' or option.name contains '尺码'
+              assign show_size_guide = true
+            endif
+          endif
+        %}
+        {% if show_size_guide %}
           <modal-opener data-modal="#SizeGuideModal">
             <button type="button" class="size-guide-trigger" aria-haspopup="dialog">Size Guide</button>
           </modal-opener>
