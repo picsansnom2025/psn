@@ -190,7 +190,7 @@
         "sg_fit_1": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "≤90",
+            "weight": "≤45",
             "col_1": "XS",
             "col_2": "S",
             "col_3": "M",
@@ -201,7 +201,7 @@
         "sg_fit_2": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "90-95",
+            "weight": "45-47.5",
             "col_1": "XS",
             "col_2": "S",
             "col_3": "M",
@@ -212,7 +212,7 @@
         "sg_fit_3": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "95-100",
+            "weight": "47.5-50",
             "col_1": "S",
             "col_2": "S",
             "col_3": "M",
@@ -223,7 +223,7 @@
         "sg_fit_4": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "100-105",
+            "weight": "50-52.5",
             "col_1": "S",
             "col_2": "M",
             "col_3": "M",
@@ -234,7 +234,7 @@
         "sg_fit_5": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "105-110",
+            "weight": "52.5-55",
             "col_1": "M",
             "col_2": "M",
             "col_3": "M",
@@ -245,7 +245,7 @@
         "sg_fit_6": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "110-115",
+            "weight": "55-57.5",
             "col_1": "M",
             "col_2": "M",
             "col_3": "M",
@@ -256,7 +256,7 @@
         "sg_fit_7": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "115-120",
+            "weight": "57.5-60",
             "col_1": "M",
             "col_2": "M",
             "col_3": "M",
@@ -267,7 +267,7 @@
         "sg_fit_8": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "120-130",
+            "weight": "60-65",
             "col_1": "L",
             "col_2": "L",
             "col_3": "L",
@@ -278,7 +278,7 @@
         "sg_fit_9": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "130-135",
+            "weight": "65-67.5",
             "col_1": "L",
             "col_2": "L",
             "col_3": "L",
@@ -289,7 +289,7 @@
         "sg_fit_10": {
           "type": "size_guide_fit",
           "settings": {
-            "weight": "135-140",
+            "weight": "67.5-70",
             "col_1": "L",
             "col_2": "L",
             "col_3": "L",
