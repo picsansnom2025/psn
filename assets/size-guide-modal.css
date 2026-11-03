@@ -72,10 +72,29 @@
   text-align: center;
 }
 
+.size-guide-modal .size-guide-modal__measurements th:has(.size-guide-modal__corner) {
+  position: relative;
+  padding: 0;
+}
+
 .size-guide-modal__corner {
   position: relative;
   display: block;
-  min-height: 36px;
+  min-height: 52px;
+}
+
+.size-guide-modal__corner-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.size-guide-modal__corner-line line {
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
 }
 
 .size-guide-modal__corner-height,
@@ -86,13 +105,13 @@
 }
 
 .size-guide-modal__corner-height {
-  top: 0;
-  right: 0;
+  top: 7px;
+  right: 8px;
 }
 
 .size-guide-modal__corner-weight {
-  bottom: 0;
-  left: 0;
+  bottom: 7px;
+  left: 8px;
 }
 
 .size-guide-modal__note {

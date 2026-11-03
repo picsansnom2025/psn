@@ -178,8 +178,8 @@
         "sg_fit_head": {
           "type": "size_guide_fit_head",
           "settings": {
-            "label": "身高",
-            "weight": "体重",
+            "label": "Height",
+            "weight": "Weight",
             "col_1": "≤159",
             "col_2": "160-164",
             "col_3": "165-169",
@@ -335,22 +335,22 @@
         "bottom_border": false,
         "border_width": "full",
         "border_color": "dark",
-        "size_guide_heading": "尺码表",
+        "size_guide_heading": "Size Guide",
         "size_guide_col_size": "Size",
         "size_guide_col_hips": "Hips (cm)",
         "size_guide_col_waist": "Waist (cm)",
         "size_guide_col_bust": "Bust (cm)",
         "size_guide_col_thigh": "Thigh (cm)",
         "size_guide_col_length": "Length (cm)",
-        "size_guide_height_label": "身高",
-        "size_guide_weight_label": "体重",
+        "size_guide_height_label": "Height",
+        "size_guide_weight_label": "Weight",
         "size_guide_height_1": "≤159",
         "size_guide_height_2": "160-164",
         "size_guide_height_3": "165-169",
         "size_guide_height_4": "170-174",
         "size_guide_height_5": "≥175",
         "size_guide_corner_axis": true,
-        "size_guide_note": "*平铺手工测量可能产生误差，尺寸以收到实物为准\n*尺码参考仅为推荐码数，具体请根据各围度数据选择;卡码建议拍大"
+        "size_guide_note": "* Flat measurements taken by hand may vary. Please refer to the product you receive.\n* Sizes are recommendations only. Choose based on your measurements. If you are between sizes, size up."
       }
     },
     "1777917546b859f363": {
