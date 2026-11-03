@@ -177,42 +177,52 @@
         },
         "sg_measure_head": {
           "type": "size_guide_measure_head",
+          "disabled": true,
           "settings": { "size": "Size", "hips": "Hips (cm)", "waist": "Waist (cm)", "bust": "Bust (cm)", "thigh": "Thigh (cm)", "length": "Length (cm)" }
         },
         "sg_fit_head": {
           "type": "size_guide_fit_head",
+          "disabled": true,
           "settings": { "label": "Height (cm)", "weight": "Weight (kg)", "col_1": "150–155", "col_2": "155–160", "col_3": "160–165", "col_4": "165–170", "col_5": "170–178" }
         },
         "sg_measure_xs": {
           "type": "size_guide_measure",
+          "disabled": true,
           "settings": { "size": "XS", "hips": "84", "waist": "64", "bust": "76–86", "thigh": "52", "length": "102" }
         },
         "sg_measure_s": {
           "type": "size_guide_measure",
+          "disabled": true,
           "settings": { "size": "S", "hips": "88", "waist": "68", "bust": "80–90", "thigh": "54", "length": "104" }
         },
         "sg_measure_m": {
           "type": "size_guide_measure",
+          "disabled": true,
           "settings": { "size": "M", "hips": "93", "waist": "73", "bust": "85–95", "thigh": "56.6", "length": "106" }
         },
         "sg_measure_l": {
           "type": "size_guide_measure",
+          "disabled": true,
           "settings": { "size": "L", "hips": "98", "waist": "78", "bust": "90–100", "thigh": "59", "length": "108" }
         },
         "sg_fit_1": {
           "type": "size_guide_fit",
+          "disabled": true,
           "settings": { "weight": "40–45", "col_1": "XS", "col_2": "XS", "col_3": "XS", "col_4": "XS", "col_5": "XS/S" }
         },
         "sg_fit_2": {
           "type": "size_guide_fit",
+          "disabled": true,
           "settings": { "weight": "45–50", "col_1": "S", "col_2": "S", "col_3": "XS", "col_4": "XS", "col_5": "XS/S" }
         },
         "sg_fit_3": {
           "type": "size_guide_fit",
+          "disabled": true,
           "settings": { "weight": "50–55", "col_1": "M", "col_2": "S/M", "col_3": "S", "col_4": "S", "col_5": "S" }
         },
         "sg_fit_4": {
           "type": "size_guide_fit",
+          "disabled": true,
           "settings": { "weight": "55–60", "col_1": "L", "col_2": "M/L", "col_3": "M", "col_4": "M", "col_5": "M" }
         }
       },
